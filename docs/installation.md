@@ -23,7 +23,7 @@ selected. `main` changes over time; a downloaded copy does not update itself.
 
 Copy selected complete folders from `skills/`, or all of them if you want the
 whole catalogue available. Availability is not a request to load every skill for
-every task. Starting with `project-planning` is sufficient to try the planning
+every task. Starting with `ibbuilds-swe-project-planning` is sufficient to try the planning
 entry point; it does not require the other skills to be installed.
 
 | Host | This project only | Personal, across projects |
@@ -40,16 +40,21 @@ project receiving its skills.
 ## 2. Copy complete skill folders
 
 Each installed folder must contain `SKILL.md`, its `LICENSE`, and any local
-`references/` files. Do not copy only `SKILL.md`, nest another `skills/` directory
+`references/` files, plus `agents/openai.yaml` for the optional Codex UI label.
+This uses [supported optional UI metadata](https://learn.chatgpt.com/docs/build-skills#optional-metadata).
+Other hosts can ignore that presentation metadata; it adds no dependency or
+invocation policy. Do not copy only `SKILL.md`, nest another `skills/` directory
 between the host root and skill name, or copy this repository's root `AGENTS.md`
 into your application. That file governs maintenance of this suite only.
 
 Expected layout, for example:
 
 ```text
-<your-project>/.agents/skills/project-planning/
+<your-project>/.agents/skills/ibbuilds-swe-project-planning/
   SKILL.md
   LICENSE
+  agents/
+    openai.yaml
   references/
     plan-intake.md
     gap-coverage-and-readiness.md
@@ -70,7 +75,7 @@ $targetRoot = 'C:\path\to\your-project\.agents\skills' # Codex project scope
 # Personal scope instead: Join-Path $HOME '.agents\skills' or '.claude\skills'
 
 $ErrorActionPreference = 'Stop'
-$names = @('project-planning')
+$names = @('ibbuilds-swe-project-planning')
 # For the complete suite, replace the line above with:
 # $names = @(Get-ChildItem -LiteralPath $sourceRoot -Directory |
 #   Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'SKILL.md') } |
@@ -106,7 +111,7 @@ If you already use Vercel's Skills CLI, run from the intended target project:
 
 ```text
 npx skills add ibbuilds/swe-essential-skills --list
-npx skills add ibbuilds/swe-essential-skills --skill project-planning --agent codex --copy
+npx skills add ibbuilds/swe-essential-skills --skill ibbuilds-swe-project-planning --agent codex --copy
 ```
 
 Use `--agent claude-code` for Claude Code and `--global` only when you intend
@@ -146,9 +151,9 @@ skill can test implicit selection when the user chooses to spend that usage.
 
 ## Explicit invocation or discovery troubleshooting
 
-- **Codex CLI/IDE:** use `/skills`, or type `$` and select `project-planning`.
+- **Codex CLI/IDE:** use `/skills`, or type `$` and select `ibbuilds-swe-project-planning`.
   Codex detects changes automatically; restart if the skill remains absent.
-- **Claude Code:** use `/skills`, then start a message with `/project-planning`.
+- **Claude Code:** use `/skills`, then start a message with `/ibbuilds-swe-project-planning`.
   Skill folders are watched; `/reload-skills` is useful if the top-level skills
   directory was created after the session started.
 
@@ -167,6 +172,25 @@ valid frontmatter and existing same-name skills in other scopes. Inspect what th
 host actually discovered; do not blindly install another duplicate. A connector
 or skill folder cannot override the host's permissions or usage limits.
 
+## Migrate from unprefixed names
+
+All current names use `ibbuilds-swe-<capability>`; for example,
+`project-planning` becomes `ibbuilds-swe-project-planning` and `software-review`
+becomes `ibbuilds-swe-software-review`. The suffix is unchanged for all 18 skills.
+This identifies the publisher and suite without requiring a custom installer.
+
+Existing installations do not automatically rename when this repository changes.
+Before reinstalling, record the installed scope and preserve local customizations
+in a recoverable copy. Preserve disabled/opt-out preferences explicitly: a host
+setting tied to an old name or path may not apply to the renamed installation.
+Update that preference for the new identity before enabling or using it.
+Use your normal skill manager or recoverable file-management
+workflow to remove the old identity before or alongside installing the renamed
+complete folder from this repository. Do not silently delete or overwrite an
+existing folder, and do not leave both identities active as duplicate skills.
+Reconcile customizations deliberately, update saved explicit invocations, and
+verify that the host lists the new name in the intended scope.
+
 ## Updates and removal
 
 Record which source revision and folders you installed. Review upstream changes
@@ -178,6 +202,9 @@ file-management workflow, not deleting shared host configuration or other skills
 After changes, verify discovery again using the host's documented refresh behavior.
 
 ## What has and has not been established
+
+The following historical checks used the original, unprefixed skill names.
+They are not installation or activation evidence for the renamed identities.
 
 On 22 October 2026, Skills CLI **1.7.4** was checked against source revision
 [`befd47f`](https://github.com/ibbuilds/swe-essential-skills/commit/befd47f99a5982859d1802eeba50e035d902fdaf)

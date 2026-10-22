@@ -23,7 +23,8 @@ For changes to that helper, also run:
 
     python -m unittest discover -s tests
 
-The helper checks metadata and ordinary inline Markdown file links. It does
+The helper checks canonical publisher/suite names, optional-host UI presentation
+metadata required by this suite, and ordinary inline Markdown file links. It does
 not test host activation, all Markdown syntax, external links, engineering
 correctness or model behavior. Review the affected engineering instructions and
 their failure cases directly; use docs/review-scenarios.md when relevant.

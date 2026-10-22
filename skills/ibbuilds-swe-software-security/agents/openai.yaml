@@ -1,0 +1,3 @@
+interface:
+  display_name: "ibbuilds SWE Essentials / Software Security"
+  short_description: "Assess trust boundaries and implement security controls"
