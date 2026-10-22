@@ -9,7 +9,7 @@ Keep build, verification, publication, deployment and successful operation disti
 
 ## Establish what moves where
 
-Identify the source revision (including relevant uncommitted changes), dependency resolution, build configuration, artifact/version, target environment or distribution channel, and intended consumers. Reuse existing build scripts and CI conventions after inspecting what they execute. A tag alone is not proof of the bytes shipped.
+Reuse applicable task-local release facts; establish missing, stale or affected source revision (including relevant uncommitted changes), dependency resolution, build configuration, artifact/version, target/channel and consumer details. Inspect build scripts and CI conventions not already reviewed in their current form before reuse. A tag alone is not proof of the bytes shipped.
 
 Choose the applicable path:
 
@@ -46,7 +46,7 @@ Follow artifacts from producer to consumer jobs. Ensure a deployment cannot acci
 
 For configuration edits, inspect event filters and conditions, matrix coverage, required checks, cancellation/concurrency behavior, timeout/failure propagation and secret/permission scope. Untrusted pull requests must not gain trusted release credentials through a privileged follow-up job or injected build script. Use the provider's current documented trust model, not guessed YAML semantics.
 
-Run available syntax/configuration validation and meaningful build/test paths in a safe context. Do not trigger publication or infrastructure mutation merely to prove the workflow parses. If CI cannot be executed, label the distinction between reviewed configuration and an observed successful run.
+Validate final changed configuration and meaningful build/test paths safely. Reuse task-local results only when coverage, artifact identity and relevant code/configuration/data/environment remain applicable and required gate freshness permits; skill activation alone is no reason to rerun. Do not trigger publication or infrastructure mutation merely to prove the workflow parses. If CI cannot be executed, label the distinction between reviewed configuration and an observed successful run.
 
 ## Completion evidence
 

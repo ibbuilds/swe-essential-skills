@@ -13,11 +13,11 @@ Identify the user/system outcome: interaction delay, startup, tail latency, thro
 
 Record the environment and workload enough to compare: exact revision/build mode, runtime/tool versions, hardware/resource limits, input/data scale and distribution, concurrency/arrival pattern, warm versus cold caches, and relevant dependencies. Use project commands and actual version documentation for profilers, runtime flags, and build configuration. Debug builds, mocked dependencies, and unrealistic tiny datasets can change the bottleneck.
 
-Measure the current path before changing it. Include the distribution or variability that matters, not just one best sample or an average hiding tail stalls. Check errors, timeouts, resource use, and completed work alongside speed; rejecting work faster is not a throughput improvement. Avoid load testing shared/production systems or creating costly resources without authorization.
+Reuse a supplied baseline when its revision, workload, environment, measurement method, and variability are known and applicable to the current path. Collect a new baseline only where these are missing, materially changed, or insufficient for the proposed comparison. Include the distribution or variability that matters, not just one best sample or an average hiding tail stalls. Check errors, timeouts, resource use, and completed work alongside speed; rejecting work faster is not a throughput improvement. Avoid load testing shared/production systems or creating costly resources without authorization.
 
 ## Find where the budget is spent
 
-Trace the critical path and distinguish service time from queueing, network waits, synchronization, scheduling, rendering, or resource exhaustion. Profile or instrument the suspected bottleneck at an appropriate layer; avoid guessing from code appearance. Check whether instrumentation materially changes timing or memory.
+Use applicable existing traces or profiles to locate the critical path and distinguish service time from queueing, network waits, synchronization, scheduling, rendering, or resource exhaustion. Profile or instrument at an appropriate layer when the bottleneck remains uncertain or the existing evidence no longer applies; avoid both guessing from code appearance and obligatory re-profiling of an established bottleneck. Check whether instrumentation materially changes timing or memory.
 
 Prefer reducing unnecessary work, duplicated IO, algorithmic growth, or serialized independent waits before adding complexity. Independence must be real: parallelizing operations with ordering or transactional dependencies changes semantics. Use [measurement-and-optimization.md](references/measurement-and-optimization.md) for profiling, caching, concurrency, and platform-specific cases.
 
@@ -32,7 +32,7 @@ Choose one justified intervention with a predicted effect and a correctness risk
 
 ## Compare and stop on evidence
 
-Run the same representative baseline and candidate workloads with appropriate repetitions/controls. Compare correctness checks, latency distributions, throughput, and resource costs under the same conditions. Include cold paths or adverse workloads if the change shifts costs there. If the result is within noise, say inconclusive; do not manufacture a percentage claim or keep an unjustified complexity increase.
+Measure the candidate against the same representative workload and conditions as the applicable baseline, with appropriate repetitions/controls. Rerun the baseline when drift or missing controls would make the comparison unreliable, not merely because it was supplied by another step. Compare correctness checks, latency distributions, throughput, and resource costs under comparable conditions. Include cold paths or adverse workloads if the change shifts costs there. If the result is within noise, say inconclusive; do not manufacture a percentage claim or keep an unjustified complexity increase.
 
 Retain a regression check or resource budget when stable and worthwhile. Do not make noisy microbenchmarks brittle CI gates; use a controlled benchmark environment or a coarse regression threshold justified by observed variance and product tolerance. Preserve required functional gates.
 

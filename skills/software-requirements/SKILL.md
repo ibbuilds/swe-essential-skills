@@ -1,11 +1,11 @@
 ---
 name: software-requirements
-description: Elicit, reconcile, validate and maintain engineering requirements for actual software across its lifecycle. Use when goals, legacy behavior, stakeholder needs, interfaces or operational constraints need agreed acceptance criteria, or a requirement change needs impact analysis; not for marketing strategy or generic task management.
+description: Resolve material ambiguity, conflicting needs, acceptance gaps or consequential requirement changes in software. Elicit and validate engineering contracts and their change impact; clear local changes with adequate acceptance need no new requirements workflow. Not for marketing strategy or generic task management.
 ---
 
 # Software requirements
 
-Establish what the software must do and what must remain true before committing to a consequential interpretation. Reuse the accepted goal, existing issues, specifications, contracts and decisions. Do not restart product positioning or require a specification phase before every small edit. Requirements, design, implementation and validation can develop together in useful increments.
+Establish what the software must do and what must remain true before committing to a consequential interpretation. Reuse the accepted goal, existing issues, specifications, contracts and decisions. Do not restart product positioning or require a specification phase before every small edit. Requirements, design, implementation and validation can develop together in useful increments. If the current request and established contracts already settle the changed behavior and acceptance, use them directly rather than repeating elicitation or producing another specification.
 
 ## Recover the need and its context
 

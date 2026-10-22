@@ -9,7 +9,7 @@ Turn the agreed interface into reliable behavior in the existing client architec
 
 ## Build the behavioral slice
 
-Inspect the entry route/window/screen, nearby components, state owner, data client, error handling, and existing tests before introducing another pattern. Establish the installed framework/runtime versions from project manifests and lockfiles. Derive commands from the repository and consult official documentation for those versions when behavior or APIs are uncertain; do not substitute remembered commands from a different stack.
+Reuse established entry-path, architecture, and runtime facts that still apply to the changed code. Before introducing another pattern, inspect the affected route/window/screen, nearby components, state owner, data client, error handling, and tests only where that context is missing or affected. Check manifests and lockfiles when versions are unknown, dependencies changed, or an API decision depends on them; an inert label correction does not require rediscovering the runtime. Use applicable known repository commands and consult official documentation for the installed versions when behavior or APIs are uncertain; do not substitute remembered commands from a different stack.
 
 Start with a representative journey, not a component inventory. Identify its trigger, observable result, data dependencies, and failure recovery. For a small edit, this can remain a few implementation notes. For a multi-step flow, map transitions before adding handlers:
 

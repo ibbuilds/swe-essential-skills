@@ -9,7 +9,7 @@ Treat schema, writers, readers and operational procedures as one data contract. 
 
 ## Establish the data model and invariant
 
-Inspect schema definitions, migrations, queries, access controls, fixtures and the application versions that read or write the data. Identify authoritative records, derived views, caches, external copies and background writers. Determine scale, growth, write contention, retention and recovery requirements from evidence; do not assume sample data resembles production.
+Reuse task-local data-contract facts where applicable; inspect missing, stale or affected schema definitions, migrations, queries, access controls, fixtures and reader/writer versions. Establish any unresolved authoritative records, derived views, caches, external copies and background writers. Determine scale, growth, write contention, retention and recovery requirements from evidence; do not assume sample data resembles production.
 
 Define identity, uniqueness, relationship ownership, null/absent semantics, units, time interpretation and deletion behavior. Express invariants with datastore constraints where supported, and explain application enforcement when they cannot be represented there. A pre-insert existence check alone is not a uniqueness guarantee under concurrency.
 
@@ -31,7 +31,7 @@ For ingestion, batch/stream transformations or derived-dataset publication, read
 
 ## Verify meaning and performance
 
-Check the relevant invariant with counts, constraints, reconciliations or sampled value comparisons—not just schema existence. Check boundary cases such as nulls, duplicate keys, invalid legacy rows, time zones and concurrent writes as applicable. Include representative application reads/writes and access-denied cases after the change.
+Verify final changed invariants with counts, constraints, reconciliations or sampled value comparisons—not just schema existence. Existing task-local checks suffice only for covered claims with applicable code/configuration/data/environment and allowed gate freshness; another skill’s activation alone adds no rerun obligation. Check boundary cases such as nulls, duplicate keys, invalid legacy rows, time zones and concurrent writes as applicable. Include representative application reads/writes and access-denied cases after the change.
 
 For query changes compare plans and actual behavior on representative distributions, with resource and side-effect limits. A faster empty-table query is not evidence for production performance. Inspect write cost and lock behavior when adding indexes; an index can improve reads while making ingestion or storage worse.
 

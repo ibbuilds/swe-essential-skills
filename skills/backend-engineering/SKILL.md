@@ -9,7 +9,7 @@ Build the operation around its invariant and failure semantics, not only its suc
 
 ## Trace the contract
 
-Inspect a representative request or message through authentication, parsing, authorization, domain logic, persistence, external effects and response/acknowledgment. Identify consumers, deployed versions and background callers. Record the intended behavior delta: valid inputs, rejected inputs, output shape, errors, persistent effects and compatibility obligations.
+Reuse an applicable request/message trace from this task; fill missing, stale or affected authentication, parsing, authorization, domain, persistence, external-effect and response/acknowledgment details. Scope discovery to the changed contract and plausible failure mechanisms: response-text edits need not retrace all callers; authorization, effects, concurrency or shared-boundary changes require the affected cross-boundary trace. Refresh relevant consumers, deployed versions and background callers where unknown or changed. Record the intended behavior delta: valid inputs, rejected inputs, output shape, errors, persistent effects and compatibility obligations.
 
 Validate untrusted inputs at runtime with bounds on size, depth, formats and resource cost. Decide whether unknown fields are rejected or tolerated according to the existing protocol. Avoid passing user-controlled fields directly into persistence updates, queries, commands or remote destinations. Treat identifiers as references to authorize, not proof of access.
 
@@ -33,6 +33,6 @@ Capture enough structured context to distinguish validation, authorization, depe
 
 ## Verify the state, not only the status code
 
-Exercise successful behavior and relevant rejected, duplicate, concurrent and interrupted behavior. Assert persistent state and external-effect count where those are the invariant. Use deterministic coordination where possible for concurrency tests; a sleep-based test that passes once is weak race evidence. Verify the established consumers still parse responses and handle errors. Separate simulated dependency behavior from integration evidence against the real service.
+Cover final changed behavior and plausible failure mechanisms, including rejection, duplication, concurrency and interruption where affected. Reuse task-local checks only when coverage and relevant code, configuration, data and environment remain applicable and required gates allow their freshness; a skill handoff is not a rerun trigger. Assert persistent state and external-effect count where those are the invariant. Use deterministic coordination where possible for concurrency tests; a sleep-based test that passes once is weak race evidence. Verify affected established consumers still parse responses and handle errors. Separate simulated dependency behavior from integration evidence against the real service.
 
 Report the changed contract, actual checks, and any unsupported failure window or unverified integration. Installing this guidance does not authorize production calls, real payments or sending real notifications; use safe fixtures and existing approved test environments.

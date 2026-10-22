@@ -11,7 +11,7 @@ Judge a concrete change against its intended behavior and surrounding contracts.
 
 Identify the repository, requested comparison, base and head revisions, and any selected paths. For branch changes, distinguish the branch's changes since its merge base from a direct comparison of two tips; choose the comparison matching the request. For an uncommitted patch, account separately for staged, unstaged, and relevant untracked files. Do not silently treat the current checkout as the requested PR head or switch a shared checkout.
 
-Read the change's purpose, accepted requirements, applicable repository instructions, and reported checks. Confirm the actual diff and changed-file list, including deletions, renames, configuration, dependency and generated artifacts. A description or green status is a claim to inspect, not proof. Where only a partial patch is available, name the unavailable context rather than inventing it.
+Reuse trustworthy purpose, requirements, repository instructions, reported checks, and source context already tied to the reviewed revision; re-open what is missing, changed, or needed to decide a finding rather than rebuilding the entire context. Confirm the actual diff and changed-file list, including deletions, renames, configuration, dependency and generated artifacts. Independently verify decisive assertions against the relevant source, contracts, or observed checks: prior findings, descriptions, and green statuses are leads, not conclusions to inherit uncritically. Where only a partial patch is available, name the unavailable context rather than inventing it.
 
 Record a stable revision identity or patch snapshot. Read source, tests, callers, and line numbers from that same snapshot. If another actor changes the head, distinguish old evidence from the new state; never combine old source with new line numbers and call it one review.
 
@@ -55,7 +55,7 @@ A single requested review ends after the scoped pass. For an explicitly requeste
 Lead the result with actionable findings, ordered by consequence. Each finding should include:
 
 - A concise problem statement and impact/priority using the project's convention when available.
-- The reviewed revision, file and smallest useful line range (or symbol when lines are unavailable).
+- The file and smallest useful line range (or symbol when lines are unavailable). State the common reviewed revision or patch identity once for the report; repeat it for a finding only if its snapshot differs.
 - The triggering condition, violated contract, consequence, and supporting trace or observed check.
 - Confidence and any material assumption; a focused correction direction or regression scenario when useful.
 

@@ -2,6 +2,19 @@
 
 A developing suite of practical guidance for the full software engineering lifecycle. **Initial implementation candidate:** the skill files are being reviewed; structural checks are not proof of host activation, engineering correctness, or measured token savings.
 
+## Purpose: improve the work, not collect concepts
+
+The primary goal is to reduce avoidable agent effort, rework and user supervision
+while preserving engineering quality. Each utility should change a concrete
+working method: resolve a material uncertainty, prevent a costly failure, reuse
+applicable evidence, or verify the right claim. Topic coverage alone is not proof
+of usefulness, and extra instructions themselves have a cost.
+
+See [workflow value](docs/workflow-value.md) for request-level interventions,
+activation/skip conditions and evidence limits. These are reasoned mechanisms,
+not measured token-savings claims. Ordinary Codex performance has not been
+benchmarked against this candidate.
+
 ## Scope
 
 The scope is the whole software engineering lifecycle. The [independent lifecycle review](docs/lifecycle-coverage.md) is the coverage reference; the original numbered outline below is historical and non-exhaustive.

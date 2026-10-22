@@ -9,7 +9,7 @@ Make the design implementable under the actual constraints. Consume the existing
 
 ## Establish what must hold
 
-Trace one representative operation from input through state changes to output. In an existing repository, inspect its entrypoints, dependencies, storage, deployments and relevant tests before proposing new boundaries. Distinguish intended design from observed behavior. Identify callers and independently deployed consumers, including jobs and administration tools.
+Reuse the current task’s established operation trace and repository facts where still applicable. Before proposing new boundaries, inspect missing, stale or affected entrypoints, dependencies, storage, deployments and tests; trace input through state changes to output where not already established. Distinguish intended design from observed behavior. Identify callers and independently deployed consumers, including jobs and administration tools.
 
 Convert ambiguous requirements into observable examples. Separate functional behavior, invariants, quality attributes and hard constraints:
 
@@ -24,7 +24,7 @@ Ask only about unresolved facts that change a consequential design choice. If wo
 
 Start with the smallest structure that supports the required ownership and failure isolation. Keep behavior and the data invariants it enforces together unless a concrete constraint justifies distribution. Name each boundary's owner, contract, state, trust level and failure behavior. Separate domain policy from transport or vendor adapters when this makes replacement or testing materially easier; avoid speculative layers for one uncomplicated caller.
 
-Compare plausible options against the strongest constraints, including the cost of operating and migrating them. For a consequential choice, preserve a compact decision near the existing design documentation: context, alternatives, decision, accepted disadvantages and evidence that would reopen it. A local correction may need only a code explanation.
+Keep an adequate existing design; compare plausible alternatives against the strongest constraints only for unresolved consequential choices, including operating and migration costs. For a consequential choice, preserve a compact decision near the existing design documentation: context, alternatives, decision, accepted disadvantages and evidence that would reopen it. A local correction may need only a code explanation.
 
 For significant uncertainty, build/buy/reuse economics or competing options, read [decision investigation](references/decision-investigation.md). For service, library, CLI, native or embedded constraints, read the relevant sections of [platform boundaries](references/platform-boundaries.md).
 
@@ -36,6 +36,6 @@ Check compatibility during transition, not just the final design: which old and 
 
 ## Make implementation possible
 
-Leave enough specificity for the next change: affected modules and contracts, invariant ownership, representative acceptance cases, essential technical dependencies and unresolved risks. Order implementation by genuine dependencies and uncertainty reduction, not by a compulsory layer-by-layer workflow. Prefer an end-to-end useful slice when it exercises the highest-risk integration early.
+Reuse the request, issue and task context for implementation: affected modules/contracts, invariant ownership, acceptance cases, dependencies and unresolved risks. Fill gaps; create a separate handoff only when durable coordination needs it. Order implementation by genuine dependencies and uncertainty reduction, not by a compulsory layer-by-layer workflow. Prefer an end-to-end useful slice when it exercises the highest-risk integration early.
 
-Use evidence suited to the disputed property: compile a consumer for API compatibility, exercise an interruption for recovery, measure a realistic workload for performance. Record what the design predicts separately from what a spike or test demonstrated. Avoid calling a design production-ready because its happy path runs.
+Reuse task-local design evidence only where it covers the disputed property and relevant code, configuration, data and environment remain applicable; honor required gate freshness. A skill handoff alone needs no rerun. For gaps or changed behavior, use evidence suited to the disputed property: compile a consumer for API compatibility, exercise an interruption for recovery, measure a realistic workload for performance. Record what the design predicts separately from what a spike or test demonstrated. Avoid calling a design production-ready because its happy path runs.
