@@ -7,6 +7,18 @@ description: Resolve material ambiguity, conflicting needs, acceptance gaps or c
 
 Establish what the software must do and what must remain true before committing to a consequential interpretation. Reuse the accepted goal, existing issues, specifications, contracts and decisions. Do not restart product positioning or require a specification phase before every small edit. Requirements, design, implementation and validation can develop together in useful increments. If the current request and established contracts already settle the changed behavior and acceptance, use them directly rather than repeating elicitation or producing another specification.
 
+## Connect to the project plan
+
+Consume the existing product problem, users, scope, outcomes and decisions before
+expanding engineering requirements. If a supplied plan is incomplete, distinguish
+missing product intent from missing technical detail: resolve only the former
+with the appropriate product owner; investigate the latter from available
+sources and engineering evidence. Do not treat a polished PDF or complete-looking
+template as proof that consequential decisions are settled. Carry the clarified
+contract back into the same authoritative plan instead of creating a competing
+specification. No product plan is required to repeat already adequate context
+for a bounded correction.
+
 ## Recover the need and its context
 
 Identify the affected system boundary, actual users and their environment, external systems, and people who operate, support, secure or retire it. Include indirect consumers: scheduled jobs, library callers, administrators, assistive-technology users and older client versions where relevant. Trace a representative journey through its inputs, decisions, state changes and outcomes, including failure and recovery.

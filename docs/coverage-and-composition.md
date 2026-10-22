@@ -6,11 +6,11 @@ Status: coverage design and initial implementation mapping, 22 October 2026. Thi
 
 Help agents make sound engineering decisions and avoid recurring mistakes while preserving user intent and project conventions. Use expert workflows as references for mechanisms, not as packages to copy wholesale. Every proposed instruction needs a concrete reason to exist: a consequential decision, a recurring failure, or a reliable way to verify an outcome.
 
-PM Essential Skills supplies domain-independent coordination. SWE Essential Skills supplies technical methods. Product discovery, business positioning and visual art direction remain outside this suite. SWE may clarify missing technical acceptance criteria, but should not restart product strategy when an adequate brief already exists.
+PM Essential Skills supplies domain-independent coordination. SWE Essential Skills now supplies product discovery, strategy/positioning, definition and planning as well as technical methods. This explicit scope expansion supersedes the earlier technical-only boundary. Visual art direction and marketing execution remain outside this suite. Reuse an adequate brief instead of restarting product strategy.
 
 ## Historical outline cross-reference
 
-This original 13–20 outline is not the scope boundary. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
+The original 13–20 outline is not the scope boundary. Areas 1–3 are now explicitly in scope: product-discovery owns problem validation, product-definition owns strategy/positioning and product definition, and project-planning connects imported or newly developed plans to engineering readiness. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
 
 | Original area | Engineering responsibility | Recurring mistakes to address | Proposed method and useful outcome |
 | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ These are design scenarios, not executed model tests:
 - **Small copy correction:** preserve the accepted wording/design; inspect the affected behavior only as necessary. No architecture redesign, full intake interview or obligatory worktree merely because the suite is installed.
 - **Production schema change:** preserve PM's accepted scope; SWE adds consumer/version compatibility, locking/data risk, migration and recovery evidence. Identify missing production authority rather than treating a successful dry run as permission to apply.
 - **Repeated bug:** reuse relevant known evidence; SWE investigates the actual cause and verifies a focused fix. PM's improvement guidance retains an applicable lesson without multiplying global rules or blaming the user by default.
-- **New application:** consume existing product decisions; clarify technical requirements and risk; build useful increments with applicable engineering checks. Do not reopen business positioning or force all specialist modules into the first task.
+- **New application:** import or develop the product plan; assess missing problem validation, direction and scope before engineering decisions; build useful increments with applicable checks. Reuse settled positioning and load specialist depth only where needed.
 - **Unavailable browser or infrastructure tool:** report the precise unverified behavior; perform useful supported checks. Do not invent screenshots, deploy success or unavailable capabilities.
 - **Library or CLI maintenance:** prioritize API/command compatibility, packaging, exit/stream behavior and consumer impact. Do not impose browser screenshots, web authentication or an online-service rollout on it.
 
