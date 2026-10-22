@@ -13,7 +13,7 @@ Reuse an applicable request/message trace from this task; fill missing, stale or
 
 Validate untrusted inputs at runtime with bounds on size, depth, formats and resource cost. Decide whether unknown fields are rejected or tolerated according to the existing protocol. Avoid passing user-controlled fields directly into persistence updates, queries, commands or remote destinations. Treat identifiers as references to authorize, not proof of access.
 
-Authenticate the actor, then authorize the action on the specific resource and tenant using trusted server-side context. Scope reads, writes, lists and nested lookups consistently. Test a valid identifier belonging to another principal; random nonexistent identifiers do not exercise cross-tenant authorization. Do not expose internal errors or sensitive existence information contrary to the API contract.
+Authenticate the actor, then authorize the action on the specific resource and tenant using trusted server-side context. Scope reads, writes, lists and nested lookups consistently. When authorization, resource lookup, tenant scoping or an affected caller changes, verify access using a valid identifier belonging to another principal; reuse applicable coverage and results under the verification rules below. Random nonexistent identifiers do not exercise cross-tenant authorization. Do not expose internal errors or sensitive existence information contrary to the API contract.
 
 For API evolution, errors, pagination and external integrations read [contracts and boundaries](references/contracts-and-boundaries.md).
 
