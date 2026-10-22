@@ -1,0 +1,38 @@
+---
+name: backend-engineering
+description: Implement or change service APIs, message handlers and backend workflows with explicit validation, authorization, error, concurrency and transaction semantics. Use for backend behavior and integration failures; database schema and backfill work may also need data-specific investigation.
+---
+
+# Backend engineering
+
+Build the operation around its invariant and failure semantics, not only its successful response. Preserve existing protocols and project architecture unless the requested change requires otherwise.
+
+## Trace the contract
+
+Inspect a representative request or message through authentication, parsing, authorization, domain logic, persistence, external effects and response/acknowledgment. Identify consumers, deployed versions and background callers. Record the intended behavior delta: valid inputs, rejected inputs, output shape, errors, persistent effects and compatibility obligations.
+
+Validate untrusted inputs at runtime with bounds on size, depth, formats and resource cost. Decide whether unknown fields are rejected or tolerated according to the existing protocol. Avoid passing user-controlled fields directly into persistence updates, queries, commands or remote destinations. Treat identifiers as references to authorize, not proof of access.
+
+Authenticate the actor, then authorize the action on the specific resource and tenant using trusted server-side context. Scope reads, writes, lists and nested lookups consistently. Test a valid identifier belonging to another principal; random nonexistent identifiers do not exercise cross-tenant authorization. Do not expose internal errors or sensitive existence information contrary to the API contract.
+
+For API evolution, errors, pagination and external integrations read [contracts and boundaries](references/contracts-and-boundaries.md).
+
+## Own the invariant under concurrency
+
+Name what must remain true, such as “inventory never becomes negative” or “one accepted operation produces at most one charge.” Identify the storage or coordinator that can enforce it. A process-local mutex is not a cross-instance guarantee. Prefer database constraints and atomic conditional writes for invariants they can represent; transactions require the correct isolation and conflict handling, not just a transaction wrapper.
+
+Draw the commit boundary. Keep remote effects out of long-held database transactions where possible. An external API call and a database commit do not become atomic because they are adjacent in code. Specify durable intent, outbox/reconciliation or compensation when effects cross boundaries. Explain what a client should do after an ambiguous timeout.
+
+For competing writes, retries, duplicate messages and partial failure, read [concurrency and delivery](references/concurrency-and-delivery.md) before implementing.
+
+## Bound resource use and make failure diagnosable
+
+Use timeouts and cancellation supported by the actual runtime and client. Allocate an end-to-end deadline across dependencies rather than allowing each hop to spend the full request budget. Bound fan-out, queue depth, payload size and expensive work; reject or shed load according to the service contract rather than amplifying an overload with retries.
+
+Capture enough structured context to distinguish validation, authorization, dependency, contention and internal failures. Use operation/correlation identifiers without logging credentials or full private payloads. Avoid high-cardinality identifiers as metric labels. Expose durable job status when acknowledgment precedes completion; do not label queued work as completed.
+
+## Verify the state, not only the status code
+
+Exercise successful behavior and relevant rejected, duplicate, concurrent and interrupted behavior. Assert persistent state and external-effect count where those are the invariant. Use deterministic coordination where possible for concurrency tests; a sleep-based test that passes once is weak race evidence. Verify the established consumers still parse responses and handle errors. Separate simulated dependency behavior from integration evidence against the real service.
+
+Report the changed contract, actual checks, and any unsupported failure window or unverified integration. Installing this guidance does not authorize production calls, real payments or sending real notifications; use safe fixtures and existing approved test environments.
