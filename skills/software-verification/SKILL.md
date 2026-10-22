@@ -33,6 +33,13 @@ When the method or oracle is uncertain, read only the relevant sections of [test
 
 Reuse applicable known checks, commands, fixtures, environment facts, and mandatory-gate requirements. Discover missing details or recheck those affected by code, configuration, data, runtime, or environment changes. Inspect unfamiliar scripts before executing them. Use version-appropriate official documentation when flags or semantics are uncertain. Distinguish read-only/dry-run checks from integration or infrastructure tests that mutate resources, transmit data, or incur cost; obtain required authorization before those actions.
 
+Before treating browser, device, API-probe or running-service results as evidence,
+confirm the target actually contains the intended code/build and configuration.
+A familiar port, URL or checkout revision can point to a stale artifact or another
+task's process. Use available process/build/source identity, not an obligatory
+rebuild or tool installation; recheck when that identity changes. If it cannot be
+established, state the limitation rather than attributing the result to this change.
+
 During iteration, run focused checks for changed behavior and its dependencies when existing evidence no longer covers them. Another skill activation is not a reason to repeat a check: reuse observed results whose relevant code, configuration, data, and environment still match, subject to the gate's freshness requirements. Before completion, ensure applicable required gates are satisfied and run any missing or invalidated ones. Broaden by blast radius: shared API changes merit consumer checks; a local copy change does not automatically require every infrastructure test. Never replace a required gate with a convenient subset without explicit accepted authority.
 
 When adding a regression, demonstrate where practical that it fails against the original defect and passes with the correction. This can use a safe temporary copy or targeted reversal; never overwrite unrelated changes. Check why it failed: missing setup, syntax errors, and unrelated failures do not establish sensitivity to the bug.

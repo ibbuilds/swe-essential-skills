@@ -27,6 +27,35 @@ representative profiling is needed for disputed runtime cost, not automatically
 for every ordinary data edit. Small scalar reads or unchanged access paths need
 no separate query-optimization exercise.
 
+## Own connection-scoped state across reuse
+
+When a pool, driver, pool mode or connection-scoped authorization/setting changes,
+establish the actual lifetime: request, transaction, logical client connection or
+physical database session. Inventory relevant tenant/role settings, search paths,
+temporary objects, prepared statements and session locks. Neither the next query
+using the same session nor a returned connection having clean state is automatic.
+
+Bind trusted request context and protected queries to the same supported scope.
+Identify which layer owns transaction completion, reset and invalidation. Reuse
+its supported cleanup rather than adding duplicate rollback/reset or discarding
+a connection after every ordinary error. Establish that request-scoped context
+cannot reach the next borrower; rollback alone need not clear all session
+resources. If cleanup fails or reuse safety remains unknown, use the driver's or
+pool's supported invalidation path. Do not reset an unowned active connection.
+When these semantics change, check sequential reuse across two principals,
+failure/cancellation cleanup and connection reassignment that could lose context.
+Reusing one physical database session can test leakage, but does not establish
+correctness when the pooler reassigns sessions. Unchanged stateless queries need
+no new pool exercise.
+
+For PostgreSQL, transaction-local settings require an actual transaction and end
+with that scope; session settings can survive commit; transaction-local values revert to prior
+session values. Savepoint rollback can also change effective settings. Verify the selected pooler/version and actual query
+scope. Protocol-level prepared statements and SQL PREPARE have different support;
+do not disable preparation globally or assume every pool preserves session state.
+Transaction binding and cleanup have capacity costs; do not introduce pooling or
+row-level security merely to apply this guidance.
+
 ## Investigate a slow query systematically
 
 1. Capture the actual query shape and sanitized parameter distribution, frequency, returned rows and observed latency boundary. Separate pool wait, network time, lock wait and execution time.

@@ -14,6 +14,24 @@ When setup fails, classify the first causal failure before changing files:
 
 Avoid executing unreviewed remote installer snippets. Installation can run package hooks and access credentials; use project-approved sources and scope. Capture the minimal reproducible setup in the existing project documentation when the task calls for setup work, not in a parallel agent-only handbook.
 
+## Own development and test subprocesses
+
+When starting a build, test command or development service, retain its handle and
+identify which process or process group the runtime actually owns. A shell PID
+need not identify all descendants. Drain captured stdout/stderr while the process
+runs; bound retained or displayed output without blocking the producer, and avoid
+buffering an unlimited log in memory. Preserve useful failure diagnostics and the
+real exit status. A command expected to finish needs a terminal result, not merely
+a successful launch; a long-running service needs appropriate readiness evidence
+and an owned handle, not a claim that it completed.
+
+Confirm readiness belongs to the intended build/configuration and serving path,
+not just any listener on a familiar port. On failure or when temporary processes
+are no longer needed, use the platform's supported cleanup for the owned process
+tree; respect intentionally persistent services. Do not kill unrelated listeners
+by name/port or introduce a new runner when existing project tooling manages this
+correctly. Ordinary commands that do not start such processes need no extra setup.
+
 ## Dependencies and generated code
 
 Before adding a dependency, identify the capability missing from the standard library or current dependencies. Check supported runtimes, maintenance, transitive weight, license constraints, security implications and how failure is surfaced. Do not replace mature project libraries solely for personal familiarity. Keep a new integration behind the actual owned boundary where that limits vendor coupling, rather than adding a generic framework for every import.

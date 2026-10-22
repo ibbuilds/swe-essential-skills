@@ -49,6 +49,62 @@
       "revision": "f706481af9b8fedb66de909f6243ad29601afa0c",
       "date": "2026-09-28T16:03:59Z",
       "url": "https://github.com/hashicorp/agent-skills/commit/f706481af9b8fedb66de909f6243ad29601afa0c"
+    },
+    {
+      "repository": "open-gsd/gsd-core",
+      "revision": "ba307f3d7c7ef02a9aa7f3986de9545eedff69b6",
+      "date": "2026-10-22T08:19:20Z",
+      "url": "https://github.com/open-gsd/gsd-core/commit/ba307f3d7c7ef02a9aa7f3986de9545eedff69b6",
+      "inspection_note": "active successor inspected"
+    },
+    {
+      "repository": "gsd-build/get-shit-done",
+      "revision": "bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815",
+      "date": "2026-05-31T08:34:35-05:00",
+      "url": "https://github.com/gsd-build/get-shit-done/commit/bdcaab2c752d9a33a1a1ca9acf3a3c81fb991815",
+      "inspection_note": "archived; redirects to open-gsd/gsd-core"
+    },
+    {
+      "repository": "bmad-code-org/BMAD-METHOD",
+      "revision": "61e01f82644c4bb533750cfa0d6d61ab61d2cc9b",
+      "date": "2026-10-18T10:46:50-07:00",
+      "url": "https://github.com/bmad-code-org/BMAD-METHOD/commit/61e01f82644c4bb533750cfa0d6d61ab61d2cc9b",
+      "inspection_note": "active workflow comparison"
+    },
+    {
+      "repository": "wshobson/agents",
+      "revision": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+      "date": "2026-10-17T17:39:17-04:00",
+      "url": "https://github.com/wshobson/agents/commit/0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+      "inspection_note": "active workflow comparison"
+    },
+    {
+      "repository": "humanlayer/humanlayer",
+      "revision": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+      "date": "2026-06-18T20:27:53-07:00",
+      "url": "https://github.com/humanlayer/humanlayer/commit/99abe673498cf8bdcd5f989aebe9406a27185b3b",
+      "inspection_note": "README describes code as deprecated"
+    },
+    {
+      "repository": "humanlayer/advanced-context-engineering-for-coding-agents",
+      "revision": "da16ab73624cd48ace04d0d0474b2957d8e7c741",
+      "date": "2026-10-15T20:21:29-04:00",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/commit/da16ab73624cd48ace04d0d0474b2957d8e7c741",
+      "inspection_note": "active material; no license established"
+    },
+    {
+      "repository": "openai/skills",
+      "revision": "49f948faa9258a0c61caceaf225e179651397431",
+      "date": "2026-06-24",
+      "url": "https://github.com/openai/skills/commit/49f948faa9258a0c61caceaf225e179651397431",
+      "inspection_note": "Selected coding/testing skill and helper source inspected; licenses checked per skill."
+    },
+    {
+      "repository": "anthropics/skills",
+      "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "date": "2026-10-09",
+      "url": "https://github.com/anthropics/skills/commit/dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "inspection_note": "Selected coding/testing skill and helper source inspected; licenses checked per skill."
     }
   ]
 }

@@ -151,6 +151,8 @@ Source inspection: **22 October 2026**. Ranking below reflects fit for this proj
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec), especially its [spec-driven schema](https://github.com/Fission-AI/OpenSpec/blob/main/schemas/spec-driven/schema.yaml): explicit behavior deltas and change impact. A checked task list is not runtime evidence.
 - [atlabsai/dev-skills](https://github.com/atlabsai/dev-skills): community lead for multi-perspective PR review and production risks. Implementation inspection is incomplete; not promoted to the primary shortlist on an unverified performance claim.
 
+See the [deeper expert/workflow comparison](docs/expert-comparison.md) for actual-source findings, selective adaptations, rejected overhead and source-maintenance corrections.
+
 ## Research conclusions so far
 
 1. Keep the engineering responsibilities complete, but activate only the guidance relevant to a task. A one-line correction and a production data migration do not need the same workflow.

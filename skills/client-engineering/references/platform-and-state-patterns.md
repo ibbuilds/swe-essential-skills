@@ -20,6 +20,15 @@ An optimistic rename A is followed by rename B. If A fails, restoring the snapsh
 - Treat trusted HTML insertion, third-party scripts, and embedded content as trust boundaries. Preserve sanitization, origin restrictions, and the project's security controls.
 - In React-like systems, effects synchronize external systems; avoid effects for pure derivations. Respect hook/lifecycle contracts, stable subscription cleanup, and dependency semantics. Framework-specific optimizations need evidence and version-compatible documentation.
 
+For a changed interactive journey, distinguish normal input evidence from bypasses.
+Direct handler calls, injected state, dispatched DOM events or forced clicks can
+help setup/diagnosis, but do not prove that a user can reach or operate the control.
+Use the supported normal input path when claiming pointer/keyboard usability;
+a focused unit check may still validly prove isolated logic. Do not bypass an
+overlay or disabled control merely to make an end-to-end check pass. Inspect the
+actual affected rendered behavior rather than treating a successful handler as
+proof of visibility, focus or hit targeting.
+
 ## Text input, composition, and locale (when affected)
 
 When changing text controls, keyboard shortcuts, live formatting, or localized input, preserve the platform's composition, caret, and selection behavior. Do not treat each key event as committed text or rewrite a composing value on every update. Enter used to confirm an IME candidate must not also invoke an application's submit/send shortcut. On the web, use composition-aware handling (including `isComposing` where supported), and verify the relevant browser/IME event ordering rather than assuming a synthetic key event proves real input behavior. The [W3C UI Events composition model](https://www.w3.org/TR/uievents/#events-composition-key-events) and [Input Events Level 2](https://www.w3.org/TR/input-events-2/) are working drafts; check actual target-platform support.
