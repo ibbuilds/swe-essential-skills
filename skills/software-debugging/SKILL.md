@@ -1,6 +1,6 @@
 ---
 name: software-debugging
-description: Diagnose reproducible, intermittent, or production-only software failures using reliable signals, distinguishing experiments, and causal tracing before choosing a fix. Use for unexplained incorrect behavior, crashes, flaky failures, and regressions.
+description: Diagnose reproducible, intermittent, or production-only software failures using reliable signals, distinguishing experiments, and causal tracing before choosing a fix. Use for unexplained incorrect behavior, crashes, flaky failures, regressions, or finding related instances of a confirmed defect.
 ---
 
 # Software debugging
@@ -25,7 +25,7 @@ When causality remains unresolved, state a specific hypothesis with a predicted 
 
 When evidence contradicts the hypothesis, update it. Do not stack speculative patches until the symptom disappears. If several patches fail, step back to the failure model and architecture boundary; a fixed attempt count is not a reason to declare a rewrite necessary.
 
-Use [investigation-patterns.md](references/investigation-patterns.md) when dealing with races, flaky tests, distributed outcomes, native/resource failures, or non-reproducible incidents.
+Use [investigation-patterns.md](references/investigation-patterns.md) when dealing with races, flaky tests, distributed outcomes, native/resource failures, non-reproducible incidents, or searches for variants of a confirmed defect.
 
 ## Fix the cause and verify the claim
 

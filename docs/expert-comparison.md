@@ -30,6 +30,9 @@ Process and input-path reasoning was checked against [Python subprocess behavior
 Concrete APIs remain runtime-specific. These references do not authorize running
 upstream helpers, probing production or changing host permissions.
 
+See the [targeted agent-weakness audit](agent-weakness-audit.md) for the later
+Reddit-to-source pass, two narrow additions and rejected overhead.
+
 ## Useful mechanisms already present
 
 - **Matt Pocock:** focused clarification, existing-context synthesis, dependency-aware

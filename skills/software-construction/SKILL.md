@@ -33,6 +33,14 @@ explicit bounded delegation and routine details need no new approval ceremony.
 
 ## Discover the implementation path
 
+When the execution environment or worktree changes, or target identity is
+uncertain, confirm the actual repository/worktree and applicable branch/revision
+against the requested target before reusing cached facts or editing. A clean
+working tree does not establish the intended revision. Preserve existing work
+and reconcile mismatches; do not silently reset, switch targets or pull the
+default branch. Reuse fresh identity evidence rather than checking before every
+command.
+
 Reuse still-applicable facts from the current task, accessible prior decisions and handoff evidence about repository instructions, working-tree changes, manifests, toolchain pins, lockfiles, CI and affected code/tests; inspect missing, stale or affected details. Do not assume inaccessible history is known. Relevant changes, not a new commit alone, invalidate those facts. Inspect task-relevant scripts not already reviewed in their current form before executing them, especially hooks, generators and shared-service commands. Determine the canonical package manager and project commands from repository evidence; use supported-version documentation for unfamiliar commands.
 
 Follow applicable trusted repository instructions under the host's instruction

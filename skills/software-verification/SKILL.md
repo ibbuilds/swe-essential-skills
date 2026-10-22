@@ -27,7 +27,7 @@ Use the narrowest layer that can expose the failure without mocking away its cau
 - **End-to-end:** a few important journeys across real boundaries, including material failure/recovery paths. Avoid duplicating every unit permutation in a slow, fragile harness.
 - **Manual/exploratory/device:** behavior requiring human judgment, physical interaction, assistive technology, visual fidelity, or unavailable automation. Record setup/actions/outcomes sufficiently to repeat; manual evidence is neither worthless nor a substitute for unrelated automated gates.
 
-When the method or oracle is uncertain, read only the relevant sections of [test-design-cases.md](references/test-design-cases.md) for illustrative invariants, oracle design, concurrency, platform, or compatibility cases. Choose layers by the defect mechanism; no universal pyramid or fixed coverage percentage is an acceptance rule.
+When the method or oracle is uncertain, read only the relevant sections of [test-design-cases.md](references/test-design-cases.md) for illustrative invariants, oracle design, repair comparisons, concurrency, platform, or compatibility cases. Choose layers by the defect mechanism; no universal pyramid or fixed coverage percentage is an acceptance rule.
 
 ## Run checks that mean what they claim
 
@@ -43,6 +43,8 @@ established, state the limitation rather than attributing the result to this cha
 During iteration, run focused checks for changed behavior and its dependencies when existing evidence no longer covers them. Another skill activation is not a reason to repeat a check: reuse observed results whose relevant code, configuration, data, and environment still match, subject to the gate's freshness requirements. Before completion, ensure applicable required gates are satisfied and run any missing or invalidated ones. Broaden by blast radius: shared API changes merit consumer checks; a local copy change does not automatically require every infrastructure test. Never replace a required gate with a convenient subset without explicit accepted authority.
 
 When adding a regression, demonstrate where practical that it fails against the original defect and passes with the correction. This can use a safe temporary copy or targeted reversal; never overwrite unrelated changes. Check why it failed: missing setup, syntax errors, and unrelated failures do not establish sensitivity to the bug.
+
+For baseline-versus-patch repair evidence, preserve the triggering input and behavior-based property being checked; inspect harness changes separately from the repair.
 
 Keep routine successful command output compact; retain the exit status and enough
 identity/context to know what ran. For failure, inspect the relevant diagnostic

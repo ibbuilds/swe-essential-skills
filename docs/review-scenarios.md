@@ -245,3 +245,53 @@ These are static review scenarios, not executed agent benchmarks.
   proceed without repeating discovery or approval.
 
 These are static scenarios, not evidence of infallible ambiguity detection.
+
+## Calibrated defect-variant searches
+
+- A confirmed unsafe lookup has sibling implementations: verify the initial query
+  detects the known instance, broaden relevant patterns, and assess each match's
+  causal path rather than reporting every text match as the same defect.
+- The original instance is already repaired: calibrate against an available
+  original snapshot or saved example, not by reverting the user's current work.
+  If neither is available, retain the search limitation instead of claiming absence.
+- A query finds no variants, but its path/file-type filters or ignore rules omit
+  workers and generated adapters: qualify that result. A positive calibration
+  does not establish coverage of dynamic dispatch or external consumers either.
+- A similar call is protected by an authoritative earlier guard: reject that
+  candidate with the relevant evidence. A local repair without a variant-search
+  need does not acquire a repository-wide audit; findings do not grant more repair
+  authority.
+
+## Comparable repair evidence
+
+- A repair test passes only because it recognizes the patched checkout: reject
+  that as a behavioral oracle. Compare the same triggering input and required
+  property, and inspect harness/fixture/assertion changes separately.
+- A renamed API requires an adapter on one revision: allow it when equivalent
+  input reaches the relevant implementation and the adapter preserves the tested
+  property. Reject an adapter that supplies the very control missing in the bug.
+- An accepted public-contract change intentionally changes output: verify the new
+  expectations and supported compatibility cases; do not demand identical output
+  or forbid legitimate test changes merely to make a baseline comparison possible.
+- Baseline dependencies are unavailable or its execution is unauthorized: state
+  the comparison gap, retain useful permitted evidence, and do not call an import
+  failure reproduction. Existing trustworthy repair evidence needs no ceremonial
+  extra runner, builds or repeated tests.
+
+These are static instruction-review scenarios, not executed model-behavior tests.
+
+### Execution-target binding before construction
+
+- A resumed environment has the expected path and a clean worktree, but its HEAD
+  predates the task's intended baseline. Establish the actual target and reconcile
+  the mismatch before dependent edits; clean status is not revision evidence.
+- A workspace has npm and pnpm submodules. Resolve the intended module and its
+  own commands rather than applying root-directory assumptions to either one.
+- The task deliberately targets a historical detached revision. Keep that target;
+  do not pull main or treat detachment as a fault.
+- The user is starting a new repository with no commit. Confirm the intended
+  directory; an absent HEAD is not itself a blocker or reason for extra setup.
+- The same verified worktree has ordinary task edits and authorized new commits.
+  Reuse fresh identity evidence; do not recheck every command or restart discovery.
+- A target mismatch coexists with unrelated dirty/untracked work. Preserve that
+  work while reconciling; do not reset it or copy stale files over the new target.
