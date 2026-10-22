@@ -125,3 +125,10 @@ Observed licensing is not uniform: Matt Pocock, Addy Osmani, Superpowers, Spec K
 ## Implementation status
 
 This candidate translates the researched mechanisms into original engineering procedures. Review focuses on practical technical depth, meaningful failure cases, and independently portable resources. Live host activation and real-task effectiveness remain unverified; neither a complete catalogue nor passing structure checks establishes universal completeness. No versioned release has been published.
+
+## License
+
+Original project content is available under the [MIT License](LICENSE). Each skill
+folder includes its own copy so individually distributed skills retain the notice.
+Linked third-party projects retain their own licenses; this license does not
+relicense their content.
