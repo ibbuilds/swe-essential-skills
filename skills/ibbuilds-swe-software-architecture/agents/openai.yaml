@@ -1,0 +1,3 @@
+interface:
+  display_name: "ibbuilds SWE Essentials / Software Architecture"
+  short_description: "Choose system boundaries and technical tradeoffs"

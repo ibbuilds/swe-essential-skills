@@ -10,12 +10,17 @@ class PortabilityTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        self.folder = self.root / "skills" / "example"
+        self.folder = self.root / "skills" / "ibbuilds-swe-example"
         self.folder.mkdir(parents=True)
+        (self.folder / "agents").mkdir()
+        (self.folder / "agents" / "openai.yaml").write_text(
+            'interface:\n  display_name: "ibbuilds SWE Essentials / Example"\n'
+            '  short_description: "Apply a useful example workflow"\n', encoding="utf-8"
+        )
 
     def skill(self, body="Useful instructions."):
         (self.folder / "SKILL.md").write_text(
-            "---\nname: example\ndescription: A useful workflow.\n---\n" + body,
+            "---\nname: ibbuilds-swe-example\ndescription: A useful workflow.\n---\n" + body,
             encoding="utf-8",
         )
 
@@ -36,6 +41,36 @@ class PortabilityTests(unittest.TestCase):
     def test_invalid_metadata_rejected(self):
         (self.folder / "SKILL.md").write_text("---\n- not-a-mapping\n---\nText.", encoding="utf-8")
         self.assertTrue(validate(self.root))
+
+    def test_unprefixed_identity_rejected(self):
+        self.skill()
+        old_folder = self.folder.with_name("example")
+        self.folder.rename(old_folder)
+        entry = old_folder / "SKILL.md"
+        entry.write_text(entry.read_text().replace("ibbuilds-swe-example", "example"))
+        self.assertTrue(any("publisher/suite prefix" in error for error in validate(self.root)))
+
+    def test_name_folder_mismatch_rejected(self):
+        self.skill()
+        self.folder.rename(self.folder.with_name("ibbuilds-swe-other"))
+        self.assertTrue(any("match folder" in error for error in validate(self.root)))
+
+    def test_unbranded_presentation_rejected(self):
+        self.skill()
+        ui = self.folder / "agents" / "openai.yaml"
+        ui.write_text(ui.read_text().replace("ibbuilds SWE Essentials / Example", "Example"))
+        self.assertTrue(any("display name" in error for error in validate(self.root)))
+
+    def test_missing_presentation_rejected(self):
+        self.skill()
+        (self.folder / "agents" / "openai.yaml").unlink()
+        self.assertTrue(validate(self.root))
+
+    def test_unusable_short_description_rejected(self):
+        self.skill()
+        ui = self.folder / "agents" / "openai.yaml"
+        ui.write_text(ui.read_text().replace("Apply a useful example workflow", ""))
+        self.assertTrue(any("short description" in error for error in validate(self.root)))
 
     def test_empty_pack_rejected(self):
         self.assertTrue(validate(self.root))

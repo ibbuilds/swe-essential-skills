@@ -10,7 +10,7 @@ PM Essential Skills supplies domain-independent coordination. SWE Essential Skil
 
 ## Historical outline cross-reference
 
-The original 13–20 outline is not the scope boundary. Areas 1–3 are now explicitly in scope: product-discovery owns problem validation, product-definition owns strategy/positioning and product definition, and project-planning connects imported or newly developed plans to engineering readiness. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
+The original 13–20 outline is not the scope boundary. Areas 1–3 are now explicitly in scope: ibbuilds-swe-product-discovery owns problem validation, ibbuilds-swe-product-definition owns strategy/positioning and product definition, and ibbuilds-swe-project-planning connects imported or newly developed plans to engineering readiness. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
 
 | Original area | Engineering responsibility | Recurring mistakes to address | Proposed method and useful outcome |
 | --- | --- | --- | --- |
@@ -91,14 +91,14 @@ need not load together. This is not a final ceiling on coverage.
 
 | Area | Implemented instruction owner(s) |
 | --- | --- |
-| 13 | software-architecture |
-| 14 | software-construction |
-| 15 | backend-engineering; data-engineering |
-| 16 | client-engineering |
-| 17 | software-debugging; software-verification; software-review; software-performance |
-| 18 | software-security |
-| 19 | software-delivery |
-| 20 | software-operations; software-evolution |
+| 13 | ibbuilds-swe-software-architecture |
+| 14 | ibbuilds-swe-software-construction |
+| 15 | ibbuilds-swe-backend-engineering; ibbuilds-swe-data-engineering |
+| 16 | ibbuilds-swe-client-engineering |
+| 17 | ibbuilds-swe-software-debugging; ibbuilds-swe-software-verification; ibbuilds-swe-software-review; ibbuilds-swe-software-performance |
+| 18 | ibbuilds-swe-software-security |
+| 19 | ibbuilds-swe-software-delivery |
+| 20 | ibbuilds-swe-software-operations; ibbuilds-swe-software-evolution |
 
 Security, performance, compatibility and recovery also appear where they affect
 a domain's actual decisions. This is deliberate local completeness for separately
