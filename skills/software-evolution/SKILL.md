@@ -10,6 +10,7 @@ Preserve behavior and invariants unless an intentional change is accepted. Compa
 ## Choose the change
 
 - **Refactor:** internal structure changes while observable behavior remains stable; use the method below.
+- **Explicitly requested project/scoped cleanup:** apply [cleanup safeguards](references/project-cleanup.md) alongside that method; installing this skill or ordinary refactoring does not request a project-wide cleanup.
 - **Dependency/platform upgrade:** read [upgrades-and-compatibility.md](references/upgrades-and-compatibility.md).
 - **API/data/protocol migration or deprecation:** read [migration-and-retirement.md](references/migration-and-retirement.md).
 - **Retirement:** use that reference's shutdown path; source deletion does not retire a running capability.

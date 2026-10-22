@@ -22,6 +22,8 @@ Research findings are not measured savings or proof of flawless behavior.
 Installation makes skills available; it does not guarantee automatic activation,
 run all phases, or bypass host permissions and usage limits.
 
+For a few reusable actions, see [cleanup, review, debug, verify and refactor](docs/reusable-actions.md). These use native skill invocation, not another command language.
+
 ## Purpose: improve the work, not collect concepts
 
 The primary goal is to reduce avoidable agent effort, rework and user supervision

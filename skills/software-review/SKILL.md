@@ -7,6 +7,10 @@ description: Review a code change, diff, pull request, or proposed patch without
 
 Judge a concrete change against its intended behavior and surrounding contracts. Review is not permission to repair files, publish comments, approve a pull request, or merge. Return findings privately unless the user separately authorizes another action. Do not mutate code to demonstrate a defect during a read-only review.
 
+Reuse an applicable native review rather than automatically launching a second
+full pass. Investigate unresolved coverage or findings, while verifying decisive
+claims as described below; a user-requested independent review is a different task.
+
 ## Establish what is being reviewed
 
 Identify the repository, requested comparison, base and head revisions, and any selected paths. For branch changes, distinguish the branch's changes since its merge base from a direct comparison of two tips; choose the comparison matching the request. For an uncommitted patch, account separately for staged, unstaged, and relevant untracked files. Do not silently treat the current checkout as the requested PR head or switch a shared checkout.
