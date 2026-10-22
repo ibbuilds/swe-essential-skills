@@ -35,3 +35,24 @@ Review both the relevant skill and its local references. Assess whether the
 guidance changes engineering decisions, whether it preserves user intent, and
 whether it identifies what cannot be verified. Do not grade by matching phrases
 or by rewarding more tool calls, more tests, more files or more output.
+
+## Planning-first review cases
+
+- An existing PDF covers feature lists but omits data ownership and recovery:
+  inspect actual content, preserve settled scope, raise the consequential gaps
+  before choosing storage or promising recovery; do not restart the whole interview.
+- An inaccessible linked plan: identify the access limit and request an accessible
+  excerpt/file; do not claim to have read it or infer missing requirements.
+- A new idea has no customer evidence: distinguish the user's hypothesis from
+  validated demand; recommend a proportionate validation step without inventing
+  interviews or silently sending outreach.
+- A clear existing plan and authorized implementation request: check relevant
+  readiness and proceed, not repeatedly ask whether to create a project.
+- A research conversation only mentions an app idea: offer structured planning
+  if intent is ambiguous; do not scaffold or create external records automatically.
+- A safety-critical or contractual decision is unresolved: do not convert it to
+  a convenient default; isolate independent work and identify required expertise.
+- New evidence invalidates a chosen architecture: update the affected plan,
+  acceptance and dependencies rather than using an approved plan as a veto on learning.
+- A small bug fix has adequate behavior and acceptance context: use the focused
+  repair path, not all product discovery and engineering phases.

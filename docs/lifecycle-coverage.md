@@ -1,7 +1,7 @@
 # Full-lifecycle coverage review
 
 Reviewed 22 October 2026. The product scope is **the software engineering
-lifecycle**, not the original numbered checklist and not the number of skill
+lifecycle plus product discovery, strategy and definition/planning**, not the original numbered checklist and not the number of skill
 folders. A named topic is not substantive coverage: the instructions must help
 an engineer make decisions, perform work, handle failure and establish evidence.
 
@@ -20,6 +20,9 @@ April 2026. No claim depends on a search engine's crawl date.
 
 | Responsibility | Instruction owner(s) | What useful coverage must enable |
 | --- | --- | --- |
+| Project planning and readiness | project-planning | Import or create a plan, assess consequential gaps, minimize repeated elicitation and establish safe next commitments |
+| Product discovery and problem validation | product-discovery | Identify users/problems/alternatives, separate evidence from assumptions and choose proportionate validation |
+| Product strategy and definition | product-definition | Establish positioning, outcomes, scope/non-goals and a coherent product-to-engineering handoff |
 | Requirements discovery, analysis and validation | software-requirements | Identify sources and conflicts, distinguish needs from assumptions, agree observable behavior and constraints, maintain change impact and acceptance traceability |
 | Architecture and detailed design | software-architecture; relevant implementation owner | Compare feasible alternatives, define ownership/contracts and failure behavior, justify consequential decisions and design implementable increments |
 | Development environment and construction | software-construction | Reproduce setup, fit actual conventions, handle resource/configuration semantics and preserve public behavior without collateral changes |
@@ -72,9 +75,9 @@ work and evidence, not by matching a taxonomy or inflating the catalogue.
 
 - PM Essentials handles cross-domain coordination. It does not substitute for
   technical requirements, engineering assurance or infrastructure work.
-- Product positioning and visual art direction remain separate disciplines;
-  their accepted outcomes are inputs, while technical feasibility, usability
-  behavior and accessibility remain engineering responsibilities.
+- Product discovery, strategy/positioning and definition/planning are now in scope.
+  Visual art direction and marketing execution remain separate; engineering
+  still owns technical feasibility, working interactions and accessibility.
 - Web, native/mobile, desktop/CLI, libraries, pipelines, embedded and scientific
   or model-backed software have different platform and domain evidence needs.
   The lifecycle remains in scope; universal knowledge of every framework,
@@ -85,3 +88,12 @@ work and evidence, not by matching a taxonomy or inflating the catalogue.
 - This review evaluates document substance. It is not an executed agent
   benchmark, a hosting deployment, a compliance certification or proof that
   future projects cannot reveal additional gaps.
+
+## Planning-flow scope correction
+
+The earlier fifteen-skill engineering candidate did not implement the newly
+requested product-to-engineering planning flow. The new planning, discovery and
+definition owners address that omission; existing requirements, architecture
+and construction entrypoints now preserve planning readiness before dependent
+implementation. This is a document-level correction, not measured evidence that
+an agent will always activate the correct skills.

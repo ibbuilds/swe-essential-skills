@@ -1,6 +1,6 @@
 # SWE Essential Skills
 
-A developing suite of practical guidance for the full software engineering lifecycle. **Initial implementation candidate:** the skill files are being reviewed; structural checks are not proof of host activation, engineering correctness, or measured token savings.
+A developing suite of practical guidance from product discovery and planning through the full software engineering lifecycle. **Initial implementation candidate:** structural checks are not proof of host activation, engineering correctness, or measured token savings.
 
 ## Purpose: improve the work, not collect concepts
 
@@ -17,9 +17,13 @@ benchmarked against this candidate.
 
 ## Scope
 
-The scope is the whole software engineering lifecycle. The [independent lifecycle review](docs/lifecycle-coverage.md) is the coverage reference; the original numbered outline below is historical and non-exhaustive.
+The scope starts with product discovery/problem validation, product strategy/positioning, and product definition/planning, then covers the whole software engineering lifecycle. The [independent lifecycle review](docs/lifecycle-coverage.md) is the coverage reference; the original numbered outline below is historical and non-exhaustive.
 
 The engineering counterpart to [PM Essential Skills](https://github.com/ibbuilds/pm-essential-skills), not a replacement for it:
+
+1. Product discovery and problem validation
+2. Product strategy and positioning
+3. Product definition and planning
 
 13. Technical discovery and architecture
 14. Repository and development foundations
@@ -30,7 +34,28 @@ The engineering counterpart to [PM Essential Skills](https://github.com/ibbuilds
 19. Build, release and deployment
 20. Operations, maintenance and support
 
-These were initial planning labels, not a complete taxonomy, scope limit, fixed number of skills or mandatory stages for every edit. Technical requirements, compatibility, migration and eventual retirement must remain represented. Visual art direction, marketing and general agent/project coordination belong to their respective skill sets.
+These were initial planning labels, not a complete taxonomy, scope limit, fixed number of skills or mandatory stages for every edit. Technical requirements, compatibility, migration and eventual retirement must remain represented. Visual art direction, marketing execution/SEO and general agent/project coordination belong to their respective skill sets. Product strategy and positioning decisions are in scope; a marketing campaign is not.
+
+## Planning-first project flow
+
+For a new project or consequential capability, start from the user's idea **or**
+existing PDF, Markdown, link, issue, repository or authorized connected source.
+Read the relevant source before interviewing the user. Identify what is settled,
+what is unsupported and what could materially change the implementation.
+
+1. Understand the problem, intended users and evidence; distinguish validation from assumptions.
+2. Establish product direction, positioning, scope, outcomes and non-goals.
+3. Resolve engineering requirements and consequential architecture/stack choices.
+4. Build a usable plan with dependencies, acceptance and relevant security, data,
+   hosting, delivery, operation and recovery considerations before dependent implementation.
+5. Implement and verify a coherent increment, then release/operate only within the
+   applicable authority. Feed new evidence back into the plan rather than blindly following it.
+
+This is dependency-aware planning, not a frozen waterfall: accepted plans are
+reused, material gaps receive targeted questions, and later details can remain
+explicitly deferred when they cannot invalidate the next commitment. A small
+well-defined correction need not become a project. Skill files guide behavior
+when loaded; they do not automatically intercept every new chat or enforce gates.
 
 ## Skill catalogue
 
@@ -39,6 +64,9 @@ contains its own required references and can be used independently of PM Essenti
 
 | Skill | Engineering work it helps perform |
 | --- | --- |
+| [Project planning](skills/project-planning/SKILL.md) | Import or create a usable plan, assess material gaps and guide readiness through the lifecycle |
+| [Product discovery](skills/product-discovery/SKILL.md) | Understand users/problems, alternatives and evidence before committing to a solution |
+| [Product definition](skills/product-definition/SKILL.md) | Establish strategy, positioning, scope, outcomes and an actionable product brief |
 | [Software requirements](skills/software-requirements/SKILL.md) | Requirements discovery, validation, conflicts, baselines and change traceability |
 | [Software architecture](skills/software-architecture/SKILL.md) | Technical requirements, quality attributes, boundaries, alternatives and failure models |
 | [Software construction](skills/software-construction/SKILL.md) | Repository foundations, reproducible setup, coherent implementation and consumer contracts |
@@ -84,6 +112,8 @@ Install the development validation dependency with
 These check metadata and ordinary inline local file references, plus the helper's
 own behavior. They do not evaluate agent decisions or every Markdown construct.
 Real-use evaluation remains deferred; scenarios are not benchmark results.
+
+See [planning research and adaptations](docs/planning-research.md) for the source-based mechanisms behind the planning-first extension.
 
 ## Expert-source shortlist
 

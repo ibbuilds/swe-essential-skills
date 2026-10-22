@@ -7,6 +7,19 @@ description: Implement cohesive code changes that fit an existing repository, or
 
 Produce a change that fits the actual codebase and can be built and exercised again. Use existing technical decisions; do not replace the architecture or scaffold a preferred stack merely because a task is underspecified.
 
+## Confirm readiness before committing to an implementation
+
+For a new product or consequential capability, first recover the usable project
+plan: intended problem/users, chosen scope, behavior and acceptance, constraints,
+consequential technical decisions and unresolved risks. An existing document,
+issue or prior conversation can supply this; do not require a new template or
+repeat settled questions. If the plan is missing or a gap could change what is
+built, resolve that gap before dependent implementation. Use project-planning
+when available, or establish the same essentials directly. A bounded correction
+with clear behavior and adequate existing decisions is already sufficiently
+planned. Authorized feasibility experiments and urgent containment can proceed
+within their limited scope; neither is permission to build an unagreed product.
+
 ## Discover the implementation path
 
 Reuse applicable facts already established in this task about repository instructions, working-tree changes, manifests, toolchain pins, lockfiles, CI and affected code/tests; inspect missing, stale or affected details. Relevant changes, not a new commit alone, invalidate those facts. Inspect task-relevant scripts not already reviewed in their current form before executing them, especially hooks, generators and shared-service commands. Determine the canonical package manager and project commands from repository evidence; use supported-version documentation for unfamiliar commands.

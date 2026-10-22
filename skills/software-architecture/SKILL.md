@@ -7,6 +7,16 @@ description: Translate accepted goals into technical requirements, system bounda
 
 Make the design implementable under the actual constraints. Consume the existing brief and decisions; do not prescribe a stack, distributed architecture, or a new specification ceremony.
 
+## Recover the product direction
+
+For a new project or consequential change, establish the intended users/problem,
+accepted outcomes, scope and constraints from the existing plan before choosing
+a stack or system structure. If these are unsettled, resolve the material product
+decision through focused planning rather than making architecture decide product
+strategy implicitly. Reuse adequate decisions; do not reopen positioning for a
+local technical change. Record a proposed technical option as a proposal until
+its consequential tradeoffs are accepted by the authorized owner.
+
 ## Establish what must hold
 
 Reuse the current task’s established operation trace and repository facts where still applicable. Before proposing new boundaries, inspect missing, stale or affected entrypoints, dependencies, storage, deployments and tests; trace input through state changes to output where not already established. Distinguish intended design from observed behavior. Identify callers and independently deployed consumers, including jobs and administration tools.
