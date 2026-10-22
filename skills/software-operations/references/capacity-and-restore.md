@@ -16,6 +16,17 @@ Inspect backup coverage, freshness, access controls and retention. Test restorat
 
 Verify the recovery point; approved availability of keys and compatible readers; critical invariants and sampled data/count reconciliation; representative application reads/writes; and restoration duration including dependencies and validation. Determine whether reconnecting producers/consumers would replay unsafe effects or overwrite repairs.
 
+Before exposure, reconcile applicable post-snapshot deletions, expiry and revoked
+access/session/credential state against the current authoritative policy or
+identity source, not merely the restored historical records. Use supported
+reconciliation while isolated, including affected derived copies or replay.
+If current restrictions cannot be established, keep the affected data/access
+restricted and obtain the responsible owner's decision; continue unaffected
+recovery work. For a relevant rehearsal, verify that a deleted synthetic record
+and revoked principal do not become available again, while legitimate access
+still works. Do not infer this from ordinary read/write success or prescribe
+universal deletion, retention, ledger or credential-rotation rules.
+
 Never overwrite the live system as a convenience test. For actual recovery cutover, establish traffic/write isolation, final recovery point, external-effect reconciliation, target identity and recovery options. Retain the old source until the recovery decision and retention policy permit removal.
 
 If restore cannot be attempted, name the unproven link: key access, backup format, cross-store consistency or isolated capacity. Keep backup existence, tested restoration and production recovery readiness as separate claims.

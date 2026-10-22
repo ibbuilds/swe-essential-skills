@@ -97,3 +97,26 @@ definition owners address that omission; existing requirements, architecture
 and construction entrypoints now preserve planning readiness before dependent
 implementation. This is a document-level correction, not measured evidence that
 an agent will always activate the correct skills.
+
+## Execution-path audit beyond the catalogue
+
+A subsequent full-entrypoint/reference review identified a concrete recovery
+handoff gap: requirements already mentioned resurrection of expired data, but
+standalone restoration paths did not reconcile post-snapshot deletion and access
+revocation decisions before exposure. Data recovery and operations now carry that
+procedure locally, preserving current authoritative restrictions and identifying
+unresolved owner decisions rather than treating historical records as consent.
+This closes an implementation-path gap, not a new lifecycle category. No restore
+or model evaluation was performed to establish these proposed cases.
+
+Model-mediated software already had ordinary authorization and safe-sink controls;
+the missing step was connecting them through model/tool dispatch. The conditional
+security reference now covers trusted caller context, actual effect authorization,
+approval scope, untrusted retrieved/tool-return content and effect-level evidence.
+The procedure was checked against current primary guidance:
+[OWASP prompt-injection prevention](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html),
+[OWASP MCP security](https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html),
+[OWASP agent authorization](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html#tool-authorization-middleware)
+and the [MCP tools specification, 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/server/tools#security-considerations).
+It neither prescribes a new architecture nor claims that instructions enforce
+permissions or prove model resistance.
