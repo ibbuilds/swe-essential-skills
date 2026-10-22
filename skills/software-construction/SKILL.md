@@ -21,6 +21,16 @@ is already sufficiently planned, even for a substantial feature or refactor.
 Installing this skill does not restart discovery or require a whole-project audit. Authorized feasibility experiments and urgent containment can proceed
 within their limited scope; neither is permission to build an unagreed product.
 
+For consequential existing-project changes, distinguish the requested outcome
+from your proposed implementation. If plausible interpretations change behavior,
+data, consumers or compatibility differently, or reveal an unaccepted conflict
+with an established goal, state the concrete consequence and ask the unresolved
+choice before dependent edits. Carry settled answers forward; a partial answer
+does not settle the remaining choices. Apply this again if new evidence exposes
+ambiguity during implementation. Pause only affected work; code already written
+or passing tests does not establish the user's intent. Clear accepted changes,
+explicit bounded delegation and routine details need no new approval ceremony.
+
 ## Discover the implementation path
 
 Reuse still-applicable facts from the current task, accessible prior decisions and handoff evidence about repository instructions, working-tree changes, manifests, toolchain pins, lockfiles, CI and affected code/tests; inspect missing, stale or affected details. Do not assume inaccessible history is known. Relevant changes, not a new commit alone, invalidate those facts. Inspect task-relevant scripts not already reviewed in their current form before executing them, especially hooks, generators and shared-service commands. Determine the canonical package manager and project commands from repository evidence; use supported-version documentation for unfamiliar commands.

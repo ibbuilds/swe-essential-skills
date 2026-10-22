@@ -10,6 +10,35 @@ Choose a lightweight representation that reveals ambiguity: a state transition f
 
 Define terms where interpretations change outcomes. A “day” may mean a local calendar date or elapsed duration. “Delete” may mean remove from active use, erase stored content or end a retention period. Record the decided meaning, affected boundary and unresolved exceptions; do not pick a convenient interpretation on the owner's behalf.
 
+## Close the actual choice, not merely the conversation
+
+Clarify material uncertainty or a newly exposed consequence, not task size alone.
+Use available intent and affected consumers first. A small permission edit can
+have broad impact; a fully specified cross-module refactor may need no question.
+Do not mistake your preferred design for an established project requirement.
+
+State the interpreted change and a concrete case separating the plausible
+alternatives. Explain the affected behavior, existing feature, data or consumers
+and ask the smallest useful owner question, with a recommendation when justified.
+For example: "Does organization-wide sharing apply only to new accounts, or must
+existing account ownership migrate too? The latter changes current access."
+A bare "Are you sure?" neither identifies the ambiguity nor resolves it.
+
+Treat answers per choice. Preserve settled decisions and ask only about material
+unanswered or contradictory parts; do not silently fill them in. Generic urgency
+or "just do it" does not choose between different outcomes unless context makes
+the intended choice clear. Clear acceptance of a stated option counts; explicit
+delegation within stated bounds counts. Do not demand a special approval format
+or repeatedly confirm what the authorized owner already decided.
+
+If implementation reveals a new conflict, pause affected edits and dependent
+commits, explain the consequence and resolve only that choice. Continue independent
+authorized work. Do not treat existing code, agent-written acceptance tests or an
+unrelated answer as agreement. Keep pending choices in the existing task context
+or project record, not a new tracker. Once settled, carry the agreed behavior and
+affected acceptance forward; an intentional authorized change can replace an old
+feature or goal. The old design is not a veto on a clear new decision.
+
 ## Case: field collection with intermittent connectivity
 
 A requester wants “offline submission.” Field workers need to capture records without connectivity; dispatchers need a truthful view of submitted work; security owners may constrain local storage; support needs recovery after device loss.
