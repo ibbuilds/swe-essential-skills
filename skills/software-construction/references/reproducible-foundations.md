@@ -18,6 +18,16 @@ Avoid executing unreviewed remote installer snippets. Installation can run packa
 
 Before adding a dependency, identify the capability missing from the standard library or current dependencies. Check supported runtimes, maintenance, transitive weight, license constraints, security implications and how failure is surfaced. Do not replace mature project libraries solely for personal familiarity. Keep a new integration behind the actual owned boundary where that limits vendor coupling, rather than adding a generic framework for every import.
 
+Before adding or executing an unfamiliar dependency, verify the exact ecosystem,
+package name and intended version against official project documentation and its
+intended distribution source (registry, upstream repository or approved internal
+source). A matching name, search result or successful installation does
+not establish that it is the intended package. Inspect relevant installation
+hooks and project integrity/provenance requirements before executing package code;
+identity or provenance does not certify benign behavior. Reuse established
+project dependency evidence while applicable; do not reaudit every unchanged
+lockfile entry or install a guessed package merely to discover whether it exists.
+
 For generated clients or bindings, identify source schemas, generator version, deterministic inputs and expected checked-in output. Regeneration can expose upstream changes unrelated to the request; separate or revert unrelated output without overwriting user work. A generated declaration must agree with runtime serialization and the deployed protocol.
 
 ## Illustrative setup decisions

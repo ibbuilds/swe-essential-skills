@@ -103,3 +103,31 @@ on logically separate changesets, [GitHub review guidance](https://docs.github.c
 on focused reviewable work, and [push workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#push)
 on remote-triggered effects. These support the mechanism, not a numerical claim
 about agent efficiency or an automatic permission to push.
+
+## Additional failure-pattern research
+
+A targeted source review on 22 October 2026 checked failures beyond the initial
+user examples, comparing them against existing SWE and PM mechanisms before
+adding instructions:
+
+- **Unfamiliar dependency identity:** [USENIX's June 2025 research summary](https://www.usenix.org/publications/loginonline/we-have-package-you-comprehensive-analysis-package-hallucinations-code)
+  provides empirical evidence of package hallucination and registration risk.
+  It does not establish a failure rate for current agents. Construction now
+  checks identity against the official project and intended distribution source
+  before an unfamiliar addition,
+  not just during a later security advisory investigation.
+- **Source content mistaken for authority:** Anthropic's [March 2026 auto-mode report](https://www.anthropic.com/research/claude-code-auto-mode)
+  and [May 2026 containment discussion](https://www.anthropic.com/research/how-we-contain-claude)
+  motivate an explicit repository/tool-content boundary in standalone construction.
+  This is behavioral guidance, not a sandbox or security guarantee.
+- **More orchestration is not automatically better:** the [March 2026 long-running-apps account](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+  describes removing process as capabilities changed and evaluator overhead on
+  simpler work. Its examples differ in outcomes and are not a controlled savings
+  benchmark for this suite. Do not import mandatory agents, sprints or evaluators.
+- **Existing coverage retained:** setup/API guessing, premature completion,
+  context drift, oversized logs, retry loops, uncertain mutations, speculative
+  review findings and weakened checks already have relevant owners. No duplicate
+  environment, memory, retry or review skill was added for those topics.
+
+These source-supported mechanisms justify narrow conditional changes; they do
+not demonstrate that future agents will follow them or prove net usage savings.
