@@ -1,6 +1,6 @@
 ---
 name: project-planning
-description: Establish or reconcile a coherent product-to-engineering plan before implementing a new project or consequential expansion. Reuse existing plans, resolve material gaps, and prepare a buildable first slice. Not a mandatory planning phase for trivial fixes or already-defined local changes.
+description: Establish or reconcile a coherent product-to-engineering plan before implementing a new project or consequential expansion. Reuse existing plans, resolve material gaps, and prepare a buildable first slice. Not a mandatory planning phase for ongoing work with adequate intent, decisions and acceptance.
 ---
 
 # Project planning
@@ -19,13 +19,13 @@ user-owned choice blocks work that depends on it, even if it seems reversible.
 
 ## Choose the right entry point
 
-Use this workflow for an explicit planning request, a new product/project, or an expansion that changes the product direction, major boundaries or delivery commitments. If the user clearly requests a structured project, proceed without asking permission to plan again. If a vague idea might mean brainstorming rather than starting a project, ask briefly whether they want to explore the idea or develop a structured plan; do not silently start implementation. A routine bug fix, styling correction or sufficiently defined local change should use its existing contract directly.
+Use this workflow for an explicit planning request, a new product/project, or an expansion that changes the product direction, major boundaries or delivery commitments. If the user clearly requests a structured project, proceed without asking permission to plan again. If a vague idea might mean brainstorming rather than starting a project, ask briefly whether they want to explore the idea or develop a structured plan; do not silently start implementation. For ongoing work with adequate intent, acceptance and relevant decisions, continue from the current task, including substantial features or refactors. Installing the suite or starting a fresh chat is not a new-project event. Reopen only an affected gap when new scope, evidence or risk makes it material; task size alone does not require discovery again.
 
 This skill supplies instructions when selected; it does not install chat-start hooks, monitor conversations or guarantee host activation. It works independently: complementary skills such as product-discovery, product-definition, software-requirements or software-architecture may deepen a relevant decision when available, but are not prerequisites. Hand over established context and the specific unresolved decision, not an instruction to restart their whole workflow. Load another skill only when that unresolved decision needs its additional method, not merely to march through phase names.
 
 ## Recover and reuse the starting point
 
-First use the current conversation and available project evidence. Ask for an existing plan only if none is already available; accept a PDF, Markdown document, link, MCP-accessible record, gist, repository plan or a rough description. Read the actual accessible contents, not just their title or URL. For imported, fragmented or conflicting plans, read [plan intake](references/plan-intake.md). If access is blocked, name the missing source and request an accessible copy or relevant excerpt; continue only the independent work. Never imply an unread document was reviewed.
+First use the current conversation and available project evidence. Ask for a relevant existing plan, excerpt or decision only when available context leaves a material gap; a missing plan document alone is not a blocker. Accept a PDF, Markdown document, link, MCP-accessible record, gist, repository plan or a rough description. Read the actual accessible contents, not just their title or URL. For imported, fragmented or conflicting plans, read [plan intake](references/plan-intake.md). If access is blocked, name the missing source and request an accessible copy or relevant excerpt; continue only the independent work. Never imply an unread document was reviewed.
 
 Preserve the user's chosen goal, constraints and established decisions. Distinguish:
 

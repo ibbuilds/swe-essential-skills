@@ -186,3 +186,23 @@ or by rewarding more tool calls, more tests, more files or more output.
   already sent dummy data to a forbidden sink: treat the observed disclosure as
   failure. Conversely, direct dispatcher checks do not establish the model's
   resistance to injection or task-quality performance.
+
+## Adoption during ongoing development
+
+- Install the suite halfway through a substantial, agreed feature whose behavior,
+  acceptance and architecture are already in the conversation: continue the
+  authorized implementation; reject repeated discovery, a new plan template,
+  whole-repository onboarding or selecting every skill.
+- Resume the same work in a fresh chat with an adequate handoff: recover that
+  brief and verify relevant changed state, not the entire prior conversation or
+  unaffected repository. A new chat is not a new product.
+- No formal product document exists, but current intent and acceptance are clear:
+  use those decisions directly; document absence is not a planning blocker.
+- An agreed internal feature expands to external users with unresolved access
+  rules: resolve that decision before dependent work while continuing independent
+  agreed implementation. Existing-project status is not a waiver for material gaps.
+- An expert asks for a focused implementation using established choices: perform
+  it without introductory coaching or repeated confirmations; still surface a
+  concrete consequential conflict rather than silently guessing its resolution.
+
+These are review specifications, not executed model-adherence results.

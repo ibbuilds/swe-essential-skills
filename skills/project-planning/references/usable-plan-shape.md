@@ -1,6 +1,6 @@
 # Usable plan shape
 
-Use when no coherent durable plan exists or a fragmented plan needs consolidation. Fit the existing artifact and audience; combine or omit sections that add no decision value. A small project can express this in a page. A larger project can link existing specifications and decisions instead of duplicating them.
+Use when actual planning or coordination needs a durable artifact or consolidation. Adequate conversational decisions can support ongoing work without a separate plan document; missing paperwork alone does not activate this workflow. Fit the existing artifact and audience; combine or omit sections that add no decision value. A small project can express this in a page. A larger project can link existing specifications and decisions instead of duplicating them.
 
 ## Compact plan
 

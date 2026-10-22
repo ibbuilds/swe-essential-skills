@@ -16,8 +16,9 @@ with the appropriate product owner; investigate the latter from available
 sources and engineering evidence. Do not treat a polished PDF or complete-looking
 template as proof that consequential decisions are settled. Carry the clarified
 contract back into the same authoritative plan instead of creating a competing
-specification. No product plan is required to repeat already adequate context
-for a bounded correction.
+specification. A missing product-plan document does not invalidate adequate existing intent
+and acceptance, including for substantial ongoing work. Investigate or ask only
+for gaps material to the changed contract.
 
 ## Recover the need and its context
 

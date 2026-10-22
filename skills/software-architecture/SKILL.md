@@ -13,8 +13,8 @@ For a new project or consequential change, establish the intended users/problem,
 accepted outcomes, scope and constraints from the existing plan before choosing
 a stack or system structure. If these are unsettled, resolve the material product
 decision through focused planning rather than making architecture decide product
-strategy implicitly. Reuse adequate decisions; do not reopen positioning for a
-local technical change. Record a proposed technical option as a proposal until
+strategy implicitly. Reuse adequate decisions; do not reopen positioning merely because ongoing
+technical work is large or this skill was newly installed. Record a proposed technical option as a proposal until
 its consequential tradeoffs are accepted by the authorized owner.
 
 ## Establish what must hold
