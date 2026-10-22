@@ -28,13 +28,17 @@ Convert ambiguous requirements into observable examples. Separate functional beh
 - A quality attribute names a workload or failure, an observable response and an agreed bound. “Fast” is not a target; a response-time percentile requires representative load and a measurement boundary. Do not invent the bound.
 - Constraints include supported runtimes/devices, compatibility, residency, offline operation, deployment authority, team capabilities and existing ownership.
 
-Ask only about unresolved facts that change a consequential design choice. If work can proceed reversibly, state the assumption and keep it local. Do not silently choose loss tolerance, authorization policy or destructive migration semantics for the user.
+Ask only about unresolved facts that change a consequential design choice. For an unresolved meaningful stack, architecture or risk choice, present options
+and a reasoned recommendation for the user or explicitly designated owner to
+choose; silence is not agreement. Reversible analysis and routine work inside
+accepted choices may continue, but reversibility alone does not authorize a
+user-owned decision or implementation that depends on it. Do not silently choose loss tolerance, authorization policy or destructive migration semantics for the user.
 
 ## Choose boundaries from pressure, not fashion
 
 Start with the smallest structure that supports the required ownership and failure isolation. Keep behavior and the data invariants it enforces together unless a concrete constraint justifies distribution. Name each boundary's owner, contract, state, trust level and failure behavior. Separate domain policy from transport or vendor adapters when this makes replacement or testing materially easier; avoid speculative layers for one uncomplicated caller.
 
-Keep an adequate existing design; compare plausible alternatives against the strongest constraints only for unresolved consequential choices, including operating and migration costs. For a consequential choice, preserve a compact decision near the existing design documentation: context, alternatives, decision, accepted disadvantages and evidence that would reopen it. A local correction may need only a code explanation.
+Keep an adequate existing design; compare plausible alternatives against the strongest constraints only for unresolved consequential choices, including operating and migration costs. For a consequential choice, preserve a compact decision near the existing design documentation: context, alternatives, recommendation or accepted decision, decision owner and acceptance status, proposed or accepted disadvantages, and evidence that would reopen it. A local correction may need only a code explanation.
 
 For significant uncertainty, build/buy/reuse economics or competing options, read [decision investigation](references/decision-investigation.md). For service, library, CLI, native or embedded constraints, read the relevant sections of [platform boundaries](references/platform-boundaries.md).
 
