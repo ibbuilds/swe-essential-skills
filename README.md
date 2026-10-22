@@ -2,6 +2,20 @@
 
 A developing suite of practical guidance from product discovery and planning through the full software engineering lifecycle. **Initial implementation candidate:** structural checks are not proof of host activation, engineering correctness, or measured token savings.
 
+## Start here
+
+1. [Install selected skills or the suite](docs/installation.md) in your Codex or
+   Claude Code environment. Copy complete folders; consumer use needs no Python
+   setup, API key or custom service.
+2. Explicitly select `project-planning` for a new idea or supplied plan. For an
+   existing focused bug/change, select the relevant engineering skill instead.
+3. [Follow one project through the workflow](docs/project-walkthrough.md): reuse
+   existing answers, help the user choose, build an authorized coherent slice,
+   verify it and preserve delivery/operation boundaries.
+
+Installation makes skills available; it does not guarantee automatic activation,
+run all phases, or bypass host permissions and usage limits.
+
 ## Purpose: improve the work, not collect concepts
 
 The primary goal is to reduce avoidable agent effort, rework and user supervision
@@ -90,8 +104,9 @@ for every regulated, hardware-dependent or otherwise specialized system.
 
 ### Use and limits
 
-Use the target agent's supported skill-installation workflow for the selected
-`skills/<name>/` folders, preserving their local references. Keep the repository's
+Follow the [installation guide](docs/installation.md) for selected or full-suite
+local copies, discovery and explicit invocation. Preserve each folder's references
+and license. Keep the repository's
 root `AGENTS.md` here: it describes maintaining this repository, not instructions
 to inject into every user project. No hooks, external services or model API keys
 are required by these skill files. They do not grant permission to deploy or

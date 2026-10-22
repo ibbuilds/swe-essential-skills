@@ -39,7 +39,7 @@ The [research shortlist](../README.md#expert-source-shortlist) provides primary 
 
 Primary disciplinary references help check for missing coverage; they are not instructions to reproduce textbooks: [IEEE SWEBOK](https://www.computer.org/education/bodies-of-knowledge/software-engineering), [NIST SSDF tailoring](https://csrc.nist.gov/projects/SSDF), [OWASP ASVS](https://owasp.org/projects/asvs), [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [Google SRE lifecycle](https://sre.google/workbook/engagement-model/). Apply the correct standard and version for the project; draft publications are not final standards, and a skill does not certify compliance.
 
-## How the suite will be structured
+## How the suite is structured
 
 1. **Independently usable skills, selected by task.** Split skills when the responsibility, trigger and evidence differ materially. The eight coverage areas do not force exactly eight folders.
 2. **Small entrypoints with conditional depth.** Keep decisions and important invariants in the skill; put substantial platform-specific procedures in local references. Never load every skill or reference for a routine request.
