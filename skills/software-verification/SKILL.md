@@ -37,6 +37,15 @@ During iteration, run focused checks for changed behavior and its dependencies w
 
 When adding a regression, demonstrate where practical that it fails against the original defect and passes with the correction. This can use a safe temporary copy or targeted reversal; never overwrite unrelated changes. Check why it failed: missing setup, syntax errors, and unrelated failures do not establish sensitivity to the bug.
 
+Keep routine successful command output compact; retain the exit status and enough
+identity/context to know what ran. For failure, inspect the relevant diagnostic
+and its cause rather than repeatedly returning the whole log. Preserve access to
+full evidence when needed; output reduction must not hide failures or change a
+command's exit status. Shell execution costs time and compute; its returned output
+and subsequent agent analysis also consume context. Do not infer subscription
+usage or token savings from test count alone, or skip a needed cheap check to
+replace it with speculative reasoning.
+
 Keep time, randomness, locale, external services, and fixtures controlled enough for meaningful repeatability. Use deterministic barriers for ordering where possible, not unexplained sleep increases. Diagnose flaky or failing checks instead of silently retrying until green. If failure predates the change, establish that with a suitable baseline comparison and report it; pre-existing does not mean irrelevant.
 
 ## State the coverage boundary

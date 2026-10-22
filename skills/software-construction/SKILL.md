@@ -46,6 +46,30 @@ When changing configuration, define defaults, required values, precedence and va
 
 When a change alters setup, configuration, a public API or a supported workflow, update the documentation and examples consumers actually use alongside the implementation. Read [engineering documentation](references/engineering-documentation.md) for choosing the authoritative source and verifying documented behavior. Internal edits with no changed usage need no new document.
 
+## Preserve meaningful version-control checkpoints
+
+Follow the repository's branch and contribution policy. When version-control
+work is authorized, checkpoint a coherent, reviewable behavior change or useful
+recovery boundary rather than every edit or only the end of a long project.
+A completed feature, focused fix or compatible migration stage can be such a
+boundary; a fixed line count, elapsed interval or number of files is not.
+
+Before committing, inspect the staged diff and paths for unrelated work,
+secrets, generated artifacts and misleading completion claims. Stage only the
+owned change; preserve other contributors' edits. Record its purpose and relevant
+verification status. A deliberately incomplete checkpoint must be labeled as such,
+not represented as a verified feature or deployable release.
+
+Commit, push, open a pull request, merge and deploy are separate actions. For an
+authorized remote workflow, push meaningful coherent checkpoints when needed for
+backup, collaboration or CI, rather than leaving completed work local indefinitely.
+Check the destination branch and remote, repository rules and automatic effects
+before pushing; combine adjacent trivial edits where no useful checkpoint is lost.
+A push that triggers deployment or publishes sensitive material needs the applicable
+authority. Do not invent permission, force-push, rewrite shared history or bypass
+required checks to satisfy a checkpoint cadence. Confirm the resulting remote
+revision; if blocked, report local versus remote state accurately.
+
 ## Establish the result
 
 Satisfy the project's required checks and verify the final changed contract with the smallest meaningful behavioral checks. Reuse task-local results only with sufficient coverage, unchanged relevant code/configuration/data/environment and permission under gate freshness rules; activating another skill alone does not require rerunning them. Typechecking does not prove runtime parsing; a build does not prove packaging; a unit test does not prove an external consumer can use the public API. Add a regression at the layer that would have detected the failure, without coupling it to incidental implementation details.

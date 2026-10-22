@@ -34,6 +34,7 @@ the actions or how many tokens an intervention saves in use.
 | Review a change | Report suspicious syntax without caller context, repeat prior discovery, chase a perfect score | software-review reuses trustworthy revision-bound context but independently checks decisive assertions and filters unsupported findings | Do not turn every implementation step into another full independent review; honor required review gates |
 | Improve performance | Add caches/concurrency speculatively, then debug new consistency problems | software-performance checks representative baseline evidence, attributes the bottleneck and compares one justified intervention | Existing applicable measurements may suffice; no fresh profiling merely to repeat established evidence |
 | Establish hosting | Start with a deploy command, discover incompatible runtime/state/network assumptions late | platform-engineering matches workload to platform and verifies dependency-ordered establishment, DNS/TLS/identity/runtime and durable behavior | Existing suitable hosting is unchanged; do not restart provider selection for a routine release |
+| Preserve completed engineering work | Either push every tiny edit or leave a long sequence of completed work only locally | software-construction selects coherent authorized checkpoints, verifies staged scope and distinguishes commit/push/merge/deployment effects | No fixed commit quota; combine trivial adjacent edits, respect repo rules and keep unapproved remote actions blocked |
 | Ship or recover a release | Confuse source tests with packaged behavior, or repeat a timed-out deployment that is still running | software-delivery verifies the actual artifact/configuration and reconciles authoritative state before retry/recovery | Reuse valid earlier evidence where the relevant inputs and required gate policy permit it |
 | Handle an incident, upgrade or retirement | Treat startup as recovery, upgrade everything at once, or leave dependent consumers/resources behind | software-operations and software-evolution target the actual failure/change and verify recovery or transition consequences | No new global process for an unrelated small correction; retain applicable operating obligations |
 
@@ -74,3 +75,31 @@ Real-use evaluation, when authorized and available, should compare complete
 accepted tasks: corrections, retries, unnecessary reads/runs, user interventions,
 time and available usage data alongside output quality. Until then, changes are
 reasoned workflow improvements with explicit limits, not measured savings claims.
+
+## Budget-conscious execution
+
+Do not confuse test count with model usage. Shell work has execution costs;
+returned logs, repeated context reconstruction and agent analysis have context
+costs. A focused deterministic check can be cheaper and stronger than a long
+speculative review. Prefer existing adequate checks, compact successful output,
+relevant failure diagnostics and reusable evidence; never suppress failures or
+skip required gates merely to appear economical.
+
+The engineering suite does not require multi-agent orchestration. General
+resource selection, delegation and retry discipline stay with PM Essentials when
+present; SWE provides the concrete engineering evidence needed. Without PM,
+ordinary single-agent execution remains valid. No new planner, reviewer or agent
+is required just because the task entered another phase.
+
+Scalability means meeting credible workload and growth constraints with explicit
+tradeoffs, not prebuilding every possible future. Maintainability means coherent
+ownership and clear contracts, not maximum layers. Reliability means meaningful
+failure handling and evidence, not maximum test volume. Optimize the complete
+accepted outcome, including planning, tool calls, retries and downstream rework;
+none of these mechanisms establishes measured savings by itself.
+
+Source basis for checkpointing: [Git contribution guidance](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project)
+on logically separate changesets, [GitHub review guidance](https://docs.github.com/en/pull-requests/concepts/helping-others-review-your-changes)
+on focused reviewable work, and [push workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#push)
+on remote-triggered effects. These support the mechanism, not a numerical claim
+about agent efficiency or an automatic permission to push.
