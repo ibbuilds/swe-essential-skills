@@ -8,6 +8,15 @@ For a balance transfer, useful invariants include conservation of total value, n
 
 For a parser/formatter pair, round-trip behavior may be useful, but two functions with the same defect can agree. Include independently specified examples, invalid inputs, and normalization rules. A metamorphic test might establish that reordering independent records preserves an aggregate; verify that independence is actually part of the contract.
 
+When a generated case fails, preserve its concrete input or event sequence,
+relevant tool/generator versions and required replay metadata. Prefer a minimized
+case when useful, without removing ordering or environment conditions needed for
+the failure. A seed, cached example database or version-specific replay blob may
+stop reproducing after changes. Preserve an important fixed case as a durable
+regression in the existing test tool rather than rerunning a large campaign to
+rediscover it. Keep secrets and unauthorized production data out of committed
+fixtures. This does not require adopting property-based testing for every change.
+
 ## Separate contract from implementation
 
 For a library change, exercise public entry points with supported consumer/compiler/runtime versions where required. Test error types, cancellation and resource ownership as well as success values. Compile/link/package consumption can catch missing exports or assets that source-level tests miss. Do not make private helper names or incidental call counts the compatibility contract.

@@ -100,3 +100,31 @@ No third-party skill prose or helper implementation is vendored. Popularity and
 installation counts were discovery signals only, not proof of correctness or
 comparative effectiveness. Changes still need scoped review and ordinary
 mechanical checks; real-agent activation and net savings remain unmeasured.
+
+## Recent community leads checked
+
+Indexed searches across Codex, Claude Code/Claude, Anthropic and skill-community
+discussions, plus skills.sh, supplied additional leads. This was not an exhaustive
+subreddit crawl. Primary source inspection, not votes or testimonials, determined
+whether a mechanism was useful and missing here. Snapshots are recorded in
+[research heads](research-heads.json).
+
+| Primary source | Decision after inspecting the implementation |
+| --- | --- |
+| [Cloudflare security-audit-skill](https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/skills/security-audit/SKILL.md) | Source-grounded findings, unresolved facts and explicit coverage reinforce existing security/review guidance. Do not import the full multi-agent audit machinery into routine changes. Record validators check structure/consistency, not whether an exploit claim is true. |
+| [Ponytail](https://github.com/DietrichGebert/ponytail/tree/09c434ab73ca43761c5d8b0c5d341926c2fba710) | Reuse and coherent, restrained implementation already have an owner. Shortest-diff or one-line preferences are not better correctness or maintainability criteria. |
+| [Reaproof](https://github.com/Junhan2/reaproof/tree/127196561989a3b9bc0759a05e2cfd10de315103) | Shipped-output inspection reinforces existing delivery/security guidance. Embedded source in a source map is not by itself contextual proof of a critical vulnerability; preserve impact and exposure reasoning. |
+| [skillc exposure implementation](https://github.com/cooneycw/skillc/blob/a1ca249d62115d91e41e5adbd068ed7a2e812d1a/skillc/exposure.py) | Authored files, client-rendered exposure, activation and effectiveness are different claims. Unavailable rendering remains unmeasured. No compiler or exposure service is required by this suite. |
+| [jpcaparas adversarial-test-sweep](https://github.com/jpcaparas/skills/blob/78a9c7da609549a3e63af20087aec559fad04d45/skills/testing/adversarial-test-sweep/SKILL.md) | One narrow improvement: retain concrete failing inputs/sequences and relevant replay metadata rather than a seed alone. Added to existing verification guidance, not a new skill or mandatory testing framework. A repository license was not established; no prose was copied. |
+
+The replay correction is independently supported by
+[Hypothesis's distinction between durable explicit examples and version-specific replay blobs/databases](https://hypothesis.readthedocs.io/en/latest/tutorial/replaying-failures.html)
+and [fast-check's additional replay metadata for stateful commands](https://fast-check.dev/docs/advanced/model-based-testing/).
+It prevents losing a known regression case without requiring another fuzzing
+campaign or a new tool. Its effect on agent effort is not measured here.
+
+[Impeccable](https://github.com/pbakaus/impeccable/tree/8644175285360c166e57b1e35ecadfbc85ff5209)
+and [Graphify](https://github.com/Graphify-Labs/graphify/tree/847a93f3cab5e2c82ea9170014b21cd2c52a4417)
+were also inspected as leads; this review did not establish an uncovered essential
+SWE mechanism warranting their installation or another skill. Their popularity
+does not itself justify adding art-direction or repository-indexing workflows.

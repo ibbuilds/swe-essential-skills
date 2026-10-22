@@ -150,9 +150,22 @@ After changes, verify discovery again using the host's documented refresh behavi
 
 ## What has and has not been established
 
-Local staging can compare copied files/hashes and validate portable references.
-That checks the package shape, not the host. A host listing establishes discovery;
-an explicit invocation establishes loading, not reliable implicit selection or
-successful engineering behavior. No live-host activation or model evaluation was
-performed for this documentation. PowerShell commands are a reviewed example,
-not a claim they were executed on your computer.
+On 22 October 2026, Skills CLI **1.7.4** was checked against source revision
+[`befd47f`](https://github.com/ibbuilds/swe-essential-skills/commit/befd47f99a5982859d1802eeba50e035d902fdaf)
+in isolated Linux project/home directories, with CLI telemetry disabled:
+
+- Both local-source `--list` and the documented GitHub-source `--list` discovered
+  all 18 skills; the latter successfully cloned the public repository.
+- Selecting `project-planning` with `--agent codex --copy` installed its complete
+  folder, including its references and license.
+- Explicitly selecting all 18 skills for `codex` and `claude-code` with `--copy`
+  produced both expected project-local layouts. Every installed skill file
+  matched its source hash; no installed skill was a symlink.
+
+This establishes CLI source discovery, public-repository retrieval and local-source
+package copying, not personal/global installation, updates or overwrite safety.
+A **CLI source listing is not coding-host discovery**. A host listing establishes
+discovery; explicit invocation establishes loading, not reliable implicit
+selection or successful engineering behavior. Neither coding model was invoked.
+Live-host activation and model evaluation remain unverified. PowerShell commands
+are a reviewed example, not a claim they were executed on Windows or your computer.

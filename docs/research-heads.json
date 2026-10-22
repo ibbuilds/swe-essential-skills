@@ -105,6 +105,48 @@
       "date": "2026-10-09",
       "url": "https://github.com/anthropics/skills/commit/dbd4588f9e1033efb41dad4bef2f7947c8993d44",
       "inspection_note": "Selected coding/testing skill and helper source inspected; licenses checked per skill."
+    },
+    {
+      "repository": "DietrichGebert/ponytail",
+      "revision": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
+      "date": "2026-10-18T01:55:14Z",
+      "url": "https://github.com/DietrichGebert/ponytail/commit/09c434ab73ca43761c5d8b0c5d341926c2fba710"
+    },
+    {
+      "repository": "Graphify-Labs/graphify",
+      "revision": "847a93f3cab5e2c82ea9170014b21cd2c52a4417",
+      "date": "2026-10-21T15:22:06Z",
+      "url": "https://github.com/Graphify-Labs/graphify/commit/847a93f3cab5e2c82ea9170014b21cd2c52a4417"
+    },
+    {
+      "repository": "Junhan2/reaproof",
+      "revision": "127196561989a3b9bc0759a05e2cfd10de315103",
+      "date": "2026-10-19T10:34:54Z",
+      "url": "https://github.com/Junhan2/reaproof/commit/127196561989a3b9bc0759a05e2cfd10de315103"
+    },
+    {
+      "repository": "cloudflare/security-audit-skill",
+      "revision": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "date": "2026-09-14T19:28:54Z",
+      "url": "https://github.com/cloudflare/security-audit-skill/commit/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8"
+    },
+    {
+      "repository": "cooneycw/skillc",
+      "revision": "a1ca249d62115d91e41e5adbd068ed7a2e812d1a",
+      "date": "2026-10-21T13:11:01Z",
+      "url": "https://github.com/cooneycw/skillc/commit/a1ca249d62115d91e41e5adbd068ed7a2e812d1a"
+    },
+    {
+      "repository": "jpcaparas/skills",
+      "revision": "78a9c7da609549a3e63af20087aec559fad04d45",
+      "date": "2026-10-19T23:41:38Z",
+      "url": "https://github.com/jpcaparas/skills/commit/78a9c7da609549a3e63af20087aec559fad04d45"
+    },
+    {
+      "repository": "pbakaus/impeccable",
+      "revision": "8644175285360c166e57b1e35ecadfbc85ff5209",
+      "date": "2026-10-22T07:10:37Z",
+      "url": "https://github.com/pbakaus/impeccable/commit/8644175285360c166e57b1e35ecadfbc85ff5209"
     }
   ]
 }
