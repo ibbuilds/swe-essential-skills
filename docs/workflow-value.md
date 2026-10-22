@@ -131,3 +131,31 @@ adding instructions:
 
 These source-supported mechanisms justify narrow conditional changes; they do
 not demonstrate that future agents will follow them or prove net usage savings.
+
+## Efficient construction, not only later optimization
+
+The next targeted review found a gap between ordinary construction and the
+already-substantive performance investigation skill: the suite should help avoid
+structurally wasteful new code before a reported slowdown. Construction now checks
+input-dependent work and representation; data/backend guidance examines collection
+request shape and actual blocking execution. No mandatory benchmark was added.
+
+Primary references inspected 22 October 2026:
+
+- Python's [deque operation documentation](https://docs.python.org/3/library/collections.html#collections.deque)
+  and [sort-key guidance](https://docs.python.org/3/howto/sorting.html#key-functions)
+  illustrate operation-aware standard structures and avoiding repeated key work.
+  Their concrete APIs are Python-specific, not universal implementation recipes.
+- Microsoft's [efficient querying guidance](https://learn.microsoft.com/en-us/ef/core/performance/efficient-querying)
+  supports inspecting projection, result size, per-item requests, join expansion
+  and buffering. The suite adapts these tradeoffs to the actual datastore/ORM.
+- Node's [event-loop guide](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop)
+  and [worker documentation](https://nodejs.org/api/worker_threads.html) distinguish
+  input-dependent blocking work from asynchronous syntax and worker overhead.
+  Those execution-model details apply conditionally, not to every runtime.
+- [C++ Core Guidelines performance principles](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-performance)
+  reinforce simple maintainable code and evidence rather than assumed speed.
+
+None of these sources proves universally optimal generated code or this suite's
+runtime or token gains. Preserve required behavior, quantify gains only when
+measured, and do not add caches, layers or parallelism merely to appear optimized.

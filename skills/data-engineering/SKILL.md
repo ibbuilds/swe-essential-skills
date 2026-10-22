@@ -15,7 +15,7 @@ Define identity, uniqueness, relationship ownership, null/absent semantics, unit
 
 Keep tenant scope and access policy in the model and queries. Inspect service-role or privileged paths that may bypass row-level controls. Minimize sensitive data, including migration logs and exported fixtures; define retention and removal propagation where the task changes data lifecycle.
 
-For schema tradeoffs and query investigation, read [model and query investigation](references/model-and-query-investigation.md).
+For schema tradeoffs, changed collection-access patterns and query investigation, read [model and query investigation](references/model-and-query-investigation.md).
 
 ## Separate logical change from physical execution
 

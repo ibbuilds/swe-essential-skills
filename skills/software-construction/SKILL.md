@@ -41,6 +41,22 @@ Use types and interfaces to expose valid states and obligations where the langua
 
 Keep resources and cancellation visible: who opens and closes a handle, owns a buffer, joins a task or removes a temporary file? Ensure error paths release resources and leave valid state. Do not log secrets or whole user payloads to make debugging convenient.
 
+## Avoid unnecessary work while constructing the change
+
+For input-dependent loops, repeated lookups, IO or retained collections, identify
+what grows with input size, request frequency and concurrency. Choose a simple
+algorithm and data representation suited to the actual access pattern and
+credible bounds; avoid repeated scans, parsing, round trips or whole-data copies
+when their cost and safe alternative are evident. Preserve ordering, identity,
+precision and failure behavior. Do not add caches, parallel workers or generic
+abstractions merely because they might help later.
+
+Read [work and resource shape](references/work-and-resource-shape.md) when a
+change introduces material growth or resource risk. Straightforward bounded edits
+need no separate cost document or benchmark. Distinguish a reasoned structural
+improvement from measured speed or memory gains; use representative measurement
+when the choice depends on runtime behavior or a performance claim is needed.
+
 ## Integrate without collateral changes
 
 Preserve unrelated edits and local conventions. Use isolation appropriate to the collision: a separate working tree does not isolate databases, queues, ports, credentials or generated outputs. Avoid reformatting unrelated files, unrequested dependency upgrades and bulk lockfile churn. Inspect generated output and manifests together when code generation is part of the build.
