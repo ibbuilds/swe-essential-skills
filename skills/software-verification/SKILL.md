@@ -15,7 +15,7 @@ Reuse accepted requirements and existing tests. Identify the changed observable 
 
 For each important claim, decide what observation could falsify it. Examples: retries do not duplicate an operation; an unauthorized identity cannot read another tenant's record; a CLI emits valid machine-readable output on stdout while diagnostics stay on stderr; an older client still understands a new server response. Assertions should encode these contracts rather than mirror helper implementation or compare incidental formatting.
 
-Choose input classes deliberately: boundaries, invalid/absent values, transitions, relevant combinations, concurrency, and partial failures. Do not generate every permutation when equivalence classes suffice. Property-based or metamorphic checks help when many inputs share an invariant and individual expected outputs are expensive; retain reproducible seeds and trustworthy oracles.
+Choose input classes deliberately: boundaries, invalid/absent values, transitions, relevant combinations, concurrency, and partial failures. Do not generate every permutation when equivalence classes suffice. Property-based or metamorphic checks help when many inputs share an invariant and individual expected outputs are expensive; use trustworthy oracles and retain failing inputs or event sequences with relevant versions and replay metadata, not a seed alone.
 
 ## Choose the evidence layer
 
