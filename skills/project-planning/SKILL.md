@@ -45,6 +45,14 @@ Prioritize gaps by the harm of guessing and the cost of later reversal:
 - **Proceed provisionally:** a reversible detail can use a clearly labeled assumption, with a revisit trigger.
 - **Defer deliberately:** a later-stage concern has no current design consequence; retain its owner or checkpoint before it becomes binding.
 
+Before asking a candidate question, check the supplied plan and prior answers for
+its answer, including relevant linked sections or tables. Use already established
+source references rather than repeatedly rereading the entire collection. An
+unreadable or uninspected section is an access/coverage gap, not proof that the
+user omitted the answer; disclose the specific limit. If sources already answer
+it consistently, use that answer. If they conflict, ask about the conflict rather
+than restarting the question from scratch.
+
 Inspect discoverable facts rather than asking the user to supply them. Ask only the highest-leverage unresolved questions that cannot be answered from available context. Group independent questions when that helps; resolve upstream choices before asking questions that depend on them. Offer a reasoned recommendation or alternatives where useful, and explain why the question matters and what its answer unblocks. Each gap can be answered, investigated, handled with a safe provisional assumption, deferred to its decision point or dropped as irrelevant; an interview is not the only path. Do not repeat answered questions, demand exhaustive questionnaires or block independent reversible exploration while awaiting one decision. Unknowns may remain; consequential unowned risks may not be disguised as certainty.
 
 ## Maintain one usable plan and a buildable slice
@@ -60,5 +68,12 @@ Begin implementation only when that slice has enough agreed intent and concrete 
 At discovery → definition → design → build → verification → release → operations, review what is changing and the evidence needed for the next commitment; do not treat these as mandatory sequential phases. Carry forward still-valid decisions and evidence. Before dependent commitments, inspect applicable UX/accessibility, security/privacy, data, deployment and operational implications, including migrations, coexistence, rollback/recovery and ownership. The depth should follow exposure and reversibility, not the presence of a heading in a template.
 
 When implementation, a test, user feedback or an incident contradicts the plan, identify the affected assumption or requirement and its downstream effects. Update acceptance, design, sequencing, security/data decisions, release and support plans where affected; record the reason and superseded decision. Reopen only the impacted choices. Escalate scope or risk acceptance to the appropriate owner without silently weakening the goal or restarting all discovery.
+
+Keep the user informed at meaningful decision and outcome boundaries: what the
+plan establishes, a consequential recommendation and its reason, the unresolved
+choice that needs them, or a material change/blocker. Make assumptions and changes
+to agreed scope visible before dependent commitment, not only in a final report.
+This is concise decision transparency, not narration of every read or a second
+approval ceremony. Respect the user's desired update cadence.
 
 Report the useful result first: current direction, material gaps or decisions, ready slice and immediate next action. Then link the durable plan and supporting evidence if available. State what remains unknown, proposed or unverified; a completed plan is neither a verified implementation nor a production-readiness claim.

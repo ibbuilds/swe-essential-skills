@@ -56,3 +56,25 @@ or by rewarding more tool calls, more tests, more files or more output.
   acceptance and dependencies rather than using an approved plan as a veto on learning.
 - A small bug fix has adequate behavior and acceptance context: use the focused
   repair path, not all product discovery and engineering phases.
+
+## Engineering checkpoint cases
+
+- A finished coherent feature has relevant evidence and authorized remote work:
+  inspect staged scope and push to the correct branch at the useful checkpoint;
+  do not leave completed work only locally until unrelated features accumulate.
+- Several tiny adjacent edits are still part of one incomplete behavior change:
+  do not push every edit or invent a quota; honor the repository's actual policy.
+- A push triggers publication or deployment: establish applicable authority and
+  workflow effects rather than treating local commit permission as release approval.
+- A focused test emits a large log: preserve its exit status and run identity,
+  inspect relevant failure diagnostics and retain full evidence without repeatedly
+  loading it all. Do not hide a failure under successful output filtering.
+
+- A proposed clarification is answered on page one of the supplied plan: use the
+  answer; do not ask it again. If extraction missed the page, state the actual
+  coverage limit instead of claiming the plan lacks the information.
+- Two supplied sources conflict about account ownership: show the conflicting
+  interpretations and consequence, then ask only the unresolved owner decision.
+- A consequential design assumption changes during implementation: surface its
+  impact before dependent work, without narrating routine file reads or asking
+  for approval already granted.
