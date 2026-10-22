@@ -16,6 +16,16 @@ For a CLI, verify exit status, stdout/stderr separation, supported flags, no-int
 
 For a rolling API/schema change, old-reader/new-writer and new-reader/old-writer cases may differ. Test the combinations actually supported during rollout, plus meaningful enum/unknown-field/default semantics. A mock generated from the same mistaken schema as the implementation is not independent compatibility evidence.
 
+## Check who supplies a prerequisite
+
+Inspect whether fixture setup performs work the real entry path is responsible
+for. A test that pre-creates an output directory, authorization context or default
+record can hide missing first-run initialization or binding. Identify the real
+owner and exercise the relevant entry path when the claim depends on it. A
+prerequisite explicitly guaranteed by the caller or deployment is legitimate;
+fixtures and mocks are not defects merely because they supply inputs. Conversely,
+a passing unit path does not prove an undeclared production prerequisite exists.
+
 ## Test ordering deliberately
 
 Suppose two workers may claim the same job. Use two real transactions or a controlled integration harness: both observe availability, then both attempt acquisition. Assert the owning invariant (one successful claim), not the exact thread that wins. Verify retry behavior and visible final state. A thousand passing serial executions do not exercise this race.

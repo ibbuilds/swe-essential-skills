@@ -21,7 +21,7 @@ user-owned choice blocks work that depends on it, even if it seems reversible.
 
 Use this workflow for an explicit planning request, a new product/project, or an expansion that changes the product direction, major boundaries or delivery commitments. If the user clearly requests a structured project, proceed without asking permission to plan again. If a vague idea might mean brainstorming rather than starting a project, ask briefly whether they want to explore the idea or develop a structured plan; do not silently start implementation. A routine bug fix, styling correction or sufficiently defined local change should use its existing contract directly.
 
-This skill supplies instructions when selected; it does not install chat-start hooks, monitor conversations or guarantee host activation. It works independently: complementary skills such as product-discovery, product-definition, software-requirements or software-architecture may deepen a relevant decision when available, but are not prerequisites. Hand over established context and the specific unresolved decision, not an instruction to restart their whole workflow.
+This skill supplies instructions when selected; it does not install chat-start hooks, monitor conversations or guarantee host activation. It works independently: complementary skills such as product-discovery, product-definition, software-requirements or software-architecture may deepen a relevant decision when available, but are not prerequisites. Hand over established context and the specific unresolved decision, not an instruction to restart their whole workflow. Load another skill only when that unresolved decision needs its additional method, not merely to march through phase names.
 
 ## Recover and reuse the starting point
 

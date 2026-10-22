@@ -36,6 +36,6 @@ Read only the applicable sections of [platform-and-state-patterns.md](references
 
 ## Verify the changed journey
 
-Exercise the actual interaction where tools permit: representative input, the affected transition, adverse response, and recovery. Check layout/interaction at relevant viewport, text-size, input-method, and platform settings rather than relying only on a static screenshot. Use focused state/logic tests for permutations and integration tests for the boundary that could fail. Preserve repository-required checks.
+Confirm the running client/build and relevant service configuration belong to this change; a familiar URL or checkout HEAD is not enough. Reuse confirmed target identity while it remains applicable. Exercise the actual interaction where tools permit: representative input, the affected transition, adverse response, and recovery. Check layout/interaction at relevant viewport, text-size, input-method, and platform settings rather than relying only on a static screenshot. Use focused state/logic tests for permutations and integration tests for the boundary that could fail. Preserve repository-required checks.
 
 Report separately what code-level checks establish and what was observed in a rendered or device session. If no browser, simulator, device, or accessibility tool is available, identify the exact behavior still unverified; do not fabricate visual or device evidence. Completion means the requested behavior works within the stated evidence, not that every possible platform has been certified.

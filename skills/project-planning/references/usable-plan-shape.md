@@ -14,6 +14,21 @@ Use when no coherent durable plan exists or a fragmented plan needs consolidatio
 
 Each next action should make clear what result it establishes. “Research backend” is weak; “Check whether the existing provider supports required regional retention before choosing storage” identifies the decision, dependency and stopping condition. Do not fabricate owners, deadlines, agreements or measurements.
 
+## Reconcile dependent slices before committing to them
+
+Where separate tasks or components share an interface, compare what the producer
+plans to provide with what the consumer expects: operation or event name,
+fields/types/units, identity and authorization context, error/retry behavior,
+version and availability/order assumptions. A dependency arrow alone does not
+establish compatibility. Resolve a concrete mismatch at the existing contract
+owner before dependent implementation; ask the user only for an unresolved
+user-owned decision, not a fact already settled by the authoritative contract.
+
+Use one short discrepancy per affected interface in the existing plan when useful,
+not a compulsory new contract matrix for every task. Preserve supported old/new
+combinations where delivery spans versions. A single local change with no shared
+boundary needs no cross-task reconciliation exercise.
+
 ## Keeping the plan durable
 
 Use stable links to authoritative requirements, design decisions, implementation and verification when coordination warrants them. Avoid maintaining a second roadmap or copying a long specification into every handoff. Save in an authorized project location; otherwise provide the plan directly and identify a proposed location without claiming it was saved.

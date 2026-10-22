@@ -1,6 +1,6 @@
 ---
 name: data-engineering
-description: Design and change persistent schemas, investigate query behavior, and perform compatible migrations, backfills and recovery planning. Use when correctness depends on stored-data invariants, query plans, rollout compatibility, data pipelines or data lifecycle, across the project's actual datastore rather than a default database.
+description: Design and change persistent schemas, investigate query behavior, and perform compatible migrations, backfills and recovery planning. Use when correctness depends on stored-data invariants, query plans, pooled-session state, rollout compatibility, data pipelines or data lifecycle, across the project's actual datastore rather than a default database.
 ---
 
 # Data engineering
@@ -15,7 +15,12 @@ Define identity, uniqueness, relationship ownership, null/absent semantics, unit
 
 Keep tenant scope and access policy in the model and queries. Inspect service-role or privileged paths that may bypass row-level controls. Minimize sensitive data, including migration logs and exported fixtures; define retention and removal propagation where the task changes data lifecycle.
 
-For schema tradeoffs, changed collection-access patterns and query investigation, read [model and query investigation](references/model-and-query-investigation.md).
+Derive identity, deletion, retention and access semantics from agreed requirements.
+If such policy remains unsettled, explain the alternatives and obtain the user's
+or designated owner's choice before dependent implementation. Routine schema and
+query decisions within that contract need no repeated approval.
+
+For schema tradeoffs, changed collection access, pool/session-state changes and query investigation, read [model and query investigation](references/model-and-query-investigation.md).
 
 ## Separate logical change from physical execution
 

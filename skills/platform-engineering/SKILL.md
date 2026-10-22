@@ -11,7 +11,7 @@ Turn the workload's requirements into a reproducible hosting foundation that can
 
 Inspect the workload entrypoints, build/runtime contracts, dependencies, existing infrastructure and ownership before choosing a host. Separate request-serving processes, workers, scheduled jobs, static assets and authoritative state. Identify expected traffic/bursts, latency and availability needs, data residency, recovery expectations, budget, team operating capacity and existing platform commitments. Local-only software may need artifact distribution rather than an always-on server.
 
-Resolve unknowns that change isolation, exposure, irreversible data placement or material spend. For reversible details, state an assumption and proceed with a bounded design. Do not invent acceptable data loss, public access, paid subscriptions or permission grants.
+Resolve unknowns that change isolation, exposure, irreversible data placement or material spend. For analysis or routine details within agreed choices, state bounded assumptions. For unresolved consequential hosting, region, exposure or cost choices, explain the options and obtain the user's or designated owner's choice before dependent implementation; reversibility is not acceptance. Do not invent acceptable data loss, public access, paid subscriptions or permission grants.
 
 - For choosing or changing a hosting model, read [platform selection](references/platform-selection.md).
 - For building the environment or diagnosing first-deployment connectivity/startup failures, read [bootstrap and network verification](references/bootstrap-and-network.md).

@@ -31,6 +31,14 @@ Use several lenses on this traced path, proportionate to its risk:
 
 Inspect tests as evidence of these contracts, not simply as present or absent. Determine whether their setup reaches the changed path and whether their assertions would detect the proposed failure. Recommend a specific missing scenario when it matters; do not demand an arbitrary coverage percentage or reproduce the entire verification workflow.
 
+When tests, acceptance budgets, CI gates, exclusions or waiver records change,
+compare their meaning with the accepted baseline. Look for lost assertions,
+skipped/deleted checks, broader suppressions, relaxed thresholds or new exceptions.
+Distinguish an equivalent or stronger replacement and an authorized requirement
+change from unapproved weakening. Explain the concrete guarantee lost; a removed
+assertion or a matching keyword alone is not a defect. Green checks do not prove
+the original acceptance bar survived. Unchanged controls need no new audit.
+
 ## Turn suspicions into defensible findings
 
 For each candidate, try to disprove it before reporting it. Inspect the caller's guarantees, framework/version semantics, guards, error handlers and supported configurations. Compare the base behavior: distinguish newly introduced regressions, pre-existing defects exposed by the change, and unrelated problems. A test failure caused by missing setup is not a product defect.

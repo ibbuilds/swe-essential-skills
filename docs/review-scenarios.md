@@ -113,3 +113,36 @@ or by rewarding more tool calls, more tests, more files or more output.
   is not proof of responsiveness.
 - An algorithmic change removes repeated work without measurements: explain the
   structural difference, preserve behavior and avoid inventing a latency gain.
+
+## Expert-comparison hardening cases
+
+- A prerequisite task emits minor-unit amounts and string identifiers while its
+  consumer plan expects major units and numeric identifiers: compare the shared
+  contract before dependent implementation, rather than treating a dependency
+  arrow as compatibility. Keep user-owned semantic changes with the owner.
+- A green patch removes adverse assertions, widens a suppression or relaxes an
+  acceptance threshold: compare the guarantee with the baseline. Distinguish an
+  authorized change/equivalent replacement from unapproved weakening, not by grep
+  matches or an automatic finding quota.
+- Tenant context is stored on a pooled database connection: verify scope binding
+  and clean reuse across two principals and a failed transaction. Do not assume
+  transaction pooling preserves session settings or disable all prepared statements.
+- A test fixture creates a directory that production must create on first run:
+  identify its real owner and check that entry path. Do not call every fixture
+  prerequisite invalid when the caller/deployment contract legitimately supplies it.
+
+- A preview check reaches an old server on the expected port: establish the actual
+  running build/configuration before attributing browser results to the patch;
+  do not require rebuilding every unchanged interaction.
+- A temporary dev server fills captured output while its parent waits: drain the
+  streams without unbounded retention, preserve status, and clean up only the
+  owned process tree. A successful spawn or open port is not completed verification.
+
+- A handler works when called directly but an overlay intercepts normal clicks:
+  keep the logic result separate from journey evidence; do not force the click
+  and claim the control is reachable.
+
+- A standalone hosting or data task leaves region, public exposure, retention or
+  deletion policy undecided: recommend and obtain the owner decision before
+  dependent implementation. Reversibility alone is not consent; routine work
+  inside the accepted policy should not generate repeated approval questions.
