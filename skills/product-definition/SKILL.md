@@ -5,19 +5,26 @@ description: Turn a chosen software opportunity into product strategy, positioni
 
 # Product definition
 
-Choose a coherent product direction and enough scope to enable useful engineering work. Consume discovery evidence, user instructions and existing plans; do not force a new strategy exercise when those already settle the choice. A compact issue can be adequate for a small change. A broader product may need a durable brief, but not a universal collection of strategy documents.
+Help the user choose a coherent product direction and enough scope to enable useful engineering work. Consume discovery evidence, user instructions and existing plans; do not force a new strategy exercise when those already settle the choice. A compact issue can be adequate for a small change. A broader product may need a durable brief, but not a universal collection of strategy documents.
+
+Product direction, positioning, scope and outcome targets are the user's choices,
+or those of an explicitly designated owner. Explain options and recommend; do
+not convert your recommendation, a provisional default or silence into agreement.
+Reuse explicit decisions and continue authorized routine work within them. Keep
+answers direct and specific: the choice, its practical tradeoff and the needed
+answer, without filler or repeating the whole brief.
 
 ## Establish the decision boundary
 
 Recover the chosen problem, target actors and context, current alternatives, known evidence, constraints and accepted decisions. Separate fixed commitments from open choices and assumptions. If a missing fact materially changes scope, retrieve it from available authorized sources. If the underlying opportunity remains uncertain, preserve that uncertainty and recommend targeted discovery rather than fabricating validation or blocking every implementation.
 
-Make only the unresolved product choices. Batch independent material questions with recommendations and explicit tradeoffs; wait on prerequisite choices before posing dependent ones. Ask the user for decisions they own or unavailable information, not facts you can establish safely. Do not reopen settled decisions merely because a template has an empty field. Continue reversible work on independent parts.
+Bring only unresolved product choices to the user. Batch independent material questions with recommendations and explicit tradeoffs; wait on prerequisite choices before posing dependent ones. Ask the user for decisions they own or unavailable information, not facts you can establish safely. Do not reopen settled decisions merely because a template has an empty field. Continue reversible work on independent parts.
 
-## Choose value and positioning
+## Help choose value and positioning
 
-Explain whose outcome improves, in which situation, and why this product or increment is preferable to the actual alternative. Distinguish users, purchasers, approvers and operators when their incentives differ. Positioning is a product choice about audience, problem, differentiated benefit and credible reason to believe it—not a tagline or a claim of market leadership. Where the category or comparison frame matters, choose one that helps the intended audience understand the value without suggesting unsupported capabilities.
+Explain whose outcome improves, in which situation, and why this product or increment is preferable to the actual alternative. Distinguish users, purchasers, approvers and operators when their incentives differ. Positioning is a product choice about audience, problem, differentiated benefit and credible reason to believe it—not a tagline or a claim of market leadership. Where the category or comparison frame matters, recommend one that helps the intended audience understand the value without suggesting unsupported capabilities.
 
-Choose focus and explicit tradeoffs: which audience/use case comes first, which strengths matter, and what is intentionally not optimized. Tie proposed differentiators to evidence or label them hypotheses. Consider distribution/access, switching and ongoing support when they affect whether the value can be realized. For internal tools, value may be reduced risk or effort rather than revenue; for libraries, compatibility and integration costs may dominate acquisition. Do not impose SaaS funnels, subscriptions, monetization or market-size exercises on unrelated products.
+Help the user choose focus and explicit tradeoffs: which audience/use case comes first, which strengths matter, and what is intentionally not optimized. Tie proposed differentiators to evidence or label them hypotheses. Consider distribution/access, switching and ongoing support when they affect whether the value can be realized. For internal tools, value may be reduced risk or effort rather than revenue; for libraries, compatibility and integration costs may dominate acquisition. Do not impose SaaS funnels, subscriptions, monetization or market-size exercises on unrelated products.
 
 Where options differ materially, compare a small set of viable directions, including improving the existing alternative or doing nothing. Use actual constraints and uncertain ranges rather than invented revenue, precision scores or a preferred technology. Recommend a direction and identify the condition that would change it. Product direction does not select a technical architecture by default.
 

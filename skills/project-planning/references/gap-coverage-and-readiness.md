@@ -26,7 +26,7 @@ A slice is ready when the following are adequate for its risk, not when all futu
 - The design identifies relevant contracts, invariant owners and dependencies. No unresolved decision would make this implementation unsafe, unauthorized or substantially wrong.
 - Applicable security/privacy, data-integrity and release/operating constraints are considered before they become expensive to reverse.
 - Verification can distinguish success from failure using available evidence, or an explicit evidence-gathering step precedes the dependent work.
-- Remaining unknowns are labeled with consequences and revisit triggers; consequential risk acceptance comes from the appropriate owner, not the assistant's assumption.
+- Remaining unknowns are labeled with consequences and revisit triggers; user-owned decisions and risk acceptance come from the user or explicitly designated owner, not the assistant's assumption. Reversibility does not transfer decision ownership.
 - The next action is authorized. Planning, coding, shared-document changes and deployment have distinct permission boundaries.
 
 If readiness fails, name the specific blocker and continue independent work or propose a narrower slice/experiment. Do not hide a blocking unknown in a backlog, or demand certainty about all later slices. After completion, reconcile observed results with the plan before choosing the next commitment.

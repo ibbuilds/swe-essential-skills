@@ -7,6 +7,16 @@ description: Establish or reconcile a coherent product-to-engineering plan befor
 
 Help the user reach a coherent plan before dependent implementation commitments, starting with the problem and product rather than a preferred stack. Keep the process proportional: a small new tool can need a short brief, while a multi-party system needs durable decisions and explicit risks. Planning is iterative, not a promise to settle the entire lifecycle upfront.
 
+## Keep decisions with the user
+
+Help the user decide: present the viable options, practical tradeoffs and a clear
+recommendation. Product direction, scope, meaningful stack/architecture choices
+and risk acceptance remain with the user or their explicitly designated owner.
+A recommendation, document draft, apparent convenience or silence is not consent.
+Reuse choices already made; do not ask for them again. Routine execution within
+agreed choices can continue under existing authority, but an unresolved
+user-owned choice blocks work that depends on it, even if it seems reversible.
+
 ## Choose the right entry point
 
 Use this workflow for an explicit planning request, a new product/project, or an expansion that changes the product direction, major boundaries or delivery commitments. If the user clearly requests a structured project, proceed without asking permission to plan again. If a vague idea might mean brainstorming rather than starting a project, ask briefly whether they want to explore the idea or develop a structured plan; do not silently start implementation. A routine bug fix, styling correction or sufficiently defined local change should use its existing contract directly.
@@ -42,7 +52,7 @@ Prioritize gaps by the harm of guessing and the cost of later reversal:
 
 - **Resolve before commitment:** a missing decision changes the product's purpose, acceptance, authorization, sensitive-data handling, irreversible effects or a major dependency.
 - **Investigate early:** uncertainty threatens feasibility or creates substantial rework; define a bounded experiment or decision task.
-- **Proceed provisionally:** a reversible detail can use a clearly labeled assumption, with a revisit trigger.
+- **Proceed provisionally:** use an assumption only for analysis or routine execution within agreed choices, with its limit and revisit trigger. Propose a provisional user-owned choice for acceptance before dependent implementation.
 - **Defer deliberately:** a later-stage concern has no current design consequence; retain its owner or checkpoint before it becomes binding.
 
 Before asking a candidate question, check the supplied plan and prior answers for
@@ -53,7 +63,7 @@ user omitted the answer; disclose the specific limit. If sources already answer
 it consistently, use that answer. If they conflict, ask about the conflict rather
 than restarting the question from scratch.
 
-Inspect discoverable facts rather than asking the user to supply them. Ask only the highest-leverage unresolved questions that cannot be answered from available context. Group independent questions when that helps; resolve upstream choices before asking questions that depend on them. Offer a reasoned recommendation or alternatives where useful, and explain why the question matters and what its answer unblocks. Each gap can be answered, investigated, handled with a safe provisional assumption, deferred to its decision point or dropped as irrelevant; an interview is not the only path. Do not repeat answered questions, demand exhaustive questionnaires or block independent reversible exploration while awaiting one decision. Unknowns may remain; consequential unowned risks may not be disguised as certainty.
+Inspect discoverable facts rather than asking the user to supply them. Ask only the highest-leverage unresolved questions that cannot be answered from available context. Group independent questions when that helps; resolve upstream choices before asking questions that depend on them. Offer a reasoned recommendation or alternatives where useful, and explain why the question matters and what its answer unblocks. Each gap can be answered, investigated, handled within already-agreed bounds or with an explicitly accepted provisional choice, deferred to its decision point or dropped as irrelevant; an interview is not the only path. Do not repeat answered questions, demand exhaustive questionnaires or block independent reversible exploration while awaiting one decision. Unknowns may remain; consequential unowned risks may not be disguised as certainty.
 
 ## Maintain one usable plan and a buildable slice
 
@@ -67,13 +77,16 @@ Begin implementation only when that slice has enough agreed intent and concrete 
 
 At discovery → definition → design → build → verification → release → operations, review what is changing and the evidence needed for the next commitment; do not treat these as mandatory sequential phases. Carry forward still-valid decisions and evidence. Before dependent commitments, inspect applicable UX/accessibility, security/privacy, data, deployment and operational implications, including migrations, coexistence, rollback/recovery and ownership. The depth should follow exposure and reversibility, not the presence of a heading in a template.
 
-When implementation, a test, user feedback or an incident contradicts the plan, identify the affected assumption or requirement and its downstream effects. Update acceptance, design, sequencing, security/data decisions, release and support plans where affected; record the reason and superseded decision. Reopen only the impacted choices. Escalate scope or risk acceptance to the appropriate owner without silently weakening the goal or restarting all discovery.
+When implementation, a test, user feedback or an incident contradicts the plan, identify the affected assumption or requirement and its downstream effects. Propose affected changes to acceptance, design, sequencing, security/data decisions, release and support plans; mark changed user-owned choices accepted only after the appropriate owner decides. Record the reason and superseded decision once accepted. Reopen only the impacted choices. Escalate scope or risk acceptance to the appropriate owner without silently weakening the goal or restarting all discovery.
 
 Keep the user informed at meaningful decision and outcome boundaries: what the
 plan establishes, a consequential recommendation and its reason, the unresolved
 choice that needs them, or a material change/blocker. Make assumptions and changes
 to agreed scope visible before dependent commitment, not only in a final report.
-This is concise decision transparency, not narration of every read or a second
+Use direct, specific, plain language: result or decision first, the necessary
+reason, and the useful question or next action. Omit filler, repeated summaries,
+generic reassurance and unnecessary jargon; preserve material uncertainty and
+tradeoffs. This is decision transparency, not narration of every read or a second
 approval ceremony. Respect the user's desired update cadence.
 
 Report the useful result first: current direction, material gaps or decisions, ready slice and immediate next action. Then link the durable plan and supporting evidence if available. State what remains unknown, proposed or unverified; a completed plan is neither a verified implementation nor a production-readiness claim.
