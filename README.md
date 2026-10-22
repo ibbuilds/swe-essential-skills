@@ -1,8 +1,12 @@
 # SWE Essential Skills
 
-A developing suite of practical guidance from product discovery and planning through the full software engineering lifecycle. **Initial implementation candidate:** structural checks are not proof of host activation, engineering correctness, or measured token savings.
+A suite of practical guidance from product discovery and planning through the full software engineering lifecycle. **First-version trial candidate:** structural checks are not proof of host activation, engineering correctness, or measured token savings.
 
 ## Start here
+
+See [first-version readiness](docs/v1-readiness.md) for the full requirement-to-procedure
+map, review results, expected work-saving mechanisms and the later user trial.
+Research findings are not measured savings or proof of flawless behavior.
 
 1. [Install selected skills or the suite](docs/installation.md) in your Codex or
    Claude Code environment. Copy complete folders; consumer use needs no Python

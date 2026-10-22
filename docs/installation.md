@@ -162,6 +162,12 @@ in isolated Linux project/home directories, with CLI telemetry disabled:
   produced both expected project-local layouts. Every installed skill file
   matched its source hash; no installed skill was a symlink.
 
+After the final recovery/model-tool instructions were integrated, the full local
+copy check was repeated against skills-tree
+`d2f011f856cd6439c26d645f7bc866a71128f28c`: all 18 skills and all **74 files per
+host** matched in both project-local layouts, including the new security
+reference. This is package-copy evidence for that content, not host activation.
+
 This establishes CLI source discovery, public-repository retrieval and local-source
 package copying, not personal/global installation, updates or overwrite safety.
 A **CLI source listing is not coding-host discovery**. A host listing establishes

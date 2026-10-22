@@ -18,6 +18,8 @@ Use the affected implementation, its callers, configuration, tests, and relevant
 
 Keep this as a small working model for the change, not a full-system threat-model document unless the assignment warrants one. For a review, read [change-review.md](references/change-review.md). For exposed secrets, suspected exploitation, or dependency advisories, read [response-and-dependencies.md](references/response-and-dependencies.md).
 
+When models consume retrieved/untrusted content or influence tool calls and consequential operations, read [model-tool-boundaries.md](references/model-tool-boundaries.md). Ordinary software changes do not require this path.
+
 ## Turn a threat into implementation
 
 Choose controls from the actual path. When implementation or executable verification is within the requested scope and authority, check the attempted bypass as well as the permitted operation. A design or review request can instead produce proposed controls and evidence needs; do not silently turn it into remediation or live testing.
