@@ -27,7 +27,7 @@ All areas matter. Equal importance does not mean equal ceremony on every request
 
 ## Expert mechanisms to use as foundations
 
-The [research shortlist](../README.md#expert-source-shortlist) provides primary links and reuse caveats. The initial skills synthesize the candidate mechanisms below into original procedures:
+The [research shortlist](expert-comparison.md#source-shortlist) provides primary links and reuse caveats. The initial skills synthesize the candidate mechanisms below into original procedures:
 
 - **Addy Osmani:** broad engineering coverage, multi-dimensional code review, migration/deprecation and production-readiness thinking. Adapt the relevant decision checks, not fixed sizes, thresholds or universal task sequences.
 - **Matt Pocock:** focused technical clarification, dependency-aware work decomposition and reproducible bug signals. Consume existing decisions rather than re-interviewing the user.

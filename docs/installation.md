@@ -11,6 +11,10 @@ Host documentation checked 22 October 2026:
 [Claude Code](https://code.claude.com/docs/en/skills).
 Host behavior can change; consult its current documentation if discovery differs.
 
+If your normal skill manager already installed the selected folders, skip the
+manual-copy sections and go to [normal automatic selection](#3-use-normal-automatic-selection).
+The copy instructions below are an alternative, not extra setup.
+
 ## 1. Choose scope and source
 
 Download this repository using GitHub's **Code → Download ZIP** and extract it,
@@ -115,7 +119,32 @@ the dependency-free copy route above. Review the current [CLI commands](https://
 and [host paths](https://github.com/vercel-labs/skills/blob/main/docs/agents.md).
 Do not accept an overwrite without reviewing the existing folder.
 
-## 3. Check discovery and explicitly start
+## 3. Use normal automatic selection
+
+Ask for your task normally. Codex's default is `allow_implicit_invocation: true`;
+these skills do not disable it. Their names/descriptions are discovery metadata,
+and full instructions are loaded when a relevant skill is selected. No custom
+installer, hooks or global `AGENTS.md` rule is required. Do not load every skill
+just to make use visible, and do not confuse ordinary selection with a guaranteed
+always-running controller.
+
+If behavior is uncertain, distinguish these evidence levels:
+
+1. **Installed:** the complete folder exists in the intended environment.
+2. **Discovered:** that host lists the intended copy without loading errors or a
+   disabled setting. A copy in another scope may not be the one you expected.
+3. **Selected and loaded:** supported read/injection evidence shows the relevant
+   skill entered the task's context. Merely naming it or saying it was used is
+   not proof of the whole workflow.
+4. **Applied:** the actual result follows the applicable instructions and skip
+   conditions. Structural checks cannot establish this.
+
+The first two can be checked without a model request. Inspect the skill picker
+and existing settings first; do not start a usage-consuming evaluation merely to
+check that files were copied. Later, an ordinary relevant task without naming a
+skill can test implicit selection when the user chooses to spend that usage.
+
+## Explicit invocation or discovery troubleshooting
 
 - **Codex CLI/IDE:** use `/skills`, or type `$` and select `project-planning`.
   Codex detects changes automatically; restart if the skill remains absent.
@@ -123,15 +152,15 @@ Do not accept an overwrite without reviewing the existing folder.
   Skill folders are watched; `/reload-skills` is useful if the top-level skills
   directory was created after the session started.
 
-First request, after explicitly selecting the skill:
+Optional explicit planning example, not a required first step:
 
 > Review the project plan I supplied. Use its existing answers, identify only
 > consequential gaps, and help me choose the remaining decisions. Do not start
 > implementation yet. Keep the explanation direct and specific.
 
 For an idea without a plan, say that and describe the problem and constraints.
-For a well-defined correction, select construction or debugging rather than
-starting a new project interview. See the [project walkthrough](project-walkthrough.md).
+For already-defined work, continue construction or debugging rather than
+starting a new project interview; explicit selection is optional. See the [project walkthrough](project-walkthrough.md).
 
 If absent, check the environment, directory depth, exact `SKILL.md` filename,
 valid frontmatter and existing same-name skills in other scopes. Inspect what the

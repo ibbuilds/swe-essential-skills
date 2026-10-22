@@ -27,3 +27,6 @@ The helper checks metadata and ordinary inline Markdown file links. It does
 not test host activation, all Markdown syntax, external links, engineering
 correctness or model behavior. Review the affected engineering instructions and
 their failure cases directly; use docs/review-scenarios.md when relevant.
+
+Write every skill for direct, concise, professional, answer-first replies. Omit
+filler, but preserve necessary evidence, uncertainty and requested depth.
