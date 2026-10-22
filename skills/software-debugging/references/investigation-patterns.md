@@ -2,6 +2,29 @@
 
 These cases illustrate experiments and conclusions; they are not records of executed model tests.
 
+## Search for variants of a confirmed defect
+
+When the task calls for finding related defects, describe the causal mistake before
+searching for similar text. Check that the initial query detects the known instance;
+if it is already patched, use an available original revision or saved example
+without reverting live work. This calibrates the query, not the correctness of the
+diagnosis. If no usable positive example is available, state that limitation rather
+than treating an empty result as proof of absence.
+
+Broaden identifiers or structure only where the same mistake could recur, inspecting
+the resulting candidates against their callers and guards. Similar syntax may be
+safe; different syntax may violate the same invariant. Account for the selected
+paths, file types, ignore rules and generated-code exclusions before interpreting
+the result. Static search may miss dynamic dispatch or external consumers. Report
+the relevant search boundary, not a claim of complete coverage. Do not turn a
+local repair into a whole-repository sweep or treat discovered variants as authority
+to repair additional code.
+
+For example, after confirming a tenant-unscoped invoice lookup, first check the
+query against that lookup's original form. Generalizing the identifier can locate
+sibling exports, but each needs its own tenant-binding analysis. A zero-result
+search restricted to HTTP handlers says nothing about an excluded worker path.
+
 ## Duplicate charge after timeout
 
 Observation: the client reports failure; a customer later sees two charges. Separate request transport, server operation creation, provider submission, and acknowledgment. Correlate operation/idempotency keys and provider records without dumping payment data.

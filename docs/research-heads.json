@@ -40,9 +40,10 @@
     },
     {
       "repository": "trailofbits/skills",
-      "revision": "f0dd11d2b1da17a1ff8c403741fbe1f6bca0f871",
-      "date": "2026-10-21T18:01:26Z",
-      "url": "https://github.com/trailofbits/skills/commit/f0dd11d2b1da17a1ff8c403741fbe1f6bca0f871"
+      "revision": "1e0cb77d071a8b9453391d111f17d34d2114e057",
+      "date": "2026-10-22T15:19:47Z",
+      "url": "https://github.com/trailofbits/skills/commit/1e0cb77d071a8b9453391d111f17d34d2114e057",
+      "inspection_note": "Additional variant-analysis and post-patch-validation sources inspected; this head is a dependency bump, not evidence the methods are new."
     },
     {
       "repository": "hashicorp/agent-skills",
@@ -147,6 +148,13 @@
       "revision": "8644175285360c166e57b1e35ecadfbc85ff5209",
       "date": "2026-10-22T07:10:37Z",
       "url": "https://github.com/pbakaus/impeccable/commit/8644175285360c166e57b1e35ecadfbc85ff5209"
+    },
+    {
+      "repository": "AndreaMontemaggiore1/repo-atlas",
+      "revision": "3eb619871548580c6e42016f6f6aaf4b1e337f2a",
+      "date": "2026-10-15T16:00:12Z",
+      "url": "https://github.com/AndreaMontemaggiore1/repo-atlas/commit/3eb619871548580c6e42016f6f6aaf4b1e337f2a",
+      "inspection_note": "Benchmark harness, scorer, stored results and negative outcomes inspected; no installation or model execution. File-localization metrics are not coding-task success."
     }
   ]
 }

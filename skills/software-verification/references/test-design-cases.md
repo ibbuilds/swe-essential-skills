@@ -35,6 +35,29 @@ prerequisite explicitly guaranteed by the caller or deployment is legitimate;
 fixtures and mocks are not defects merely because they supply inputs. Conversely,
 a passing unit path does not prove an undeclared production prerequisite exists.
 
+## Keep repair comparisons about behavior
+
+When comparing a defect before and after repair, use the same triggering input or
+event sequence and the same required behavioral property. The oracle must inspect
+the observed result, not the checkout label, commit identity or presence of the
+patch. Inspect changes to setup, fixtures and assertions independently: changing
+both the harness and code can make an apparent red-to-green result incomparable.
+Test changes are legitimate; establish what the comparison still demonstrates.
+
+For example, a tenant-isolation repair should reject the same cross-tenant request
+without disclosing data or causing a protected effect. A harness that expects
+denial only when a patched-version flag is set does not prove that repair. An
+adapter for a renamed public entrypoint can be valid if it supplies equivalent
+input and preserves that property; it must not add the missing authorization itself.
+
+An accepted behavior or API change may require different expectations. Verify the
+new contract and relevant compatibility obligations rather than forcing identical
+outputs across versions. If the baseline cannot run with available dependencies or
+authority, report the comparison gap and use other applicable evidence; a setup
+failure is not reproduction. Reuse trustworthy existing evidence. This comparison
+does not require another runner, extra builds or repeated checks when the claim is
+already supported, and does not make baseline execution mandatory for every test.
+
 ## Test ordering deliberately
 
 Suppose two workers may claim the same job. Use two real transactions or a controlled integration harness: both observe availability, then both attempt acquisition. Assert the owning invariant (one successful claim), not the exact thread that wins. Verify retry behavior and visible final state. A thousand passing serial executions do not exercise this race.
