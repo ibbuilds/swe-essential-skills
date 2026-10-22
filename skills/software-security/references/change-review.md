@@ -1,0 +1,14 @@
+# Security change review
+
+Use for a security-sensitive diff or a requested security review. Narrow harmless changes rather than staging a full audit.
+
+1. Establish the compared revisions and intended behavior. Inspect changed functions plus callers, shared middleware, configuration defaults and tests. History can explain why an apparently redundant guard exists; it is evidence to investigate, not proof that the guard is obsolete.
+2. Follow changed data to a consequential sink: storage, command execution, network destination, deserialization, privileged operation, template, credential or log. Also inspect removed checks and changed ordering. A safe helper does not help a caller that bypasses it.
+3. State an attack hypothesis with actor, controlled input, prerequisite, path and impact. Prefer “a tenant member can export another tenant's invoice by substituting this ID” to “possible access-control issue.” Check whether an earlier authoritative layer actually rules it out.
+4. Construct the smallest safe distinguishing check. For an authorization regression, use two isolated fixture tenants and verify both the response and absence of side effects. For a path issue, include normalization and symlink behavior relevant to the platform; do not read real sensitive files to demonstrate it.
+5. Propose a fix at the owner of the invariant, then inspect other callers sharing that failure mode. Avoid a one-route patch when a shared query or policy is the actual defect. Avoid broadly rewriting unrelated authentication code to fix one missing permission.
+6. Recheck the fixed revision and relevant legitimate flows. Record rejected findings with the concrete constraint that prevents exploitation; reopen them if that constraint changes. Stop when actionable findings in scope are resolved or explicitly left blocked/accepted, not when a commercial tool gives a perfect score.
+
+**Illustration:** An invoice export moves to a worker. The HTTP route checks membership, but the worker fetches the invoice by ID alone. Determine whether the queued job carries a trustworthy tenant binding and whether authorization is meant to hold at submission or execution. A delayed job after membership revocation may need execution-time authorization; a previously authorized immutable administrative job may have different semantics. Encode the chosen rule and test both timing and cross-tenant substitution.
+
+A useful finding includes location, reachable scenario, impact, evidence, proposed control and a regression check. Do not inflate severity from a dangerous API name without showing the reachable conditions.

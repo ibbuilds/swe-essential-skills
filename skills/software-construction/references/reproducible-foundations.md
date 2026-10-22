@@ -1,0 +1,27 @@
+# Reproducible foundations
+
+## Resolve setup from evidence
+
+Compare local toolchain versions with repository pins and CI; multiple manifests may represent a workspace rather than competing package managers. Determine the intended working directory and prerequisite services. Prefer the repository's documented reproducible install mode and preserve its lockfile. Do not guess universal flags across package managers or versions.
+
+When setup fails, classify the first causal failure before changing files:
+
+- **Toolchain mismatch:** reproduce with the supported version rather than loosening language or compiler constraints.
+- **Dependency resolution:** compare manifest and lockfile intent, registry access and platform constraints. Do not delete the lockfile as a generic repair.
+- **Native build:** inspect the missing system library, compiler or architecture mismatch; a package reinstall may not supply system prerequisites.
+- **Environment/configuration:** distinguish missing secrets or services from invalid code. Use documented local substitutes when their semantics suffice.
+- **Permissions/network:** preserve the exact failed operation and missing authority. An unrelated privilege escalation or alternate data path is not a setup fix.
+
+Avoid executing unreviewed remote installer snippets. Installation can run package hooks and access credentials; use project-approved sources and scope. Capture the minimal reproducible setup in the existing project documentation when the task calls for setup work, not in a parallel agent-only handbook.
+
+## Dependencies and generated code
+
+Before adding a dependency, identify the capability missing from the standard library or current dependencies. Check supported runtimes, maintenance, transitive weight, license constraints, security implications and how failure is surfaced. Do not replace mature project libraries solely for personal familiarity. Keep a new integration behind the actual owned boundary where that limits vendor coupling, rather than adding a generic framework for every import.
+
+For generated clients or bindings, identify source schemas, generator version, deterministic inputs and expected checked-in output. Regeneration can expose upstream changes unrelated to the request; separate or revert unrelated output without overwriting user work. A generated declaration must agree with runtime serialization and the deployed protocol.
+
+## Illustrative setup decisions
+
+1. **Fresh checkout fails while CI is green:** compare runtime and working directory first. If CI injects a database URL, identify the documented local database or test substitute; do not copy production credentials or silently skip integration tests and report success.
+2. **Dependency update changes hundreds of lockfile entries:** determine whether the package-manager version rewrote the format or a broad resolution occurred. Restore the intended toolchain and scope the update before interpreting every change as necessary.
+3. **Two development tasks collide:** distinct directories protect source edits, but both tasks may still use one database and queue. Give tests isolated namespaces or disposable fixtures using existing supported mechanisms, and confirm cleanup cannot delete another task's state.

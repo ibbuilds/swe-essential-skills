@@ -1,8 +1,23 @@
 # SWE Essential Skills
 
-A software-engineering skill set being researched and designed for the full software lifecycle. This repository is **not yet an installable skill pack**.
+A developing suite of practical guidance for the full software engineering lifecycle. **Initial implementation candidate:** the skill files are being reviewed; structural checks are not proof of host activation, engineering correctness, or measured token savings.
+
+## Purpose: improve the work, not collect concepts
+
+The primary goal is to reduce avoidable agent effort, rework and user supervision
+while preserving engineering quality. Each utility should change a concrete
+working method: resolve a material uncertainty, prevent a costly failure, reuse
+applicable evidence, or verify the right claim. Topic coverage alone is not proof
+of usefulness, and extra instructions themselves have a cost.
+
+See [workflow value](docs/workflow-value.md) for request-level interventions,
+activation/skip conditions and evidence limits. These are reasoned mechanisms,
+not measured token-savings claims. Ordinary Codex performance has not been
+benchmarked against this candidate.
 
 ## Scope
+
+The scope is the whole software engineering lifecycle. The [independent lifecycle review](docs/lifecycle-coverage.md) is the coverage reference; the original numbered outline below is historical and non-exhaustive.
 
 The engineering counterpart to [PM Essential Skills](https://github.com/ibbuilds/pm-essential-skills), not a replacement for it:
 
@@ -15,7 +30,60 @@ The engineering counterpart to [PM Essential Skills](https://github.com/ibbuilds
 19. Build, release and deployment
 20. Operations, maintenance and support
 
-These are coverage areas, not a fixed number of skills or mandatory stages for every edit. Technical requirements, compatibility, migration and eventual retirement must remain represented. Visual art direction, marketing and general agent/project coordination belong to their respective skill sets.
+These were initial planning labels, not a complete taxonomy, scope limit, fixed number of skills or mandatory stages for every edit. Technical requirements, compatibility, migration and eventual retirement must remain represented. Visual art direction, marketing and general agent/project coordination belong to their respective skill sets.
+
+## Skill catalogue
+
+Use the skill relevant to the task, not the entire suite on every request. Each folder
+contains its own required references and can be used independently of PM Essentials.
+
+| Skill | Engineering work it helps perform |
+| --- | --- |
+| [Software requirements](skills/software-requirements/SKILL.md) | Requirements discovery, validation, conflicts, baselines and change traceability |
+| [Software architecture](skills/software-architecture/SKILL.md) | Technical requirements, quality attributes, boundaries, alternatives and failure models |
+| [Software construction](skills/software-construction/SKILL.md) | Repository foundations, reproducible setup, coherent implementation and consumer contracts |
+| [Backend engineering](skills/backend-engineering/SKILL.md) | APIs, service behavior, concurrency, transactions and side-effect semantics |
+| [Data engineering](skills/data-engineering/SKILL.md) | Data integrity, schema/query work, migrations, backfills and recovery |
+| [Client engineering](skills/client-engineering/SKILL.md) | Working interactions, state, async behavior, accessibility and client lifecycle |
+| [Software debugging](skills/software-debugging/SKILL.md) | Reproduction, causal investigation, distinguishing experiments and verified fixes |
+| [Software verification](skills/software-verification/SKILL.md) | Behavior/invariant-based checks, test strategy, regression evidence and limitations |
+| [Software review](skills/software-review/SKILL.md) | Context-aware code/change review, validated findings and impact assessment |
+| [Software performance](skills/software-performance/SKILL.md) | Representative measurements, profiling, bottlenecks and safe optimization |
+| [Software security](skills/software-security/SKILL.md) | Trust boundaries, secure implementation, security review and vulnerability response |
+| [Platform engineering](skills/platform-engineering/SKILL.md) | Hosting selection, environment establishment, network/DNS/TLS, identity and runtime foundations |
+| [Software delivery](skills/software-delivery/SKILL.md) | Build/package/CI, infrastructure changes, compatible rollout and recovery |
+| [Software operations](skills/software-operations/SKILL.md) | Runtime diagnosis, observability, incidents, capacity and restoration |
+| [Software evolution](skills/software-evolution/SKILL.md) | Refactoring, upgrades, compatibility, deprecation and retirement |
+
+The catalogue organizes responsibilities; it is not a cap on coverage or a mandatory
+pipeline. Conditional references provide technical depth without loading unrelated
+platform procedures. The suite does not pretend to replace specialist assurance
+for every regulated, hardware-dependent or otherwise specialized system.
+
+### Use and limits
+
+Use the target agent's supported skill-installation workflow for the selected
+`skills/<name>/` folders, preserving their local references. Keep the repository's
+root `AGENTS.md` here: it describes maintaining this repository, not instructions
+to inject into every user project. No hooks, external services or model API keys
+are required by these skill files. They do not grant permission to deploy or
+change infrastructure.
+
+See [coverage and composition](docs/coverage-and-composition.md) for ownership,
+[review scenarios](docs/review-scenarios.md) for representative cases, and
+[research heads](docs/research-heads.json) for recorded upstream revisions.
+
+### Maintainer checks
+
+Install the development validation dependency with
+`python -m pip install -r requirements-dev.txt`, then run:
+
+- `python scripts/validate_skills.py`
+- `python -m unittest discover -s tests` when changing the validation helper
+
+These check metadata and ordinary inline local file references, plus the helper's
+own behavior. They do not evaluate agent decisions or every Markdown construct.
+Real-use evaluation remains deferred; scenarios are not benchmark results.
 
 ## Expert-source shortlist
 
@@ -54,6 +122,13 @@ The comparison is source-based research, not executed agent-performance testing.
 
 Observed licensing is not uniform: Matt Pocock, Addy Osmani, Superpowers, Spec Kit, OpenSpec, Vercel and Supabase expose MIT licensing; Trail of Bits uses CC-BY-SA-4.0; HashiCorp uses MPL-2.0. A single repository-wide license was not established for Ras Mic's collection, which contains components with different notices, including PolyForm Shield. Verify each exact revision and resource before copying or adapting content. This repository currently records original research summaries and links, not vendored skill text.
 
-## Next milestone
+## Implementation status
 
-Deepen the selected skill comparisons, map useful mechanisms to engineering coverage, and implement original, independently usable skills. Select folders by distinct responsibilities and triggers, not by a target skill count. Preserve proportional verification and document unsupported or untested behavior honestly.
+This candidate translates the researched mechanisms into original engineering procedures. Review focuses on practical technical depth, meaningful failure cases, and independently portable resources. Live host activation and real-task effectiveness remain unverified; neither a complete catalogue nor passing structure checks establishes universal completeness. No versioned release has been published.
+
+## License
+
+Original project content is available under the [MIT License](LICENSE). Each skill
+folder includes its own copy so individually distributed skills retain the notice.
+Linked third-party projects retain their own licenses; this license does not
+relicense their content.

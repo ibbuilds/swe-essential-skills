@@ -1,6 +1,6 @@
 # Engineering coverage and composition
 
-Status: proposed design, 22 October 2026. This maps the requested responsibilities and how to cover them. It is not an implemented skill catalogue, an exhaustive claim about software engineering, or evidence of measured agent performance.
+Status: coverage design and initial implementation mapping, 22 October 2026. This maps the requested responsibilities and their instruction owners. It is not an exhaustive claim about software engineering or evidence of measured agent performance.
 
 ## Purpose
 
@@ -8,7 +8,9 @@ Help agents make sound engineering decisions and avoid recurring mistakes while 
 
 PM Essential Skills supplies domain-independent coordination. SWE Essential Skills supplies technical methods. Product discovery, business positioning and visual art direction remain outside this suite. SWE may clarify missing technical acceptance criteria, but should not restart product strategy when an adequate brief already exists.
 
-## What we cover, and how
+## Historical outline cross-reference
+
+This original 13–20 outline is not the scope boundary. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
 
 | Original area | Engineering responsibility | Recurring mistakes to address | Proposed method and useful outcome |
 | --- | --- | --- | --- |
@@ -25,7 +27,7 @@ All areas matter. Equal importance does not mean equal ceremony on every request
 
 ## Expert mechanisms to use as foundations
 
-The [research shortlist](../README.md#expert-source-shortlist) provides primary links and reuse caveats. Candidate mechanisms below are not yet implemented:
+The [research shortlist](../README.md#expert-source-shortlist) provides primary links and reuse caveats. The initial skills synthesize the candidate mechanisms below into original procedures:
 
 - **Addy Osmani:** broad engineering coverage, multi-dimensional code review, migration/deprecation and production-readiness thinking. Adapt the relevant decision checks, not fixed sizes, thresholds or universal task sequences.
 - **Matt Pocock:** focused technical clarification, dependency-aware work decomposition and reproducible bug signals. Consume existing decisions rather than re-interviewing the user.
@@ -80,3 +82,28 @@ These are design scenarios, not executed model tests:
 - Added deterministic helpers are checked against relevant behavior, not merely expected wording.
 - Composition and negative cases are reviewed. Structural validation alone is not evidence of agent adherence.
 - Any proposed live model evaluation or paid tooling remains separate and subject to the user's available allowance and authorization. No token-savings claim is made without suitable measurements.
+
+
+## Historical implementation mapping
+
+The first implementation separates these responsibilities so unrelated procedures
+need not load together. This is not a final ceiling on coverage.
+
+| Area | Implemented instruction owner(s) |
+| --- | --- |
+| 13 | software-architecture |
+| 14 | software-construction |
+| 15 | backend-engineering; data-engineering |
+| 16 | client-engineering |
+| 17 | software-debugging; software-verification; software-review; software-performance |
+| 18 | software-security |
+| 19 | software-delivery |
+| 20 | software-operations; software-evolution |
+
+Security, performance, compatibility and recovery also appear where they affect
+a domain's actual decisions. This is deliberate local completeness for separately
+installed skills, not a requirement to activate every related owner. Code review
+is separate from test execution because inspecting a change and designing/running
+its verification are distinct requests and need different evidence.
+
+Requirements engineering and platform/hosting establishment now have distinct owners beyond that original mapping. Assurance, configuration management, pipeline work, engineering economics and documentation are assessed in the independent lifecycle map rather than assumed covered by these numbers.
