@@ -7,6 +7,12 @@ description: Investigate and improve latency, throughput, memory, startup, respo
 
 Optimize a measured constraint while preserving correctness. A slow feeling, familiar anti-pattern, or benchmark score from another project is a hypothesis, not evidence that the same optimization belongs here.
 
+Appropriate algorithm/API selection and respecting known resource bounds are
+ordinary construction responsibilities; do not first build obviously unnecessary
+or unbounded work just to justify fixing it later. Structural cost reasoning is
+not a measured speedup. More complex tuning and quantified performance claims
+still require evidence against the actual workload.
+
 ## Establish the workload and baseline
 
 Identify the user/system outcome: interaction delay, startup, tail latency, throughput at a stated concurrency, memory growth, batch completion, battery/energy, or a real-time deadline. Reuse existing service objectives or device/resource budgets. If none exist, establish a relevant baseline and clarify the consequential tradeoff rather than inventing universal thresholds.

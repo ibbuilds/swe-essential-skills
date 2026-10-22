@@ -8,6 +8,25 @@ Choose normalization for authoritative facts and denormalization for a demonstra
 
 Represent currency, measurements and time with explicit precision, unit and semantics. Distinguish event time from ingestion time and an instant from a local calendar date. Avoid implicit floating-point or timezone conversions where equality or ordering matters. Evaluate uniqueness with the real collation/case rules and tenant scope.
 
+## Shape collection access before it becomes a bottleneck
+
+For changed collection reads, inspect the actual generated SQL or equivalent
+request shape. Identify lazy/per-item loading that makes round trips grow with
+the result count; push appropriate filtering, field selection and limits before
+materialization. Do not replace it blindly with one large join: multiple related
+collections can multiply rows and transferred bytes. Compare projection, eager
+loading, bounded batches or explicit split queries against relationship shape,
+parameter limits, ordering and consistency requirements. Preserve tenant scope
+and intended tracking/update semantics.
+
+Fewer queries is not an unconditional win. Split reads can observe different
+snapshots; a streamed result may hold a connection and an ORM/driver may buffer
+internally. Trace the full consumption path before claiming bounded memory.
+Use a stable query-count/shape observation when it can expose repeated work;
+representative profiling is needed for disputed runtime cost, not automatically
+for every ordinary data edit. Small scalar reads or unchanged access paths need
+no separate query-optimization exercise.
+
 ## Investigate a slow query systematically
 
 1. Capture the actual query shape and sanitized parameter distribution, frequency, returned rows and observed latency boundary. Separate pool wait, network time, lock wait and execution time.

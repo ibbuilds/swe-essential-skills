@@ -25,9 +25,21 @@ Draw the commit boundary. Keep remote effects out of long-held database transact
 
 For competing writes, retries, duplicate messages and partial failure, read [concurrency and delivery](references/concurrency-and-delivery.md) before implementing.
 
+For changed collection-returning workflows, inspect whether datastore requests
+scale per item or a proposed join multiplies returned rows. Choose appropriate
+projection/loading or bounded batching without losing tenant scope, ordering or
+consistency; neither one query nor maximum parallelism is always better.
+
 ## Bound resource use and make failure diagnosable
 
 Use timeouts and cancellation supported by the actual runtime and client. Allocate an end-to-end deadline across dependencies rather than allowing each hop to spend the full request budget. Bound fan-out, queue depth, payload size and expensive work; reject or shed load according to the service contract rather than amplifying an overload with retries.
+
+On event-loop or shared-thread runtimes, identify where parsing, serialization,
+compression, IO and CPU loops actually execute; asynchronous syntax does not make
+synchronous work nonblocking. For material input-dependent work, use appropriate
+runtime APIs, bounded partitioning or an existing bounded worker facility as
+justified. Account for worker startup, copying, queues, cancellation and ownership;
+do not create one worker per item or apply event-loop advice to unrelated runtimes.
 
 Capture enough structured context to distinguish validation, authorization, dependency, contention and internal failures. Use operation/correlation identifiers without logging credentials or full private payloads. Avoid high-cardinality identifiers as metric labels. Expose durable job status when acknowledgment precedes completion; do not label queued work as completed.
 

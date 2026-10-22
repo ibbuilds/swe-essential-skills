@@ -99,3 +99,17 @@ or by rewarding more tool calls, more tests, more files or more output.
 - A planning reply: lead with the specific result or decision, explain only the
   necessary tradeoff, and ask the useful question. Do not repeat the brief or
   remove material uncertainty merely to shorten the response.
+
+## Efficient construction cases
+
+- Repeated membership checks scan a growing collection: compare a conventional
+  lookup structure including its build/memory cost and equality/duplicate/order
+  semantics. Do not replace a clear tiny bounded scan by reflex.
+- A collection endpoint performs one related query per item: inspect actual query
+  shape and choose bounded loading/projection. Avoid silent N+1 access; check that
+  replacement joins do not cause excessive row expansion or violate required consistency.
+- An asynchronous handler performs large synchronous parsing: identify the actual
+  execution thread and input bounds; an async label or unbounded worker creation
+  is not proof of responsiveness.
+- An algorithmic change removes repeated work without measurements: explain the
+  structural difference, preserve behavior and avoid inventing a latency gain.
