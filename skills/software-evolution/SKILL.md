@@ -16,6 +16,10 @@ Preserve behavior and invariants unless an intentional change is accepted. Compa
 
 Identify the change's purpose and invariant: public behavior, data meaning, performance envelope, resource ownership, security boundary or operability. Inspect actual consumers/failure cases. Small local refactors need no migration document; external or irreversible changes need sequencing and evidence.
 
+## Justify maintenance work
+
+When choosing among debt reductions rather than executing an already accepted change, read [evidence-based debt reduction](references/evidence-based-debt-reduction.md). Use observed incident, maintenance or change burden to select a bounded intervention; an unfamiliar style or low line count is not itself evidence of debt. Reuse existing priorities and records instead of creating a second planning backlog.
+
 ## Refactor without accidental redesign
 
 1. **Locate the seam.** Trace execution, callers, tests, shared state and ownership. Find the coupling/duplication responsible for the maintenance problem. Prefer the existing owner over a parallel framework.

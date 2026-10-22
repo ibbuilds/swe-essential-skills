@@ -8,7 +8,9 @@ Help agents make sound engineering decisions and avoid recurring mistakes while 
 
 PM Essential Skills supplies domain-independent coordination. SWE Essential Skills supplies technical methods. Product discovery, business positioning and visual art direction remain outside this suite. SWE may clarify missing technical acceptance criteria, but should not restart product strategy when an adequate brief already exists.
 
-## What we cover, and how
+## Historical outline cross-reference
+
+This original 13–20 outline is not the scope boundary. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
 
 | Original area | Engineering responsibility | Recurring mistakes to address | Proposed method and useful outcome |
 | --- | --- | --- | --- |
@@ -82,7 +84,7 @@ These are design scenarios, not executed model tests:
 - Any proposed live model evaluation or paid tooling remains separate and subject to the user's available allowance and authorization. No token-savings claim is made without suitable measurements.
 
 
-## Initial implementation owners
+## Historical implementation mapping
 
 The first implementation separates these responsibilities so unrelated procedures
 need not load together. This is not a final ceiling on coverage.
@@ -103,3 +105,5 @@ a domain's actual decisions. This is deliberate local completeness for separatel
 installed skills, not a requirement to activate every related owner. Code review
 is separate from test execution because inspecting a change and designing/running
 its verification are distinct requests and need different evidence.
+
+Requirements engineering and platform/hosting establishment now have distinct owners beyond that original mapping. Assurance, configuration management, pipeline work, engineering economics and documentation are assessed in the independent lifecycle map rather than assumed covered by these numbers.

@@ -1,6 +1,6 @@
 ---
 name: data-engineering
-description: Design and change persistent schemas, investigate query behavior, and perform compatible migrations, backfills and recovery planning. Use when correctness depends on stored-data invariants, query plans, rollout compatibility or data lifecycle, across the project's actual datastore rather than a default database.
+description: Design and change persistent schemas, investigate query behavior, and perform compatible migrations, backfills and recovery planning. Use when correctness depends on stored-data invariants, query plans, rollout compatibility, data pipelines or data lifecycle, across the project's actual datastore rather than a default database.
 ---
 
 # Data engineering
@@ -24,6 +24,10 @@ Name the behavior delta and every affected reader/writer. Determine whether old 
 Prefer a compatible transition when components cannot change atomically: expand capability, adapt writers/readers, backfill, validate, cut over, then remove obsolete structures after the compatibility window closes. This is a technique, not a mandatory sequence for a disposable local database.
 
 For production-sized migrations, online changes or backfills, read [migration and backfill execution](references/migration-and-backfill-execution.md). Before destructive changes or claims of recoverability, read [recovery and reconciliation](references/recovery-and-reconciliation.md).
+
+## Move data without losing its meaning
+
+For ingestion, batch/stream transformations or derived-dataset publication, read [pipeline correctness and operations](references/pipeline-correctness-and-operations.md). Use it when source evolution, delayed input, replay or partial publication can change what consumers see; a schema migration alone need not adopt a pipeline workflow.
 
 ## Verify meaning and performance
 

@@ -17,6 +17,7 @@ Choose the applicable path:
 - **CI/CD change:** check triggers, permissions, secret exposure, trust of contributions, concurrency and artifact handoffs; exercise the changed branch safely.
 - **Infrastructure:** read [infrastructure.md](references/infrastructure.md) before planning, testing or applying changes.
 - **Release/deploy:** read [rollout-and-recovery.md](references/rollout-and-recovery.md) before the externally visible action.
+- **Coupled versions or drift:** read [configuration-baselines.md](references/configuration-baselines.md) when release correctness depends on a coordinated configuration set, deployed-version accounting, or reconciliation of declared and live state.
 
 Installation of this skill grants no registry, signing, production, spending or destructive authority. If the requested destination or authority is ambiguous, prepare and validate what can be done locally; pause the consequential action with the exact target and missing decision.
 

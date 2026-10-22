@@ -29,6 +29,10 @@ Preserve unrelated edits and local conventions. Use isolation appropriate to the
 
 When changing configuration, define defaults, required values, precedence and validation. Reject invalid combinations at a useful boundary; distinguish an absent value from an empty or zero value when behavior differs. Keep secrets out of committed defaults and fixtures. Check which settings are baked into an artifact versus read at runtime before claiming they can change without rebuilding.
 
+## Keep changed usage usable
+
+When a change alters setup, configuration, a public API or a supported workflow, update the documentation and examples consumers actually use alongside the implementation. Read [engineering documentation](references/engineering-documentation.md) for choosing the authoritative source and verifying documented behavior. Internal edits with no changed usage need no new document.
+
 ## Establish the result
 
 Run the project's required checks and the smallest meaningful behavioral checks for the changed contract. Typechecking does not prove runtime parsing; a build does not prove packaging; a unit test does not prove an external consumer can use the public API. Add a regression at the layer that would have detected the failure, without coupling it to incidental implementation details.

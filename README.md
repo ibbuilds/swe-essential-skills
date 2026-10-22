@@ -1,8 +1,10 @@
 # SWE Essential Skills
 
-Practical engineering guidance for the full software lifecycle. **Initial implementation candidate:** the skill files are being reviewed; structural checks are not proof of host activation, engineering correctness, or measured token savings.
+A developing suite of practical guidance for the full software engineering lifecycle. **Initial implementation candidate:** the skill files are being reviewed; structural checks are not proof of host activation, engineering correctness, or measured token savings.
 
 ## Scope
+
+The scope is the whole software engineering lifecycle. The [independent lifecycle review](docs/lifecycle-coverage.md) is the coverage reference; the original numbered outline below is historical and non-exhaustive.
 
 The engineering counterpart to [PM Essential Skills](https://github.com/ibbuilds/pm-essential-skills), not a replacement for it:
 
@@ -15,7 +17,7 @@ The engineering counterpart to [PM Essential Skills](https://github.com/ibbuilds
 19. Build, release and deployment
 20. Operations, maintenance and support
 
-These are coverage areas, not a fixed number of skills or mandatory stages for every edit. Technical requirements, compatibility, migration and eventual retirement must remain represented. Visual art direction, marketing and general agent/project coordination belong to their respective skill sets.
+These were initial planning labels, not a complete taxonomy, scope limit, fixed number of skills or mandatory stages for every edit. Technical requirements, compatibility, migration and eventual retirement must remain represented. Visual art direction, marketing and general agent/project coordination belong to their respective skill sets.
 
 ## Skill catalogue
 
@@ -24,6 +26,7 @@ contains its own required references and can be used independently of PM Essenti
 
 | Skill | Engineering work it helps perform |
 | --- | --- |
+| [Software requirements](skills/software-requirements/SKILL.md) | Requirements discovery, validation, conflicts, baselines and change traceability |
 | [Software architecture](skills/software-architecture/SKILL.md) | Technical requirements, quality attributes, boundaries, alternatives and failure models |
 | [Software construction](skills/software-construction/SKILL.md) | Repository foundations, reproducible setup, coherent implementation and consumer contracts |
 | [Backend engineering](skills/backend-engineering/SKILL.md) | APIs, service behavior, concurrency, transactions and side-effect semantics |
@@ -34,6 +37,7 @@ contains its own required references and can be used independently of PM Essenti
 | [Software review](skills/software-review/SKILL.md) | Context-aware code/change review, validated findings and impact assessment |
 | [Software performance](skills/software-performance/SKILL.md) | Representative measurements, profiling, bottlenecks and safe optimization |
 | [Software security](skills/software-security/SKILL.md) | Trust boundaries, secure implementation, security review and vulnerability response |
+| [Platform engineering](skills/platform-engineering/SKILL.md) | Hosting selection, environment establishment, network/DNS/TLS, identity and runtime foundations |
 | [Software delivery](skills/software-delivery/SKILL.md) | Build/package/CI, infrastructure changes, compatible rollout and recovery |
 | [Software operations](skills/software-operations/SKILL.md) | Runtime diagnosis, observability, incidents, capacity and restoration |
 | [Software evolution](skills/software-evolution/SKILL.md) | Refactoring, upgrades, compatibility, deprecation and retirement |

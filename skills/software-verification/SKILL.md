@@ -1,11 +1,13 @@
 ---
 name: software-verification
-description: Design and run proportionate software verification while implementing or changing behavior, selecting tests from requirements, invariants, contracts, and failure risks. Use for test strategy, regression coverage, acceptance evidence, or assessing what existing checks actually prove.
+description: Design proportionate software verification and system validation from requirements, contracts and failure risks. Use for test strategy, regression coverage, lifecycle assurance obligations, acceptance readiness, evidence gaps and exception assessment—not general project coordination.
 ---
 
 # Software verification
 
 Choose evidence for the claim, not a ceremonial test count. Verification informs implementation: use it to clarify ambiguous behavior, expose missing seams, and distinguish correct results from merely executable code. No universal test-first mandate or exemption from testing applies.
+
+For material risk, regulated use, or cross-lifecycle acceptance obligations, read [lifecycle-assurance.md](references/lifecycle-assurance.md). Use it to connect claims, accountable acceptance and evidence—not to require a separate assurance plan for every edit.
 
 ## Derive meaningful checks
 
