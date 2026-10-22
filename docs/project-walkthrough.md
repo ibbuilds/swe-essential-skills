@@ -4,6 +4,22 @@ This is an illustrative workflow, **not an executed agent test**. Use the names
 below through your host's supported skill invocation. Installing skills makes
 them available; it does not run every stage or guarantee automatic selection.
 
+## Joining an ongoing project
+
+If you are already implementing an agreed feature, continue that work. The
+conversation, issue, accepted decisions and affected code may already provide
+what is needed; do not request a replacement plan or scan the entire repository
+just because the suite was installed. This also applies to substantial work,
+not only small corrections. Reuse current evidence and inspect only missing,
+stale or affected facts. A new chat should recover the available handoff and
+current relevant state, not replay discovery.
+
+If a new decision becomes material, resolve that specific gap before dependent
+work. For example, adding external access to an internal feature may require an
+authorization decision; changing an internal implementation does not inherently
+reopen the product's audience or positioning. Continue independent agreed work.
+This is task-sensitive assistance, not a user-selected rigid operating mode.
+
 ## Start with what you have
 
 Suppose you want an internal tool for reviewing documents. You already have a

@@ -19,8 +19,8 @@ Visual art direction and marketing execution are not. Platform-specific and
 regulated work still needs appropriate current documentation, tools and expertise.
 The skill count is an implementation fact, not a completeness score.
 
-V1 must work as selective guidance: a bounded bug fix does not restart product
-strategy; a known check recipe does not restart assurance planning. Each skill's
+V1 must work as selective guidance: already-defined ongoing development,
+including substantial features or refactors, does not restart product strategy; a known check recipe does not restart assurance planning. Each skill's
 required references stay in its own folder. Installation does not enforce
 activation, establish a sandbox, grant production access or authorize spending,
 publication, merging or destructive action.

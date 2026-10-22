@@ -11,8 +11,10 @@ Research findings are not measured savings or proof of flawless behavior.
 1. [Install selected skills or the suite](docs/installation.md) in your Codex or
    Claude Code environment. Copy complete folders; consumer use needs no Python
    setup, API key or custom service.
-2. Explicitly select `project-planning` for a new idea or supplied plan. For an
-   existing focused bug/change, select the relevant engineering skill instead.
+2. Select `project-planning` when developing or reconciling a plan. If existing
+   context already settles the current work, use the relevant engineering skill
+   directly, including for substantial ongoing features or refactors. Installing
+   the suite does not restart the project or require a new planning document.
 3. [Follow one project through the workflow](docs/project-walkthrough.md): reuse
    existing answers, help the user choose, build an authorized coherent slice,
    verify it and preserve delivery/operation boundaries.
