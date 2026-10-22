@@ -206,3 +206,20 @@ or by rewarding more tool calls, more tests, more files or more output.
   concrete consequential conflict rather than silently guessing its resolution.
 
 These are review specifications, not executed model-adherence results.
+
+## Native-first cleanup and review
+
+- A native review or cleanup already addressed the current revision: reuse its
+  applicable evidence and examine material gaps, not another complete pass by
+  default. A requested independent review remains a distinct task.
+- A tiny cleanup can be handled by the current agent: do not launch a native
+  multi-reviewer action merely because it exists or the suite was installed.
+- Whole-project cleanup includes pre-existing user edits: inspect the requested
+  first-party scope in coherent batches, preserve those edits, and report excluded
+  or unexamined areas rather than equating the latest diff with the whole project.
+- A project script named clean deletes local state: inspect its actual effects;
+  code cleanup does not authorize data loss or resetting the checkout.
+- No candidate improves maintainability without an unjustified behavior change:
+  report no change and relevant uncertainty, not cosmetic churn to show activity.
+
+These are static review scenarios, not executed agent benchmarks.
