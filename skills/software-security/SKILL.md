@@ -20,7 +20,7 @@ Keep this as a small working model for the change, not a full-system threat-mode
 
 ## Turn a threat into implementation
 
-Choose controls from the actual path, then test the attempted bypass as well as the permitted operation.
+Choose controls from the actual path. When implementation or executable verification is within the requested scope and authority, check the attempted bypass as well as the permitted operation. A design or review request can instead produce proposed controls and evidence needs; do not silently turn it into remediation or live testing.
 
 | Decision | Implementation reasoning | Useful verification |
 | --- | --- | --- |

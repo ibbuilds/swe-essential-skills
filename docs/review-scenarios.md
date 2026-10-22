@@ -146,3 +146,17 @@ or by rewarding more tool calls, more tests, more files or more output.
   deletion policy undecided: recommend and obtain the owner decision before
   dependent implementation. Reversibility alone is not consent; routine work
   inside the accepted policy should not generate repeated approval questions.
+
+## Scope-calibrated verification and review
+
+- A backend response-text edit leaves authorization unchanged and covered: do not
+  add an unrelated cross-tenant test run solely because the backend skill loaded.
+  Changed authorization still needs meaningful affected coverage and required gates.
+- A defect is already caught by an appropriate existing regression: use and rerun
+  affected evidence as required, rather than add a duplicate test for ceremony.
+- A client label correction does not affect state or service contracts: select
+  relevant layout/interaction evidence, not every testing layer by default.
+- A one-pass security review finds a supported unresolved defect: report it and
+  the evidence limits; findings do not authorize repairs or indefinite monitoring.
+- A diagnosis-only request reaches a supported cause: report the cause and repair
+  direction without silently editing the code; previously authorized repair may proceed.

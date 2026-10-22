@@ -153,6 +153,8 @@ Source inspection: **22 October 2026**. Ranking below reflects fit for this proj
 
 See the [deeper expert/workflow comparison](docs/expert-comparison.md) for actual-source findings, selective adaptations, rejected overhead and source-maintenance corrections.
 
+See [empirical evidence and its limits](docs/empirical-evidence.md) for measured external studies and why they support selective guidance rather than more instructions or arbitrary shortening.
+
 ## Research conclusions so far
 
 1. Keep the engineering responsibilities complete, but activate only the guidance relevant to a task. A one-line correction and a production data migration do not need the same workflow.

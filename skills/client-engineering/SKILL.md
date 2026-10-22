@@ -36,6 +36,17 @@ Read only the applicable sections of [platform-and-state-patterns.md](references
 
 ## Verify the changed journey
 
-Confirm the running client/build and relevant service configuration belong to this change; a familiar URL or checkout HEAD is not enough. Reuse confirmed target identity while it remains applicable. Exercise the actual interaction where tools permit: representative input, the affected transition, adverse response, and recovery. Check layout/interaction at relevant viewport, text-size, input-method, and platform settings rather than relying only on a static screenshot. Use focused state/logic tests for permutations and integration tests for the boundary that could fail. Preserve repository-required checks.
+Select checks for the changed journey and plausible affected failure mechanisms.
+Reuse applicable task-local results when coverage and relevant code, build,
+configuration, data and environment still match and required gates permit their
+freshness. Before treating a running-session result as evidence, confirm that the
+client/build and relevant service configuration belong to this change; reuse
+confirmed target identity while applicable. Exercise the actual affected
+interaction where tools permit, including adverse response and recovery when
+those paths are affected. Check relevant layout, viewport, text-size, input-method
+and platform behavior rather than treating a screenshot as interaction evidence.
+Use focused state/logic tests for permutations and integration checks where the
+failure depends on a real boundary; do not require every layer for every edit.
+Preserve repository-required checks.
 
 Report separately what code-level checks establish and what was observed in a rendered or device session. If no browser, simulator, device, or accessibility tool is available, identify the exact behavior still unverified; do not fabricate visual or device evidence. Completion means the requested behavior works within the stated evidence, not that every possible platform has been certified.
