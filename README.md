@@ -1,4 +1,4 @@
-# ibbuilds SWE Essential Skills
+# SWE Essential Skills
 
 18 independent skills for software work in Codex and Claude Code, from product
 planning through development, security, delivery and maintenance. The goal is
@@ -41,13 +41,11 @@ with Codex's `$` picker or Claude Code's `/skill-name` syntax. See the
 
 ## Skill identity
 
-Every installable name uses `ibbuilds-swe-<capability>`: `ibbuilds` identifies
-the publisher, `swe` identifies this engineering suite, and the suffix identifies
-the skill. For example: `ibbuilds-swe-software-review`. The folder and `name`
-frontmatter match, so the identity travels with individually copied skills.
-Optional Codex UI metadata uses readable names such as **ibbuilds SWE Essentials /
-Software Review**; hosts that ignore it still have the canonical skill name.
-See [migration guidance](docs/installation.md#migrate-from-unprefixed-names) for
+Every installable name uses `repo-name-skill-name`: for example,
+`swe-essential-skills-software-review`. Folder names, `name` frontmatter and
+optional Codex UI display names all use that exact identity. Hosts that ignore
+UI metadata still have the same canonical skill name.
+See [migration guidance](docs/installation.md#migrate-from-previous-names) for
 existing installations; old installed names do not rename themselves.
 
 ## Skill catalogue
@@ -57,24 +55,24 @@ workflow suite, not a dependency.
 
 | Skill | Engineering work it helps perform |
 | --- | --- |
-| [Project planning](skills/ibbuilds-swe-project-planning/SKILL.md) | Import or create a usable plan, assess material gaps and guide readiness through the lifecycle |
-| [Product discovery](skills/ibbuilds-swe-product-discovery/SKILL.md) | Understand users/problems, alternatives and evidence before committing to a solution |
-| [Product definition](skills/ibbuilds-swe-product-definition/SKILL.md) | Establish strategy, positioning, scope, outcomes and an actionable product brief |
-| [Software requirements](skills/ibbuilds-swe-software-requirements/SKILL.md) | Requirements discovery, validation, conflicts, baselines and change traceability |
-| [Software architecture](skills/ibbuilds-swe-software-architecture/SKILL.md) | Technical requirements, quality attributes, boundaries, alternatives and failure models |
-| [Software construction](skills/ibbuilds-swe-software-construction/SKILL.md) | Repository foundations, reproducible setup, coherent implementation and consumer contracts |
-| [Backend engineering](skills/ibbuilds-swe-backend-engineering/SKILL.md) | APIs, service behavior, concurrency, transactions and side-effect semantics |
-| [Data engineering](skills/ibbuilds-swe-data-engineering/SKILL.md) | Data integrity, schema/query work, migrations, backfills and recovery |
-| [Client engineering](skills/ibbuilds-swe-client-engineering/SKILL.md) | Working interactions, state, async behavior, accessibility and client lifecycle |
-| [Software debugging](skills/ibbuilds-swe-software-debugging/SKILL.md) | Reproduction, causal investigation, distinguishing experiments and verified fixes |
-| [Software verification](skills/ibbuilds-swe-software-verification/SKILL.md) | Behavior/invariant-based checks, test strategy, regression evidence and limitations |
-| [Software review](skills/ibbuilds-swe-software-review/SKILL.md) | Context-aware code/change review, validated findings and impact assessment |
-| [Software performance](skills/ibbuilds-swe-software-performance/SKILL.md) | Representative measurements, profiling, bottlenecks and safe optimization |
-| [Software security](skills/ibbuilds-swe-software-security/SKILL.md) | Trust boundaries, secure implementation, security review and vulnerability response |
-| [Platform engineering](skills/ibbuilds-swe-platform-engineering/SKILL.md) | Hosting selection, environment establishment, network/DNS/TLS, identity and runtime foundations |
-| [Software delivery](skills/ibbuilds-swe-software-delivery/SKILL.md) | Build/package/CI, infrastructure changes, compatible rollout and recovery |
-| [Software operations](skills/ibbuilds-swe-software-operations/SKILL.md) | Runtime diagnosis, observability, incidents, capacity and restoration |
-| [Software evolution](skills/ibbuilds-swe-software-evolution/SKILL.md) | Refactoring, upgrades, compatibility, deprecation and retirement |
+| [Project planning](skills/swe-essential-skills-project-planning/SKILL.md) | Import or create a usable plan, assess material gaps and guide readiness through the lifecycle |
+| [Product discovery](skills/swe-essential-skills-product-discovery/SKILL.md) | Understand users/problems, alternatives and evidence before committing to a solution |
+| [Product definition](skills/swe-essential-skills-product-definition/SKILL.md) | Establish strategy, positioning, scope, outcomes and an actionable product brief |
+| [Software requirements](skills/swe-essential-skills-software-requirements/SKILL.md) | Requirements discovery, validation, conflicts, baselines and change traceability |
+| [Software architecture](skills/swe-essential-skills-software-architecture/SKILL.md) | Technical requirements, quality attributes, boundaries, alternatives and failure models |
+| [Software construction](skills/swe-essential-skills-software-construction/SKILL.md) | Repository foundations, reproducible setup, coherent implementation and consumer contracts |
+| [Backend engineering](skills/swe-essential-skills-backend-engineering/SKILL.md) | APIs, service behavior, concurrency, transactions and side-effect semantics |
+| [Data engineering](skills/swe-essential-skills-data-engineering/SKILL.md) | Data integrity, schema/query work, migrations, backfills and recovery |
+| [Client engineering](skills/swe-essential-skills-client-engineering/SKILL.md) | Working interactions, state, async behavior, accessibility and client lifecycle |
+| [Software debugging](skills/swe-essential-skills-software-debugging/SKILL.md) | Reproduction, causal investigation, distinguishing experiments and verified fixes |
+| [Software verification](skills/swe-essential-skills-software-verification/SKILL.md) | Behavior/invariant-based checks, test strategy, regression evidence and limitations |
+| [Software review](skills/swe-essential-skills-software-review/SKILL.md) | Context-aware code/change review, validated findings and impact assessment |
+| [Software performance](skills/swe-essential-skills-software-performance/SKILL.md) | Representative measurements, profiling, bottlenecks and safe optimization |
+| [Software security](skills/swe-essential-skills-software-security/SKILL.md) | Trust boundaries, secure implementation, security review and vulnerability response |
+| [Platform engineering](skills/swe-essential-skills-platform-engineering/SKILL.md) | Hosting selection, environment establishment, network/DNS/TLS, identity and runtime foundations |
+| [Software delivery](skills/swe-essential-skills-software-delivery/SKILL.md) | Build/package/CI, infrastructure changes, compatible rollout and recovery |
+| [Software operations](skills/swe-essential-skills-software-operations/SKILL.md) | Runtime diagnosis, observability, incidents, capacity and restoration |
+| [Software evolution](skills/swe-essential-skills-software-evolution/SKILL.md) | Refactoring, upgrades, compatibility, deprecation and retirement |
 
 
 ## Documentation

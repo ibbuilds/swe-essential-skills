@@ -26,7 +26,7 @@ Suppose you want an internal tool for reviewing documents. You already have a
 brief describing reviewers and an approval journey. Supply that brief or its
 accessible location, then ask:
 
-> Use ibbuilds-swe-project-planning to review this brief. Reuse settled decisions, identify
+> Use swe-essential-skills-project-planning to review this brief. Reuse settled decisions, identify
 > consequential gaps, and help me choose the remaining product and engineering
 > decisions before implementing anything. Keep questions specific and concise.
 
@@ -87,13 +87,13 @@ update repeats the whole brief, claims research that did not happen, or says
 
 - **A known small bug:** start with debugging or construction; reuse existing
   behavior/acceptance. No new product interview is needed.
-- **A code review only:** start with ibbuilds-swe-software-review. Findings are not permission
+- **A code review only:** start with swe-essential-skills-software-review. Findings are not permission
   to edit, publish comments or merge.
-- **A database migration:** start with ibbuilds-swe-data-engineering plus delivery where
+- **A database migration:** start with swe-essential-skills-data-engineering plus delivery where
   transition matters; existing product direction need not be reopened.
 - **An incident:** start with operations/debugging and authorized containment;
   do not delay recovery to create a greenfield project plan.
-- **An unclear new product:** start with ibbuilds-swe-project-planning; discovery and definition
+- **An unclear new product:** start with swe-essential-skills-project-planning; discovery and definition
   are available where their specific decisions are missing.
 
 ## What this does not prove

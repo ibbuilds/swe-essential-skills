@@ -12,7 +12,7 @@ results and existing coverage over popularity or additional machinery.
 
 [Trail of Bits variant analysis](https://github.com/trailofbits/skills/blob/1e0cb77d071a8b9453391d111f17d34d2114e057/plugins/variant-analysis/skills/variant-analysis/SKILL.md)
 uses the known defect to check a detector before broadening a search. Our
-[debugging guidance](../skills/ibbuilds-swe-software-debugging/references/investigation-patterns.md)
+[debugging guidance](../skills/swe-essential-skills-software-debugging/references/investigation-patterns.md)
 adds this conditionally, including already-patched examples, unavailable controls,
 search exclusions and causally different matches. It does not mandate a repository
 sweep or authorize fixing additional findings.
@@ -29,7 +29,7 @@ coverage or correctness of the diagnosis.
 
 [Trail of Bits post-patch validation](https://github.com/trailofbits/skills/blob/1e0cb77d071a8b9453391d111f17d34d2114e057/plugins/post-patch-validation/skills/post-patch-validation/SKILL.md)
 and its runner separate baseline/patch evidence from revision labels. Our
-[verification examples](../skills/ibbuilds-swe-software-verification/references/test-design-cases.md)
+[verification examples](../skills/swe-essential-skills-software-verification/references/test-design-cases.md)
 clarify equivalent triggering inputs and behavioral properties, independently
 reviewed harness changes, legitimate API adapters and unavailable baselines.
 
@@ -41,7 +41,7 @@ engineering ideas, with attribution, not copied source text or code.
 
 ### Bind reused facts to the actual execution target
 
-[Construction](../skills/ibbuilds-swe-software-construction/SKILL.md) now checks target identity
+[Construction](../skills/swe-essential-skills-software-construction/SKILL.md) now checks target identity
 when the execution environment/worktree changes or its identity is uncertain.
 A clean but old checkout can otherwise make remembered decisions appear applicable
 to the wrong source. This is not a requirement to use latest main, repeatedly fetch,

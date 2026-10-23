@@ -23,7 +23,7 @@ selected. `main` changes over time; a downloaded copy does not update itself.
 
 Copy selected complete folders from `skills/`, or all of them if you want the
 whole catalogue available. Availability is not a request to load every skill for
-every task. Starting with `ibbuilds-swe-project-planning` is sufficient to try the planning
+every task. Starting with `swe-essential-skills-project-planning` is sufficient to try the planning
 entry point; it does not require the other skills to be installed.
 
 | Host | This project only | Personal, across projects |
@@ -50,7 +50,7 @@ into your application. That file governs maintenance of this suite only.
 Expected layout, for example:
 
 ```text
-<your-project>/.agents/skills/ibbuilds-swe-project-planning/
+<your-project>/.agents/skills/swe-essential-skills-project-planning/
   SKILL.md
   LICENSE
   agents/
@@ -75,7 +75,7 @@ $targetRoot = 'C:\path\to\your-project\.agents\skills' # Codex project scope
 # Personal scope instead: Join-Path $HOME '.agents\skills' or '.claude\skills'
 
 $ErrorActionPreference = 'Stop'
-$names = @('ibbuilds-swe-project-planning')
+$names = @('swe-essential-skills-project-planning')
 # For the complete suite, replace the line above with:
 # $names = @(Get-ChildItem -LiteralPath $sourceRoot -Directory |
 #   Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'SKILL.md') } |
@@ -111,7 +111,7 @@ If you already use Vercel's Skills CLI, run from the intended target project:
 
 ```text
 npx skills add ibbuilds/swe-essential-skills --list
-npx skills add ibbuilds/swe-essential-skills --skill ibbuilds-swe-project-planning --agent codex --copy
+npx skills add ibbuilds/swe-essential-skills --skill swe-essential-skills-project-planning --agent codex --copy
 ```
 
 Use `--agent claude-code` for Claude Code and `--global` only when you intend
@@ -151,9 +151,9 @@ skill can test implicit selection when the user chooses to spend that usage.
 
 ## Explicit invocation or discovery troubleshooting
 
-- **Codex CLI/IDE:** use `/skills`, or type `$` and select `ibbuilds-swe-project-planning`.
+- **Codex CLI/IDE:** use `/skills`, or type `$` and select `swe-essential-skills-project-planning`.
   Codex detects changes automatically; restart if the skill remains absent.
-- **Claude Code:** use `/skills`, then start a message with `/ibbuilds-swe-project-planning`.
+- **Claude Code:** use `/skills`, then start a message with `/swe-essential-skills-project-planning`.
   Skill folders are watched; `/reload-skills` is useful if the top-level skills
   directory was created after the session started.
 
@@ -172,12 +172,20 @@ valid frontmatter and existing same-name skills in other scopes. Inspect what th
 host actually discovered; do not blindly install another duplicate. A connector
 or skill folder cannot override the host's permissions or usage limits.
 
-## Migrate from unprefixed names
+## Migrate from previous names
 
-All current names use `ibbuilds-swe-<capability>`; for example,
-`project-planning` becomes `ibbuilds-swe-project-planning` and `software-review`
-becomes `ibbuilds-swe-software-review`. The suffix is unchanged for all 18 skills.
-This identifies the publisher and suite without requiring a custom installer.
+All current names use `swe-essential-skills-<capability>`: the repository name
+followed by the original skill slug. Both previous naming schemes migrate to
+the same identity:
+
+| Previous bare name | Previous publisher-prefixed name | Current name |
+| --- | --- | --- |
+| `project-planning` | `ibbuilds-swe-project-planning` | `swe-essential-skills-project-planning` |
+| `software-review` | `ibbuilds-swe-software-review` | `swe-essential-skills-software-review` |
+
+The original capability suffix is unchanged for all 18 skills. The UI display
+name matches the canonical name exactly. No aliases or custom installer are
+required.
 
 Existing installations do not automatically rename when this repository changes.
 Before reinstalling, record the installed scope and preserve local customizations

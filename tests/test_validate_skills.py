@@ -10,17 +10,17 @@ class PortabilityTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        self.folder = self.root / "skills" / "ibbuilds-swe-example"
+        self.folder = self.root / "skills" / "swe-essential-skills-example"
         self.folder.mkdir(parents=True)
         (self.folder / "agents").mkdir()
         (self.folder / "agents" / "openai.yaml").write_text(
-            'interface:\n  display_name: "ibbuilds SWE Essentials / Example"\n'
+            'interface:\n  display_name: "swe-essential-skills-example"\n'
             '  short_description: "Apply a useful example workflow"\n', encoding="utf-8"
         )
 
     def skill(self, body="Useful instructions."):
         (self.folder / "SKILL.md").write_text(
-            "---\nname: ibbuilds-swe-example\ndescription: A useful workflow.\n---\n" + body,
+            "---\nname: swe-essential-skills-example\ndescription: A useful workflow.\n---\n" + body,
             encoding="utf-8",
         )
 
@@ -47,18 +47,32 @@ class PortabilityTests(unittest.TestCase):
         old_folder = self.folder.with_name("example")
         self.folder.rename(old_folder)
         entry = old_folder / "SKILL.md"
-        entry.write_text(entry.read_text().replace("ibbuilds-swe-example", "example"))
-        self.assertTrue(any("publisher/suite prefix" in error for error in validate(self.root)))
+        entry.write_text(entry.read_text().replace("swe-essential-skills-example", "example"))
+        self.assertTrue(any("repository prefix" in error for error in validate(self.root)))
+
+    def test_previous_publisher_prefix_rejected(self):
+        self.skill()
+        old_folder = self.folder.with_name("ibbuilds-swe-example")
+        self.folder.rename(old_folder)
+        entry = old_folder / "SKILL.md"
+        entry.write_text(entry.read_text().replace("swe-essential-skills-example", "ibbuilds-swe-example"))
+        self.assertTrue(any("repository prefix" in error for error in validate(self.root)))
+
+    def test_readable_display_alias_rejected(self):
+        self.skill()
+        ui = self.folder / "agents" / "openai.yaml"
+        ui.write_text(ui.read_text().replace("swe-essential-skills-example", "SWE Essential Skills / Example"))
+        self.assertTrue(any("display name" in error for error in validate(self.root)))
 
     def test_name_folder_mismatch_rejected(self):
         self.skill()
-        self.folder.rename(self.folder.with_name("ibbuilds-swe-other"))
+        self.folder.rename(self.folder.with_name("swe-essential-skills-other"))
         self.assertTrue(any("match folder" in error for error in validate(self.root)))
 
     def test_unbranded_presentation_rejected(self):
         self.skill()
         ui = self.folder / "agents" / "openai.yaml"
-        ui.write_text(ui.read_text().replace("ibbuilds SWE Essentials / Example", "Example"))
+        ui.write_text(ui.read_text().replace("swe-essential-skills-example", "Example"))
         self.assertTrue(any("display name" in error for error in validate(self.root)))
 
     def test_missing_presentation_rejected(self):
