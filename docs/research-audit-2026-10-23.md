@@ -216,3 +216,47 @@ flight. The delivery reference connects admission, drain, resource lifetime and
 forced fallback without prescribing Kubernetes, fixed sleeps or a new runner.
 These upstream tests were inspected, not executed. Proposed in-flight scenarios
 remain review cases, not evidence of measured model behavior.
+
+
+### Malformed metadata should not flood the validation result
+
+An isolated malformed frontmatter fixture containing 1,100 opening brackets
+triggered a parser-recursion traceback. With the same temporary source path and
+API-invocation fixture, the pre-fix result emitted 247,000 stderr bytes; the
+patched validator returned a 121-byte printed error list with no stderr. The
+fixture printed the returned errors, so its normal process exit is not a claim
+that the skill passed validation. Repository CLI validation still rejects errors.
+
+Decoder-local handling preserves the useful diagnostic, labels the file and
+continues later skills. Existing valid metadata remains accepted, with no new
+fixed nesting limit. This measures that fixture's diagnostic size only, not
+model tokens, net workflow savings or universal parser-resource safety.
+
+
+## Duplicate metadata and host compatibility
+
+A temporary skill with repeated `name` or `description` keys passed the prior
+PyYAML-based validators because the later value replaced the earlier one.
+Codex [0.163.0's typed frontmatter parser](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/skills/src/parser.rs)
+uses a derived deserializer whose [pinned duplicate-field handling](https://github.com/serde-rs/serde/blob/v1.0.228/serde_derive/src/de/struct_.rs#L265-L272)
+rejects repeated recognized fields. Its loader records that parse failure rather
+than adding the skill. This is a source-backed discovery mismatch, not a live
+host-selection test.
+
+The validator now rejects duplicate explicit string keys before merge expansion,
+with file/key location diagnostics. Tests retain optional metadata, shared aliases
+and legal merge overrides instead of confusing inherited values with explicit
+duplicates. Invalid optional UI metadata is a separate case: the Codex metadata
+loader can discard it without discarding the skill itself. No claim is made that
+these checks emulate every host parser or prove model adherence.
+
+
+SWE also used substring splitting for frontmatter and rejected a valid quoted
+description containing inline `---`. It now recognizes complete delimiter lines,
+matching the inspected [Codex extraction boundary](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/skills/src/parser.rs#L200-L220),
+and preserves the remaining body. Tests retain missing-delimiter and empty-body
+rejection while accepting inline tokens and later Markdown horizontal rules.
+
+The inspected host trims delimiter lines, so an indented standalone `---` within
+a block scalar is still a compatibility limitation. The validator does not relax
+that boundary merely because a general YAML parser could accept the document.
