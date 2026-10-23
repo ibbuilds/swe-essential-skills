@@ -405,3 +405,16 @@ These are authored review cases, not executed model evaluations.
   A contract deliberately consuming cancellation remains valid. Only exercise
   cancellation arriving during suspended cleanup when that interleaving exists
   and changes; trivial edits do not need a new failure-injection matrix.
+
+
+### Authorization evaluation versus required controls
+
+- A broad permit is valid but a required suspension guard errors on missing
+  context: verify the adapter enforces the accepted security contract instead
+  of assuming an `Allow` result or default-deny label proves the guard ran.
+  Omitting the required guard entirely may produce no diagnostic; check input
+  completeness at its actual loader/adapter owner.
+- An unrelated optional policy errors while a sufficient independent permit
+  remains valid and the accepted contract tolerates it: do not impose blanket
+  denial or change availability semantics. Reuse trusted existing validation;
+  do not create a parallel authorization framework.

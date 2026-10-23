@@ -16,7 +16,7 @@ Use the affected implementation, its callers, configuration, tests, and relevant
 - **Authority source:** where identity, ownership, roles, device trust, or signed metadata actually comes from. User-controlled fields and model output are not authority.
 - **Failure property:** what must remain true when a dependency times out, credentials expire, input is malformed, or a check fails.
 
-Keep this as a small working model for the change, not a full-system threat-model document unless the assignment warrants one. For a review, read [change-review.md](references/change-review.md). For exposed secrets, suspected exploitation, or dependency advisories, read [response-and-dependencies.md](references/response-and-dependencies.md).
+Keep this as a small working model for the change, not a full-system threat-model document unless the assignment warrants one. For a review or changed authorization error/input contract, read [change-review.md](references/change-review.md). For exposed secrets, suspected exploitation, or dependency advisories, read [response-and-dependencies.md](references/response-and-dependencies.md).
 
 When models consume retrieved/untrusted content or influence tool calls and consequential operations, read [model-tool-boundaries.md](references/model-tool-boundaries.md). Ordinary software changes do not require this path.
 
