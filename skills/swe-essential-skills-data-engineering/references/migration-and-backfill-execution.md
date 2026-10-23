@@ -4,6 +4,8 @@
 
 List old/new readers, writers, jobs, imports, exports and analytical consumers. For each stage identify what each can read and write. Decide which source wins if old and new representations disagree. Application rollback must remain compatible with the schema and values already written; a down migration that drops new data is not a safe rollback.
 
+When a migration can resume or replay under a later application release, include its implementation dependencies in that map. Use supported historical models or stable migration-local transformations rather than assuming current application helpers retain the same behavior. Historical models need not preserve custom methods or hooks; make required transformation behavior explicit. Keep referenced code available through the supported resume/upgrade path, and check the affected path when changing or removing those dependencies. A checkpoint alone does not preserve transformation semantics. Existing isolated migrations need no new abstraction or full replay for unrelated edits.
+
 Inspect the actual engine/version and migration tool for lock modes, transaction wrapping, statement limits, index build behavior and restart semantics. Estimate affected size and available disk, log/WAL, replica lag and connection capacity using approved observations. Rehearse with representative data and invalid legacy cases where feasible. Set stop/abort conditions from service limits or agreed budgets, not arbitrary universal percentages.
 
 ## Stage the change

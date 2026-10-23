@@ -442,3 +442,13 @@ These are authored review cases, not executed model evaluations.
   explicit shutdown flush has a deadline: do not apply best-effort dropping or
   a universal nonblocking rule. Preserve those requirements without treating
   ordinary observability as an audit system by default.
+
+### Migration implementation survives application upgrades
+
+- A backfill checkpoints successfully, but its next batch runs after an upgrade
+  changed the imported application model/helper: preserve the intended historical
+  transformation through the supported migration mechanism. Check the affected
+  resume or replay path, including required behavior that historical models do
+  not preserve automatically. A self-contained SQL migration or an already
+  isolated implementation with applicable coverage needs no new abstraction or
+  full migration replay for unrelated edits.
