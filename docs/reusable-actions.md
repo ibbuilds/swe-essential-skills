@@ -6,11 +6,11 @@ Do not automatically run a suite pass after the same native work has completed.
 
 | Need | Start with | Optional suite guidance when it adds value |
 | --- | --- | --- |
-| Review a change | The host's existing code-review action, such as Codex `/review` or Claude `/code-review` | `ibbuilds-swe-software-review` for evidence-backed findings, revision/consumer checks and explicit review limits; no second full review by default |
-| Clean up code | Ordinary scoped editing or an appropriate native cleanup such as Claude `/simplify` | `ibbuilds-swe-software-evolution` for explicit project-wide cleanup scope, user-edit protection and result reuse |
-| Diagnose a failure | Available debugger, logs and focused checks in the current workflow | `ibbuilds-swe-software-debugging` for discriminating evidence and avoiding speculative repair loops |
-| Verify a change | Relevant existing project checks and still-valid results | `ibbuilds-swe-software-verification` when coverage, evidence or a failure needs additional reasoning |
-| Refactor | Existing editor/refactor tools and current project decisions | `ibbuilds-swe-software-evolution` for preserving contracts and sequencing a consequential change |
+| Review a change | The host's existing code-review action, such as Codex `/review` or Claude `/code-review` | `swe-essential-skills-software-review` for evidence-backed findings, revision/consumer checks and explicit review limits; no second full review by default |
+| Clean up code | Ordinary scoped editing or an appropriate native cleanup such as Claude `/simplify` | `swe-essential-skills-software-evolution` for explicit project-wide cleanup scope, user-edit protection and result reuse |
+| Diagnose a failure | Available debugger, logs and focused checks in the current workflow | `swe-essential-skills-software-debugging` for discriminating evidence and avoiding speculative repair loops |
+| Verify a change | Relevant existing project checks and still-valid results | `swe-essential-skills-software-verification` when coverage, evidence or a failure needs additional reasoning |
+| Refactor | Existing editor/refactor tools and current project decisions | `swe-essential-skills-software-evolution` for preserving contracts and sequencing a consequential change |
 
 These are choices, not sequential stages. Built-in does not automatically mean
 cheap: some actions fan out to several reviewers or use a background model.
@@ -22,10 +22,10 @@ Do not promise a fixed token cost or saving, or remove required quality gates.
 If installed guidance is useful, invoke its actual skill name and add ordinary
 scope text. For example:
 
-- Codex: `$ibbuilds-swe-software-evolution clean up this whole project while preserving behavior`.
-- Claude Code: `/ibbuilds-swe-software-evolution clean up this whole project while preserving behavior`.
-- Codex: `$ibbuilds-swe-software-review review my uncommitted changes; report findings without editing`.
-- Claude Code: `/ibbuilds-swe-software-review review my uncommitted changes; report findings without editing`.
+- Codex: `$swe-essential-skills-software-evolution clean up this whole project while preserving behavior`.
+- Claude Code: `/swe-essential-skills-software-evolution clean up this whole project while preserving behavior`.
+- Codex: `$swe-essential-skills-software-review review my uncommitted changes; report findings without editing`.
+- Claude Code: `/swe-essential-skills-software-review review my uncommitted changes; report findings without editing`.
 
 Use the host's picker where the surface differs. Claude plugin installations
 can use `/plugin-name:skill-name`; use the installed namespace. These examples

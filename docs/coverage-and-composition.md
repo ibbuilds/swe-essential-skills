@@ -10,7 +10,7 @@ PM Essential Skills supplies domain-independent coordination. SWE Essential Skil
 
 ## Historical outline cross-reference
 
-The original 13–20 outline is not the scope boundary. Areas 1–3 are now explicitly in scope: ibbuilds-swe-product-discovery owns problem validation, ibbuilds-swe-product-definition owns strategy/positioning and product definition, and ibbuilds-swe-project-planning connects imported or newly developed plans to engineering readiness. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
+The original 13–20 outline is not the scope boundary. Areas 1–3 are now explicitly in scope: swe-essential-skills-product-discovery owns problem validation, swe-essential-skills-product-definition owns strategy/positioning and product definition, and swe-essential-skills-project-planning connects imported or newly developed plans to engineering readiness. See [full-lifecycle coverage](lifecycle-coverage.md) for the independently reviewed responsibilities and gaps.
 
 | Original area | Engineering responsibility | Recurring mistakes to address | Proposed method and useful outcome |
 | --- | --- | --- | --- |
@@ -91,14 +91,14 @@ need not load together. This is not a final ceiling on coverage.
 
 | Area | Implemented instruction owner(s) |
 | --- | --- |
-| 13 | ibbuilds-swe-software-architecture |
-| 14 | ibbuilds-swe-software-construction |
-| 15 | ibbuilds-swe-backend-engineering; ibbuilds-swe-data-engineering |
-| 16 | ibbuilds-swe-client-engineering |
-| 17 | ibbuilds-swe-software-debugging; ibbuilds-swe-software-verification; ibbuilds-swe-software-review; ibbuilds-swe-software-performance |
-| 18 | ibbuilds-swe-software-security |
-| 19 | ibbuilds-swe-software-delivery |
-| 20 | ibbuilds-swe-software-operations; ibbuilds-swe-software-evolution |
+| 13 | swe-essential-skills-software-architecture |
+| 14 | swe-essential-skills-software-construction |
+| 15 | swe-essential-skills-backend-engineering; swe-essential-skills-data-engineering |
+| 16 | swe-essential-skills-client-engineering |
+| 17 | swe-essential-skills-software-debugging; swe-essential-skills-software-verification; swe-essential-skills-software-review; swe-essential-skills-software-performance |
+| 18 | swe-essential-skills-software-security |
+| 19 | swe-essential-skills-software-delivery |
+| 20 | swe-essential-skills-software-operations; swe-essential-skills-software-evolution |
 
 Security, performance, compatibility and recovery also appear where they affect
 a domain's actual decisions. This is deliberate local completeness for separately

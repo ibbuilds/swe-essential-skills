@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlsplit
 import yaml
 
 
-SKILL_PREFIX = "ibbuilds-swe-"
+SKILL_PREFIX = "swe-essential-skills-"
 
 
 def validate(root: Path) -> list[str]:
@@ -30,7 +30,7 @@ def validate(root: Path) -> list[str]:
             if not isinstance(name, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name) or len(name) > 64:
                 raise ValueError("invalid skill name")
             if not name.startswith(SKILL_PREFIX) or name == SKILL_PREFIX:
-                raise ValueError(f"skill name must use publisher/suite prefix {SKILL_PREFIX}")
+                raise ValueError(f"skill name must use repository prefix {SKILL_PREFIX}")
             if name != entry.parent.name or name in names:
                 raise ValueError("name must match folder and be unique")
             names.add(name)
@@ -42,9 +42,9 @@ def validate(root: Path) -> list[str]:
             interface = ui.get("interface") if isinstance(ui, dict) else None
             if not isinstance(interface, dict):
                 raise ValueError("missing presentation interface")
-            expected_display = "ibbuilds SWE Essentials / " + name.removeprefix(SKILL_PREFIX).replace("-", " ").title()
+            expected_display = name
             if interface.get("display_name") != expected_display:
-                raise ValueError("display name must identify publisher, suite and capability")
+                raise ValueError("display name must match the canonical repository-prefixed skill name")
             short = interface.get("short_description")
             if not isinstance(short, str) or not 25 <= len(short) <= 64:
                 raise ValueError("short description must contain 25–64 characters")

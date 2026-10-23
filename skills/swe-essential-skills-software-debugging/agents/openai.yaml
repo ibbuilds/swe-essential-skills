@@ -1,0 +1,3 @@
+interface:
+  display_name: "swe-essential-skills-software-debugging"
+  short_description: "Trace software failures to verified causes and fixes"
