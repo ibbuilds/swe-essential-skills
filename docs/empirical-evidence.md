@@ -140,6 +140,29 @@ security, compatibility and verification criteria intact. Separate input/output,
 reasoning, execution time and provider-specific billing measures where observable;
 do not convert them into subscription-quota savings without evidence.
 
-That evaluation has not been run. This document is research interpretation and a
-maintenance decision aid, not an installed runtime instruction or a promise of
-measured improvements.
+A representative matched evaluation establishing those benefits remains outstanding.
+The bounded observations below are distinct from the external research above;
+neither is an installed runtime instruction or a promise of measured improvements.
+
+## Suite functional observations: 23 October 2026
+
+Explicitly activated SWE Software Verification at `77efd89` supported independent
+review of an actual PM decoder-boundary repair. The participant rejected a synthetic
+wrong-path/no-tests proposal, selected the repository-required checks and requested
+no user rescue. The recorded full suite ran 310 tests (OK, three Windows-only
+skips); 18 independently reviewed probes supported error handling and state safety.
+The repair shipped in [PM PR #36](https://github.com/ibbuilds/pm-essential-skills/pull/36).
+Repository instructions also supplied the correct commands: this demonstrates
+bounded application, not SWE's causal contribution or superiority.
+
+A separate PM Context Management demonstration completed two SWE migration
+documents through a source-authored brief and fresh successor, with a safely
+corrected schema error. Its recovery follow-on retrieved historical content and
+produced a correct note, but did not establish a strict full pass: an immutable
+historical citation and separate transport capture were missing, and an overbroad
+read preceded the narrow retrieval. Transport was controller-assisted and host
+identity assurances simulated. See the [PM evidence update](https://github.com/ibbuilds/pm-essential-skills/blob/main/docs/cloud-workflow-evaluation-2026-10-23.md#later-functional-observations-23-october-2026).
+
+These are selected functional observations from local receipts and artifact
+checks, not complete native-session telemetry, automatic discovery, representative
+user-effort savings, provider billing measurements or suite-wide effectiveness.

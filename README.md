@@ -101,8 +101,9 @@ These results cover the reported defects and checks, not the full suites.
 
 Installation and structural checks do not prove that a particular host selected,
 loaded or followed a skill. No comparable token usage was available, so token
-savings remain unknown. Other skill behaviors and the end-to-end user experience
-remain unvalidated. The evidence does not establish a suite-wide quality
+savings remain unknown. Later [cloud observations](docs/empirical-evidence.md#suite-functional-observations-23-october-2026)
+demonstrate selected-skill application; broader behavior and end-to-end user
+experience remain unvalidated. The evidence does not establish a suite-wide quality
 advantage, reduced user supervision, or token savings; it also does not establish
 that either suite is ineffective.
 
