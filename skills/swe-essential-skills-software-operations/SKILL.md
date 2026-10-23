@@ -25,6 +25,8 @@ For each critical operation, choose success, failure, duration, workload and sat
 - **Traces:** propagate correlation across asynchronous boundaries where supported. Sampling means absent spans do not prove an operation did not run.
 - **Health:** distinguish alive, ready for work and able to complete the critical operation. A liveness probe coupled to a flaky dependency can turn degradation into a restart storm.
 
+When changing telemetry emission, exporters or diagnostic handlers, check whether a slow or failed sink can unexpectedly block/fail primary work or replace its original error. Reuse supported containment and bounded buffering/retries rather than wrapping every call. Distinguish best-effort telemetry from required audit records and explicit initialization, error-handler, flush or shutdown contracts: some blocking or failure is intentional. Verify the affected failure path, not a new universal middleware layer.
+
 For a service with a real reliability objective, define an SLI around eligible operations or time intervals, its data source and exclusions. Select a target/window from service expectations, not a memorized number. Track error-budget consumption or another actionable degradation measure with traffic and telemetry-delay context. Low-volume services may need synthetic critical-path checks and longer observation instead of noisy short-window ratios.
 
 For batch jobs, measure freshness, deadlines, missing/duplicate records and backlog age. For CLI/native/device software, prioritize actionable local diagnostics, crash/update evidence and recovery instructions; remote telemetry must respect consent and privacy requirements. A local command does not need an online-service SLO merely to be maintainable.

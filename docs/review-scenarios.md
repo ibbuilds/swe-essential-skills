@@ -430,3 +430,15 @@ These are authored review cases, not executed model evaluations.
   cancellation/replay/ownership behavior. Readiness changes do not prove all
   traffic sources immediately observed them. A static artifact or unchanged
   lifecycle needs no new service-style shutdown procedure.
+
+
+### Telemetry failure versus required audit behavior
+
+- An optional exporter throws while reporting another failure, or slow diagnostic
+  output stalls the request path: inspect supported containment and bounds rather
+  than masking the original error or adding retries at every logging call.
+  Existing correctly contained handlers need no extra catch wrapper.
+- The accepted contract requires a durable audit event before an action, or an
+  explicit shutdown flush has a deadline: do not apply best-effort dropping or
+  a universal nonblocking rule. Preserve those requirements without treating
+  ordinary observability as an audit system by default.
