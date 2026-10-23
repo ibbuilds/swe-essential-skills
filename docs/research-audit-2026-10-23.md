@@ -260,3 +260,22 @@ rejection while accepting inline tokens and later Markdown horizontal rules.
 The inspected host trims delimiter lines, so an indented standalone `---` within
 a block scalar is still a compatibility limitation. The validator does not relax
 that boundary merely because a general YAML parser could accept the document.
+
+
+## Telemetry must respect its own failure contract
+
+[Node 26.12.1 process I/O](https://github.com/nodejs/node/blob/v26.12.1/doc/api/process.md#L4267)
+explains how diagnostic output can block application work. OpenTelemetry's
+[current stable error-handling contract](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.62.0/specification/error-handling.md)
+and [performance guidance](https://github.com/open-telemetry/opentelemetry-specification/blob/v1.62.0/specification/performance.md)
+support runtime containment while preserving initialization, custom-handler and
+explicit flush/shutdown exceptions. Existing [Python 3.15.1 handler tests](https://github.com/python/cpython/blob/v3.15.1/Lib/test/test_logging.py#L848-L868)
+are a counterexample to adding redundant catch middleware around standard paths.
+
+Required audit data has a different contract: current [Kubernetes audit source](https://github.com/kubernetes/website/blob/6c42e266fcc1f0e0edd4805baea904e1b3cbaf9c/content/en/docs/tasks/debug/debug-cluster/audit.md#L207-L208)
+includes a strict mode that deliberately fails a request when its required audit
+event cannot be recorded. The operations addition therefore preserves the
+accepted policy rather than universally dropping diagnostics or blocking work.
+No collector, logging service, WAL, middleware or production probe was added.
+These sources/tests were inspected, not executed; behavior and net savings of
+agents using the instruction remain unmeasured.
