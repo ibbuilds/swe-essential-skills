@@ -10,6 +10,37 @@ import yaml
 SKILL_PREFIX = "swe-essential-skills-"
 
 
+class UniqueStringKeyLoader(yaml.SafeLoader):
+    """Reject explicit duplicate string keys, without rejecting merge overrides."""
+
+    def __init__(self, stream):
+        super().__init__(stream)
+        self._checked_mappings = set()
+
+    def flatten_mapping(self, node):
+        # PyYAML mutates nodes while expanding merges. Check each original node
+        # once, including shared aliases, before inherited keys are inserted.
+        if node not in self._checked_mappings:
+            self._checked_mappings.add(node)
+            seen = set()
+            for key, _ in node.value:
+                if key.tag == "tag:yaml.org,2002:str":
+                    if key.value in seen:
+                        raise yaml.constructor.ConstructorError(
+                            "while constructing a mapping", node.start_mark,
+                            f"duplicate explicit key {key.value!r}", key.start_mark)
+                    seen.add(key.value)
+        return super().flatten_mapping(node)
+
+
+def load_yaml(raw):
+    """Keep parser exhaustion in the ordinary metadata-validation error path."""
+    try:
+        return yaml.load(raw, Loader=UniqueStringKeyLoader)
+    except RecursionError as exc:
+        raise ValueError(f"YAML nesting exceeds parser capacity: {exc}") from exc
+
+
 def validate(root: Path) -> list[str]:
     errors = []
     skills = sorted((root / "skills").glob("*/SKILL.md"))
@@ -20,10 +51,14 @@ def validate(root: Path) -> list[str]:
         folder = entry.parent.resolve()
         try:
             content = entry.read_text(encoding="utf-8")
-            parts = content.split("---", 2)
-            if len(parts) != 3 or parts[0].strip():
+            # Match the inspected Codex delimiter lines, not inline tokens.
+            lines = content.splitlines(keepends=True)
+            if not lines or lines[0].strip() != "---":
                 raise ValueError("missing YAML frontmatter")
-            metadata = yaml.safe_load(parts[1])
+            closing = next((i for i in range(1, len(lines)) if lines[i].strip() == "---"), None)
+            if closing is None:
+                raise ValueError("missing YAML frontmatter")
+            metadata = load_yaml("".join(lines[1:closing]))
             if not isinstance(metadata, dict):
                 raise ValueError("frontmatter must be a mapping")
             name = metadata.get("name")
@@ -36,9 +71,9 @@ def validate(root: Path) -> list[str]:
             names.add(name)
             if not isinstance(metadata.get("description"), str) or not metadata["description"].strip():
                 raise ValueError("description must be nonempty text")
-            if not parts[2].strip():
+            if not "".join(lines[closing + 1:]).strip():
                 raise ValueError("missing skill instructions")
-            ui = yaml.safe_load((entry.parent / "agents" / "openai.yaml").read_text(encoding="utf-8"))
+            ui = load_yaml((entry.parent / "agents" / "openai.yaml").read_text(encoding="utf-8"))
             interface = ui.get("interface") if isinstance(ui, dict) else None
             if not isinstance(interface, dict):
                 raise ValueError("missing presentation interface")
