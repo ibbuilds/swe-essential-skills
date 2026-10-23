@@ -295,3 +295,67 @@ These are static instruction-review scenarios, not executed model-behavior tests
   Reuse fresh identity evidence; do not recheck every command or restart discovery.
 - A target mismatch coexists with unrelated dirty/untracked work. Preserve that
   work while reconciling; do not reset it or copy stale files over the new target.
+
+## Research-derived engineering guards
+
+These are authored positive/negative instruction-review cases, not executed model
+benchmarks or evidence that the example systems passed their checks.
+
+### Expected rejection and asynchronous completion
+
+- A rejection assertion runs only inside a catch handler, or a promise assertion
+  is launched without returning/awaiting it: identify the false-green path. Use
+  the existing runner's completion mechanism and verify the required error, so
+  both unexpected success and an unrelated rejection fail the test.
+- A native awaited rejection assertion already checks the required error: retain
+  it without adding a blanket assertion-count rule or changing test frameworks.
+  A callback test using the runner's supported completion/error path can also be
+  valid; promise conversion is not itself the goal.
+
+### Aggregate CI coverage
+
+- A green release gate judges only unit-test results while the event's required
+  package-consumer check is absent from its dependencies: reject the coverage
+  claim despite all supplied results succeeding. Check the authoritative event
+  mapping, missing dependencies and failure/cancellation behavior.
+- A platform check is intentionally inapplicable to this event and an experiment
+  is explicitly non-voting: preserve those exclusions. Do not require every job
+  on every event or create a second manually synchronized job registry.
+
+### Artifact claims and trusted expectations
+
+- A signature verifies, but the evidence describes different artifact bytes or
+  an unexpected producer/workflow: do not accept it for this release. Compare
+  the actual artifact and trusted policy expectations, not identity fields copied
+  from the attestation itself.
+- Existing supported verification binds the bytes to the accepted source,
+  producer, workflow and relevant parameters: reuse applicable evidence without
+  installing a new verifier or provisioning a signing service. Do not infer that
+  verified provenance proves benign contents or an uncompromised build.
+- A privileged job restores executable inputs from a cache writable by less
+  trusted jobs: examine that handoff even if the lockfile key matches and the
+  earlier job's token was read-only. Conversely, a supported cache isolation
+  boundary should not be replaced by a blanket cache ban.
+
+### Invalidation versus pending publication
+
+- A fill reads version A, invalidation excludes A, eviction removes the guard,
+  then the old fill completes: require the publication protocol to prevent A
+  becoming trusted current data. Also account for missed invalidations during a
+  coherence-channel disconnect; a simple sequential delete test is insufficient.
+- Immutable version-addressed payloads or an accepted bounded-staleness contract
+  already meet the requirement: do not mandate generations, global flushes,
+  locks or permanent tombstones. If a mutable current-version pointer exists,
+  examine its separate freshness guarantee rather than assuming immutability
+  of payloads settles publication correctness.
+
+### Executable architecture boundaries
+
+- An accepted dependency boundary repeatedly erodes, and the existing build can
+  enforce it: check intended scope and direction with allowed and forbidden
+  edges. A renamed source set makes the rule match nothing; green is then not
+  evidence that the boundary holds.
+- Native module visibility already enforces the boundary, or a scoped rule has
+  explicit narrow legacy exceptions: reuse it without adding a new linter,
+  imposing fixed layers or requiring full cleanup. Reject a baseline refresh
+  that silently absorbs new forbidden edges solely to make the build green.

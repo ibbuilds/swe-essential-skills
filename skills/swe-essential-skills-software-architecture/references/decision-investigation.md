@@ -37,6 +37,24 @@ Test sensitivity to assumptions that could reverse the choice: workload growth, 
 
 Leave the recommended engineering option, alternatives rejected on hard constraints, lifecycle cost/benefit evidence, uncertain assumptions and a concrete reconsideration trigger. This is an engineering sourcing decision, not investment, tax or financial advice. State projections separately from observed costs and benefits.
 
+## Enforce a settled boundary when drift matters
+
+A consequential, accepted dependency boundary that repeatedly drifts may warrant
+an executable rule in the existing compiler, module, build or lint mechanism.
+Prefer native visibility and dependency constraints to a new linter or parallel
+architecture framework. Derive the rule from this project's accepted design,
+not fixed layers imposed on every repository.
+
+Validate the intended modules/files and allowed as well as forbidden edges. A
+green rule matching no modules, omitting an important source set or checking the
+wrong dependency direction proves little. Check a representative forbidden edge
+and a permitted edge through safe existing fixtures or isolated checks where
+needed; do not contaminate the working tree merely to demonstrate failure.
+Record narrow justified exceptions or an explicit existing-debt baseline, keeping
+new violations detectable. Do not refresh the baseline just to get green, broaden
+exceptions silently or demand full-project cleanup to enforce a scoped boundary.
+An adequate native boundary or a one-off local correction needs no extra rule.
+
 ## Illustrative branches, not tested outcomes
 
 ### Export request exceeds request lifetime

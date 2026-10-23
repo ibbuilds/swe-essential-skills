@@ -36,3 +36,15 @@ Identify the owner and protected location of state backups, baseline manifests, 
 For state repair or recovery, preserve the current state first where authorized, freeze competing writers through the existing process, inspect partial effects, and use the documented procedure with a compatible tool/provider version. If the required backup, owner or recovery permission is missing, report the exact blocked operation and safe evidence already collected instead of improvising a repair.
 
 At release handoff, leave maintainers the actual active set, supported transitional combinations, known drift/temporary controls with owner and revisit trigger, authoritative references and recovery limits. Update installation, upgrade, migration and operator documentation when behavior changed; stale instructions can reintroduce an incompatible set after a correct rollout.
+
+## Check the release gate's coverage
+
+Suppose a release gate receives successful unit-test results but its dependency
+list omits the required package-consumer check. Approving every supplied result
+still leaves the release requirement unverified. Compare the gate's represented
+checks with the established requirements for the actual event/configuration,
+including matrix expansion and dependency conditions. Exercise or inspect the
+missing-check and upstream failure/cancellation paths without triggering release.
+An intentionally excluded platform on this event or a documented non-voting
+experiment is not a missing required check. Reuse the workflow's authoritative
+mapping and supported gate mechanism rather than maintaining a parallel job list.
