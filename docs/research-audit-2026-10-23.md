@@ -296,3 +296,21 @@ whitespace-only description case is a demonstrated local false-green against the
 host's normalized nonempty requirement. All checked-in skills already meet these
 field constraints; this work does not establish a current live-loading failure
 or guarantee future host selection.
+
+## Migration implementation is part of compatibility
+
+Current [GitLab background-migration guidance](https://docs.gitlab.com/development/database/batched_background_migrations/#isolation)
+isolates long-running migrations from changing application code because releases
+can overlap their execution. [Django 6.1 historical-model guidance](https://docs.djangoproject.com/en/6.1/topics/migrations/#historical-models)
+shows why current-model imports can succeed initially but break later replay;
+historical models also do not automatically retain custom methods or save hooks.
+The migration reference now includes these implementation dependencies in its
+existing compatibility map, retaining required code only through the supported
+resume/upgrade path and checking the affected behavior when dependencies change.
+
+Mixed-version schema access, rollback limits, durable checkpoints, partial
+execution and concurrent-write protection were already covered. No second
+procedure, copied-model requirement, permanent legacy retention, migration
+service or universal replay gate was added. The positive/skip scenario is
+authored review material; sources were inspected, not executed, and agent
+behavior or net workflow savings remain unmeasured.
