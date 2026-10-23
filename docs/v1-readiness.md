@@ -6,6 +6,14 @@ a certification, or a promise of perfect engineering. This document joins the
 requirements to implemented procedures and defines a finite acceptance boundary.
 It does not start a new project tracker or replace the user's existing plan.
 
+**Status clarification — 23 October 2026:** The checked gates, review results and
+package-copy evidence below belong to the stated 22 October snapshots. Subsequent
+changes are summarized in the [23 October research audit](research-audit-2026-10-23.md).
+Use the selected candidate's exact source revision and applicable checks for
+current integration status; earlier package copies do not validate later content.
+Live application and net savings remain unverified, and the disclosed PM
+location-policy choice remains pending.
+
 ## What this version must do
 
 Help an agent take software work from product intent through retirement without
@@ -191,8 +199,9 @@ Final local mechanics on 22 October 2026:
 - No coding model, production recovery, application deployment or live benchmark
   was invoked. The copy test does not establish host activation or adherence.
 
-The handoff is prepared for the reviewed source candidate; remote CI and the
-exact merged revision must be checked by the integration owner before delivery.
+The historical handoff covered the reviewed source candidate. For a later
+candidate, identify its exact merged revision and applicable local/remote check
+results in the final handoff.
 No versioned release/tag is requested or created by these gates.
 
 When these gates are established, call the result **“v1 ready for the user's
