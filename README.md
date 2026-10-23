@@ -87,11 +87,31 @@ workflow suite, not a dependency.
 
 ## Status and limits
 
-This is a first-version trial candidate. Installation and structural checks do
-not prove that a particular host selected, loaded or followed a skill, or that
-it saved tokens. Live behavior and net savings remain unmeasured. Skills do not
-bypass permissions or usage limits, and specialized systems can still require
-appropriate tools, current documentation and expert assurance.
+This is a first-version trial candidate. Two completed Codex reviews of the
+same source found two PM evaluator bugs and no defects in the SWE validator
+code reviewed. One review used supplied PM Execution Efficiency and SWE Software
+Review instructions; a fresh blind review omitted those supplied runtime skill
+bodies and found the same results. Global skill exposure and effective settings
+were not independently isolated, so this comparison does not establish the
+effect of those instructions.
+
+Both PM bugs were independently reproduced, fixed, and merged in
+[PM PR #25](https://github.com/ibbuilds/pm-essential-skills/pull/25); PM `main` CI passed.
+These results cover the reported defects and checks, not the full suites.
+
+Installation and structural checks do not prove that a particular host selected,
+loaded or followed a skill. No comparable token usage was available, so token
+savings remain unknown. Other skill behaviors and the end-to-end user experience
+remain unvalidated. The evidence does not establish a suite-wide quality
+advantage, reduced user supervision, or token savings; it also does not establish
+that either suite is ineffective.
+
+Skills do not bypass permissions or usage limits, and specialized systems can
+still require appropriate tools, current documentation and expert assurance.
+
+A subsequent [workflow smoke test](https://github.com/ibbuilds/pm-essential-skills/blob/main/docs/workflow-smoke-test-2026-10-23.md) required no extra user
+questions or setup in either arm; it did not establish lower token use or broader
+user-effort savings.
 
 ## For maintainers
 
