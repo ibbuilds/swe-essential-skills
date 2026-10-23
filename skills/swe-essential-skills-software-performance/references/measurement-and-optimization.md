@@ -22,6 +22,22 @@ A permissions-dependent response keyed only by document ID can leak content acro
 
 For concurrent misses, bounded request coalescing may avoid a stampede. Specify what happens when the fill fails, the waiter cancels, or the cache entry expires while a refresh runs. Consider stale-while-refresh only where stale output is acceptable. Test cold start, expiration, eviction, and account/context changes as well as warm hits.
 
+When invalidation promises to exclude prior data, removing a stored value is not
+enough: a fill started before invalidation must not later publish that old value
+as trusted current data. Trace fill start, invalidation, eviction and publication,
+including eviction of the metadata used to reject an obsolete fill. Reuse the
+cache's supported generation/version, owned-placeholder or coherent publication
+protocol; do not prescribe global locks, global flushes or unbounded tombstones.
+If coherence depends on an invalidation channel, establish what channel loss and
+reconnection mean for cached values and pending fills before trusting them again.
+Use controlled event-order cases, including invalidation followed by eviction
+before the old fill completes, not just sequential hit/miss checks.
+
+Immutable/version-addressed data or an accepted TTL/stale-while-refresh contract
+may already satisfy the requirement without added invalidation machinery. A
+mutable pointer selecting the current version still needs its own freshness and
+publication guarantee; immutable payloads do not make that pointer coherent.
+
 ## Bounded concurrency and resource budgets
 
 A batch of 50,000 remote calls should not automatically become 50,000 simultaneous promises/tasks. Measure the service's and client's limits, choose bounded workers and bounded buffering, and propagate backpressure. Track total completion time, tail latency, retries/errors, open sockets, and memory. A concurrency increase that improves isolated throughput but destabilizes downstream capacity is not an unconditional win.

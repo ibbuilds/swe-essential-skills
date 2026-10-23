@@ -1,5 +1,7 @@
 # Expert and popular-workflow comparison
 
+See the [23 October comparison](research-audit-2026-10-23.md) for the latest narrow adaptations, counterexamples and rejected additions.
+
 Source inspection: 22 October 2026. This pass compares actual instructions and
 selected helper implementations against this suite, rather than ranking authors
 or copying their workflows. Repository revisions are recorded in

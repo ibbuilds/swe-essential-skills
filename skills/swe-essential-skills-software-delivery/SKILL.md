@@ -27,6 +27,14 @@ Build with the project's locked dependencies/toolchain where supported. Identify
 
 Inspect the **packaged output**, not only the working tree: required runtime files and metadata, absence of secrets/development data, licensing notices, entrypoints, architecture/ABI/runtime support, and version embedded in the artifact. Retain the digest or equivalent immutable identity and applicable provenance/signature evidence. Keep signing credentials out of logs and build output.
 
+When signatures or provenance support acceptance, use the project's supported
+verifier or applicable existing evidence to check binding to the actual artifact
+bytes and the trusted expected producer, source, workflow and relevant build
+parameters under the accepted policy. Do not take those expectations from the
+artifact's own claims. A valid signature or provenance does not prove benign
+contents or an uncompromised build. This does not mandate a signing service,
+installation or network action; report missing required evidence instead.
+
 Select verification by consumer:
 
 | Deliverable | Verification that catches release-only failures |
@@ -42,9 +50,9 @@ Use the applicable rows, not the whole table. If a clean consumer, device or pla
 
 ## CI is an executable release boundary
 
-Follow artifacts from producer to consumer jobs. Ensure a deployment cannot accidentally rebuild different bytes or select a stale artifact from another revision. Cache keys must account for relevant dependencies/toolchains; distinguish disposable caches from authoritative build outputs. A cache miss should not change required behavior.
+Follow artifacts from producer to consumer jobs. Ensure a deployment cannot accidentally rebuild different bytes or select a stale artifact from another revision. Cache keys must account for relevant dependencies/toolchains; distinguish disposable caches from authoritative build outputs. A cache miss should not change required behavior. Trace cache writers and readers across trust boundaries: a matching lockfile key or a read-only workflow token does not make restored executable input trustworthy.
 
-For configuration edits, inspect event filters and conditions, matrix coverage, required checks, cancellation/concurrency behavior, timeout/failure propagation and secret/permission scope. Untrusted pull requests must not gain trusted release credentials through a privileged follow-up job or injected build script. Use the provider's current documented trust model, not guessed YAML semantics.
+For configuration edits, inspect event filters and conditions, matrix coverage, required checks, cancellation/concurrency behavior, timeout/failure propagation and secret/permission scope. An aggregate gate must cover the intended required checks for this event and configuration, not merely approve the results supplied to it. Reuse the established job/requirement mapping, preserving legitimate conditional and non-voting exclusions; do not create a second manual job registry. Check missing, skipped, failed and cancelled dependencies against that policy, not just the aggregate job's green status. Untrusted pull requests must not gain trusted release credentials through a privileged follow-up job or injected build script. Use the provider's current documented trust model, not guessed YAML semantics.
 
 Validate final changed configuration and meaningful build/test paths safely. Reuse task-local results only when coverage, artifact identity and relevant code/configuration/data/environment remain applicable and required gate freshness permits; skill activation alone is no reason to rerun. Do not trigger publication or infrastructure mutation merely to prove the workflow parses. If CI cannot be executed, label the distinction between reviewed configuration and an observed successful run.
 

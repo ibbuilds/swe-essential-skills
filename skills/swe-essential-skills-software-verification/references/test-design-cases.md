@@ -58,6 +58,18 @@ failure is not reproduction. Reuse trustworthy existing evidence. This compariso
 does not require another runner, extra builds or repeated checks when the claim is
 already supported, and does not make baseline execution mandatory for every test.
 
+## Make expected failure observable
+
+A rejection test must fail if the operation succeeds or rejects for the wrong
+reason. An assertion only inside a catch handler can pass without running;
+an unawaited asynchronous assertion can finish after the runner declares success.
+Use the existing runner's supported awaited/returned promise, callback completion
+or native rejection assertion, and check the relevant error contract. With manual
+catch handling, make unexpected success fail outside any catch that could swallow
+that failure. Assertion counts can help where appropriate, but are not a universal
+requirement or a substitute for checking the rejection reason. Inspect whether
+success and an unrelated error would actually fail this test.
+
 ## Test ordering deliberately
 
 Suppose two workers may claim the same job. Use two real transactions or a controlled integration harness: both observe availability, then both attempt acquisition. Assert the owning invariant (one successful claim), not the exact thread that wins. Verify retry behavior and visible final state. A thousand passing serial executions do not exercise this race.
