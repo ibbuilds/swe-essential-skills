@@ -90,6 +90,6 @@ A label correction may be adequately supported by inspection, existing lint/buil
 
 ## Interpret coverage and failures
 
-A test executes an error branch but never asserts the error: line coverage can be high while the oracle is weak. A safe deliberate fault (for example, allowing an unauthorized result in a temporary isolated copy) should make the relevant assertion fail. Do not modify the working tree unsafely to manufacture this demonstration.
+A test executes an error branch but never asserts the error: line coverage can be high while the oracle is weak. A safe deliberate fault (for example, allowing an unauthorized result in a temporary isolated copy) should make the relevant assertion fail. Confirm that an intended fault/reversal actually changed the exercised artifact; a no-op, unloaded mutation or unrelated setup failure is not evidence of oracle sensitivity. Reuse existing trustworthy red-green evidence rather than mandating mutation testing. Do not modify the working tree unsafely to manufacture this demonstration.
 
 If the full suite cannot run because its database is unavailable, report that exact missing dependency. Run supported unit or static checks, but do not call them equivalent to database integration. If a required gate fails, completion remains qualified or blocked according to the project's acceptance policy; do not quietly redefine the gate.

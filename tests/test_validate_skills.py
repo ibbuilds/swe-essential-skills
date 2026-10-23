@@ -86,6 +86,19 @@ class PortabilityTests(unittest.TestCase):
         ui.write_text(ui.read_text().replace("Apply a useful example workflow", ""))
         self.assertTrue(any("short description" in error for error in validate(self.root)))
 
+    def test_invalid_reference_encoding_is_reported_without_aborting(self):
+        self.skill("[Read](guide.md) [Missing](missing.md)")
+        (self.folder / "guide.md").write_bytes(b"\xff")
+        errors = validate(self.root)
+        self.assertTrue(any("guide.md: cannot read Markdown" in error for error in errors))
+        self.assertTrue(any("missing reference: missing.md" in error for error in errors))
+
+    def test_malformed_url_is_reported_and_later_links_are_checked(self):
+        self.skill("[Malformed](https://[broken) [Missing](missing.md)")
+        errors = validate(self.root)
+        self.assertTrue(any("invalid or unreadable reference https://[broken" in error for error in errors))
+        self.assertTrue(any("missing reference: missing.md" in error for error in errors))
+
     def test_empty_pack_rejected(self):
         self.assertTrue(validate(self.root))
 

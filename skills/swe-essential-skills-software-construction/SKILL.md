@@ -58,7 +58,7 @@ Use the request, issue or task context’s behavior delta; resolve missing input
 
 Use types and interfaces to expose valid states and obligations where the language supports them. Validate untrusted data at the boundary; static types do not validate files, network payloads or persisted legacy data. Avoid broad exception swallowing, unchecked casts, disabled checks and global mutable state used to bypass a contract problem. If a temporary compatibility adapter is necessary, identify the old contract, translation and removal condition.
 
-Keep resources and cancellation visible: who opens and closes a handle, owns a buffer, joins a task or removes a temporary file? Ensure error paths release resources and leave valid state. Do not log secrets or whole user payloads to make debugging convenient.
+Keep resources and cancellation visible: who opens and closes a handle, owns a buffer, joins a task or removes a temporary file? Ensure error paths release resources and leave valid state. For changed acquisition, cleanup or cancellation semantics, use [lifecycle failure handling](references/contract-aware-implementation.md#acquisition-cleanup-and-cancellation). Do not log secrets or whole user payloads to make debugging convenient.
 
 ## Avoid unnecessary work while constructing the change
 

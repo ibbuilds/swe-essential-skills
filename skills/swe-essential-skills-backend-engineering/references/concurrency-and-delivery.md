@@ -27,6 +27,10 @@ Specify in-progress, completed and failed/unknown behavior, including concurrent
 
 Identify one retry owner per path where possible. Nested retries multiply work and delay. Retry only errors judged transient, within a bounded deadline/attempt budget, with backoff and jitter as appropriate; honor supported server retry instructions. Ensure every attempt is safe, including requests whose previous result is unknown. Do not retry authorization failures, invalid data or permanent business rejections as if they were outages.
 
+Retry safety also requires reproducible input and a safe output boundary. Reconstruct consumed request bodies using the client's supported mechanism without unbounded buffering or changed input. Once partial output reaches a consumer, use the protocol's resume/deduplication semantics or report failure rather than blindly restarting. An idempotency key alone does not make a consumed stream replayable; an existing client that already handles this needs no second retry wrapper.
+
+Under sustained failure, inspect existing aggregate retry/admission controls as well as per-operation limits. Match their scope to the actual bottleneck: shared controls can couple unrelated work, while independent clients can multiply retry budgets against one shared resource. Bounded concurrency alone does not establish a bound on repeated request rate; do not introduce another controller when existing controls suffice.
+
 For queues, understand at-least-once delivery, visibility/lease duration, acknowledgment and redelivery. Acknowledge after the durable work or durable handoff required by the contract. Poison messages need bounded handling, diagnostic context and a deliberate replay path—not infinite rapid redelivery. Replaying a dead-letter message must preserve operation identity.
 
 ## Distinct events can arrive out of order
