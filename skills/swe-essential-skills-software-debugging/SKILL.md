@@ -5,32 +5,32 @@ description: Diagnose reproducible, intermittent, or production-only software fa
 
 # SWE Essential Skills / Software Debugging
 
-Make the next observation reduce uncertainty. Avoid changing code merely because it resembles a familiar bug. Reuse existing incident evidence, reproduction steps, and technical decisions; no separate planning ceremony is required.
+Reuse existing evidence, reproductions, and technical decisions without a separate planning ceremony. Choose observations that reduce uncertainty, not changes based on resemblance to a familiar bug.
 
 ## Establish a trustworthy failure signal
 
-Capture expected versus actual behavior, affected input/context, relevant versions/configuration, and the smallest observable check that distinguishes them. A signal may be a failing assertion, replay, CLI output/exit code, device trace, metric, or demonstrated UI interaction. Ensure it fails for the reported reason: a test that cannot start is not yet a reproduction.
+Capture expected versus actual behavior, input/context, versions/configuration, and the smallest observable check distinguishing them: assertion, replay, CLI output/exit code, device trace, metric, or UI interaction. Verify it fails for the reported reason; a test that cannot start is not a reproduction.
 
-For intermittent failures, record observed frequency and relevant timing/concurrency instead of calling a single passing run a fix. Control seeds, clocks, scheduling, and dependencies where feasible without removing the suspected mechanism. If reproduction is unavailable, explicitly work from a bounded hypothesis and collect the next discriminating evidence; do not claim a confirmed cause.
+For intermittent failures, record frequency and timing/concurrency; one passing run does not establish a fix. Control seeds, clocks, scheduling, and dependencies where feasible without removing the suspected mechanism. Without a reproduction, bound the hypothesis, seek discriminating evidence, and leave the cause unconfirmed.
 
-Before replaying an operation, determine whether it writes data, charges money, sends messages, moves hardware, or changes production. Prefer sanitized fixtures, isolated environments, and read-only inspection. A timeout may mean the operation committed without an acknowledgment. Reconcile uncertain outcomes before retrying; debugging does not grant mutation authority.
+Before replay, check for writes, charges, messages, hardware movement, or production changes. Prefer sanitized fixtures, isolation, and read-only inspection. A timeout may hide a committed operation: reconcile uncertain outcomes before retrying. Debugging grants no mutation authority.
 
 ## Locate the first broken assumption
 
-Trace the path from input to incorrect result across relevant callers, processes, queues, persistence, caches, and clients. At each consequential boundary ask what entered, what exited, and which invariant should have held. Correlate identities, versions, and operation IDs; do not infer event order solely from unsynchronized timestamps.
+Trace input to incorrect result across relevant callers, processes, queues, persistence, caches, and clients. At consequential boundaries, compare inputs/outputs against the expected invariant. Correlate identities, versions, and operation IDs; unsynchronized timestamps alone do not establish event order.
 
-Inspect recent changes and a known-good path when available, but treat proximity as a lead, not proof. Read the contracts of suspect dependencies at the project's actual version. Obtain commands from repository configuration; avoid installing tools or upgrading dependencies simply to test a guess.
+Use recent changes and known-good paths as leads, not proof. Read suspect dependency contracts at the project's actual version; obtain commands from repository configuration. Avoid installing tools or upgrading dependencies merely to test a guess.
 
-When causality remains unresolved, state a specific hypothesis with a predicted observation and compare plausible competing explanations. Choose the cheapest safe experiment that distinguishes them: a controlled input, boundary instrumentation, isolated dependency, deterministic interleaving, or version comparison. Change one relevant factor where practical. If a trustworthy reproduction or source trace already directly demonstrates the defect and its cause, proceed to the focused correction and regression check when repair is authorized; otherwise report the supported cause, correction direction and proposed check. Do not manufacture an alternative hypothesis merely to perform an investigation ritual. Keep any temporary instrumentation narrow, redact sensitive data, and remove or intentionally retain it after investigation.
+If the cause remains unknown, state a specific hypothesis and predicted observation, compare plausible alternatives, and choose the cheapest safe distinguishing experiment: controlled input, boundary instrumentation, isolated dependency, deterministic interleaving, or version comparison. Change one relevant factor where practical. If a trustworthy reproduction or source trace directly demonstrates defect and cause, skip artificial alternative hypotheses: make the focused correction and regression check if repair is authorized; otherwise report the supported cause, correction direction, and proposed check. Keep temporary instrumentation narrow, redact sensitive data, and remove or intentionally retain it.
 
-When evidence contradicts the hypothesis, update it. Do not stack speculative patches until the symptom disappears. If several patches fail, step back to the failure model and architecture boundary; a fixed attempt count is not a reason to declare a rewrite necessary.
+Update contradicted hypotheses rather than stacking speculative patches. After several failed patches, revisit the failure model and architecture boundary; a fixed attempt count does not justify a rewrite.
 
-Use [investigation-patterns.md](references/investigation-patterns.md) when dealing with races, flaky tests, distributed outcomes, native/resource failures, non-reproducible incidents, or searches for variants of a confirmed defect.
+Use [investigation-patterns.md](references/investigation-patterns.md) for races, flaky tests, distributed outcomes, native/resource failures, non-reproducible incidents, or searches for variants of a confirmed defect.
 
 ## Fix the cause and verify the claim
 
-Choose a correction at the boundary responsible for the violated invariant. A fallback, retry, catch-all, delay, or relaxed assertion may mask the failure or create duplicates; use one only with justified semantics. Distinguish containment (reduces impact), workaround (avoids the path), and causal fix.
+Correct the boundary responsible for the violated invariant. Use fallbacks, retries, catch-alls, delays, or relaxed assertions only with justified semantics: they may mask failures or create duplicates. Distinguish containment (reduces impact), workaround (avoids the path), and causal fix.
 
-Where practical, add a regression that exposes the original behavior and fails without the correction for the right reason. Then rerun the original signal and checks for affected neighboring contracts. Respect mandatory repository gates; broader verification depends on impact, not a universal full-suite rule.
+Where practical, add a regression exposing the original behavior that fails without the correction for the right reason. Rerun the original signal and affected neighboring-contract checks. Respect mandatory repository gates; choose broader verification by impact, not a universal full-suite rule.
 
-Before reporting resolution, inspect the final diff for diagnostic residue and unintended behavior changes. State the supported cause, correction, actual checks and remaining uncertainty. If blocked, preserve the exact signal, leading hypotheses, discriminating next experiment, and required access or input rather than claiming the bug is fixed.
+Before reporting resolution, inspect the actual final diff for diagnostic residue and unintended behavior changes. Report supported cause, correction, actual checks, and remaining uncertainty. If blocked, preserve the exact signal, leading hypotheses, next discriminating experiment, and required access/input; do not claim a fix.
