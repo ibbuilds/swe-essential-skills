@@ -12,3 +12,10 @@ Use for a security-sensitive diff or a requested security review. Narrow harmles
 **Illustration:** An invoice export moves to a worker. The HTTP route checks membership, but the worker fetches the invoice by ID alone. Determine whether the queued job carries a trustworthy tenant binding and whether authorization is meant to hold at submission or execution. A delayed job after membership revocation may need execution-time authorization; a previously authorized immutable administrative job may have different semantics. Encode the chosen rule and test both timing and cross-tenant substitution.
 
 A useful finding includes location, reachable scenario, impact, evidence, proposed control and a proposed or observed regression check, labeled accordingly. Do not inflate severity from a dangerous API name without showing the reachable conditions.
+
+
+## Authorization errors are not ordinary policy denials
+
+When changing an authorization adapter, policy loading or required context, distinguish a policy denial from an unavailable check, evaluation error or incomplete input. Inspect how the actual engine combines decisions and diagnostics: default deny does not necessarily make an erroring guard deny access. Enforce the accepted safety/availability contract before the protected effect, including required-policy/context completeness and explicitly allowed fallback. Do not silently grant access or impose blanket denial for unrelated tolerated errors.
+
+For example, a general export permit can remain satisfied while a required suspension guard errors on missing context. A missing guard may produce no evaluation diagnostic at all. Verify the affected failed/missing required guard path and legitimate access under tolerated errors; a clean diagnostics list alone does not prove the intended policy set was supplied. Reuse existing loader/schema guarantees where they establish those preconditions. This is not a requirement to replace the authorization engine or add another cache policy.

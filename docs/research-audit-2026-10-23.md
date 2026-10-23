@@ -178,3 +178,22 @@ were also compared. Existing diagnosis/repair authority, untrusted-output
 boundaries, causal checks and evidence-based completion already cover the useful
 mechanisms. No minimum cause-category count, blanket full-suite rerun or extra
 controller was added.
+
+
+### Authorization diagnostics and required input completeness
+
+Cedar's [current authorization contract](https://docs.cedarpolicy.com/auth/authorization.html)
+and pinned [skip-on-error cases](https://github.com/cedar-policy/cedar/blob/4fe34d23a161200ba989718b654f7555a60b9e41/cedar-policy-core/src/authorizer.rs#L211-L264)
+show an unconditional permit can remain allowed when another policy errors.
+This is documented engine behavior, not a claimed Cedar vulnerability. The
+[security contract](https://docs.cedarpolicy.com/other/security.html) also assigns
+relevant input supply to the application. A proposed application scenario with
+a required suspension guard distinguishes engine semantics from the product's
+security invariant; absent policy data need not produce a diagnostic.
+
+The security reference now asks the owning adapter to honor its accepted
+safety/availability contract, including required inputs. It explicitly avoids
+denying unrelated work merely because an optional policy errors. Existing cache,
+revocation and fallback guidance remains the owner of those separate tradeoffs.
+Upstream cases were inspected, not executed; no live authorization system was
+probed or changed.
