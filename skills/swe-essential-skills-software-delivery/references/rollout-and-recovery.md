@@ -25,6 +25,14 @@ Execute only the authorized scope. Observe the intended artifact's actual activa
 
 If a deployment or publication times out or its response is lost, treat the outcome as unknown—not failed. Inspect authoritative release/job state and the active or published artifact identity before retrying or rolling back. Reuse the operation identity or documented idempotency mechanism where supported; otherwise reconcile any partial effects and choose the next action from observed state. A blind retry can publish twice or race an operation still in progress.
 
+## Verify termination with work in flight
+
+When changing service/worker shutdown or replacement, identify who stops new admissions, tracks existing work and forces termination. Reuse the runtime/framework lifecycle; readiness changes and a closed listener do not prove draining is complete. Check which requests, deliveries, background tasks and long-lived sessions its shutdown API actually waits for.
+
+Keep dependencies available until their users finish. Fit drain and cleanup within the supervisor's actual deadline, including hooks that consume that budget. Define the accepted fallback: supported cancellation, durable handoff or replay/reconciliation. A timed-out wait does not establish that work stopped or effects were undone. Preserve durable acknowledgment and ownership/fencing rules when unfinished work can resume or another owner takes over.
+
+Verify affected in-flight completion and deadline-expiry paths, including late admissions or excluded sessions where relevant. Assert durable outcomes and recovery, not merely process exit. Reuse adequate coverage; unrelated packaging changes need no drain exercise, arbitrary sleeps or new shutdown framework.
+
 ## Close the release loop
 
 Verify the resulting version and behavior after rollout **and after any recovery**. Check data invariants, backlog/retries, long-lived processes, background workers and dependent consumers where relevant. Confirm temporary release controls do not silently remain as permanent security or availability exceptions.

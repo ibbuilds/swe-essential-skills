@@ -418,3 +418,15 @@ These are authored review cases, not executed model evaluations.
   remains valid and the accepted contract tolerates it: do not impose blanket
   denial or change availability semantics. Reuse trusted existing validation;
   do not create a parallel authorization framework.
+
+
+### Shutdown is not merely listener closure
+
+- Serving returns as shutdown starts; main exits while a held request still
+  needs its database connection: verify process/dependency lifetime lasts through
+  the applicable drain contract, not just that a drain method was called.
+- Drain deadline expires with a long-lived session or delivered job outstanding:
+  distinguish tracked completion from excluded work, and verify accepted
+  cancellation/replay/ownership behavior. Readiness changes do not prove all
+  traffic sources immediately observed them. A static artifact or unchanged
+  lifecycle needs no new service-style shutdown procedure.

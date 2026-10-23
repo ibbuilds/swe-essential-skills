@@ -197,3 +197,22 @@ denying unrelated work merely because an optional policy errors. Existing cache,
 revocation and fallback guidance remains the owner of those separate tradeoffs.
 Upstream cases were inspected, not executed; no live authorization system was
 probed or changed.
+
+
+### Drain completion belongs to the full application lifecycle
+
+The inspected [Go 1.27.3 shutdown implementation](https://github.com/golang/go/blob/go1.27.3/src/net/http/server.go)
+and [maintained shutdown cases](https://github.com/golang/go/blob/go1.27.3/src/net/http/serve_test.go)
+distinguish serving-method return from completed drain and exclude work such as
+hijacked connections from ordinary HTTP tracking. Application lifetime still
+matters. Tests have protocol limitations, so they do not establish an immediate
+admission barrier for every HTTP version.
+
+Current Kubernetes [Pod lifecycle source](https://github.com/kubernetes/website/blob/b4811b23fdc1a199b0d9754edf90579aa93b45de/content/en/docs/concepts/workloads/pods/pod-lifecycle.md)
+corroborates shared grace budgets and concurrent routing/termination operations.
+[Consumer cancellation semantics](https://www.rabbitmq.com/docs/consumers#cancelling-a-consumer)
+also distinguish stopping future dispatch from resolving deliveries already in
+flight. The delivery reference connects admission, drain, resource lifetime and
+forced fallback without prescribing Kubernetes, fixed sleeps or a new runner.
+These upstream tests were inspected, not executed. Proposed in-flight scenarios
+remain review cases, not evidence of measured model behavior.
