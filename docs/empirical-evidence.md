@@ -1,6 +1,6 @@
 # What measured research does and does not establish
 
-Reviewed 22 October 2026. These are external experiments, not evaluations of SWE
+Reviewed 23 October 2026 against the latest available primary versions. These are external experiments, not evaluations of SWE
 Essential Skills. Repository context files, selectively discovered skill packages,
 and large-marketplace retrieval are different interventions. Neither popularity
 nor these results establishes this suite's task success or subscription savings.
@@ -17,7 +17,9 @@ tasks. Generated context did not significantly improve success and increased
 inference cost by roughly 20–23%; developer context's average success gain was
 also not statistically significant against absence. The analysis associates cost
 with additional exploration, testing and reasoning, not a clear relationship with
-file length. Security and other nonfunctional outcomes were outside its evaluation.
+file length. Security and other nonfunctional outcomes were outside its evaluation. A separate
+documentation-removal ablation favored generated context: redundant guidance and
+otherwise unavailable repository knowledge are different interventions.
 
 **Consequence:** inspect what an instruction makes the agent do. Do not infer that
 shorter text always wins, or delete needed safety and verification gates to match
@@ -27,8 +29,9 @@ not be injected into consumer projects.
 ### Curated, task-relevant skills can help substantially
 
 [SkillsBench, v4, June 2026](https://arxiv.org/html/2602.12670v4)
-reports a mean pass-rate increase from 33.9% to 50.5% across 87 tasks and 18
-model–harness configurations, with three trials per arm. Skill bundles are mounted
+reports a mean task-macro verifier score (called “pass rate,” including partial
+credit) increase from 33.9% to 50.5% across 87 tasks and 18 model–harness
+configurations, with three trials per arm. Skill bundles are mounted
 for native discovery/progressive disclosure, not all bodies force-injected. Tasks
 are curated for skill sensitivity; the methods reject low-signal submissions
 without measurable separation. This is not an unbiased estimate for arbitrary
@@ -38,7 +41,8 @@ not randomized same-task trimming.
 Self-generated packs perform worse in a separate diagnostic condition, but some
 were never discovered and authoring could displace task work; this does not isolate
 the quality of all AI-authored instructions. Our source review is not equivalent
-to this benchmark's tested curation.
+to this benchmark's tested curation. Token use and priced inference cost vary by
+configuration; neither consistently decreases.
 
 **Consequence:** preserve specific applicability and simpler valid paths. Do not
 invent a maximum of three installed skills, a universal word limit or a promised
@@ -50,7 +54,9 @@ uplift. Installed inventory is not the same as simultaneously loaded guidance.
 compares curated loading, autonomous selection, distractors and retrieval from a
 34,198-skill collection. Benefits degrade as selection and retrieval become harder;
 results vary by model, and generic retrieved material can be unhelpful. Query-specific
-refinement helps several settings but is not uniformly beneficial.
+refinement helps several settings but is not uniformly beneficial. It requires an
+additional task-exploration pass, so reported quality gains do not establish net
+efficiency.
 
 **Consequence:** keep discriminative descriptions, exclusions and explicit invocation
 instructions. Do not force-load everything or add a retrieval engine based on an
@@ -62,8 +68,9 @@ of discovery, not proof it was selected or applied correctly.
 [SWE-Skills-Bench, preliminary v1, March 2026](https://arxiv.org/html/2603.15401v1)
 reports a small mean pass-rate change with increased average token consumption
 across 49 public skills. It uses one model, generated requirement-driven tasks,
-a very high baseline and small per-skill samples; its placement description and
-activation evidence limit interpretation.
+a very high baseline and small per-skill samples. Its methods inconsistently
+describe placement under `~/.claude` and at the project root, without per-trial
+activation rates. This reporting gap is not proof activation failed.
 
 **Consequence:** treat this as counterevidence to automatic benefit, not proof that
 this suite's particular procedures should be removed. Its extreme individual
@@ -73,9 +80,15 @@ cost changes are not typical penalties or Codex quota estimates.
 
 [On the Impact of AGENTS.md Files, v2, March 2026](https://arxiv.org/html/2601.20404v2)
 reports lower median runtime and output tokens for small PR-derived changes using
-GPT-5.2-Codex. Median total/input tokens did not decrease; their means declined without the
-same reported statistical significance. Comprehensive functional correctness
-was not evaluated.
+GPT-5.2-Codex. Median input tokens did not decrease; mean input declined without
+the same reported statistical significance. Comprehensive functional correctness
+was not evaluated. Its published “total” adds cached input separately to input
+and output, although cached input is already included under
+[Codex usage semantics](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/protocol/src/protocol.rs#L2552-L2554).
+The [replication archive](https://zenodo.org/records/18348507) confirms that
+accounting; independent input-plus-output arithmetic retains the higher-median
+direction. Do not treat the published total as nonduplicated usage or an
+allowance measurement.
 
 [Ablating Repository Context, v1, July 2026](https://arxiv.org/html/2607.27250v1)
 finds no measurable correctness difference in a small three-repository comparison
