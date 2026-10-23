@@ -4,6 +4,12 @@
 
 Identify exported symbols, type declarations, serialization formats and compatibility guarantees. Avoid changing a default, exception type, ownership rule or timing behavior without considering consumers. Compile or run a representative external consumer against the built package, because internal imports can bypass missing exports and packaging errors. Inspect included files and runtime dependencies; a source-tree test cannot detect an omitted resource in the artifact. For native bindings verify ABI, architecture, calling convention and lifetime expectations on supported targets as applicable.
 
+## Acquisition, cleanup and cancellation
+
+For changed resource-lifecycle paths, establish when ownership begins or transfers. Release successfully acquired resources if later initialization fails, without disposing borrowed resources. Prefer the project's native resource-management mechanism. When work and cleanup both fail, retain actionable evidence of both through supported chaining, suppression or aggregation; do not impose a universal top-level exception order.
+
+Respect the runtime's cancellation contract: cleanup must not accidentally turn cancellation into ordinary retry or success. Deliberate supported consumption remains valid. Select checks for reachable failure combinations when acquisition, fallible cleanup or cancellation semantics change; reuse established coverage. Cancellation arriving during suspended cleanup is a separate interleaving only when that path exists and is affected. Trivial edits preserving these mechanisms need no failure-injection matrix or custom shielding framework.
+
 ## Command-line interfaces
 
 Preserve argument parsing, exit codes and stream behavior. Put diagnostics on the established diagnostic stream rather than corrupting JSON or piped output. Define behavior for invalid input, missing files, unreadable paths, broken pipes, cancellation and interactive prompts in automation. Use safe filesystem operations: validate destination intent, handle symlinks according to the threat model, avoid partial replacement of valuable files, and clean temporary artifacts after failure. Test through the installed executable when packaging or entrypoints change.

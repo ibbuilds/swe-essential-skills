@@ -8,6 +8,10 @@ Separate malformed input, failed preconditions, authorization failure, resource 
 
 For list operations, define stable ordering with a unique tie-breaker and maximum page size. Offset pagination can skip or duplicate records during mutation; cursor pagination requires a defined ordering and consistency expectation too. Ensure the cursor cannot widen tenant scope or bypass filters. Do not promise snapshot consistency unless the implementation actually supplies it.
 
+## Failure after a response starts
+
+For streaming responses or work continuing after acknowledgment, identify when status/headers become committed and whether success means acceptance or completed work. A later exception may reach a server error handler without replacing the response already received by the client. Define the appropriate late-failure signal, incomplete-stream behavior or operation-status/reconciliation path where the product contract requires one. Check relevant faults before and after commitment; handler invocation alone does not prove the client received an error. Reuse supported protocol behavior; do not introduce queues or status APIs for incidental best-effort work.
+
 ## External integrations
 
 Inspect the supported client/provider version and official contract for timeout, retry, pagination, rate limits and idempotency behavior. Do not invent headers, error codes or guarantees from familiarity with another provider. Validate remote responses and constrain permitted destinations for user-influenced fetches. Keep credentials server-side and grant only the needed capability.

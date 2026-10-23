@@ -359,3 +359,49 @@ benchmarks or evidence that the example systems passed their checks.
   explicit narrow legacy exceptions: reuse it without adding a new linter,
   imposing fixed layers or requiring full cleanup. Reject a baseline refresh
   that silently absorbs new forbidden edges solely to make the build green.
+
+
+## Error recovery boundaries
+
+These are authored review cases, not executed model evaluations.
+
+### Retry replay and aggregate budgets
+
+- A request has an idempotency key, but its body stream was consumed before a
+  transport failure: preserve intended bytes and identity using the supported
+  client mechanism, or fail safely. Do not retry an empty body, buffer an
+  unbounded upload, or duplicate a client-provided retry controller.
+- A read-only stream delivers records before failing: restart only under the
+  accepted resume/deduplication contract. Read-only remote behavior does not
+  prevent duplicate effects in the consumer. An intentionally fail-fast stream
+  or an existing supported resume mechanism needs no new retry layer.
+- Each call stays within its attempt limit during an outage, yet combined retry
+  traffic overloads the dependency: inspect aggregate admission at the real
+  bottleneck. Conversely, a bounded one-off call does not require a new shared
+  quota service. Splitting clients may isolate unrelated throttling but multiply
+  independent budgets against a shared resource; do not prescribe it blindly.
+
+### Error ownership and response commitment
+
+- A render boundary is added around a button, but its detached async handler
+  rejects: trace whether the framework routes that rejection to the boundary.
+  Use the supported action/query mechanism or owned error state; do not assume
+  similar-looking transition APIs have identical routing or add catches when
+  the existing mechanism already handles it.
+- A server error handler runs after a streaming response starts or a background
+  task fails after a 204: do not claim the caller received the handler's 500.
+  Verify the accepted partial-stream or late-failure contract, distinguishing
+  acceptance from completion. Buffered pre-response errors may still use the
+  normal handler; best-effort incidental work need not gain a durable job API.
+
+### Combined failures and ownership
+
+- Acquire A, fail while initializing B, then fail while closing A: attempt owned
+  cleanup and retain both causes through native chaining/suppression/grouping.
+  Do not dispose borrowed resources or demand the original cause always remain
+  the top-level exception.
+- Cancellation initiates cleanup that also fails: preserve native control-flow
+  and diagnostic semantics, without a generic retry restarting canceled work.
+  A contract deliberately consuming cancellation remains valid. Only exercise
+  cancellation arriving during suspended cleanup when that interleaving exists
+  and changes; trivial edits do not need a new failure-injection matrix.

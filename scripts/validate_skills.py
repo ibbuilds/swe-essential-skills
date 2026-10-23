@@ -55,16 +55,25 @@ def validate(root: Path) -> list[str]:
             if document.is_symlink():
                 errors.append(f"{document.relative_to(root)}: symlink not portable")
                 continue
+            label = document.relative_to(root)
+            try:
+                text = document.read_text(encoding="utf-8")
+            except (OSError, UnicodeError) as exc:
+                errors.append(f"{label}: cannot read Markdown: {exc}")
+                continue
             # Markdown inline links only. External links and anchors are not fetched.
-            for link in re.findall(r"\[[^\]]*\]\(([^\s)]+)\)", document.read_text(encoding="utf-8")):
-                parsed = urlsplit(link)
-                if parsed.scheme or parsed.netloc or not parsed.path:
-                    continue
-                target = (document.parent / unquote(parsed.path)).resolve()
-                if not target.is_relative_to(folder):
-                    errors.append(f"{document.relative_to(root)}: reference leaves skill: {link}")
-                elif not target.is_file():
-                    errors.append(f"{document.relative_to(root)}: missing reference: {link}")
+            for link in re.findall(r"\[[^\]]*\]\(([^\s)]+)\)", text):
+                try:
+                    parsed = urlsplit(link)
+                    if parsed.scheme or parsed.netloc or not parsed.path:
+                        continue
+                    target = (document.parent / unquote(parsed.path)).resolve()
+                    if not target.is_relative_to(folder):
+                        errors.append(f"{label}: reference leaves skill: {link}")
+                    elif not target.is_file():
+                        errors.append(f"{label}: missing reference: {link}")
+                except (ValueError, OSError, RuntimeError) as exc:
+                    errors.append(f"{label}: invalid or unreadable reference {link}: {exc}")
     return errors
 
 
