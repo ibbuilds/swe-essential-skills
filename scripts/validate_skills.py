@@ -69,8 +69,18 @@ def validate(root: Path) -> list[str]:
             if name != entry.parent.name or name in names:
                 raise ValueError("name must match folder and be unique")
             names.add(name)
-            if not isinstance(metadata.get("description"), str) or not metadata["description"].strip():
-                raise ValueError("description must be nonempty text")
+            description = metadata.get("description")
+            if not isinstance(description, str) or not description.strip() or len(description) > 1024:
+                raise ValueError("description must be nonempty text under 1,025 characters")
+            # Portable Agent Skills format, not an emulation of host coercions.
+            if "metadata" in metadata:
+                extra = metadata["metadata"]
+                if not isinstance(extra, dict) or any(
+                    not isinstance(key, str) or not isinstance(value, str)
+                    for key, value in extra.items()
+                ):
+                    raise ValueError("metadata must map string keys to string values; "
+                                     "quote scalar values, or omit unused metadata/use {}")
             if not "".join(lines[closing + 1:]).strip():
                 raise ValueError("missing skill instructions")
             ui = load_yaml((entry.parent / "agents" / "openai.yaml").read_text(encoding="utf-8"))
