@@ -11,8 +11,9 @@ package-copy evidence below belong to the stated 22 October snapshots. Subsequen
 changes are summarized in the [23 October research audit](research-audit-2026-10-23.md).
 Use the selected candidate's exact source revision and applicable checks for
 current integration status; earlier package copies do not validate later content.
-Live application and net savings remain unverified, and the disclosed PM
-location-policy choice remains pending.
+Live application and net savings remain unverified. The PM workflow/location
+policy is settled: required questions wait for the user's answer, including
+during urgent incidents; urgency does not authorize a bypass.
 
 ## What this version must do
 
@@ -48,7 +49,8 @@ publication, merging or destructive action.
   counted as implemented merely because its subject appears here.
 
 The lifecycle map below reports **implemented instructions with static support;
-all live behavior and savings remain unverified**. Unperformed live use and the retained PM policy choice are explicit limits, not implied completions. Existing research in
+all live behavior and savings remain unverified**. Unperformed live use remains
+an explicit limit, not an implied completion. Existing research in
 [empirical evidence](empirical-evidence.md) concerns other interventions and
 settings; its results cannot be transferred into this suite's success rate or
 weekly-quota savings.
@@ -69,10 +71,11 @@ plan, sources and results; another skill becoming relevant is not a reason to
 repeat discovery or run the same test. Evidence becomes stale when its relevant
 inputs, target, scope or required-gate freshness change—not just at a handoff.
 
-**Known composition constraint:** current PM policy blocks urgent incident domain
-work while its chat-location prompt is unanswered. An exception requires the
-user's decision, which is pending; current policy remains unchanged. This draft
-neither authorizes an exception nor redesigns that policy.
+**Settled composition policy:** required PM workflow/location questions must wait
+for the user's answer before domain work proceeds, including during urgent
+incidents. There is no urgency-based bypass. Existing critical-pressure,
+authorization, opt-out and ownership safeguards remain unchanged; this
+clarification does not redesign them or reopen the settled decision.
 
 ## Lifecycle traceability
 
