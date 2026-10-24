@@ -49,6 +49,13 @@ stdout with surrogate safety and retains non-UTF-8 fallback. One fixed synthetic
 Unicode sample fell from **828 to 740 bytes**; this is not a general savings rate.
 Raw streams and stored summary behavior were preserved.
 
+A later [PM coordination clarification](https://github.com/ibbuilds/pm-essential-skills/pull/42)
+distinguishes notification-only messages, supported task admission and completion.
+One bounded cloud-host follow-up resumed an existing owner and returned its
+read-only verification result; four additional admission cases were reasoning
+checks, not live integrations. This adds no new tool or installer and does not
+guarantee adherence on other hosts.
+
 A held-out Project Planning candidate passed observable behavior gates on two
 cases but remains **held, not shipped as an optimization**. It returned 2,117 fewer
 instruction/read bytes while writing 2,764 more work bytes, with the same 11
@@ -58,9 +65,9 @@ total; no overall efficiency gain was demonstrated.
 ## Provenance and limits
 
 The planning pair used PM `108e228` and SWE `6d2cf828`; engineering used PM
-`5c0df50` and the same SWE revision. Later PM main `940c127` includes PRs #40/#41;
-that is not the source revision of every frozen run. Runtime instruction bodies
-were not changed by these results.
+`5c0df50` and the same SWE revision. PM revision `940c127` includes PRs #40/#41;
+that is not the source revision of every frozen run. These frozen pairs do not evaluate the later Task Coordination clarification
+or native skill selection; SWE runtime instruction bodies remain unchanged.
 
 These were fresh cloud agents, not the user's actual Codex session or native
 installation/selection tests. Quality judgments preceded mapping/cost disclosure,
