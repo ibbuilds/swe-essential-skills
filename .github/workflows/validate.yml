@@ -7,8 +7,13 @@ on:
 permissions:
   contents: read
 jobs:
-  validate:
-    runs-on: ubuntu-latest
+  platform_checks:
+    name: Platform validation (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
@@ -18,3 +23,15 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m unittest discover -s tests
       - run: python scripts/validate_skills.py
+
+  # Preserve the existing validate check name while requiring both platforms here.
+  validate:
+    needs: platform_checks
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require every platform to pass
+        env:
+          PLATFORM_RESULT: ${{ needs.platform_checks.result }}
+        run: test "$PLATFORM_RESULT" = success
