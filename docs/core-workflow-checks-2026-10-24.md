@@ -62,6 +62,78 @@ instruction/read bytes while writing 2,764 more work bytes, with the same 11
 operations per arm. These overlapping categories cannot be summed into a usage
 total; no overall efficiency gain was demonstrated.
 
+## Additional applied workflows
+
+Three later checks used SWE `6b878299` and PM `16e66f01` where relevant.
+Each had one fresh applied participant and independent review, not a comparison
+arm. First outcomes, adverse observations and original acceptance rules were
+retained. These extend functional coverage, not the matched-pair effect estimate.
+
+### Operations and coordination: containment, not restoration
+
+Over two fixed turns, the agent inspected a synthetic failed release, performed
+already-authorized read-only containment, and verified that all 120 retained
+records remained. It distinguished green liveness from a still-failing v2 export.
+A previously timed-out non-idempotent rollback remained UNKNOWN and was not
+retried. The owner had not chosen the recovery strategy; the agent delivered a
+blocked handoff instead of choosing a destructive rollback, inventing approval,
+or continuing to poll after the second instruction.
+
+Independent review passed all seven frozen functional gates. It also retained
+**two compliance blemishes**: the same necessary pending question appeared in an
+interim message and a drafted update, and the handoff lacked explicit source-file
+citations. The existing coordination instruction already prohibits repeated
+pending questions; this observation did not justify another instruction or a
+favorable rerun. Recorded workload was 15 observer calls, including one call
+containing three simulator commands. This is not production recovery evidence.
+
+### Client engineering: asynchronous state repair
+
+A small dependency-free JavaScript module passed **22/22 frozen contract checks**
+on its first controller acceptance run, with independent source review finding
+no contract defect. It correctly handled latest-request ordering, account epochs
+including A-to-B-to-A transitions, retained data on refresh errors, single-save
+gating, ambiguous timeout outcomes, explicit reconciliation, and protection of
+edits made since the original save. No automatic mutation retry was added.
+
+The participant's retained local logs show 4/33 baseline checks passing with
+three unhandled-rejection warnings, then 33/33 on the repaired module. Historical
+identity of its local test source was not independently established; the separate
+22-check controller was frozen and hash-verified. These are deterministic local
+logic checks, not rendered UI, accessibility, transport, authorization, backend
+idempotency, deployment or native skill-selection evidence.
+
+### Review and debugging: real repair, failed frozen acceptance
+
+A historical PM capture-helper replay correctly identified and reproduced a
+Python 3.12 symlink-loop failure before editing, left a clean control unchanged,
+repaired the real loop, and passed all ten local tests. Its new regression failed
+the original source for the intended cause. However, the frozen oracle passed
+only **2/3**, and the full frozen acceptance **failed**. That result is retained.
+
+Independent adjudication found a public-task/controller mismatch: the task asked
+for the real loop repair while preserving unrelated programming failures; the
+controller additionally expected normalization of a bare mocked resolution
+RuntimeError without the real loop's ELOOP context. The submitted narrower guard
+met the reported real-loop behavior but not that broader frozen rule. No
+retrospective oracle adjustment, participant repair or rerun turned it into a
+pass. Future use of such a case must disclose the exact boundary policy before
+launch. This finding concerns evaluation validity as well as implementation;
+it is not evidence that the reported real loop remained broken.
+
+That adjudication separately reproduced a current PM API edge case: a custom
+PathLike provider's programming RuntimeError was misclassified as an input
+ValueError because path construction was inside the resolution handler. The
+scoped correction moves construction outside that handler, preserving the
+historically tested resolution normalization. An unmocked regression fails before
+the correction and passes after it; no producer or output artifact is created.
+This is an API diagnostic correction, not a normal string-path outage or savings
+measurement. It does not change the failed historical trial's result.
+
+All three checks used cooperative records, not an isolation/security boundary.
+They establish neither exhaustive absence of unrecorded actions nor incremental
+skill benefit, actual human minutes or provider token/billing savings.
+
 ## Provenance and limits
 
 The planning pair used PM `108e228` and SWE `6d2cf828`; engineering used PM

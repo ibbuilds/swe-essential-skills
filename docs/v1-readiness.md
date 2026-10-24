@@ -6,14 +6,15 @@ a certification, or a promise of perfect engineering. This document joins the
 requirements to implemented procedures and defines a finite acceptance boundary.
 It does not start a new project tracker or replace the user's existing plan.
 
-**Status clarification — 23 October 2026:** The checked gates, review results and
-package-copy evidence below belong to the stated 22 October snapshots. Subsequent
-changes are summarized in the [23 October research audit](research-audit-2026-10-23.md).
-Use the selected candidate's exact source revision and applicable checks for
-current integration status; earlier package copies do not validate later content.
-Live application and net savings remain unverified. The PM workflow/location
-policy is settled: required questions wait for the user's answer, including
-during urgent incidents; urgency does not authorize a bypass.
+**Evidence update — 24 October 2026:** The readiness map and gate results below
+describe the stated historical snapshots. Later
+[core workflow checks](core-workflow-checks-2026-10-24.md) provide bounded
+behavioral evidence for planning and a synthetic data/security implementation.
+Those observations do not turn every lifecycle row into verified behavior. Use
+the selected candidate's exact source revision and applicable checks for current
+integration status; earlier package copies do not validate later content. The PM
+workflow/location policy is settled: required questions wait for the user's
+answer, including during urgent incidents; urgency does not authorize a bypass.
 
 ## What this version must do
 
@@ -42,15 +43,16 @@ publication, merging or destructive action.
   the mechanism and relevant failure cases. It is not a controlled comparison.
 - **Mechanically checked:** a named local command actually ran against a stated
   snapshot with an observed result. Final integration results are recorded below.
-- **Live unverified:** discovery/loading, correct application, user experience,
-  finished-task quality and net usage effects have not been established in a user
-  trial or matched model evaluation.
+- **Not established by this readiness pass:** native discovery/loading, broad
+  correct application, user experience and net usage effects. Later bounded
+  behavior observations are identified separately in the linked workflow report.
 - **Pending:** integration or review remains to be closed; a planned change is not
   counted as implemented merely because its subject appears here.
 
-The lifecycle map below reports **implemented instructions with static support;
-all live behavior and savings remain unverified**. Unperformed live use remains
-an explicit limit, not an implied completion. Existing research in
+The lifecycle map records **authored procedures and static support**, not executed
+coverage of every row. Consult the linked workflow report for subsequently
+observed behavior. Actual native-host activation, broad user experience and net
+savings remain unestablished. Existing research in
 [empirical evidence](empirical-evidence.md) concerns other interventions and
 settings; its results cannot be transferred into this suite's success rate or
 weekly-quota savings.
