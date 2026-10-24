@@ -166,3 +166,20 @@ identity assurances simulated. See the [PM evidence update](https://github.com/i
 These are selected functional observations from local receipts and artifact
 checks, not complete native-session telemetry, automatic discovery, representative
 user-effort savings, provider billing measurements or suite-wide effectiveness.
+
+## Core workflow observations: 24 October 2026
+
+The [core workflow report](core-workflow-checks-2026-10-24.md) adds own-suite
+observations without replacing the studies or earlier results above. Ordinary and
+explicitly instructed participants both produced actionable multi-turn plans
+(16/16) and implemented a scoped SQLite migration/security change (20/20; each
+passed 12 contract checks and three additional reviewer probes). This demonstrates
+bounded functional capabilities, not an incremental suite benefit. The optional
+maintainer case packages the 12 contract checks, not those historical extra probes.
+
+A separate planning candidate remains held: observable behavior passed, but fewer
+read bytes coincided with more written-work bytes and unchanged operation counts.
+The report also distinguishes shipped PM capture corrections from instruction
+changes. Partial blinding, frozen source revisions, cloud-only infrastructure and
+observer limits remain material; representative effectiveness, native activation,
+human-effort reduction and billing savings remain unestablished.
