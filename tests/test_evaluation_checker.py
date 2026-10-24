@@ -71,6 +71,10 @@ class EvaluationCheckerTests(unittest.TestCase):
     def test_unicode_target_diagnostic_on_ascii_console(self):
         path = self.root / "雪.py"
         path.write_text(STUB, encoding="utf-8")
+        # An unresolved alias exercises path normalization on every platform.
+        child = self.root / "child"
+        child.mkdir()
+        path = child / ".." / path.name
         # Exercise wrapper success without embedding a reference implementation.
         suite = unittest.TestSuite(
             unittest.FunctionTestCase(lambda: None)
@@ -84,7 +88,9 @@ class EvaluationCheckerTests(unittest.TestCase):
                 with contextlib.redirect_stdout(console), contextlib.redirect_stderr(io.StringIO()):
                     self.assertEqual(self.checker.main([str(path)]), 0)
             console.flush()
-            self.assertIn(ascii(str(path)), raw.getvalue().decode("ascii"))
+            output = raw.getvalue().decode("ascii")
+            self.assertIn(f"TARGET={ascii(str(path.resolve(strict=True)))}", output)
+            self.assertIn("PASS: 12 deterministic checks", output)
         finally:
             console.close()
 
