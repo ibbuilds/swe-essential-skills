@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-client-engineering
-description: Implement or change interactive web, native, and desktop client behavior, including state, navigation, async integration, accessibility, and lifecycle handling. Use for working user journeys, not choosing visual art direction.
+description: Implement web, native or desktop interactions, state, navigation, async behavior and accessibility. Use for working user journeys; visual art direction belongs to design workflows.
 ---
 
 # SWE Essential Skills / Client Engineering

@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-construction
-description: Implement cohesive code changes that fit an existing repository, or establish a reproducible foundation for a new one. Use for setup, configuration, dependency integration, module structure and public-contract preservation across applications, libraries, CLIs and embedded software.
+description: Implement code changes, repository setup, configuration and dependency integration while preserving consumer contracts. Use for authorized construction in the existing architecture.
 ---
 
 # SWE Essential Skills / Software Construction

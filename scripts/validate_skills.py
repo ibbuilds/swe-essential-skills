@@ -93,6 +93,9 @@ def validate(root: Path) -> list[str]:
             short = interface.get("short_description")
             if not isinstance(short, str) or not 25 <= len(short) <= 64:
                 raise ValueError("short description must contain 25–64 characters")
+            policy = ui.get("policy", {})
+            if not isinstance(policy, dict) or type(policy.get("allow_implicit_invocation", True)) is not bool:
+                raise ValueError("invocation policy must be a mapping with a boolean allow_implicit_invocation")
         except (ValueError, OSError, yaml.YAMLError) as exc:
             errors.append(f"{entry.relative_to(root)}: {exc}")
             continue

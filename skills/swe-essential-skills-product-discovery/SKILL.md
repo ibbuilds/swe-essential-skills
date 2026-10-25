@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-product-discovery
-description: Investigate a software product opportunity, actual user problem, context and current alternatives; distinguish evidence from assumptions and choose proportionate problem-validation work. Use when deciding whether or what problem to pursue, not for routine implementation of an adequate brief, marketing campaigns or generic project coordination.
+description: Investigate a software opportunity, user problem and current alternatives. Use to decide which problem merits investment; skip discovery when an accepted brief already settles the direction.
 ---
 
 # SWE Essential Skills / Product Discovery

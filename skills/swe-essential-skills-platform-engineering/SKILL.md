@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-platform-engineering
-description: Select and build hosting foundations for applications and jobs, including environment isolation, compute, network paths, identity, durable storage and bootstrap verification. Use for hosting/platform setup or infrastructure design, not routine release execution or ongoing incident response.
+description: Choose or build hosting, compute, networking, identity and durable storage. Use for platform setup and first-deployment bootstrap; routine releases and incidents have separate workflows.
 ---
 
 # SWE Essential Skills / Platform Engineering

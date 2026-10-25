@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-product-definition
-description: Turn a chosen software opportunity into product strategy, positioning, outcome choices, prioritized scope and an engineering-ready product brief. Use for deciding what to build and why, initial product plans or consequential product-scope changes; not generic scheduling, marketing campaigns, UI art direction or low-level technical specifications.
+description: Define software product direction, positioning, outcomes and prioritized scope. Use when deciding what to build and why; skip settled scope and routine implementation.
 ---
 
 # SWE Essential Skills / Product Definition
