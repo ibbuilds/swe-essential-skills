@@ -26,6 +26,8 @@ Identify the affected system boundary, actual users and their environment, exter
 
 Inspect applicable code, tests, interface definitions, incidents, support evidence and existing commitments. Label each statement by what it establishes: an approved need, an observed behavior, a proposed interpretation, or an assumption. Legacy behavior and tests are evidence, not automatic proof of intended policy. Follow an explicit current decision from the authorized requirement owner, updating the prior baseline and affected acceptance criteria. If it conflicts with an external commitment or obligation that owner cannot change, explain the conflict and seek the needed decision rather than silently overriding either. Preserve the source and the person or role able to resolve a disputed expectation. Do not contact stakeholders, expose their data or modify shared records without applicable authorization.
 
+For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
+
 Use [elicitation and conflict cases](references/elicitation-and-conflicts.md) when intent, terminology or sources disagree. Ask targeted questions whose answers change behavior or acceptance; continue reversible work that does not depend on the answer.
 
 ## Express the contract, not a preferred solution

@@ -452,3 +452,24 @@ These are authored review cases, not executed model evaluations.
   not preserve automatically. A self-contained SQL migration or an already
   isolated implementation with applicable coverage needs no new abstraction or
   full migration replay for unrelated edits.
+
+## User-owned decisions and input capabilities
+
+- A material architecture, hosting, product or scope choice has two meaningful
+  alternatives and a permitted native input tool exists: ask once with concise
+  selectable options, tradeoffs and a justified recommendation. Do not settle a
+  user-owned choice silently or replace the native selector with prose alone.
+- A user describes a real workflow without predefined alternatives: accept a
+  free-form account rather than inventing a binary questionnaire.
+- An async prompt returns only dispatch acknowledgement: keep its choice pending,
+  continue independent work and withhold dependent edits. A preselected option
+  or timeout is not consent. A later clear written answer settles the choice;
+  do not demand a click or re-ask.
+- No suitable tool is permitted in the current mode: ask plainly in text, without
+  fabricated buttons, mode changes or new installations. Dedicated permission
+  escalations keep their own approval mechanism.
+
+These are review specifications, not executed native UI tests. The
+[official Codex app-server documentation](https://learn.chatgpt.com/docs/app-server)
+describes structured input; actual runtime schemas govern tool availability.
+This presentation rule does not add decisions or reopen accepted requirements.

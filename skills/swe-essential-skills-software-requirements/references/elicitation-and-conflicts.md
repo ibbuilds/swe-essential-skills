@@ -22,7 +22,7 @@ alternatives. Explain the affected behavior, existing feature, data or consumers
 and ask the smallest useful owner question, with a recommendation when justified.
 For example: "Does organization-wide sharing apply only to new accounts, or must
 existing account ownership migrate too? The latter changes current access."
-A bare "Are you sure?" neither identifies the ambiguity nor resolves it.
+Use that example as the content of a supported selectable question: “New accounts only” or “Migrate existing accounts too”, with the access consequence. It is not an instruction to use prose when an interactive tool is permitted and available. Keep asynchronous choices pending until answered, without duplicate prompts or dependent edits. A clear text answer is equally valid; do not require a click afterward. Without a suitable tool, ask plainly in text. Open-ended task descriptions remain free-form. A bare "Are you sure?" neither identifies the ambiguity nor resolves it.
 
 Treat answers per choice. Preserve settled decisions and ask only about material
 unanswered or contradictory parts; do not silently fill them in. Generic urgency
