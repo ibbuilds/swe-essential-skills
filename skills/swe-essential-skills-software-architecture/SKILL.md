@@ -28,6 +28,8 @@ Convert ambiguous requirements into observable examples. Separate functional beh
 - A quality attribute names a workload or failure, an observable response and an agreed bound. “Fast” is not a target; a response-time percentile requires representative load and a measurement boundary. Do not invent the bound.
 - Constraints include supported runtimes/devices, compatibility, residency, offline operation, deployment authority, team capabilities and existing ownership.
 
+For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
+
 Ask only about unresolved facts that change a consequential design choice. For an unresolved meaningful stack, architecture or risk choice, present options
 and a reasoned recommendation for the user or explicitly designated owner to
 choose; silence is not agreement. Reversible analysis and routine work inside

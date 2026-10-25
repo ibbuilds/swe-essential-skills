@@ -18,6 +18,8 @@ answer, without filler or repeating the whole brief.
 
 Recover the chosen problem, target actors and context, current alternatives, known evidence, constraints and accepted decisions. Separate fixed commitments from open choices and assumptions. If a missing fact materially changes scope, retrieve it from available authorized sources. If the underlying opportunity remains uncertain, preserve that uncertainty and recommend targeted discovery rather than fabricating validation or blocking every implementation.
 
+For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
+
 Bring only unresolved product choices to the user. Batch independent material questions with recommendations and explicit tradeoffs; wait on prerequisite choices before posing dependent ones. Ask the user for decisions they own or unavailable information, not facts you can establish safely. Do not reopen settled decisions merely because a template has an empty field. Continue reversible work on independent parts.
 
 ## Help choose value and positioning

@@ -63,6 +63,8 @@ user omitted the answer; disclose the specific limit. If sources already answer
 it consistently, use that answer. If they conflict, ask about the conflict rather
 than restarting the question from scratch.
 
+For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
+
 Inspect discoverable facts rather than asking the user to supply them. Ask only the highest-leverage unresolved questions that cannot be answered from available context. Group independent questions when that helps; resolve upstream choices before asking questions that depend on them. Offer a reasoned recommendation or alternatives where useful, and explain why the question matters and what its answer unblocks. Each gap can be answered, investigated, handled within already-agreed bounds or with an explicitly accepted provisional choice, deferred to its decision point or dropped as irrelevant; an interview is not the only path. Do not repeat answered questions, demand exhaustive questionnaires or block independent reversible exploration while awaiting one decision. Unknowns may remain; consequential unowned risks may not be disguised as certainty.
 
 ## Maintain one usable plan and a buildable slice
