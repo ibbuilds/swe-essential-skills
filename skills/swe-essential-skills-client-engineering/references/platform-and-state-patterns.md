@@ -12,6 +12,18 @@ Associate the result with the complete query key (including filters and account 
 
 An optimistic rename A is followed by rename B. If A fails, restoring the snapshot before A could erase B. Track mutation identity/version and invalidate or rebase only the affected optimistic layer. For consequential writes (purchases, destructive changes, device commands), prefer explicit pending/reconciliation states unless safe optimistic semantics exist. A retry should reuse the intended operation identity where the server supports deduplication, not invent a new operation on every transport attempt.
 
+An `unknown` label alone does not enforce that decision. For a non-idempotent
+write or an unverified retry contract, guard the actual mutation entry point
+against automatic **and user-triggered** repeats of that operation until
+authoritative reconciliation. A disabled button can be bypassed by another
+caller or shortcut. Where the service already guarantees an idempotent retry,
+reuse its supported operation identity and unchanged intent instead of blocking
+that valid path. Check a committed write with a lost response followed by a user
+retry, then the legitimate path after reconciliation. This is a conditional
+failure case, not a new retry framework. The
+[AWS Builders' Library treatment](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/)
+explains the underlying reconciliation and operation-identity contract.
+
 ## Route failures to the actual owner
 
 When changing an async handler, action/query integration, error boundary or recovery behavior, trace the failure from its execution context to the state owner or boundary that receives it. A render boundary need not catch event-handler, timer, subscription or detached async failures; supported action/query mechanisms may explicitly route them. Reuse that mechanism rather than wrapping every operation in a new catch. Verify the relevant rejection reaches the intended recoverable state and recovery clears pending/error state without discarding valid input. Unrelated presentation changes need no new error-routing audit.

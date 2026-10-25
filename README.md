@@ -79,6 +79,7 @@ workflow suite, not a dependency.
 
 - [Installation and automatic discovery](docs/installation.md)
 - [Activation audit and troubleshooting](docs/activation-audit-2026-10-25.md)
+- [Functional validation of all eighteen workflows](docs/functional-validation-2026-10-25.md)
 - [Coverage and composition](docs/coverage-and-composition.md)
 - [Lifecycle coverage](docs/lifecycle-coverage.md)
 - [Workflow value and limits](docs/workflow-value.md)
