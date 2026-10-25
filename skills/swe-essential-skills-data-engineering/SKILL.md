@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-data-engineering
-description: Design and change persistent schemas, investigate query behavior, and perform compatible migrations, backfills and recovery planning. Use when correctness depends on stored-data invariants, query plans, pooled-session state, rollout compatibility, data pipelines or data lifecycle, across the project's actual datastore rather than a default database.
+description: Change schemas, queries, migrations, backfills or data pipelines. Use for stored-data invariants, pooled sessions, compatibility and recovery in the actual datastore.
 ---
 
 # SWE Essential Skills / Data Engineering

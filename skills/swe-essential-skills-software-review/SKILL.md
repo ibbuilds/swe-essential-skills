@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-review
-description: Review a code change, diff, pull request, or proposed patch without editing it. Use to identify evidence-backed defects, compatibility regressions, and consequential design risks in a specific revision; distinguish findings from preferences and report review limits. Test implementation belongs to verification, defect repair to construction or debugging, and dedicated threat audits to security.
+description: Review a code change, diff or PR for supported defects without editing it. Use for revision-specific review; repairs, test implementation and dedicated threat audits have separate workflows.
 ---
 
 # SWE Essential Skills / Software Review

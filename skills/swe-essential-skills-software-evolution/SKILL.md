@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-evolution
-description: Safely refactor or modernize software, upgrade dependencies, evolve APIs and data formats, deprecate capabilities, migrate consumers or retire systems. Use when behavior and compatibility across versions and time are the central engineering problem.
+description: Refactor, upgrade, migrate, deprecate or retire software while preserving supported behavior. Use when compatibility across versions, consumers or stored data is the central problem.
 ---
 
 # SWE Essential Skills / Software Evolution

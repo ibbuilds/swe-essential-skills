@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-performance
-description: Investigate and improve latency, throughput, memory, startup, responsiveness, and resource efficiency using representative workloads and measured bottlenecks. Use for performance regressions, capacity constraints, or evidence-backed optimization across clients, services, data jobs, and native software.
+description: Investigate latency, throughput, memory, startup or responsiveness with representative workloads. Use for regressions, resource constraints and measured optimization; skip speculative tuning.
 ---
 
 # SWE Essential Skills / Software Performance

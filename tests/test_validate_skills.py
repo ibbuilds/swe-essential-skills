@@ -34,6 +34,28 @@ class PortabilityTests(unittest.TestCase):
         self.skill("[Read](guide.md#section) [Source](https://example.com)")
         self.assertEqual(validate(self.root), [])
 
+    def test_invocation_policy_preserves_default_and_explicit_choices(self):
+        self.skill()
+        ui = self.folder / "agents/openai.yaml"
+        original = ui.read_text(encoding="utf-8")
+        for policy in ("", "policy: {}\n", "policy:\n  allow_implicit_invocation: true\n",
+                       "policy:\n  allow_implicit_invocation: false\n"):
+            with self.subTest(policy=policy):
+                ui.write_text(original + policy, encoding="utf-8")
+                self.assertEqual(validate(self.root), [])
+
+    def test_malformed_invocation_policy_is_rejected(self):
+        self.skill()
+        ui = self.folder / "agents/openai.yaml"
+        original = ui.read_text(encoding="utf-8")
+        for policy in ("policy: false\n", "policy: null\n", "policy: []\n",
+                       'policy:\n  allow_implicit_invocation: "false"\n',
+                       "policy:\n  allow_implicit_invocation: 0\n",
+                       "policy:\n  allow_implicit_invocation: null\n"):
+            with self.subTest(policy=policy):
+                ui.write_text(original + policy, encoding="utf-8")
+                self.assertTrue(any("invocation policy" in error for error in validate(self.root)))
+
     def test_missing_reference_rejected(self):
         self.skill("[Missing](missing.md)")
         self.assertTrue(validate(self.root))

@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-operations
-description: Diagnose operational failures, design useful telemetry and service expectations, handle incidents and support cases, or verify capacity and restoration. Adapt to CLI, native, device and batch products rather than assuming an online service.
+description: Diagnose runtime failures, handle incidents and support cases, or verify telemetry, capacity and restoration. Use for operating services, jobs, CLI, native and device software.
 ---
 
 # SWE Essential Skills / Software Operations

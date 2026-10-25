@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-architecture
-description: Translate accepted goals into technical requirements, system boundaries and architecture decisions for new systems or consequential changes to existing software. Use for feasibility, quality attributes, interface ownership and architecture tradeoffs, not product strategy or routine local edits.
+description: Design system boundaries, technical contracts and consequential architecture choices. Use for feasibility and quality tradeoffs; skip product strategy and routine local edits.
 ---
 
 # SWE Essential Skills / Software Architecture

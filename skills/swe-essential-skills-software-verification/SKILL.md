@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-verification
-description: Choose or assess software verification and validation evidence when requirements, contracts, risks, regression coverage, assurance obligations, acceptance readiness, or exceptions need reasoning beyond an established check recipe. Routine execution of known checks need not restart test strategy; this is not general project coordination.
+description: Choose verification evidence for changed contracts, regression risks or acceptance gaps. Use when test strategy needs judgment; running an established check recipe needs no new strategy.
 ---
 
 # SWE Essential Skills / Software Verification

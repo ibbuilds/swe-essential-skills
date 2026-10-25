@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-debugging
-description: Diagnose reproducible, intermittent, or production-only software failures using reliable signals, distinguishing experiments, and causal tracing before choosing a fix. Use for unexplained incorrect behavior, crashes, flaky failures, regressions, or finding related instances of a confirmed defect.
+description: Diagnose bugs, crashes, flaky failures and regressions using a trustworthy failure signal and causal experiments. Use when software behavior is unexplained before choosing a fix.
 ---
 
 # SWE Essential Skills / Software Debugging

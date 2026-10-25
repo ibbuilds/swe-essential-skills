@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-project-planning
-description: Establish or reconcile a coherent product-to-engineering plan before implementing a new project or consequential expansion. Reuse existing plans, resolve material gaps, and prepare a buildable first slice. Not a mandatory planning phase for ongoing work with adequate intent, decisions and acceptance.
+description: Create or reconcile a software project plan and a buildable first slice. Use for requested planning, new projects or consequential expansion; continue adequately planned ongoing work directly.
 ---
 
 # SWE Essential Skills / Project Planning

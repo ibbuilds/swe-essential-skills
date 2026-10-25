@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-requirements
-description: Resolve material ambiguity, conflicting needs, acceptance gaps or consequential requirement changes in software. Elicit and validate engineering contracts and their change impact; clear local changes with adequate acceptance need no new requirements workflow. Not for marketing strategy or generic task management.
+description: Resolve ambiguous software behavior, conflicting requirements, acceptance gaps or consequential scope changes. Use to establish engineering contracts; skip clear changes with adequate acceptance.
 ---
 
 # SWE Essential Skills / Software Requirements
