@@ -1,0 +1,1237 @@
+{
+  "date": "2026-10-26",
+  "scope": "Complete 70-entry inventory of three named expert catalogs, with selected mechanism-to-owner analysis; not a claim of universal market coverage or full upstream script/API parity.",
+  "evidence": "Static traceability unless a separately documented behavioral case says otherwise. Prior official and specialist comparisons remain linked, not newly rerun.",
+  "entries": [
+    {
+      "source": "mattpocock/ask-matt",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/ask-matt/SKILL.md",
+      "mechanism": "Choose a fitting method and configure source-specific tracker conventions",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-resource-selection/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-resource-selection/SKILL.md"
+        }
+      ],
+      "limit": "General resource selection is covered; Matt-specific installers, tracker adapters and slash-command registration are not shipped."
+    },
+    {
+      "source": "mattpocock/code-review",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/code-review/SKILL.md",
+      "mechanism": "Review concrete changes against behavior and project conventions",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-review/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-review/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "mattpocock/codebase-design",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/codebase-design/SKILL.md",
+      "mechanism": "Cohesive interfaces, ownership, testable boundaries and useful alternatives",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-evolution/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-evolution/SKILL.md"
+        }
+      ],
+      "limit": "No forced deep-module vocabulary, mandatory parallel designs or speculative seams."
+    },
+    {
+      "source": "mattpocock/diagnosing-bugs",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/diagnosing-bugs/SKILL.md",
+      "mechanism": "Causal investigation with a failure-sensitive feedback loop",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-debugging/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-debugging/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "mattpocock/domain-modeling",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/domain-modeling/SKILL.md",
+      "mechanism": "Challenge assumptions; distinguish domain terms; retain accepted meanings and consequential decisions",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/references/decision-investigation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/references/decision-investigation.md"
+        }
+      ],
+      "limit": "Reuse current domain records; no mandatory GLOSSARY filename, per-term ADR or code-wide rename."
+    },
+    {
+      "source": "mattpocock/grill-with-docs",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/grill-with-docs/SKILL.md",
+      "mechanism": "Challenge assumptions; distinguish domain terms; retain accepted meanings and consequential decisions",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/references/decision-investigation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/references/decision-investigation.md"
+        }
+      ],
+      "limit": "Reuse current domain records; no mandatory GLOSSARY filename, per-term ADR or code-wide rename."
+    },
+    {
+      "source": "mattpocock/implement-spec",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/implement-spec/SKILL.md",
+      "mechanism": "Dependency-aware vertical slices and integrated completion",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "No compulsory integration branch, one-agent-per-ticket, tracker publication or TDD on every task."
+    },
+    {
+      "source": "mattpocock/implement",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/implement/SKILL.md",
+      "mechanism": "Contract-aware implementation, proportionate checks and coherent completion",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "mattpocock/improve-codebase-architecture",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/improve-codebase-architecture/SKILL.md",
+      "mechanism": "Cohesive interfaces, ownership, testable boundaries and useful alternatives",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-evolution/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-evolution/SKILL.md"
+        }
+      ],
+      "limit": "No forced deep-module vocabulary, mandatory parallel designs or speculative seams."
+    },
+    {
+      "source": "mattpocock/pr",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/pr/SKILL.md",
+      "mechanism": "Explain the changed behavior and publish a scoped authorized PR",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/references/engineering-documentation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/references/engineering-documentation.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "No forced PR for every local change; use the actual repository template and authorized destination."
+    },
+    {
+      "source": "mattpocock/prototype",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/prototype/SKILL.md",
+      "mechanism": "Small experiment tied to a design question with visible limits",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/references/decision-investigation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/references/decision-investigation.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-product-discovery/references/validation-choices.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-product-discovery/references/validation-choices.md"
+        }
+      ],
+      "limit": "No bundled UI variant generator; do not promote prototype shortcuts or skip safety merely because it is temporary."
+    },
+    {
+      "source": "mattpocock/research",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/research/SKILL.md",
+      "mechanism": "Ground decisions in accessible authoritative sources and reusable evidence",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-source-selection/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-source-selection/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "mattpocock/retro",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/retro/SKILL.md",
+      "mechanism": "Improve demonstrated friction with concise reusable instructions and checks",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-workflow-improvement/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-workflow-improvement/SKILL.md"
+        }
+      ],
+      "limit": "No mandatory retrospective, new rule or new check after every task; skill authoring remains a specialized host capability."
+    },
+    {
+      "source": "mattpocock/setup-matt-pocock-skills",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "mechanism": "Choose a fitting method and configure source-specific tracker conventions",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-resource-selection/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-resource-selection/SKILL.md"
+        }
+      ],
+      "limit": "General resource selection is covered; Matt-specific installers, tracker adapters and slash-command registration are not shipped."
+    },
+    {
+      "source": "mattpocock/tdd",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/tdd/SKILL.md",
+      "mechanism": "Defect-sensitive red/green evidence and incremental repair",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-debugging/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-debugging/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        }
+      ],
+      "limit": "TDD is an applicable technique, not a compulsory sequence for wording, exploration or every edit."
+    },
+    {
+      "source": "mattpocock/to-spec",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-spec/SKILL.md",
+      "mechanism": "Turn accepted intent into behavioral contracts and usable scope",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "mattpocock/to-tickets",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-tickets/SKILL.md",
+      "mechanism": "Dependency-aware vertical slices and integrated completion",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "No compulsory integration branch, one-agent-per-ticket, tracker publication or TDD on every task."
+    },
+    {
+      "source": "mattpocock/triage",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/triage/SKILL.md",
+      "mechanism": "Classify actionable work, missing evidence and readiness without losing prior answers",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-operations/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-operations/SKILL.md"
+        },
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/SKILL.md"
+        }
+      ],
+      "limit": "No imported triage label vocabulary, automatic issue closure or unsolicited external comments."
+    },
+    {
+      "source": "mattpocock/wayfinder",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wayfinder/SKILL.md",
+      "mechanism": "Separate unresolved decisions from build tasks; expose dependency-ready work",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/references/decision-interviews.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/references/decision-interviews.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        }
+      ],
+      "limit": "No mandatory issue-map service or fixed ticket/token size; retain open unknowns and distinguish planning from execution."
+    },
+    {
+      "source": "mattpocock/wizard",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wizard/SKILL.md",
+      "mechanism": "Verified ordered handoff for human-only setup and optional repeatable wizard",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/references/reproducible-foundations.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/references/reproducible-foundations.md"
+        }
+      ],
+      "limit": "No bundled Bash wizard or provider dashboard integration; preserve secret destinations, idempotence and actual permissions."
+    },
+    {
+      "source": "mattpocock/chief-of-staff",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/chief-of-staff/SKILL.md",
+      "mechanism": "Long-running ownership, durable source pointers and reusable workflow improvements",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/SKILL.md"
+        },
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-context-management/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-context-management/SKILL.md"
+        },
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-workflow-improvement/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-workflow-improvement/SKILL.md"
+        }
+      ],
+      "limit": "Upstream experimental; useful mechanisms already owned. No mandatory all-subagent execution, new wiki, unsolicited schedules or environment redesign on every task."
+    },
+    {
+      "source": "mattpocock/claude-handoff",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/claude-handoff/SKILL.md",
+      "mechanism": "Preserve continuity when handing work to a fresh background agent",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-context-management/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-context-management/SKILL.md"
+        }
+      ],
+      "limit": "Upstream experimental and Claude-specific; use Codex supported authorized handoff rather than claiming the same background-spawn adapter."
+    },
+    {
+      "source": "mattpocock/loop-me",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/loop-me/SKILL.md",
+      "mechanism": "Define a recurring workflow with trigger, output, human decisions and completion",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-workflow-improvement/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-workflow-improvement/SKILL.md"
+        },
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/references/decision-interviews.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/references/decision-interviews.md"
+        }
+      ],
+      "limit": "Upstream experimental; no required workflows folder, life audit or automatic scheduling. Resolve only consequential implementation gaps."
+    },
+    {
+      "source": "mattpocock/setup-ts-deep-modules",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "mechanism": "Enforce a settled architecture boundary with a failure-sensitive check",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/references/decision-investigation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/references/decision-investigation.md"
+        }
+      ],
+      "limit": "Upstream experimental; generic boundary enforcement is covered, but dependency-cruiser installation and the author-specific TS directory policy are not defaults."
+    },
+    {
+      "source": "mattpocock/writing-beats",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/writing-beats/SKILL.md",
+      "mechanism": "Experimental long-form article composition",
+      "disposition": "experimental",
+      "owners": [],
+      "limit": "Dedicated essay exploration/structure is outside these essential suites; concise technical communication remains available, without claiming equivalent creative-writing workflows."
+    },
+    {
+      "source": "mattpocock/writing-fragments",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/writing-fragments/SKILL.md",
+      "mechanism": "Experimental long-form article composition",
+      "disposition": "experimental",
+      "owners": [],
+      "limit": "Dedicated essay exploration/structure is outside these essential suites; concise technical communication remains available, without claiming equivalent creative-writing workflows."
+    },
+    {
+      "source": "mattpocock/writing-shape",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/in-progress/writing-shape/SKILL.md",
+      "mechanism": "Experimental long-form article composition",
+      "disposition": "experimental",
+      "owners": [],
+      "limit": "Dedicated essay exploration/structure is outside these essential suites; concise technical communication remains available, without claiming equivalent creative-writing workflows."
+    },
+    {
+      "source": "mattpocock/git-guardrails-claude-code",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/git-guardrails-claude-code/SKILL.md",
+      "mechanism": "Claude Code-specific shell interception hook",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "Safe ownership/Git decisions are covered; no equivalent enforcement hook is claimed or installed in Codex."
+    },
+    {
+      "source": "mattpocock/migrate-to-shoehorn",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/migrate-to-shoehorn/SKILL.md",
+      "mechanism": "Migration to the author-specific Shoehorn tool",
+      "disposition": "out-of-scope",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-evolution/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-evolution/SKILL.md"
+        }
+      ],
+      "limit": "General migration contracts are covered; the named tool migration is not an essential universal workflow."
+    },
+    {
+      "source": "mattpocock/scaffold-exercises",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/scaffold-exercises/SKILL.md",
+      "mechanism": "Teaching curriculum and interactive exercises",
+      "disposition": "out-of-scope",
+      "owners": [],
+      "limit": "Dedicated pedagogy/course generation is outside PM coordination and quality software delivery; ordinary explanations remain available."
+    },
+    {
+      "source": "mattpocock/setup-pre-commit",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/setup-pre-commit/SKILL.md",
+      "mechanism": "Wire appropriate existing checks into an authorized development workflow",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-delivery/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-delivery/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/references/reproducible-foundations.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/references/reproducible-foundations.md"
+        }
+      ],
+      "limit": "No mandatory hooks or TypeScript toolchain for every repository."
+    },
+    {
+      "source": "mattpocock/grill-me",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/grill-me/SKILL.md",
+      "mechanism": "Deliberate plan challenge; ready decisions, adaptive question rounds and completion",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/references/decision-interviews.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/references/decision-interviews.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        }
+      ],
+      "limit": "Explicit challenge works on accepted plans; no exhaustive tree, mandatory delegation, biased yes-format or automatic implementation."
+    },
+    {
+      "source": "mattpocock/grilling",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/grilling/SKILL.md",
+      "mechanism": "Deliberate plan challenge; ready decisions, adaptive question rounds and completion",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/references/decision-interviews.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/references/decision-interviews.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        }
+      ],
+      "limit": "Explicit challenge works on accepted plans; no exhaustive tree, mandatory delegation, biased yes-format or automatic implementation."
+    },
+    {
+      "source": "mattpocock/handoff",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/handoff/SKILL.md",
+      "mechanism": "Concise durable context with existing source pointers and remaining work",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-context-management/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-context-management/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "mattpocock/teach",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/teach/SKILL.md",
+      "mechanism": "Teaching curriculum and interactive exercises",
+      "disposition": "out-of-scope",
+      "owners": [],
+      "limit": "Dedicated pedagogy/course generation is outside PM coordination and quality software delivery; ordinary explanations remain available."
+    },
+    {
+      "source": "mattpocock/to-questionnaire",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/to-questionnaire/SKILL.md",
+      "mechanism": "Draft questions for the person who has missing facts; reconcile returned answers",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/references/decision-interviews.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/references/decision-interviews.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        }
+      ],
+      "limit": "Draft is not permission to send; do not ask the requester to supply the facts being requested from someone else."
+    },
+    {
+      "source": "mattpocock/wait-what",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/wait-what/SKILL.md",
+      "mechanism": "Re-explain the result in plain language with necessary context",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-concise-communication/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-concise-communication/SKILL.md"
+        }
+      ],
+      "limit": "No prescribed English-only dialect; preserve the user language, terminology and requested depth."
+    },
+    {
+      "source": "mattpocock/writing-for-agents",
+      "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "url": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/writing-for-agents/SKILL.md",
+      "mechanism": "Improve demonstrated friction with concise reusable instructions and checks",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-workflow-improvement/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-workflow-improvement/SKILL.md"
+        }
+      ],
+      "limit": "No mandatory retrospective, new rule or new check after every task; skill authoring remains a specialized host capability."
+    },
+    {
+      "source": "rasmic/before-and-after",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/before-and-after/SKILL.md",
+      "mechanism": "Comparable visual evidence of a requested UI change",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-client-engineering/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-client-engineering/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        }
+      ],
+      "limit": "Use available capture tools with matching state/viewport; Ras Mic capture/upload scripts are not bundled."
+    },
+    {
+      "source": "rasmic/code-structure",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/code-structure/SKILL.md",
+      "mechanism": "Keep existing owners/conventions and extract genuinely shared mechanisms",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/references/contract-aware-implementation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/references/contract-aware-implementation.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "rasmic/evidence-driven-testing",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/evidence-driven-testing/SKILL.md",
+      "mechanism": "Match evidence to actual target/runtime and changed behavior",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-client-engineering/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-client-engineering/SKILL.md"
+        }
+      ],
+      "limit": "No mandatory video, paid environment, public evidence upload or browser for non-browser work."
+    },
+    {
+      "source": "rasmic/greploop-apps",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/greploop-apps/SKILL.md",
+      "mechanism": "Bounded current-revision review/fix cycle; evidence for false positives",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-review/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-review/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "General loop and finish criteria are covered; Greptile-specific triggers/platform adapters require that available authorized integration."
+    },
+    {
+      "source": "rasmic/greploop",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/greploop/SKILL.md",
+      "mechanism": "Bounded current-revision review/fix cycle; evidence for false positives",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-review/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-review/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "General loop and finish criteria are covered; Greptile-specific triggers/platform adapters require that available authorized integration."
+    },
+    {
+      "source": "rasmic/new-feature",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/new-feature/SKILL.md",
+      "mechanism": "Preserve task ownership and isolate actual collisions",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "No worktree mandate on every edit; worktrees do not isolate ports or shared data."
+    },
+    {
+      "source": "rasmic/unslop",
+      "revision": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "url": "https://github.com/michaelshimeles/skills/blob/11b15767d7587bab11f6c4957507b5f26d1785c7/unslop/SKILL.md",
+      "mechanism": "Concrete concise prose preserving meaning, tone and evidence",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-concise-communication/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-concise-communication/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/references/engineering-documentation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/references/engineering-documentation.md"
+        }
+      ],
+      "limit": "No fake personality, deliberate errors or automatic rewriting of untouched prose."
+    },
+    {
+      "source": "addyosmani/api-and-interface-design",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/api-and-interface-design/SKILL.md",
+      "mechanism": "Stable contracts, validation, compatibility and idempotency",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-backend-engineering/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-backend-engineering/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/browser-testing-with-devtools",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/browser-testing-with-devtools/SKILL.md",
+      "mechanism": "Inspect real browser behavior, input paths and runtime diagnostics",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-client-engineering/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-client-engineering/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        }
+      ],
+      "limit": "Actual browser capability is required; no Chrome DevTools dependency or fabricated runtime success."
+    },
+    {
+      "source": "addyosmani/ci-cd-and-automation",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/ci-cd-and-automation/SKILL.md",
+      "mechanism": "Required gates, built artifact, rollout, observability and recovery",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-delivery/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-delivery/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-operations/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-operations/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/code-review-and-quality",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-review-and-quality/SKILL.md",
+      "mechanism": "Evidence-supported correctness/security/performance/contract findings",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-review/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-review/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/code-simplification",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-simplification/SKILL.md",
+      "mechanism": "Preserve behavior and compatibility through incremental evolution",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-evolution/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-evolution/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/constraint-driven-development",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/constraint-driven-development/SKILL.md",
+      "mechanism": "Preserve agreed quality floors and detect weakened acceptance",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-review/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-review/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        }
+      ],
+      "limit": "No invented universal coverage/performance thresholds or mandatory CONSTRAINTS.md."
+    },
+    {
+      "source": "addyosmani/context-engineering",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/context-engineering/SKILL.md",
+      "mechanism": "Relevant context, source pointers, authorized continuation and recovery",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-context-management/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-context-management/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/debugging-and-error-recovery",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/debugging-and-error-recovery/SKILL.md",
+      "mechanism": "Find the cause from a trustworthy failure and verify the repair",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-debugging/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-debugging/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/deprecation-and-migration",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/deprecation-and-migration/SKILL.md",
+      "mechanism": "Preserve behavior and compatibility through incremental evolution",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-evolution/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-evolution/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/documentation-and-adrs",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/documentation-and-adrs/SKILL.md",
+      "mechanism": "Maintain useful design rationale and affected user/developer docs",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/references/engineering-documentation.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/references/engineering-documentation.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-architecture/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-architecture/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/doubt-driven-development",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/doubt-driven-development/SKILL.md",
+      "mechanism": "Challenge consequential claims with counterexamples and supported evidence",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-review/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-review/SKILL.md"
+        }
+      ],
+      "limit": "No compulsory fresh agent for every branch or automatic multi-agent permission; review findings still need substantiation."
+    },
+    {
+      "source": "addyosmani/frontend-ui-engineering",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/frontend-ui-engineering/SKILL.md",
+      "mechanism": "Working accessible responsive interactions and actual client evidence",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-client-engineering/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-client-engineering/SKILL.md"
+        }
+      ],
+      "limit": "Engineering coverage does not replace specialist visual art direction, framework docs or design assets."
+    },
+    {
+      "source": "addyosmani/git-workflow-and-versioning",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/git-workflow-and-versioning/SKILL.md",
+      "mechanism": "Owned staging, coherent commits, authorized publication and remote state",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/idea-refine",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/idea-refine/SKILL.md",
+      "mechanism": "Investigate needs/alternatives and converge on useful product direction",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-product-discovery/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-product-discovery/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-product-definition/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-product-definition/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/incremental-implementation",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/incremental-implementation/SKILL.md",
+      "mechanism": "Small useful slices with contracts, feedback and complete requested delivery",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/interview-me",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/interview-me/SKILL.md",
+      "mechanism": "Explicit intent/design interview with adaptive questions and stopping point",
+      "disposition": "extended",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/references/design-interview.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/references/design-interview.md"
+        },
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/references/decision-interviews.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/references/decision-interviews.md"
+        }
+      ],
+      "limit": "No made-up 95% threshold, manipulative guesses, fixed pace contrary to the user or rejection of valid bounded delegation."
+    },
+    {
+      "source": "addyosmani/observability-and-instrumentation",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/observability-and-instrumentation/SKILL.md",
+      "mechanism": "Signals tied to failure, diagnosis, privacy and operational action",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-operations/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-operations/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/performance-optimization",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/performance-optimization/SKILL.md",
+      "mechanism": "Representative measurement, causal bottleneck and regression evidence",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-performance/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-performance/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/planning-and-task-breakdown",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/planning-and-task-breakdown/SKILL.md",
+      "mechanism": "Dependency-aware usable slices and current commitments",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        },
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-task-coordination/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-task-coordination/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/security-and-hardening",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/security-and-hardening/SKILL.md",
+      "mechanism": "Threat preconditions, controls, data/privacy and evidence-based remediation",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-security/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-security/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/shipping-and-launch",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/shipping-and-launch/SKILL.md",
+      "mechanism": "Required gates, built artifact, rollout, observability and recovery",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-delivery/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-delivery/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-operations/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-operations/SKILL.md"
+        }
+      ],
+      "limit": "Use only for the relevant request; preserve host capabilities and authority."
+    },
+    {
+      "source": "addyosmani/source-driven-development",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/source-driven-development/SKILL.md",
+      "mechanism": "Version-appropriate authoritative evidence for material decisions",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-source-selection/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-source-selection/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-construction/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-construction/SKILL.md"
+        }
+      ],
+      "limit": "Do not retrieve docs for every obvious operation when adequate applicable evidence is already present."
+    },
+    {
+      "source": "addyosmani/spec-driven-development",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/spec-driven-development/SKILL.md",
+      "mechanism": "Behavior/acceptance contracts and changes reconciled with the plan",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-requirements/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-requirements/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-project-planning/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-project-planning/SKILL.md"
+        }
+      ],
+      "limit": "No mandatory waterfall or fresh spec document for clear ongoing work."
+    },
+    {
+      "source": "addyosmani/test-driven-development",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/test-driven-development/SKILL.md",
+      "mechanism": "Use a test that can expose the defect, then verify the correction",
+      "disposition": "existing",
+      "owners": [
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-verification/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-verification/SKILL.md"
+        },
+        {
+          "repo": "swe-essential-skills",
+          "path": "skills/swe-essential-skills-software-debugging/SKILL.md",
+          "url": "https://github.com/ibbuilds/swe-essential-skills/blob/main/skills/swe-essential-skills-software-debugging/SKILL.md"
+        }
+      ],
+      "limit": "Meaningful TDD where useful; preserve proportionality and required gates."
+    },
+    {
+      "source": "addyosmani/using-agent-skills",
+      "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "url": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/using-agent-skills/SKILL.md",
+      "mechanism": "Select a useful capability without forcing the entire catalog",
+      "disposition": "host-specific",
+      "owners": [
+        {
+          "repo": "pm-essential-skills",
+          "path": "skills/pm-essential-skills-resource-selection/SKILL.md",
+          "url": "https://github.com/ibbuilds/pm-essential-skills/blob/main/skills/pm-essential-skills-resource-selection/SKILL.md"
+        }
+      ],
+      "limit": "Skill discovery and activation are host behavior; no global must-invoke controller is installed."
+    }
+  ]
+}

@@ -1,11 +1,13 @@
 ---
 name: swe-essential-skills-software-requirements
-description: Resolve ambiguous software behavior, conflicting requirements, acceptance gaps or consequential scope changes. Use to establish engineering contracts; skip clear changes with adequate acceptance.
+description: Resolve ambiguous software behavior, conflicting requirements and acceptance gaps, or pressure-test a software plan ("grill me"). Establish engineering contracts; clear execution needs no interview.
 ---
 
 # SWE Essential Skills / Software Requirements
 
 Establish what the software must do and what must remain true before committing to a consequential interpretation. Reuse the accepted goal, existing issues, specifications, contracts and decisions. Do not restart product positioning or require a specification phase before every small edit. Requirements, design, implementation and validation can develop together in useful increments. If the current request and established contracts already settle the changed behavior and acceptance, use them directly rather than repeating elicitation or producing another specification.
+
+For an explicit plan challenge or design interview, use [design interview](references/design-interview.md), including question dependencies, stakeholder questionnaires and domain-language decisions. A deliberate challenge may examine an accepted plan; the ordinary no-interview path does not cancel that request.
 
 ## Connect to the project plan
 

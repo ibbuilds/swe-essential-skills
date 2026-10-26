@@ -6,6 +6,10 @@ Write the decision in operational terms: “Can the existing process handle this
 
 Choose a distinguishing experiment, with a stopping condition tied to the decision. A prototype may measure an upper bound or prove integration feasibility; explicitly exclude what it cannot establish (production authorization, long-term maintainability, representative scale). Use synthetic or approved sanitized data and avoid real side effects. Record environment, workload, revision, observations and limitations. Discard prototype shortcuts rather than silently promoting them to production architecture.
 
+## Resolve domain language before freezing a boundary
+
+When one term covers distinct identities, states or responsibilities, compare its uses in the existing glossary, code and public contracts. Test a concrete scenario that makes the difference observable, such as deleting a person's login while retaining an organization's invoices. Propose precise names without silently changing business policy or renaming the repository. Let the appropriate owner settle consequential meaning; record accepted definitions in the existing domain documentation and keep implementation choices separate. Preserve legitimate context-specific meanings with explicit mappings. Record a consequential tradeoff near the design with alternatives and rationale; a terminology clarification alone does not require an ADR.
+
 ## Evaluate options
 
 For each viable option explain:
