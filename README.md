@@ -4,6 +4,13 @@
 planning through development, security, delivery and maintenance. The goal is
 less avoidable work and user supervision without reducing engineering quality.
 
+The [70-entry workflow map](docs/workflow-coverage.md) shows how Matt Pocock,
+Ras Mic and Addy Osmani mechanisms map to these skills and PM, with explicit
+adaptations, integration limits and exclusions. For "grill my software plan",
+Software Requirements now provides a focused design-interview route.
+See [coverage validation](docs/coverage-validation-2026-10-26.md) for the actual
+independent exercises and their limits.
+
 ## Install as normal skills
 
 Use your usual skill manager with this repository. For example, with the Skills CLI:

@@ -36,6 +36,8 @@ Establish enough users/problem, scope, intended outcome, behavior/acceptance and
 
 Before asking, check available sources and prior answers; retrieve discoverable facts. Ask only high-impact unresolved choices or unavailable facts. Explain the concrete consequence and recommendation, grouping independent questions while holding dependent ones until prerequisites settle. Use a permitted selectable-input tool for concrete alternatives, or free text for open facts/when unavailable; a clear written answer suffices. Keep permission escalation in its dedicated mechanism.
 
+For an explicit software-plan stress test ("grill me"), software-requirements offers a focused design-interview method when available; carry the existing plan and settled choices into it. Without that skill, investigate consequential counterexamples and ask ready owner decisions at the requested pace.
+
 Each gap can be answered, investigated, handled within agreed/delegated bounds, deferred or dropped as irrelevant. Do not exhaust a questionnaire, repeat answered questions or disguise consequential unowned risks as certainty. A prototype or research proposal is not authorization to contact people, expose artifacts or spend money; do not invent results, thresholds or stakeholder agreement.
 
 ## Leave one usable plan and a ready slice

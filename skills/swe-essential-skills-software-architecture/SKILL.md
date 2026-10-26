@@ -44,7 +44,7 @@ Start with the smallest structure that supports the required ownership and failu
 
 Keep an adequate existing design; compare plausible alternatives against the strongest constraints only for unresolved consequential choices, including operating and migration costs. For a consequential choice, preserve a compact decision near the existing design documentation: context, alternatives, recommendation or accepted decision, decision owner and acceptance status, proposed or accepted disadvantages, and evidence that would reopen it. A local correction may need only a code explanation.
 
-For significant uncertainty, build/buy/reuse economics, competing options or enforcement of a repeatedly drifting settled boundary, read [decision investigation](references/decision-investigation.md). For service, library, CLI, native or embedded constraints, read the relevant sections of [platform boundaries](references/platform-boundaries.md).
+For domain-language conflicts, significant uncertainty, build/buy/reuse economics, competing options or enforcement of a repeatedly drifting settled boundary, read [decision investigation](references/decision-investigation.md). For service, library, CLI, native or embedded constraints, read the relevant sections of [platform boundaries](references/platform-boundaries.md).
 
 ## Design the unsuccessful operation too
 

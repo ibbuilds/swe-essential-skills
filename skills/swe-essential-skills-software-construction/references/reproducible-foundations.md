@@ -57,3 +57,24 @@ For generated clients or bindings, identify source schemas, generator version, d
 ## Changed configuration
 
 When changing configuration, define defaults, required values, precedence and validation. Reject invalid combinations at a useful boundary; distinguish an absent value from an empty or zero value when behavior differs. Keep secrets out of committed defaults and fixtures. Check which settings are baked into an artifact versus read at runtime before claiming they can change without rebuilding.
+
+## Human-only setup steps
+
+When a requested setup depends on actions only the human can perform, first do
+the authorized agent-capable work and reuse existing configuration. Give the
+smallest ordered handoff: verified location/action, required input, its purpose
+and destination, and how completion will be checked. Do not invent dashboard
+paths or ask the human to perform available agent operations. Keep secrets in
+the intended secret store or hidden local input, out of chat, logs and tracked
+files. Separate public identifiers from credentials and grant only the needed
+scope. A user-completed step is evidence only for what it actually establishes.
+
+For a recurring requested setup, a local guide or wizard may reduce repeated
+explanation. Reuse project conventions; make repeat runs preserve existing
+values unless replacement is authorized. Validate syntax and value destinations
+without exercising real purchases, secrets changes or destructive migration
+merely to test the wizard. Mark remaining human steps and verify the resulting
+configuration through a harmless appropriate check before claiming setup works.
+This adapts the useful handoff mechanism from
+[Matt Pocock's wizard](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wizard/SKILL.md)
+without requiring its Bash template or an additional confirmation at every step.
