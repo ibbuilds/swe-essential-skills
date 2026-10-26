@@ -30,3 +30,17 @@ A slice is ready when the following are adequate for its risk, not when all futu
 - The next action is authorized. Planning, coding, shared-document changes and deployment have distinct permission boundaries.
 
 If readiness fails, name the specific blocker and continue independent work or propose a narrower slice/experiment. Do not hide a blocking unknown in a backlog, or demand certainty about all later slices. After completion, reconcile observed results with the plan before choosing the next commitment.
+
+## Develop missing product direction
+
+Recover or help formulate the intended users, their problem and current alternatives; why this project is worth doing; desired outcome and success evidence; core journeys; scope and non-goals; and real constraints such as timing, resources or obligations. For an existing product, carry forward the accepted strategy and inspect only what this change challenges. Avoid reopening settled positioning or requiring market research for every utility.
+
+Develop missing product discovery, strategy and definition through concrete options and representative scenarios. Keep claims about users, demand or differentiation separate from hypotheses. When uncertainty could invalidate the project, propose the smallest useful validation: a workflow walkthrough, prototype, user feedback or feasibility experiment, with a question and decision it can inform. Obtain authorization before contacting people, spending money or sharing artifacts. Do not invent research results, success thresholds or stakeholder agreement.
+
+Once the product direction is coherent enough, derive the engineering implications: required behavior and acceptance, system and trust boundaries, data lifecycle, integrations, quality needs, architecture choices and delivery approach. Do not let an arbitrary technology choice silently define the product. Conversely, surface technical constraints that require revisiting scope or strategy rather than pretending the stages never interact.
+
+## Reconcile lifecycle transitions and changes
+
+At discovery → definition → design → build → verification → release → operations, review what is changing and the evidence needed for the next commitment; do not treat these as mandatory sequential phases. Carry forward still-valid decisions and evidence. Before dependent commitments, inspect applicable UX/accessibility, security/privacy, data, deployment and operational implications, including migrations, coexistence, rollback/recovery and ownership. The depth should follow exposure and reversibility, not the presence of a heading in a template.
+
+When implementation, a test, user feedback or an incident contradicts the plan, identify the affected assumption or requirement and its downstream effects. Propose affected changes to acceptance, design, sequencing, security/data decisions, release and support plans; mark changed user-owned choices accepted only after the appropriate owner decides. Record the reason and superseded decision once accepted. Reopen only the impacted choices. Escalate scope or risk acceptance to the appropriate owner without silently weakening the goal or restarting all discovery.

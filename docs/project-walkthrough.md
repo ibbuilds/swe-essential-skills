@@ -83,18 +83,35 @@ still undecided and changes document permissions; here are the options.” A poo
 update repeats the whole brief, claims research that did not happen, or says
 “everything is ready” while concealing the missing decision.
 
-## Different task, different entry
+## Route to the smallest useful owner and finish the request
 
-- **A known small bug:** start with debugging or construction; reuse existing
-  behavior/acceptance. No new product interview is needed.
-- **A code review only:** start with swe-essential-skills-software-review. Findings are not permission
-  to edit, publish comments or merge.
-- **A database migration:** start with swe-essential-skills-data-engineering plus delivery where
-  transition matters; existing product direction need not be reopened.
-- **An incident:** start with operations/debugging and authorized containment;
-  do not delay recovery to create a greenfield project plan.
-- **An unclear new product:** start with swe-essential-skills-project-planning; discovery and definition
-  are available where their specific decisions are missing.
+Skills supply optional, complementary methods. Select the owner of the unresolved
+work and add another method only for a real gap; no request must traverse all 18.
+Use adequate built-in capabilities and project checks rather than duplicate passes.
+
+| Ordinary request | Start with | Concrete finish evidence |
+| --- | --- | --- |
+| Wording that preserves meaning and behavior | Construction only if implementation guidance is useful | Inspect the changed usage and final diff; preserve required checks and relevant rendering/localization checks. No new literal-string test or repeat of unaffected behavioral checks is needed by default. |
+| Clear feature or local behavior change | Construction and the affected domain owner if needed | Requested behavior works at its real boundary, plausible regressions are checked, and authorized delivery is complete. Adequate acceptance and delegated choices need no new planning phase. |
+| Known defect | Construction; debugging when cause is unexplained | Correct the owner, reproduce the defect where practical, and verify the changed and plausibly affected contracts. |
+| Test strategy gap | Verification | Evidence that can refute the claim, relevant required gates satisfied, precise remaining limits. Running an established recipe needs no new strategy. |
+| Code review only | Review | Revision-specific supported findings or a scoped no-findings result; no repair, publication or merge without authority. |
+| Data migration or compatibility transition | Data engineering or evolution; delivery when rollout matters | Preserved data/consumer invariants, executed checks, actual transition state and remaining cutover/recovery work. |
+| Incident | Operations/debugging and authorized containment | Current impact/health, observed recovery and remaining cause or restoration uncertainty. Do not delay containment for a new plan. |
+| Unclear new product or consequential expansion | Project planning; discovery/definition only for their unresolved decisions | One usable direction and ready slice, or the specific owner decision/evidence blocking it. Respect bounded delegation. |
+| Build, release or deployment | Delivery within existing authority | Intended artifact/target identity, consumer/runtime evidence and actual publication/deployment status; a successful upload alone is insufficient. |
+
+For authorized Git work, stage only owned changes after reviewing staged paths
+and diff; preserve unrelated user work. Commit coherent behavior or recovery
+boundaries, combining adjacent trivial edits. Push when requested or needed by
+the authorized remote workflow after checking branch, remote and automatic
+effects; verify the resulting remote revision. Commit, push, PR, merge and deploy
+remain separate actions. Report any blocked step as local versus remote state.
+
+Reuse valid test evidence across skill handoffs and wording-only follow-ups;
+rerun only missing/invalidated checks or gates whose freshness requires it. Finish
+when the requested behavior and authorized delivery are complete with adequate
+evidence, or identify the precise unresolved action instead of claiming completion.
 
 ## What this does not prove
 

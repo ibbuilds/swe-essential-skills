@@ -93,3 +93,30 @@ A label correction may be adequately supported by inspection, existing lint/buil
 A test executes an error branch but never asserts the error: line coverage can be high while the oracle is weak. A safe deliberate fault (for example, allowing an unauthorized result in a temporary isolated copy) should make the relevant assertion fail. Confirm that an intended fault/reversal actually changed the exercised artifact; a no-op, unloaded mutation or unrelated setup failure is not evidence of oracle sensitivity. Reuse existing trustworthy red-green evidence rather than mandating mutation testing. Do not modify the working tree unsafely to manufacture this demonstration.
 
 If the full suite cannot run because its database is unavailable, report that exact missing dependency. Run supported unit or static checks, but do not call them equivalent to database integration. If a required gate fails, completion remains qualified or blocked according to the project's acceptance policy; do not quietly redefine the gate.
+
+## Choose the evidence layer
+
+Use the narrowest layer that can expose the failure without mocking away its cause:
+
+- **Unit:** pure logic, transformations, state transitions, and precise edge cases. Fakes can control time or dependencies, but tests of fake behavior do not prove the real dependency contract.
+- **Integration:** actual interaction with storage, serialization, queues, runtime components, filesystem, or platform interfaces. Isolate test resources; a worktree does not isolate a database or port.
+- **Contract/compatibility:** producer/consumer agreements, schema, protocols, supported versions, API/ABI, command output, and packaging boundaries. Schema validation alone may miss semantic incompatibility.
+- **End-to-end:** a few important journeys across real boundaries, including material failure/recovery paths. Avoid duplicating every unit permutation in a slow, fragile harness.
+- **Manual/exploratory/device:** behavior requiring human judgment, physical interaction, assistive technology, visual fidelity, or unavailable automation. Record setup/actions/outcomes sufficiently to repeat; manual evidence is neither worthless nor a substitute for unrelated automated gates.
+
+## Input classes and nondeterminism
+
+Choose input classes deliberately: boundaries, invalid/absent values, transitions, relevant combinations, concurrency, and partial failures. Do not generate every permutation when equivalence classes suffice. Property-based or metamorphic checks help when many inputs share an invariant and individual expected outputs are expensive; use trustworthy oracles and retain failing inputs or event sequences with relevant versions and replay metadata, not a seed alone.
+
+Keep time, randomness, locale, external services, and fixtures controlled enough for meaningful repeatability. Use deterministic barriers for ordering where possible, not unexplained sleep increases. Diagnose flaky or failing checks instead of silently retrying until green. If failure predates the change, establish that with a suitable baseline comparison and report it; pre-existing does not mean irrelevant.
+
+## Retain usable execution evidence
+
+Keep routine successful command output compact; retain the exit status and enough
+identity/context to know what ran. For failure, inspect the relevant diagnostic
+and its cause rather than repeatedly returning the whole log. Preserve access to
+full evidence when needed; output reduction must not hide failures or change a
+command's exit status. Shell execution costs time and compute; its returned output
+and subsequent agent analysis also consume context. Do not infer subscription
+usage or token savings from test count alone, or skip a needed cheap check to
+replace it with speculative reasoning.

@@ -89,8 +89,11 @@ workflow suite, not a dependency.
 
 ## Status and limits
 
-This is an independently installable first-version skill suite with bounded
-cloud workflow evidence. Tested tasks include planning from partial information
+This is an independently installable workflow suite. The current
+[outcome contract](docs/v1-readiness.md) and
+[request routing guide](docs/project-walkthrough.md#route-to-the-smallest-useful-owner-and-finish-the-request)
+explain selective use, proportional verification and coherent authorized delivery.
+Evidence includes bounded local and cloud workflows. Tested tasks include planning from partial information
 and a SQLite change preserving existing data, tenant boundaries, transaction
 ownership and rollback/retry behavior. See
 [core workflow checks](docs/core-workflow-checks-2026-10-24.md) for exact scope

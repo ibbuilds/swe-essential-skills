@@ -53,3 +53,7 @@ For generated clients or bindings, identify source schemas, generator version, d
 1. **Fresh checkout fails while CI is green:** compare runtime and working directory first. If CI injects a database URL, identify the documented local database or test substitute; do not copy production credentials or silently skip integration tests and report success.
 2. **Dependency update changes hundreds of lockfile entries:** determine whether the package-manager version rewrote the format or a broad resolution occurred. Restore the intended toolchain and scope the update before interpreting every change as necessary.
 3. **Two development tasks collide:** distinct directories protect source edits, but both tasks may still use one database and queue. Give tests isolated namespaces or disposable fixtures using existing supported mechanisms, and confirm cleanup cannot delete another task's state.
+
+## Changed configuration
+
+When changing configuration, define defaults, required values, precedence and validation. Reject invalid combinations at a useful boundary; distinguish an absent value from an empty or zero value when behavior differs. Keep secrets out of committed defaults and fixtures. Check which settings are baked into an artifact versus read at runtime before claiming they can change without rebuilding.
