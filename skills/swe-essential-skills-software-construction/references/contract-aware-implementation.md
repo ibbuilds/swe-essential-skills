@@ -31,3 +31,27 @@ Changing `timeout = 0` from “no timeout” to “use default” is a behavior 
 Preserve units, precision and explicit conversion at boundaries. For numerical changes test meaningful tolerances, extreme magnitudes and unstable inputs against an appropriate reference; choose absolute/relative error according to the domain rather than a universal epsilon. Compiler optimizations, parallel reductions and target hardware can change floating-point results. Document whether reproducibility means bitwise identity or an accepted error bound.
 
 For inference integrations, bind the preprocessing/postprocessing contract to the model artifact and compatible code version. Validate shapes, units and label mappings at load or execution boundaries. Separate deterministic integration tests using controlled outputs from statistical evaluations of model quality; a mocked model proves neither accuracy nor robustness. Preserve approved evaluation-data handling and report when realistic model or target-hardware evidence is unavailable.
+
+## Implementation readiness and changed intent
+
+For a new product or consequential capability, first recover the usable project
+plan: intended problem/users, chosen scope, behavior and acceptance, constraints,
+consequential technical decisions and unresolved risks. An existing document,
+issue or prior conversation can supply this; do not require a new template or
+repeat settled questions. If missing intent or a decision could materially change what is
+built, resolve that gap before dependent implementation; absence of a formal
+plan alone is not a blocker. Resolve the affected gap directly; use swe-essential-skills-project-planning only when available
+and its method is needed. Ongoing work with clear behavior, acceptance and adequate existing decisions
+is already sufficiently planned, even for a substantial feature or refactor.
+Installing this skill does not restart discovery or require a whole-project audit. Authorized feasibility experiments and urgent containment can proceed
+within their limited scope; neither is permission to build an unagreed product.
+
+For consequential existing-project changes, distinguish the requested outcome
+from your proposed implementation. If plausible interpretations change behavior,
+data, consumers or compatibility differently, or reveal an unaccepted conflict
+with an established goal, state the concrete consequence and ask the unresolved
+choice before dependent edits. Carry settled answers forward; a partial answer
+does not settle the remaining choices. Apply this again if new evidence exposes
+ambiguity during implementation. Pause only affected work; code already written
+or passing tests does not establish the user's intent. Clear accepted changes,
+explicit bounded delegation and routine details need no new approval ceremony.

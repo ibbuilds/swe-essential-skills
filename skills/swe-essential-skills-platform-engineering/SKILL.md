@@ -15,6 +15,8 @@ For necessary decisions with concrete alternatives, use the host's permitted sel
 
 Resolve unknowns that change isolation, exposure, irreversible data placement or material spend. For analysis or routine details within agreed choices, state bounded assumptions. For unresolved consequential hosting, region, exposure or cost choices, explain the options and obtain the user's or designated owner's choice before dependent implementation; reversibility is not acceptance. Do not invent acceptable data loss, public access, paid subscriptions or permission grants.
 
+Explicit delegation within stated bounds permits the delegated choice without another approval. State consequential tradeoffs and stay within those bounds; delegation does not expand authority for external actions, spending, access or risk acceptance beyond those bounds.
+
 - For choosing or changing a hosting model, read [platform selection](references/platform-selection.md).
 - For building the environment or diagnosing first-deployment connectivity/startup failures, read [bootstrap and network verification](references/bootstrap-and-network.md).
 

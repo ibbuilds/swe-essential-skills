@@ -36,6 +36,8 @@ choose; silence is not agreement. Reversible analysis and routine work inside
 accepted choices may continue, but reversibility alone does not authorize a
 user-owned decision or implementation that depends on it. Do not silently choose loss tolerance, authorization policy or destructive migration semantics for the user.
 
+Explicit delegation within stated bounds permits the delegated choice without another approval. State consequential tradeoffs and stay within those bounds; delegation does not expand authority for external actions, spending, access or risk acceptance beyond those bounds.
+
 ## Choose boundaries from pressure, not fashion
 
 Start with the smallest structure that supports the required ownership and failure isolation. Keep behavior and the data invariants it enforces together unless a concrete constraint justifies distribution. Name each boundary's owner, contract, state, trust level and failure behavior. Separate domain policy from transport or vendor adapters when this makes replacement or testing materially easier; avoid speculative layers for one uncomplicated caller.

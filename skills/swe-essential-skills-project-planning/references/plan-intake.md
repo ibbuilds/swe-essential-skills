@@ -19,3 +19,13 @@ Identify the canonical plan if one exists, its audience, intended scope, materia
 Use the current explicit authorized decision to reconcile an older proposal, while retaining why it changed. If sources conflict and authority is unclear, state the competing interpretations, their practical consequence and the needed owner decision. External obligations may require a different owner than product preferences. Do not resolve a legal, contractual or security obligation by choosing the most convenient source.
 
 Check material contradictions, duplicate obligations and terminology drift across the sources; a renamed concept may not be a new requirement. Summarize what is already settled before asking for gaps. For example: “The brief establishes the audience and core workflow; it does not settle whether guest access may expose customer records. That choice changes authentication and storage, so it blocks that part of design.” A missing heading alone is not a gap; evidence may live elsewhere, and some concerns may not apply.
+
+## Check source coverage before asking
+
+Before asking a candidate question, check the supplied plan and prior answers for
+its answer, including relevant linked sections or tables. Use already established
+source references rather than repeatedly rereading the entire collection. An
+unreadable or uninspected section is an access/coverage gap, not proof that the
+user omitted the answer; disclose the specific limit. If sources already answer
+it consistently, use that answer. If they conflict, ask about the conflict rather
+than restarting the question from scratch.
