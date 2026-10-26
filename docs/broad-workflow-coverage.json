@@ -1,0 +1,686 @@
+{
+  "date": "2026-10-26",
+  "scope": "48 selected mechanism comparisons across 16 pinned repositories; not a full audit of every file or a universal market census.",
+  "baseline": {
+    "pm": "6a9fbbbf8587ff8beb1ee323d2d06b9eb7910ede",
+    "swe": "fca152c28dc135610b5597b33fdc1b77bf7fd013"
+  },
+  "rows": [
+    {
+      "id": "M01",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "productivity/skills/task-management/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/productivity/skills/task-management/SKILL.md"
+      },
+      "mechanism": "Separate active, waiting, someday, completed commitments; preserve waiting-since and due context.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-task-coordination/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Existing owner/status/dependency/completion requirements cover the portable mechanism. Mandatory TASKS.md, copied dashboard, weekly deletion and repeated add confirmation are product-specific costs, not missing capability."
+    },
+    {
+      "id": "M02",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "productivity/skills/memory-management/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/productivity/skills/memory-management/SKILL.md"
+      },
+      "mechanism": "Resolve aliases progressively from known summary to deeper relevant records; promote frequent context and demote stale entries.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-context-management/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Existing continuity preserves relevant context with conditional deeper retrieval. A fixed hot-30 directory/profile system is not justified. Unknown alias search falls under scope/terminology recovery; exact organizational decoder is domain data."
+    },
+    {
+      "id": "M03",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "productivity/skills/update/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/productivity/skills/update/SKILL.md"
+      },
+      "mechanism": "Compare current local commitments with assigned external items, show additions/completions/staleness, preserve source links.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-task-coordination/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Material-change and actual-completion reconciliation already apply. Use stable identity over the source's fuzzy-title-only matching; no universal scan or new tracker. A full synchronization product is outside generic PM ownership."
+    },
+    {
+      "id": "M04",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "enterprise-search/skills/search-strategy/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/enterprise-search/skills/search-strategy/SKILL.md"
+      },
+      "mechanism": "Decompose question into entities, intent, constraints and negations; use tool-supported syntax and aliases; rank by question-specific evidence need.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-source-selection/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Baseline has missing-facts, native source, terminology/scope, authority/conflicts and coverage recovery. No explicit query-planning worked recipe; forward trace Q1 passes without one. Do not adopt all-connected-source fanout, invented numeric relevance weights, or automatic removal of user dates."
+    },
+    {
+      "id": "M05",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "enterprise-search/skills/knowledge-synthesis/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/enterprise-search/skills/knowledge-synthesis/SKILL.md"
+      },
+      "mechanism": "Merge duplicate reports, retain unique facts, preserve conflicting conclusions and evolving decisions, cite claim provenance.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-source-selection/references/coverage-and-recovery.md",
+      "disposition": "preserved",
+      "assessment": "Baseline explicitly says duplicates do not add confidence, resolves governing status/applicability, preserves disagreement, and leads with answer. No gap; chronological freshness alone is weaker than baseline supersession rules."
+    },
+    {
+      "id": "M06",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "enterprise-search/skills/source-management/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/enterprise-search/skills/source-management/SKILL.md"
+      },
+      "mechanism": "Discover relevant available tools, preserve source health and rate-limit coverage, continue useful accessible sources.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-source-selection/references/coverage-and-recovery.md",
+      "disposition": "preserved",
+      "assessment": "Baseline distinguishes errors/denial from negative findings, reports inaccessible coverage, avoids repeated unchanged attempts and respects actual tool semantics. Tool-prefix existence alone does not establish access; do not import it."
+    },
+    {
+      "id": "M07",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "operations/skills/capacity-plan/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/operations/skills/capacity-plan/SKILL.md"
+      },
+      "mechanism": "Compute available work from people/skills, commitments, absences and overhead; compare demand by role/time and expose bottlenecks/scenarios.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-task-coordination/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Existing material capacity/deadline change rule covers decision. A compact conditional arithmetic recipe could make capacity analysis more reproducible, but C1 baseline passes. Fixed 75-80%/50-60% utilization and monthly review are unsupported defaults."
+    },
+    {
+      "id": "M08",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "operations/skills/change-request/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/operations/skills/change-request/SKILL.md"
+      },
+      "mechanism": "Assess affected people/systems/processes; state implementation ownership, recovery trigger/steps and recovery verification.",
+      "owner": "skills/swe-essential-skills-software-delivery/references/rollout-and-recovery.md",
+      "disposition": "preserved",
+      "assessment": "SWE already provides more concrete actual recovery/compatibility/verification procedures. Organizational training/adoption details are conditional content for requested change plans, not a new universal PM gate. Do not import automatic ITSM creation/chat posting."
+    },
+    {
+      "id": "M09",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "operations/skills/process-optimization/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/operations/skills/process-optimization/SKILL.md"
+      },
+      "mechanism": "Map steps, decisions, handoffs and waits; identify queues/rework/over-processing; compare future state and total outcome costs.",
+      "owner": "pm-essential-skills/skills/pm-essential-skills-workflow-improvement/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Baseline requires friction evidence, smallest remedy, total overhead, contrasting cases and maintaining owner. A named waste checklist alone does not establish a missing capability. No routine map or impact measurement mandated."
+    },
+    {
+      "id": "M10",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "product-management/skills/roadmap-update/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/product-management/skills/roadmap-update/SKILL.md"
+      },
+      "mechanism": "Use before/after changes, dependencies and need-by constraints; account for capacity and affected commitments without false distant precision.",
+      "owner": "skills/swe-essential-skills-product-definition/references/scope-and-outcomes.md",
+      "disposition": "preserved",
+      "assessment": "Scope/outcome tradeoffs, evidence-weighted priority, actual capacity and provisional roadmap commitments are covered. User's genuine added spare capacity need not force a cut; no universal RICE/ICE ratios, cadence or status database."
+    },
+    {
+      "id": "M11",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "product-management/skills/sprint-planning/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/product-management/skills/sprint-planning/SKILL.md"
+      },
+      "mechanism": "Account for availability and carryover, choose coherent goal, distinguish mandatory and stretch scope, identify dependencies.",
+      "owner": "skills/swe-essential-skills-project-planning/references/usable-plan-shape.md",
+      "disposition": "preserved",
+      "assessment": "Ready end-to-end slice, acceptance and sequencing already covered. Shares optional capacity recipe with operations; do not add another sprint framework, signoff gate or 70-80% buffer."
+    },
+    {
+      "id": "M12",
+      "source": {
+        "repository": "anthropics/knowledge-work-plugins",
+        "revision": "33d3dea41a341b341d4f5da2e8801ae0c89be2b8",
+        "path": "product-management/skills/synthesize-research/SKILL.md",
+        "url": "https://github.com/anthropics/knowledge-work-plugins/blob/33d3dea41a341b341d4f5da2e8801ae0c89be2b8/product-management/skills/synthesize-research/SKILL.md"
+      },
+      "mechanism": "Extract atomic observations by participant/context, code and group themes, count independent participants, inspect contradictory segments, link findings to evidence.",
+      "owner": "skills/swe-essential-skills-product-discovery/references/validation-choices.md",
+      "disposition": "preserved",
+      "assessment": "Baseline covers behavior/report/inference, contrary cases, duplicates/denominators, population and missingness but has no explicit coding/theme-review recipe. R1 passes with current suite; optional research-synthesis reference is a candidate, not demonstrated failure. Do not impose 5-8 themes, personas, outreach or dashboards."
+    },
+    {
+      "id": "D01",
+      "source": {
+        "repository": "getsentry/skills",
+        "revision": "d12f250460ffd961f549dbebf7eeb0cf4afd4c2e",
+        "path": "skills/iterate-pr/SKILL.md",
+        "line": 126,
+        "url": "https://github.com/getsentry/skills/blob/d12f250460ffd961f549dbebf7eeb0cf4afd4c2e/skills/iterate-pr/SKILL.md#L126"
+      },
+      "mechanism": "Separate actionable CI/review work from human approval, draft and merge gates; bounded repair/recheck loop with a final feedback refresh.",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "consolidated",
+      "assessment": "Current review has revision-bounded repeated review and delivery has required-check semantics, but no explicit repair-CI feedback convergence procedure. Add optional reference only for a requested repeated repair loop; no demonstrated inability in frozen task.",
+      "boundary": "Single read-only review; one local known failing test; no requested loop; no tools or authority for remote work. No gh/uv requirement, arbitrary bot allowlist, auto-comments or fixed sleeps."
+    },
+    {
+      "id": "D02",
+      "source": {
+        "repository": "openai/skills",
+        "revision": "49f948faa9258a0c61caceaf225e179651397431",
+        "path": "skills/.curated/gh-fix-ci/scripts/inspect_pr_checks.py",
+        "line": 333,
+        "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/scripts/inspect_pr_checks.py#L333"
+      },
+      "mechanism": "Resolve actual run/job identity and fetch specific failure evidence; distinguish pending logs from unavailable logs.",
+      "owner": "skills/swe-essential-skills-software-verification/SKILL.md",
+      "disposition": "consolidated",
+      "assessment": "Identity, diagnostics and failure classification already present. Specific CI log run/job fallback is a useful example in D01, not independent broad skill expansion.",
+      "boundary": "No CI failure; existing exact-run diagnostics already sufficient. Do not import source's mandatory approval or provider exclusion."
+    },
+    {
+      "id": "D03",
+      "source": {
+        "repository": "getsentry/skills",
+        "revision": "d12f250460ffd961f549dbebf7eeb0cf4afd4c2e",
+        "path": "skills/find-bugs/SKILL.md",
+        "line": 45,
+        "url": "https://github.com/getsentry/skills/blob/d12f250460ffd961f549dbebf7eeb0cf4afd4c2e/skills/find-bugs/SKILL.md#L45"
+      },
+      "mechanism": "Review full comparison, read surrounding callers and test whether each concern is already handled.",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Destination is stronger: stable snapshot, causal reachability, unsupported unknowns and no finding quota.",
+      "boundary": "Do not import every-checklist-item-for-every-file ceremony."
+    },
+    {
+      "id": "D04",
+      "source": {
+        "repository": "getsentry/skills",
+        "revision": "d12f250460ffd961f549dbebf7eeb0cf4afd4c2e",
+        "path": "skills/code-review/SKILL.md",
+        "line": 17,
+        "url": "https://github.com/getsentry/skills/blob/d12f250460ffd961f549dbebf7eeb0cf4afd4c2e/skills/code-review/SKILL.md#L17"
+      },
+      "mechanism": "Review performance by plausible work growth, N+1 queries and unintended allocations.",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Construction structural cost plus performance workload/profile/control guidance already exceed source checklist specificity.",
+      "boundary": "No mandatory benchmark for evident bounded edits and no measured claim from structural reasoning."
+    },
+    {
+      "id": "D05",
+      "source": {
+        "repository": "getsentry/skills",
+        "revision": "d12f250460ffd961f549dbebf7eeb0cf4afd4c2e",
+        "path": "skills/iterate-pr/SKILL.md",
+        "line": 99,
+        "url": "https://github.com/getsentry/skills/blob/d12f250460ffd961f549dbebf7eeb0cf4afd4c2e/skills/iterate-pr/SKILL.md#L99"
+      },
+      "mechanism": "Verify feedback root cause and search related call sites before patching.",
+      "owner": "skills/swe-essential-skills-software-debugging/references/investigation-patterns.md",
+      "disposition": "preserved",
+      "assessment": "Destination has calibrated positive example, semantic variants, path exclusions and scope authority; preserve rather than copying fix-all-instances directive.",
+      "boundary": "No whole-repository sweep for a local fix."
+    },
+    {
+      "id": "D06",
+      "source": {
+        "repository": "getsentry/skills",
+        "revision": "d12f250460ffd961f549dbebf7eeb0cf4afd4c2e",
+        "path": "skills/commit/SKILL.md",
+        "line": 18,
+        "url": "https://github.com/getsentry/skills/blob/d12f250460ffd961f549dbebf7eeb0cf4afd4c2e/skills/commit/SKILL.md#L18"
+      },
+      "mechanism": "Coherent independently reviewable commits, inspected full branch diff and refreshed reviewer-facing net behavior.",
+      "owner": "skills/swe-essential-skills-software-construction/SKILL.md",
+      "disposition": "consolidated",
+      "assessment": "Commit ownership and publication authority already covered. Optional PR handoff note in D01 can explain whole-current-diff title/body and preserve repository template/current PR state.",
+      "boundary": "Do not mandate conventional commits, new branch on every task, draft creation, stage-all, dependency installation, pull-from-master or PR creation."
+    },
+    {
+      "id": "D07",
+      "source": {
+        "repository": "openai/skills",
+        "revision": "49f948faa9258a0c61caceaf225e179651397431",
+        "path": "skills/.curated/gh-address-comments/scripts/fetch_comments.py",
+        "line": 64,
+        "url": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/scripts/fetch_comments.py#L64"
+      },
+      "mechanism": "Inspect conversation comments, reviews and review threads, respecting pagination and preserving resolved/outdated state.",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "consolidated",
+      "assessment": "Review semantic treatment already covered. D01 can name these distinct feedback surfaces so one endpoint is not claimed as all feedback.",
+      "boundary": "No need to reread unchanged resolved discussion or import reply/resolve permissions."
+    },
+    {
+      "id": "D08",
+      "source": {
+        "repository": "anthropics/skills",
+        "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/webapp-testing/scripts/with_server.py",
+        "line": 91,
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/webapp-testing/scripts/with_server.py#L91"
+      },
+      "mechanism": "Own test-server lifecycle, await readiness and clean up owned processes.",
+      "owner": "skills/swe-essential-skills-software-construction/references/reproducible-foundations.md",
+      "disposition": "preserved",
+      "assessment": "Destination explicitly handles drained pipes, descendants, real readiness identity and exit status; source checks port only, leaves pipes undrained and terminates shell process. Do not transplant helper.",
+      "boundary": "Use current supported process tool; no new Python/Playwright runner or universal networkidle waits."
+    },
+    {
+      "id": "D09",
+      "source": {
+        "repository": "anthropics/skills",
+        "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/webapp-testing/SKILL.md",
+        "line": 31,
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/webapp-testing/SKILL.md#L31"
+      },
+      "mechanism": "Observe rendered page before selecting actions; test behavior rather than screenshot presence.",
+      "owner": "skills/swe-essential-skills-software-verification/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Current verified artifact identity and client/browser tooling are sufficient; generic always-networkidle advice is not portable to long-polling apps.",
+      "boundary": "CLI/library tasks have no browser prerequisite."
+    },
+    {
+      "id": "D10",
+      "source": {
+        "repository": "anthropics/skills",
+        "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/mcp-builder/SKILL.md",
+        "line": 34,
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/mcp-builder/SKILL.md#L34"
+      },
+      "mechanism": "Actionable errors, bounded filtered/paginated outputs, structured schemas and consumer-oriented tools.",
+      "owner": "skills/swe-essential-skills-backend-engineering/references/contracts-and-boundaries.md",
+      "disposition": "preserved",
+      "assessment": "Backend already specifies categories, retry semantics, uncertain outcomes and pagination contracts. MCP-specific schema/annotations should remain platform-specific.",
+      "boundary": "Do not require MCP stack, exhaustive endpoint coverage or arbitrary default page sizes in all services."
+    },
+    {
+      "id": "D11",
+      "source": {
+        "repository": "anthropics/skills",
+        "revision": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/mcp-builder/SKILL.md",
+        "line": 168,
+        "url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/mcp-builder/SKILL.md#L168"
+      },
+      "mechanism": "Evaluate realistic multi-tool tasks with independently verified stable answers.",
+      "owner": "skills/swe-essential-skills-software-verification/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Claim-specific oracles, real consumer paths and evidence layers already covered. Source illustrates valuable task-level tool usability; no need for exactly ten string-match questions or paid evaluations.",
+      "boundary": "No model evaluation or live data access authorized."
+    },
+    {
+      "id": "D12",
+      "source": {
+        "repository": "openai/openai-agents-python",
+        "revision": "0dc4cf152bff1f50bdc0e41f28808563406545b2",
+        "path": ".agents/skills/code-change-verification/SKILL.md",
+        "line": 40,
+        "url": "https://github.com/openai/openai-agents-python/blob/0dc4cf152bff1f50bdc0e41f28808563406545b2/.agents/skills/code-change-verification/SKILL.md#L40"
+      },
+      "mechanism": "Run applicable final gates after stable fixes while reusing focused checks and avoiding setup reruns.",
+      "owner": "skills/swe-essential-skills-software-verification/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Destination already conditions reuse on coverage/freshness; SDK strict stack/review order is repo policy, not universal guidance.",
+      "boundary": "Do not import make/uv, full-stack rerun after every fix, host locks, independent reviewers or sandbox marker exclusions."
+    },
+    {
+      "id": "D13",
+      "source": {
+        "repository": "openai/openai-agents-python",
+        "revision": "0dc4cf152bff1f50bdc0e41f28808563406545b2",
+        "path": ".agents/skills/final-release-review/SKILL.md",
+        "line": 184,
+        "url": "https://github.com/openai/openai-agents-python/blob/0dc4cf152bff1f50bdc0e41f28808563406545b2/.agents/skills/final-release-review/SKILL.md#L184"
+      },
+      "mechanism": "Docs publication timing must match the available release, separately from preparing documentation.",
+      "owner": "skills/swe-essential-skills-software-construction/references/engineering-documentation.md",
+      "disposition": "adapted",
+      "assessment": "Destination covers version-specific examples and safe publication but not whether auto-published live docs describe an unreleased feature. Generic same-change wording can be misapplied. No observed baseline failure is claimed.",
+      "boundary": "Editorial docs, already released correction, versioned release docs, unpublished internal draft. Do not impose SDK's English-only policy or documentation-nonblocking release rule."
+    },
+    {
+      "id": "D14",
+      "source": {
+        "repository": "openai/openai-agents-js",
+        "revision": "be4f1f9aa4ad4f03cc5db5fdd57d0d0136923570",
+        "path": ".agents/skills/examples-run-analysis/SKILL.md",
+        "line": 43,
+        "url": "https://github.com/openai/openai-agents-js/blob/be4f1f9aa4ad4f03cc5db5fdd57d0d0136923570/.agents/skills/examples-run-analysis/SKILL.md#L43"
+      },
+      "mechanism": "Read completed example logs for meaningful actions, reconcile per-item identities and classify skips/errors.",
+      "owner": "skills/swe-essential-skills-software-construction/references/engineering-documentation.md",
+      "disposition": "preserved",
+      "assessment": "Destination already rejects green-by-exit-only and skipped-as-pass; scoped log reconciliation is a useful application, not missing doctrine.",
+      "boundary": "No import of SDK manual-only examples execution prohibition or exact footer schema."
+    },
+    {
+      "id": "D15",
+      "source": {
+        "repository": "openai/openai-agents-python",
+        "revision": "0dc4cf152bff1f50bdc0e41f28808563406545b2",
+        "path": ".agents/skills/final-release-review/SKILL.md",
+        "line": 103,
+        "url": "https://github.com/openai/openai-agents-python/blob/0dc4cf152bff1f50bdc0e41f28808563406545b2/.agents/skills/final-release-review/SKILL.md#L103"
+      },
+      "mechanism": "Independent released compatibility determination and release metadata must agree.",
+      "owner": "skills/swe-essential-skills-software-delivery/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Release/package identity and compatibility already covered. Explicit semver bump judgment could help package releases but cannot import SDK pre-1.0 policy. Parent should inspect evolution coverage before deciding.",
+      "boundary": "No universal patch/minor rules, automatic release tags, complete re-review after irrelevant metadata change, or assumption all CI passed."
+    },
+    {
+      "id": "D16",
+      "source": {
+        "repository": "openai/openai-agents-js",
+        "revision": "be4f1f9aa4ad4f03cc5db5fdd57d0d0136923570",
+        "path": ".agents/skills/changeset-validation/SKILL.md",
+        "line": 48,
+        "url": "https://github.com/openai/openai-agents-js/blob/be4f1f9aa4ad4f03cc5db5fdd57d0d0136923570/.agents/skills/changeset-validation/SKILL.md#L48"
+      },
+      "mechanism": "Share one changeset validation rule source across local review and CI; summaries describe whole branch outcome.",
+      "owner": "skills/swe-essential-skills-software-construction/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Single-source ownership and current-net-change principles suffice; source command gathering helper is a concrete implementation for that repo.",
+      "boundary": "No universal one-changeset rule, LLM CI service, schema or package manager."
+    },
+    {
+      "id": "SEC-VARIANT",
+      "source": {
+        "repository": "trailofbits/skills",
+        "revision": "196a9073ab10d35bacf111f945e02c00b2c6883a",
+        "path": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/variant-analysis/skills/variant-analysis/SKILL.md"
+      },
+      "mechanism": "Calibrate a search against the known defective instance, vary one structural element at a time, then validate each candidate's data flow and guards.",
+      "owner": "skills/swe-essential-skills-software-security/references/change-review.md",
+      "disposition": "standalone-route",
+      "assessment": "Calibrated variant analysis already exists in software-debugging/references/investigation-patterns.md. Add a concise local procedure to security/change-review so independently installed security can use it without requiring debugging. This is not a new suite capability.",
+      "boundary": "No known root cause or no requested broader search: normal review scope. Empty result from an uncalibrated search is not absence evidence. No global repository sweep, fixed false-positive threshold, compulsory query tool or CI rule."
+    },
+    {
+      "id": "SEC-ERASURE",
+      "source": {
+        "repository": "trailofbits/skills",
+        "revision": "196a9073ab10d35bacf111f945e02c00b2c6883a",
+        "path": "plugins/zeroize-audit/skills/zeroize-audit/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/zeroize-audit/skills/zeroize-audit/SKILL.md"
+      },
+      "mechanism": "Bind secure-erasure claims to actual optimized build evidence and trace secret copies and error exits.",
+      "owner": "skills/swe-essential-skills-software-security/SKILL.md",
+      "disposition": "specialist-reference",
+      "assessment": "Secrets row covers injection/storage, lifetime and built output/logs. It does not distinguish source-level wiping from compiler-preserved erasure or copies in memory.",
+      "boundary": "Only when the requested threat model requires in-memory erasure. No blanket zeroization of ordinary managed-runtime application data; do not claim all copies erased or require nightly tools globally. Retain exact specialist source for an explicit secure-erasure task; no compiler-level verification was executed and no complete zeroization workflow is claimed."
+    },
+    {
+      "id": "SEC-FP",
+      "source": {
+        "repository": "trailofbits/skills",
+        "revision": "196a9073ab10d35bacf111f945e02c00b2c6883a",
+        "path": "plugins/fp-check/skills/fp-check/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/fp-check/skills/fp-check/SKILL.md"
+      },
+      "mechanism": "Restate trigger/root cause/impact, trace all guards, and try to refute each finding.",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Findings are independently checked against current source; explicit disproof, caller guarantees and meaningful impact already required.",
+      "boundary": "Do not import mandatory phases, binary verdicts for unresolved facts, module-count routing or agent ceremony."
+    },
+    {
+      "id": "SEC-ERGONOMICS",
+      "source": {
+        "repository": "trailofbits/skills",
+        "revision": "196a9073ab10d35bacf111f945e02c00b2c6883a",
+        "path": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+        "url": "https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/sharp-edges/skills/sharp-edges/SKILL.md"
+      },
+      "mechanism": "Probe zero/empty/null defaults, dangerous setting combinations and security-relevant API misuse.",
+      "owner": "skills/swe-essential-skills-software-security/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Security error/failure properties, config defaults in change-review and typed runtime validation in backend/construction cover core risk.",
+      "boundary": "A configurable primitive is not automatically exploitable; establish caller and reachable effect."
+    },
+    {
+      "id": "PRIVACY-LIFECYCLE",
+      "source": {
+        "repository": "cloudflare/security-audit-skill",
+        "revision": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+        "path": "skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md",
+        "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md"
+      },
+      "mechanism": "Follow a protected record across derived copies, deletion/revocation, queued processing and restore; distinguish current authority from historical snapshot.",
+      "owner": "skills/swe-essential-skills-data-engineering/references/recovery-and-reconciliation.md",
+      "disposition": "preserved",
+      "assessment": "Current restrictions across historical recovery explicitly covers later deletions/revocations, derived copies and replay; pipeline and backend references cover ordering and resurrection risks.",
+      "boundary": "Do not promise instant backup deletion, invent a ledger or elevate unspecified retention preference to vulnerability."
+    },
+    {
+      "id": "SEC-UNCERTAINTY",
+      "source": {
+        "repository": "cloudflare/security-audit-skill",
+        "revision": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+        "path": "skills/security-audit/VALIDATION-AND-REPORTING.md",
+        "url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/skills/security-audit/VALIDATION-AND-REPORTING.md"
+      },
+      "mechanism": "Reconstruct strongest controls; separate source-confirmed, unresolved external facts and rejected hypotheses; zero findings is valid.",
+      "owner": "skills/swe-essential-skills-software-security/references/change-review.md",
+      "disposition": "preserved",
+      "assessment": "Explicit observed/plausible/hardening distinctions, exact blocked boundaries, rejected findings and scope already present.",
+      "boundary": "Full audit machinery and artifact-promotion protocol are not proportionate defaults for routine changes. Validator prose describes format/consistency, not exploit truth; validator implementations were not re-audited here."
+    },
+    {
+      "id": "CLIENT-REQUEST-SCOPE",
+      "source": {
+        "repository": "vercel-labs/agent-skills",
+        "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+        "path": "skills/react-best-practices/rules/server-no-shared-module-state.md",
+        "url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/server-no-shared-module-state.md"
+      },
+      "mechanism": "Process-wide mutable state can contaminate overlapping server renders; request data must have request lifetime while immutable config and deliberately keyed caches may be shared.",
+      "owner": "skills/swe-essential-skills-client-engineering/references/platform-and-state-patterns.md",
+      "disposition": "preserved",
+      "assessment": "Narrowest state owner/lifetime plus request/account async ownership and server/browser distinction lead to correct correction in frozen local case.",
+      "boundary": "Do not ban module scope, immutable config, stateless singleton clients or correctly partitioned caches."
+    },
+    {
+      "id": "PERF-DEPENDENCY",
+      "source": {
+        "repository": "vercel-labs/agent-skills",
+        "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+        "path": "skills/react-best-practices/rules/async-dependencies.md",
+        "url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/rules/async-dependencies.md"
+      },
+      "mechanism": "Start each independent operation when its actual prerequisites are ready instead of adding a batch-wide barrier.",
+      "owner": "skills/swe-essential-skills-software-performance/references/measurement-and-optimization.md",
+      "disposition": "preserved",
+      "assessment": "Critical path, serialized independent waits, actual ordering dependencies, bounded concurrency and failure/cancellation handling already owned.",
+      "boundary": "No better-all dependency mandate, universal promise fan-out or inherited 2-10x claim."
+    },
+    {
+      "id": "PERF-GATE",
+      "source": {
+        "repository": "vercel-labs/agent-skills",
+        "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+        "path": "skills/vercel-optimize/lib/gates/slow-route.mjs",
+        "url": "https://github.com/vercel-labs/agent-skills/blob/063bee94c3f4df8453406c830b0a7df0f2860278/skills/vercel-optimize/lib/gates/slow-route.mjs"
+      },
+      "mechanism": "Separate an error-dominated route from a latency tuning candidate; bind signals to same route/account/window before investigation.",
+      "owner": "skills/swe-essential-skills-software-performance/SKILL.md",
+      "disposition": "preserved",
+      "assessment": "Workload identity, distributions, errors/timeouts/completed work alongside speed and scope selection already present.",
+      "boundary": "Helper's 500/1500 ms, 1400/250 invocations, 50% error and confidence .94 are not portable truth. Missing status rows mean no disqualification, not proof of healthy status. No Vercel CLI/account linking or paid observability required."
+    },
+    {
+      "id": "DB-CLAIM",
+      "source": {
+        "repository": "supabase/agent-skills",
+        "revision": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+        "path": "skills/supabase-postgres-best-practices/references/lock-skip-locked.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/lock-skip-locked.md"
+      },
+      "mechanism": "Atomically select and claim a job while letting other workers skip claimed rows.",
+      "owner": "skills/swe-essential-skills-backend-engineering/references/concurrency-and-delivery.md",
+      "disposition": "preserved",
+      "assessment": "Atomic claims, leases/fencing, ack-after-durable-effect, redelivery and failure handling already cover essential correctness beyond the source's claim example.",
+      "boundary": "Claim success does not recover crashed jobs, enforce fairness or prove exactly-once remote effects. SKIP LOCKED is not a general consistent-view read or mandatory migration approach."
+    },
+    {
+      "id": "DB-LOCK-ORDER",
+      "source": {
+        "repository": "supabase/agent-skills",
+        "revision": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+        "path": "skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md"
+      },
+      "mechanism": "Consistent lock ordering reduces deadlocks; inspect blockers and preserve transaction retry semantics.",
+      "owner": "skills/swe-essential-skills-data-engineering/references/migration-and-backfill-execution.md",
+      "disposition": "preserved",
+      "assessment": "Engine/version lock modes, short transactions, blocker/waiter inspection and backend lock order/fresh-read transaction retry present.",
+      "boundary": "Do not adopt source's implication that a single multirow UPDATE eliminates all deadlocks. Do not treat its example session settings or fixed timeout as universal production recipe."
+    },
+    {
+      "id": "DB-RLS",
+      "source": {
+        "repository": "supabase/agent-skills",
+        "revision": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+        "path": "skills/supabase-postgres-best-practices/references/security-rls-basics.md",
+        "url": "https://github.com/supabase/agent-skills/blob/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/references/security-rls-basics.md"
+      },
+      "mechanism": "Use authoritative per-principal predicates at data boundary; account for privileged bypass and connection context.",
+      "owner": "skills/swe-essential-skills-data-engineering/references/model-and-query-investigation.md",
+      "disposition": "preserved",
+      "assessment": "Explicit pool/scope/context/cleanup/reassignment and privileged bypass procedures are deeper than the small source SET-context example.",
+      "boundary": "Do not require RLS universally or copy session SET into a pooled service without supported lifetime ownership."
+    },
+    {
+      "id": "IAC-IDENTITY",
+      "source": {
+        "repository": "hashicorp/agent-skills",
+        "revision": "f706481af9b8fedb66de909f6243ad29601afa0c",
+        "path": "plugins/terraform/skills/refactor-module/SKILL.md",
+        "url": "https://github.com/hashicorp/agent-skills/blob/f706481af9b8fedb66de909f6243ad29601afa0c/plugins/terraform/skills/refactor-module/SKILL.md"
+      },
+      "mechanism": "Refactor code addresses while preserving managed live-resource identity; inspect actual state and plan replacements.",
+      "owner": "skills/swe-essential-skills-software-delivery/references/configuration-baselines.md",
+      "disposition": "preserved",
+      "assessment": "Declared configuration vs management mapping vs live resources, compatible versions, ownership, recovery, renames/replacements and safe repair already explicit.",
+      "boundary": "Do not infer no-change plan proves workload; do not execute init/state mv/apply for research; do not make Terraform mandatory."
+    },
+    {
+      "id": "IAC-TEST",
+      "source": {
+        "repository": "hashicorp/agent-skills",
+        "revision": "f706481af9b8fedb66de909f6243ad29601afa0c",
+        "path": "plugins/terraform/skills/provider-test-patterns/SKILL.md",
+        "url": "https://github.com/hashicorp/agent-skills/blob/f706481af9b8fedb66de909f6243ad29601afa0c/plugins/terraform/skills/provider-test-patterns/SKILL.md"
+      },
+      "mechanism": "Acceptance lifecycle includes plan/apply/refresh/final plan/destroy, state checks and import verification; a test is often mutating.",
+      "owner": "skills/swe-essential-skills-software-delivery/references/infrastructure.md",
+      "disposition": "preserved",
+      "assessment": "Static vs plan/mock vs apply verification, resource authorization/bounds/cleanup and live behavior separate from mock success already explicit.",
+      "boundary": "No default parallel live acceptance tests or sweepers; test naming is not isolation."
+    },
+    {
+      "id": "IAC-SECRET-LIFETIME",
+      "source": {
+        "repository": "hashicorp/agent-skills",
+        "revision": "f706481af9b8fedb66de909f6243ad29601afa0c",
+        "path": "plugins/terraform/skills/provider-ephemeral-resources/SKILL.md",
+        "url": "https://github.com/hashicorp/agent-skills/blob/f706481af9b8fedb66de909f6243ad29601afa0c/plugins/terraform/skills/provider-ephemeral-resources/SKILL.md"
+      },
+      "mechanism": "Distinguish display redaction from secret persistence; ephemeral open/renew/close must match actual credential lifecycle and supported sink.",
+      "owner": "skills/swe-essential-skills-software-delivery/references/infrastructure.md",
+      "disposition": "preserved",
+      "assessment": "State/plan sensitivity and safe handling plus platform secret injection/rotation/lifetime already covered; exact Terraform ephemeral API is specialist implementation knowledge.",
+      "boundary": "Sensitive label is not evidence of no persistence. Close hook is not evidence of revocation unsupported by issuer. A test echoing secret into inspectable state needs synthetic credentials."
+    },
+    {
+      "id": "F1",
+      "source": {
+        "repository": "obra/superpowers",
+        "revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/receiving-code-review/SKILL.md",
+        "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/receiving-code-review/SKILL.md"
+      },
+      "mechanism": "Verify review feedback against current contracts and callers before accepting or rejecting it",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "covered",
+      "assessment": "Keep supported disproof and independent work. Do not copy blanket stop-for-all-questions, per-item tests or style prohibitions.",
+      "read_scope": "Complete selected skill."
+    },
+    {
+      "id": "F2",
+      "source": {
+        "repository": "github/spec-kit",
+        "revision": "67e0f7294e6e728ab60bf7b4590deb470448bc2d",
+        "path": "templates/commands/converge.md",
+        "url": "https://github.com/github/spec-kit/blob/67e0f7294e6e728ab60bf7b4590deb470448bc2d/templates/commands/converge.md"
+      },
+      "mechanism": "Check current implementation against accepted intent and unfinished obligations, regardless of task checkmarks",
+      "owner": "skills/swe-essential-skills-project-planning/SKILL.md; skills/swe-essential-skills-software-verification/SKILL.md",
+      "disposition": "covered",
+      "assessment": "No mandatory spec scaffold, hooks, append-only backlog or permission to expand beyond the accepted feature.",
+      "read_scope": "Goal, operating constraints, context, intent inventory, assessment and severity sections."
+    },
+    {
+      "id": "F3",
+      "source": {
+        "repository": "Fission-AI/OpenSpec",
+        "revision": "6d04a1b58dedc95729d34e4f223d9d483aae210a",
+        "path": "skills/openspec-sync-specs/SKILL.md",
+        "url": "https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/skills/openspec-sync-specs/SKILL.md"
+      },
+      "mechanism": "Apply only selected semantic requirement deltas and preserve untouched scenarios",
+      "owner": "skills/swe-essential-skills-software-requirements/references/baseline-and-change-impact.md",
+      "disposition": "adapted",
+      "assessment": "No CLI/store dependency or source-specific deletion policy. Detect conflicts instead of replacing a conflicting duplicate silently.",
+      "read_scope": "Setup and selection boundaries, current-spec read, semantic additions/modifications/removals/renames and new-spec handling."
+    },
+    {
+      "id": "F4",
+      "source": {
+        "repository": "open-gsd/gsd-core",
+        "revision": "f2a1feedd16d5f01e49820bb6a5c4160c76943a6",
+        "path": "agents/gsd-verifier.md",
+        "url": "https://github.com/open-gsd/gsd-core/blob/f2a1feedd16d5f01e49820bb6a5c4160c76943a6/agents/gsd-verifier.md"
+      },
+      "mechanism": "Work backward from outcome to substantive artifacts and real wiring; completion claims are not evidence",
+      "owner": "skills/swe-essential-skills-software-verification/SKILL.md; skills/swe-essential-skills-project-planning/SKILL.md",
+      "disposition": "covered",
+      "assessment": "Do not import full planning filesystem, universal agent gates, all referenced helper files or automatic human checkpoints.",
+      "read_scope": "Role, adversarial stance, core principle, context and initial verification/must-have sections. Other helper references not exhaustively audited."
+    },
+    {
+      "id": "F5",
+      "source": {
+        "repository": "bmad-code-org/BMAD-METHOD",
+        "revision": "61e01f82644c4bb533750cfa0d6d61ab61d2cc9b",
+        "path": "skills/bmad-build/references/claims-check.md",
+        "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/61e01f82644c4bb533750cfa0d6d61ab61d2cc9b/skills/bmad-build/references/claims-check.md"
+      },
+      "mechanism": "Falsify implementation claims and check removed behavior against actual source",
+      "owner": "skills/swe-essential-skills-software-review/SKILL.md",
+      "disposition": "covered",
+      "assessment": "No required reviewer panel or unverified trust in a subagent finding. Existing review already traces deletions, contracts and stale claims.",
+      "read_scope": "Complete claims-check.md and deletion-check.md; selected step-04-review setup and triage sections."
+    }
+  ]
+}

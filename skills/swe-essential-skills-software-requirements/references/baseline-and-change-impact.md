@@ -21,6 +21,28 @@ Identify design/code/test updates, migration needs, mixed-version behavior, roll
 
 After authorized implementation, attach actual evidence to the relevant revision and mark gaps honestly. Review changed links and stale assertions: keeping a test name while changing its oracle does not preserve the old acceptance proof. Update the agreed baseline through the project's existing process; no extra approval board is implied.
 
+## Reconcile a partial specification change
+
+When applying an accepted delta to an existing issue, contract or specification,
+read the current target and the selected delta together. Identify additions,
+modifications, removals and renames by their actual requirement or scenario;
+apply only the authorized selection. A partial delta is not a replacement for
+the whole baseline. Preserve unrelated requirements, scenarios and concurrent
+edits, including those absent from the proposal's older snapshot.
+
+Resolve overlapping changes against the current agreement before overwriting
+them. A missing modification target, conflicting duplicate addition or ambiguous
+rename is a conflict to resolve, not permission to invent or silently replace a
+requirement. If a requested operation is already applied, avoid duplication or
+another rewrite. Delete only what the accepted removal covers; an empty section
+does not itself authorize deleting a document with other useful content.
+
+Review the resulting semantic diff: intended changes are present, retained
+obligations survive, and links still identify the right requirement. Keep
+accepted specification state separate from implementation and verification
+state. Use the existing records and workflow; this does not require OpenSpec,
+new document scaffolding or an additional approval for an already accepted delta.
+
 ## Case: retention change
 
 An approved change reduces active-record retention. Impact is not limited to one cleanup job: identify replicas, derived stores, exports, backups, legal holds if applicable, users' recovery expectations and deletion audit needs. Confirm precise scope and exceptions with responsible owners rather than interpreting retention law. Assess whether restoration could resurrect expired data and what behavior must follow.
@@ -34,3 +56,7 @@ A UI label changes without changing its meaning or behavior. The accepted issue,
 ## Expert reference
 
 [SEBoK: Requirements Management](https://sebokwiki.org/wiki/Requirements_Management) provides the basis for controlled requirement evolution and traceability supporting impact analysis. This lightweight software adaptation does not prescribe a specific tool, document hierarchy or lifecycle model.
+
+[OpenSpec's semantic spec synchronization](https://github.com/Fission-AI/OpenSpec/blob/6d04a1b58dedc95729d34e4f223d9d483aae210a/skills/openspec-sync-specs/SKILL.md)
+informs the selective delta procedure; its CLI, store setup and deletion policy
+are not imported.

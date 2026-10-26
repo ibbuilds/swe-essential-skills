@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-delivery
-description: Build, package, release or deploy software; change CI/CD and infrastructure workflows. Use for artifact compatibility, rollout and recovery within existing publication and deployment authority.
+description: Build, package, release or deploy software; change CI/CD or infrastructure and resolve requested PR/CI repair loops. Use for artifact compatibility, rollout and recovery within existing authority.
 ---
 
 # SWE Essential Skills / Software Delivery
@@ -15,6 +15,7 @@ Choose the applicable path:
 
 - **Build/package only:** produce an inspectable artifact, verify its contents and consumer behavior; stop before publication.
 - **CI/CD change:** check triggers, permissions, secret exposure, trust of contributions, concurrency and artifact handoffs; exercise the changed branch safely.
+- **Requested PR/CI repair loop:** read [pr-convergence.md](references/pr-convergence.md) to reconcile failures, feedback and required gates against the current revision within existing authority.
 - **Infrastructure:** read [infrastructure.md](references/infrastructure.md) before planning, testing or applying changes.
 - **Release/deploy:** read [rollout-and-recovery.md](references/rollout-and-recovery.md) before the externally visible action.
 - **Coupled versions or drift:** read [configuration-baselines.md](references/configuration-baselines.md) when release correctness depends on a coordinated configuration set, deployed-version accounting, or reconciliation of declared and live state.
