@@ -11,6 +11,9 @@ Software Requirements now provides a focused design-interview route.
 See [coverage validation](docs/coverage-validation-2026-10-26.md) for the actual
 independent exercises and their limits.
 
+The [broader workflow audit](docs/broad-workflow-coverage.md) adds official
+and specialist sources, exact adaptation decisions and explicit remaining limits.
+
 ## Install as normal skills
 
 Use your usual skill manager with this repository. For example, with the Skills CLI:

@@ -1,5 +1,8 @@
 # Popular workflow coverage — 26 October 2026
 
+See the [broader source audit](broad-workflow-coverage.md) for the subsequent
+16-repository mechanism review beyond this three-author catalog.
+
 This is a finite, auditable inventory: 38 Matt Pocock, 7 Ras Mic and 25 Addy Osmani
 entrypoints at pinned revisions, not an assertion that every useful skill on the
 internet has been implemented. Names can be wrappers around the same method.

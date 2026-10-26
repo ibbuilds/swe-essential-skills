@@ -14,6 +14,22 @@ Use for a security-sensitive diff or a requested security review. Narrow harmles
 A useful finding includes location, reachable scenario, impact, evidence, proposed control and a proposed or observed regression check, labeled accordingly. Do not inflate severity from a dangerous API name without showing the reachable conditions.
 
 
+## Calibrate a requested search for variants
+
+When a known defect motivates a search for variants, establish the root cause
+and first verify that the query can retrieve the known defective instance or
+its preserved pre-fix snapshot. Deliberately widen identifiers or structure,
+then check new matches against actual data flow, trusted inputs and preventing
+controls. Include relevant alternate owners and entry paths, rather than only
+the original filename. A syntactic hit is a candidate; an empty search proves
+nothing outside what the query can represent. State exclusions and stop when
+further widening adds no useful coverage. No known cause or requested broader
+search means ordinary scoped review, not a compulsory repository sweep,
+scanner installation or standing CI rule.
+
+This adapts [Trail of Bits variant analysis](https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/plugins/variant-analysis/skills/variant-analysis/SKILL.md)
+without importing tool requirements or arbitrary false-positive thresholds.
+
 ## Authorization errors are not ordinary policy denials
 
 When changing an authorization adapter, policy loading or required context, distinguish a policy denial from an unavailable check, evaluation error or incomplete input. Inspect how the actual engine combines decisions and diagnostics: default deny does not necessarily make an erroring guard deny access. Enforce the accepted safety/availability contract before the protected effect, including required-policy/context completeness and explicitly allowed fallback. Do not silently grant access or impose blanket denial for unrelated tolerated errors.
