@@ -58,9 +58,11 @@ for the owner; preserve mandatory obligations and label uncertainty.
 
 ## Leave one usable decision record
 
-Update the existing issue, brief or source plan with the chosen problem/audience,
-value, scope, journeys, outcome intent, constraints, priority rationale and
-material unresolved choices. Preserve sources and approved/proposed/assumed status.
+Keep the chosen problem/audience, value, scope, journeys, outcome intent,
+constraints, priority rationale and material unresolved choices together.
+Update the existing issue, brief or source plan when that write is within the
+requested authority; otherwise provide the decision-ready result directly and
+do not imply it was saved. Preserve sources and approved/proposed/assumed status.
 Avoid duplicate strategy documents and repeating the interview downstream.
 
 When behavior or acceptance needs clarification, load installed `swe-essential-skills-software-requirements`;
