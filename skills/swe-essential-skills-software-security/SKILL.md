@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-security
-description: Design or assess security and privacy controls, vulnerabilities and dependency risks. Use for affected trust boundaries and reachable attack paths; harmless edits need no security audit.
+description: "Use when changing or investigating trust boundaries, authentication, authorization, secrets, untrusted input, privacy or dependency vulnerabilities. Harmless copy edits need no threat audit."
 ---
 
 # SWE Essential Skills / Software Security

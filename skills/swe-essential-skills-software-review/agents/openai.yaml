@@ -1,3 +1,6 @@
 interface:
   display_name: "swe-essential-skills-software-review"
   short_description: "Review changes for evidence-backed defects and risks"
+
+policy:
+  allow_implicit_invocation: true

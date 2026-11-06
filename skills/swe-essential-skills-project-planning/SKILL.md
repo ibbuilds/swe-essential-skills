@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-project-planning
-description: Create or reconcile a software project plan and a buildable first slice. Use for requested planning, new projects or consequential expansion; continue adequately planned ongoing work directly.
+description: "Use when asked to plan or reconcile a software project, a partial brief or consequential expansion into a buildable slice. Continue adequately planned work without restarting planning."
 ---
 
 # SWE Essential Skills / Project Planning

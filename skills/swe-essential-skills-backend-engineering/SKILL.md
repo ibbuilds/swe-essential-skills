@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-backend-engineering
-description: Implement APIs, message handlers and backend workflows. Use for service validation, authorization, transactions, concurrency and integration failures; pair data changes with datastore-specific evidence.
+description: "Use when changing APIs, webhooks, workers or service side effects, especially validation, object authorization, duplicate delivery, transactions or concurrent writes."
 ---
 
 # SWE Essential Skills / Backend Engineering

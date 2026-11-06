@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-platform-engineering
-description: Choose or build hosting, compute, networking, identity and durable storage. Use for platform setup and first-deployment bootstrap; routine releases and incidents have separate workflows.
+description: "Use when choosing hosting or establishing compute, networking, identity and durable storage, including first-deployment startup/connectivity. Existing release execution belongs to delivery."
 ---
 
 # SWE Essential Skills / Platform Engineering

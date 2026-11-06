@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-product-discovery
-description: Investigate a software opportunity, user problem and current alternatives. Use to decide which problem merits investment; skip discovery when an accepted brief already settles the direction.
+description: "Use when deciding whether a software opportunity or reported user problem merits investment, researching real workflows and alternatives. An accepted build brief can already settle direction."
 ---
 
 # SWE Essential Skills / Product Discovery

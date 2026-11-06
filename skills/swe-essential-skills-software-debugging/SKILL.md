@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-debugging
-description: Diagnose bugs, crashes, flaky failures and regressions using a trustworthy failure signal and causal experiments. Use when software behavior is unexplained before choosing a fix.
+description: "Use when software crashes, tests flake, results are wrong or a regression remains unexplained, including failures encountered mid-task. An established cause can proceed directly to its repair."
 ---
 
 # SWE Essential Skills / Software Debugging

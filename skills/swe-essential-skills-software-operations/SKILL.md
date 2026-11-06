@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-operations
-description: Diagnose runtime failures, handle incidents and support cases, or verify telemetry, capacity and restoration. Use for operating services, jobs, CLI, native and device software.
+description: "Use when handling runtime incidents or support cases, investigating live health, telemetry or capacity, or verifying backup restoration across services, jobs, CLI and devices."
 ---
 
 # SWE Essential Skills / Software Operations

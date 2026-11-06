@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-architecture
-description: Design system boundaries, technical contracts and consequential architecture choices. Use for feasibility and quality tradeoffs; skip product strategy and routine local edits.
+description: "Use when system boundaries, technical contracts, feasibility or consequential architecture choices remain unresolved or fail an invariant. Routine local edits need no architecture exercise."
 ---
 
 # SWE Essential Skills / Software Architecture

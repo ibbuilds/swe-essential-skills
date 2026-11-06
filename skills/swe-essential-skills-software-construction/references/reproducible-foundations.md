@@ -1,5 +1,41 @@
 # Reproducible foundations
 
+## Own generated files and recovery copies
+
+Apply while creating outputs and at a useful work boundary; a user need not ask
+for cleanup first. Reuse an established workspace-hygiene workflow when available.
+This section remains usable on its own. A small edit that creates no artifacts
+needs no inventory or disk scan.
+
+Before a bulk copy, capture, export, dependency installation or repeated build,
+identify its output location, expected growth and useful recovery boundary. Keep
+scratch work in the project's existing temporary area; keep deliverables in their
+intended destination. Capture concise diagnostics by default, retaining a bounded
+raw artifact only when it supports a current finding or recovery need.
+
+Prefer version-control checkpoints for tracked source. When a filesystem backup
+is necessary, copy only the affected material and define when it can be retired.
+Keep the destination outside its source and exclude existing backups, dependency
+trees and generated output unless recovery specifically needs them. Never let a
+new snapshot recursively include prior snapshots. A successful copy is not tested
+recovery; retain the required known-good boundary until replacement is verified.
+
+If generated files grow unexpectedly, stop the producing loop before making
+another copy. Use existing size/count evidence or a bounded inventory of the
+affected area, including ignored output. Follow neither symlinks nor Windows
+junctions into another workspace. Distinguish needed recovery material, final
+deliverables, regenerable intermediates and files whose ownership is unknown.
+Ignored, untracked, old or named `backup` does not by itself mean disposable.
+
+At a milestone or completion, remove task-owned temporary outputs whose consumers
+have finished and whose contents can be regenerated, within existing editing
+authority and project policy. Preserve user files, active work from another task,
+secrets/configuration, required diagnostic evidence and recovery copies still in
+use. Recheck resolved paths and current ownership before any deletion; use the
+native cleanup mechanism for the exact scoped targets. A retain/delete decision
+outside an established policy needs that specific decision, not a blanket cleanup
+prompt. Report material retained growth or unresolved candidates briefly.
+
 ## Resolve setup from evidence
 
 Compare local toolchain versions with repository pins and CI; multiple manifests may represent a workspace rather than competing package managers. Determine the intended working directory and prerequisite services. Prefer the repository's documented reproducible install mode and preserve its lockfile. Do not guess universal flags across package managers or versions.

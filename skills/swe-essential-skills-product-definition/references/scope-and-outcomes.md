@@ -1,5 +1,13 @@
 # Scope, outcomes and staged choices
 
+## Help choose value and positioning
+
+Explain whose outcome improves, in which situation, and why this product or increment is preferable to the actual alternative. Distinguish users, purchasers, approvers and operators when their incentives differ. Positioning is a product choice about audience, problem, differentiated benefit and credible reason to believe it—not a tagline or a claim of market leadership. Where the category or comparison frame matters, recommend one that helps the intended audience understand the value without suggesting unsupported capabilities.
+
+Help the user choose focus and explicit tradeoffs: which audience/use case comes first, which strengths matter, and what is intentionally not optimized. Tie proposed differentiators to evidence or label them hypotheses. Consider distribution/access, switching and ongoing support when they affect whether the value can be realized. For internal tools, value may be reduced risk or effort rather than revenue; for libraries, compatibility and integration costs may dominate acquisition. Do not impose SaaS funnels, subscriptions, monetization or market-size exercises on unrelated products.
+
+Where options differ materially, compare a small set of viable directions, including improving the existing alternative or doing nothing. Use actual constraints and uncertain ranges rather than invented revenue, precision scores or a preferred technology. Recommend a direction and identify the condition that would change it. Product direction does not select a technical architecture by default.
+
 ## Define a complete slice
 
 Trace one priority journey from its real trigger to a useful outcome. Include the minimum supporting behavior needed to make that outcome trustworthy: prerequisites, access, invalid or missing inputs, failure communication and recovery where applicable. A command-line conversion tool needs meaningful output and failure/exit behavior; it does not automatically need accounts, billing or a dashboard.

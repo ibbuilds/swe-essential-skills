@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-evolution
-description: Refactor, upgrade, migrate, deprecate or retire software while preserving supported behavior. Use when compatibility across versions, consumers or stored data is the central problem.
+description: "Use when refactoring, upgrading, migrating, deprecating, retiring or explicitly cleaning up software, with supported consumers or stored data to preserve. File retention is a separate concern."
 ---
 
 # SWE Essential Skills / Software Evolution
