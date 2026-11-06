@@ -40,10 +40,11 @@ project receiving its skills.
 ## 2. Copy complete skill folders
 
 Each installed folder must contain `SKILL.md`, its `LICENSE`, and any local
-`references/` files, plus `agents/openai.yaml` for the optional Codex UI label.
+`references/` files, plus `agents/openai.yaml` for Codex presentation and invocation policy.
 This uses [supported optional UI metadata](https://learn.chatgpt.com/docs/build-skills#optional-metadata).
-Other hosts can ignore that presentation metadata; it adds no dependency or
-invocation policy. Do not copy only `SKILL.md`, nest another `skills/` directory
+All eighteen shipped policy files explicitly allow implicit invocation. Other
+hosts can ignore this Codex metadata; it adds no tool dependency. Do not copy only
+`SKILL.md`, nest another `skills/` directory
 between the host root and skill name, or copy this repository's root `AGENTS.md`
 into your application. That file governs maintenance of this suite only.
 

@@ -6,7 +6,7 @@ Resolve the exact package, version, ecosystem, lockfile and shipped artifact. Di
 
 Trace whether the affected feature is reachable under the advisory's prerequisites. Record evidence for reachability or its absence; lack of a reproduced exploit alone is not proof of safety. Choose among a compatible patched version, disabling the affected feature, a documented temporary mitigation, or replacement. Check dependency origin, installation hooks and integrity/provenance expectations before executing unfamiliar package code.
 
-Test the affected behavior and consumer compatibility after the change. Regenerate lockfiles using the project's supported tooling, inspect unexpected dependency changes, and verify the built artifact actually contains the corrected version. A suppression needs an owner, rationale, conditions and a review trigger; do not hide the warning merely to make CI green.
+Test the affected behavior and consumer compatibility after the change. Regenerate lockfiles using the project's supported tooling and inspect unexpected dependency changes. Verify the corrected dependency is the one actually resolved in the affected build or runtime path; inspect packaged or vendored copies where shipped. A build-only tool need not appear in the output. If remediation requires regenerated output, verify the affected artifact was rebuilt with the corrected tool; a lockfile edit alone does not update existing artifacts. Reuse applicable artifact evidence; do not rebuild unrelated deliverables. A suppression needs an owner, rationale, conditions and a review trigger; do not hide the warning merely to make CI green.
 
 ## Suspected exploitation or secret exposure
 

@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-verification
-description: Choose verification evidence for changed contracts, regression risks or acceptance gaps. Use when test strategy needs judgment; running an established check recipe needs no new strategy.
+description: "Use when choosing evidence for changed behavior, regression risks, uncertain test coverage or acceptance gaps, including before claiming completion. Reuse an established adequate check recipe."
 ---
 
 # SWE Essential Skills / Software Verification

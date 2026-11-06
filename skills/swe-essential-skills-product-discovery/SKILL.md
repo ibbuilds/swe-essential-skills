@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-product-discovery
-description: Investigate a software opportunity, user problem and current alternatives. Use to decide which problem merits investment; skip discovery when an accepted brief already settles the direction.
+description: "Use when deciding whether a software opportunity or reported user problem merits investment, researching real workflows and alternatives. An accepted build brief can already settle direction."
 ---
 
 # SWE Essential Skills / Product Discovery
@@ -34,7 +34,7 @@ Identify the few assumptions whose failure would reverse the decision or substan
 
 For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
 
-Retrieve missing facts from authorized records, code, analytics or current authoritative public sources when useful; verify relevance, population and freshness. Ask the user only for material information unavailable through permitted investigation or choices they must own. Batch independent, currently answerable questions with a recommended answer and consequence. Hold dependent questions until their prerequisites are settled; continue unrelated useful work. Do not repeatedly ask settled questions or exhaust every possible branch of an idea.
+Retrieve missing facts from authorized records, code, analytics or current authoritative public sources when useful; verify relevance, population and freshness. Ask the user only for material information unavailable through permitted investigation or choices they must own. Batch independent, currently answerable questions. Recommend an option for an owner choice when justified, explaining its consequence; ask neutrally for reported facts or experience rather than suggesting the desired answer. Hold dependent questions until their prerequisites are settled; continue unrelated useful work. Do not repeatedly ask settled questions or exhaust every possible branch of an idea.
 
 For a material unknown, choose the least costly credible evidence that can change the decision. Read [validation choices](references/validation-choices.md) when designing research or an experiment. Existing evidence may already be sufficient; sometimes a reversible implementation is cheaper than further research. State what remains uncertain rather than treating “not worth investigating now” as “validated.”
 

@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-performance
-description: Investigate latency, throughput, memory, startup or responsiveness with representative workloads. Use for regressions, resource constraints and measured optimization; skip speculative tuning.
+description: "Use when latency, startup, throughput, memory or responsiveness misses a real need or regresses, including a resource problem discovered mid-task. Measure against a representative workload."
 ---
 
 # SWE Essential Skills / Software Performance

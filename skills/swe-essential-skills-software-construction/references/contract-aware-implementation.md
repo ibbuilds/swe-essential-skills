@@ -2,7 +2,7 @@
 
 ## Libraries and bindings
 
-Identify exported symbols, type declarations, serialization formats and compatibility guarantees. Avoid changing a default, exception type, ownership rule or timing behavior without considering consumers. Compile or run a representative external consumer against the built package, because internal imports can bypass missing exports and packaging errors. Inspect included files and runtime dependencies; a source-tree test cannot detect an omitted resource in the artifact. For native bindings verify ABI, architecture, calling convention and lifetime expectations on supported targets as applicable.
+Identify affected exported symbols, type declarations, serialization formats and compatibility guarantees. Avoid changing a default, exception type, ownership rule or timing behavior without considering consumers. When public contracts, packaging, runtime dependencies or supported-consumer compatibility change, compile or run a representative external consumer against the built package, reusing applicable existing coverage. Internal imports can bypass missing exports and packaging errors; a source-tree test cannot detect an omitted artifact resource. Inspect affected package contents and dependencies. An internal-only change with adequate boundary coverage needs no additional consumer harness. For changed native bindings verify ABI, architecture, calling convention and lifetime expectations on supported targets as applicable.
 
 ## Acquisition, cleanup and cancellation
 

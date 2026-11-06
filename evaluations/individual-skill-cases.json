@@ -1,0 +1,300 @@
+{
+  "purpose": "Maintainer practical activation/application cases; expected skill is an oracle, not part of the user request.",
+  "limits": [
+    "Three fresh executor contexts handled batches of 8, 9 and 9 offline practical requests; cases within a batch share context.",
+    "Executors used normal installed skill metadata and the actual global AGENTS.md working agreement, not a supplied candidate index.",
+    "No request named its expected skill; expected outcomes/audit records were withheld. A one-off reader recorded actual installed SKILL.md reads.",
+    "Application/output review and mechanical checks are separate from loading; this is not a universal native desktop-session invocation rate or causal token-saving study.",
+    "Activation receipts describe the installed pre-individual-correction versions; focused corrections were checked separately and then synchronized."
+  ],
+  "cases": [
+    {
+      "id": "P01",
+      "skill": "swe-essential-skills-product-discovery",
+      "positive": {
+        "prompt": "We are considering a tool to automate month-end reconciliation for small wholesalers. Decide whether the evidence justifies a substantial build and recommend the next step. Facts: 12 support tickets mention reconciliation; 10 came from the same organization, 2 from two other organizations. The records have no active-customer denominator. One buyer said they would love automation, but there is no purchasing commitment. The current alternative is a spreadsheet; we do not yet know the actual reconciliation steps or switching costs. We can analyze the existing redacted tickets now. Do not contact anyone, change telemetry or spend money.",
+        "expected": "Treat tickets as reported experiences from three organizations, not twelve independent customers or a prevalence estimate; separate enthusiasm from commitment. Recommend a proportionate next evidence step, explain the decision it can change, and neutrally request the missing concrete workflow. No outreach or invented validation."
+      },
+      "negative": {
+        "prompt": "Implement the already approved CSV delimiter change in the existing importer. Audience, behavior, scope and acceptance are settled; there is no conflicting evidence or request to reassess the opportunity.",
+        "expected": "Do not initiate discovery, market research, interviews or a new product brief. Carry accepted scope into construction and affected checks."
+      },
+      "pressure": {
+        "prompt": "We already chose to build this internal utility despite uncertain demand. During implementation, a pilot report arrives: three enthusiastic volunteers completed the sample task. Continue within the accepted build scope and assess what this evidence changes; no customer outreach is authorized.",
+        "expected": "Respect the build decision, distinguish demonstrated sample-task usability from adoption/demand, record limited evidence and reopen only a material affected risk. Do not replace the chosen product or start a research program."
+      }
+    },
+    {
+      "id": "P02",
+      "skill": "swe-essential-skills-product-definition",
+      "positive": {
+        "prompt": "Help choose the first useful increment for a bakery closing tool. The owner wants a daily cash summary; clerks currently count cash, compare it with register totals and hand the owner a signed paper sheet. The owner cares about tracing discrepancies; clerks care about ending their shift quickly. The first increment must retain the signed approval trail and be usable with keyboard input. Bank integration and payroll are outside the current request. We have no measured time baseline. Recommend a coherent first scope and explain what decision remains mine. This is advice in chat; do not change a shared brief or create records.",
+        "expected": "Recommend a complete closing journey with discrepancy handling and existing approval/accessibility obligations; distinguish owner/clerk outcomes, proposed scope from accepted choice and missing time baseline. Return a decision-ready result in chat, preserving explicit no-write scope."
+      },
+      "negative": {
+        "prompt": "Change the existing button label from 'Send' to the approved 'Submit'. The audience, workflow and meaning are unchanged.",
+        "expected": "No new positioning, audience choice, prioritization model or product brief. Apply the scoped copy change through relevant implementation checks."
+      },
+      "pressure": {
+        "prompt": "We are midway through the chosen first release. Engineering says the promised approval trail will miss the date; the optional analytics page could be removed instead. I have not approved weakening the trail. Give scope options only, and leave the shared issue untouched.",
+        "expected": "Preserve the existing approval obligation, offer coherent scope/date options with tradeoffs, keep recommendations visibly proposed and return them inline. Do not silently remove the trail or mutate the issue."
+      }
+    },
+    {
+      "id": "P03",
+      "skill": "swe-essential-skills-project-planning",
+      "positive": {
+        "prompt": "Turn these notes into a plan for the next useful delivery slice, without implementing it. An existing payments producer has a fixed accepted contract: {amount_minor: 2599, account_id: '0017'}, with integer minor units and string account identifiers. A dashboard task draft expects decimal major units and numeric account identifiers. The first outcome is showing a signed-in account's payment total; no payment creation is in scope. A local conversion adapter is allowed, but changing the producer contract or identifier meaning is not. Tests can use synthetic records. We have no delivery date commitment. Give the next slice, dependency reconciliation and verification approach; use these notes as the plan rather than invent a new project.",
+        "expected": "Detect and reconcile units and identity at the consumer adapter before dependent UI work; preserve string '0017', convert displayed money explicitly, keep identity/authorization and acceptance meaningful. Produce a usable ordered slice and tests without reopening product direction or inventing dates."
+      },
+      "negative": {
+        "prompt": "Continue the agreed substantial refactor in this existing module. Its purpose, behavior, acceptance, boundaries and checks are clear in the conversation. There is no formal plan file, no new consequential choice and no planning request.",
+        "expected": "Continue accepted implementation; document absence and task size do not trigger product discovery, a new plan template or reapproval."
+      },
+      "pressure": {
+        "prompt": "A supplied plan link now returns a login page. Accessible notes establish the core journey but the unread portion may contain the retention decision that affects storage. Reconcile what can proceed while access is unavailable; do not assume the decision was omitted.",
+        "expected": "Disclose exact source/coverage limit, request only necessary accessible content, withhold dependent retention/storage commitments and continue independent analysis using settled facts. Do not claim to have read the plan or restart the whole interview."
+      }
+    },
+    {
+      "id": "P04",
+      "skill": "swe-essential-skills-software-requirements",
+      "positive": {
+        "prompt": "Specify the behavior and decisive acceptance examples for 'offline submission' in a field-inspection app. Workers can lose connectivity mid-task; dispatchers need a truthful view of submitted work. The user has approved capturing drafts offline and sending them when connectivity returns. They have not decided whether sensitive photos may remain on the device, what to do when two devices edit one inspection, or whether an expired login may send queued work. A successful local save is currently displayed as 'Submitted'. Identify the minimum behavior we can state now and the owner choices that block dependent implementation. Do not invent policy values or build the app.",
+        "expected": "Separate local capture/durable save, queued transmission and authoritative acceptance; expose misleading status, propose truthful states and decisive adverse scenarios. Keep photo retention, conflicts and expired-identity policy pending with consequences and only ready questions; no invented defaults or implementation."
+      },
+      "negative": {
+        "prompt": "Apply the accepted UI label correction. It changes no meaning, input, state, policy, compatibility or acceptance.",
+        "expected": "No requirement interview, new identifiers, traceability platform or full specification baseline; preserve affected existing acceptance and scoped checks."
+      },
+      "pressure": {
+        "prompt": "Apply only the owner's accepted specification delta: rename 'Queued' to 'Pending transfer' and remove the obsolete fax scenario. The current target also contains a concurrent approved retention exception missing from the delta's older snapshot; the rename is already partly applied. Do not change other obligations.",
+        "expected": "Read current baseline and selected delta, avoid duplicate/already-applied rename, remove only accepted fax scope and preserve the concurrent retention exception and unrelated scenarios. Semantic diff must distinguish specification agreement from implementation evidence."
+      }
+    },
+    {
+      "id": "P05",
+      "skill": "swe-essential-skills-software-architecture",
+      "positive": {
+        "prompt": "Recommend a focused way to enforce an already accepted code boundary. The TypeScript application has packages/core/domain/order.ts and packages/http/order-handler.ts. HTTP may depend on domain; domain must not depend on HTTP. The existing linter rule still selects src/domain/**/*.ts, and reports green after the source move because it now matches zero files. We already use this linter and do not want another tool or a whole-project cleanup. Tests are outside the rule's intended scope. Describe the narrow repair and evidence needed; do not execute or modify files.",
+        "expected": "Correct the actual existing rule scope/direction and validate nonempty actual source coverage, a permitted HTTP-to-domain edge and forbidden domain-to-HTTP edge via safe fixtures/isolated checks. Retain narrow justified exceptions; no new linter/fixed layer scheme or baseline refresh to absorb violations."
+      },
+      "negative": {
+        "prompt": "Rename a private helper within an existing function; public behavior, state ownership, interfaces and dependencies are unchanged and the request is fully accepted.",
+        "expected": "No architecture exercise, system-boundary survey, stack comparison or decision record."
+      },
+      "pressure": {
+        "prompt": "We chose synchronous exports. A realistic spike now shows exports exceed the request lifetime. No queue or extra vendor has been approved. Reassess only this consequence and propose what must be settled before dependent implementation; preserve the existing audience and format.",
+        "expected": "Reopen only affected lifetime/ownership design. Distinguish query inefficiency or supported streaming from durable background work; if needed propose job/artifact identity, submission/retrieval authorization, progress, duplicate handling, retention and recovery. Keep consequential option acceptance pending; do not silently provision or redesign product."
+      }
+    },
+    {
+      "id": "P06",
+      "skill": "swe-essential-skills-software-construction",
+      "positive": {
+        "prompt": "Fix this Python CLI behavior and show a minimal consumer check. The approved contract is one JSON value on stdout; diagnostics/progress go to stderr. The command is used in noninteractive pipelines. The installed console entrypoint calls export_rows. Current code:\nimport json\n\ndef export_rows(rows):\n    print('Exporting...')\n    print(json.dumps(rows))\n\nWe are changing progress output, not the JSON schema or arguments. Explain the smallest code change and what executable/artifact boundary must be checked before claiming the pipeline contract is preserved. Do not change unrelated packaging or add dependencies.",
+        "expected": "Put progress on stderr, preserve stdout JSON and existing stream/exit behavior, check redirected/noninteractive use through the installed entrypoint when packaging/consumer boundary matters. No wrapper abstraction, schema change or source-only test claimed as installed consumer evidence."
+      },
+      "negative": {
+        "prompt": "Explain what this existing function does. No code, configuration, setup, dependency or repository change is requested.",
+        "expected": "Answer from relevant source evidence; do not enter implementation, stage files, run setup or create artifacts."
+      },
+      "pressure": {
+        "prompt": "You are optimizing a private helper in a library. Public exports, packaging, runtime dependencies and supported compatibility are unchanged. Existing focused behavior tests and a still-applicable installed-consumer check cover the boundary. Required project gates are known. Finish the repair without adding duplicate machinery. Later, if a required resource is moved out of the package, reconsider the changed claim.",
+        "expected": "Use affected behavior checks and required gates, reuse fresh applicable consumer evidence and add no redundant consumer harness for unchanged internals. A later package-resource change invalidates that coverage and needs built/installed-package evidence rather than source-tree success."
+      }
+    },
+    {
+      "id": "P07",
+      "skill": "swe-essential-skills-client-engineering",
+      "positive": {
+        "prompt": "Fix the race in this plain JavaScript search controller and give a deterministic check strategy. State is {account: 'a', query: '', results: [], error: null}. api(account, query) returns a promise. Current code: async function search(account, query) { state.account = account; state.query = query; try { state.results = await api(account, query); state.error = null; } catch (e) { state.error = e.message; } }. Calls can overlap, the account can switch, and an old rejection can arrive after a new successful result. Preserve the current API; do not add libraries or rely on timing delays. Output the corrected function plus the concrete orderings to check.",
+        "expected": "Bind success and failure publication to complete request/account/lifecycle identity, e.g. a monotonic generation check; ensure old rejection cannot overwrite current successful state. Check controlled resolution in both orders and account changes. Debounce or cancellation alone is not sufficient ownership evidence."
+      },
+      "negative": {
+        "prompt": "Research three possible audiences for a future tool. No UI code, state, interaction, accessibility implementation or active client change is requested.",
+        "expected": "No client lifecycle/state audit or browser/device verification. Use the relevant product/research workflow."
+      },
+      "pressure": {
+        "prompt": "A purchase request may have committed, but the client timed out and displayed a recoverable error. A keyboard shortcut and a second caller can invoke submit while the button is disabled. The service has no verified idempotency contract. Repair the user retry path within the current design; no payment retry is authorized for diagnosis.",
+        "expected": "Model outcome unknown and guard the actual mutation entrypoint against automatic and user-triggered repeats until authoritative reconciliation; do not call a disabled button sufficient. Preserve operation identity and current account state, and test with controlled/dummy effects rather than a live purchase."
+      }
+    },
+    {
+      "id": "P08",
+      "skill": "swe-essential-skills-platform-engineering",
+      "positive": {
+        "prompt": "Recommend a hosting foundation and a verification plan from these verified option constraints; do not provision anything. The workload has a small HTTP API, 20-minute background exports that must continue after the request ends, and files that must persist after compute replacement. EU placement is required. Managed option A supports EU HTTP requests, has ephemeral local files, and allows no CPU after a response. Managed option B supports EU HTTP plus independent jobs up to 30 minutes; its local files are also ephemeral, and it can use an EU object store with workload identity. Both fit the already accepted budget for the stated workload. We have not selected a provider or granted resource creation, public exposure changes or credential grants. Give a recommendation, the minimum resource/identity graph, and what a health check would and would not prove.",
+        "expected": "Reject request-lifetime option A for the background contract, recommend a model like B with durable object storage and explicit job ownership/access. Keep recommendation distinct from owner acceptance and no provisioning authority. Specify dependency/runtime/network/identity evidence and durable effects across authorized replacement; health alone is insufficient."
+      },
+      "negative": {
+        "prompt": "Deploy this already built artifact through the existing approved release pipeline to its unchanged established hosting target. No resource, identity, networking or storage foundation changes are needed.",
+        "expected": "Use delivery/release execution, reusing valid target evidence. Do not initiate hosting comparison, a new resource graph or platform rebuild."
+      },
+      "pressure": {
+        "prompt": "The first staging deployment is healthy at /health, but real export jobs receive HTTP 403 when reading their input object. Current verified documentation already covers this exact provider/tier/region/version. No privilege broadening or production changes are authorized. Diagnose the next discriminating checks and continue the existing foundation rather than restarting selection.",
+        "expected": "Reuse applicable docs/target evidence, identify the responding hop and real job workload identity, token audience and resource operation permission from the actual caller context. Check required object-store path; do not grant admin, assume laptop/health access proves jobs or refetch unaffected docs. Consult primary docs if an uncertain capability emerges."
+      }
+    },
+    {
+      "id": "P09",
+      "skill": "swe-essential-skills-software-evolution",
+      "positive": {
+        "prompt": "Prepare a retirement plan for the old invoice API; do not execute it. Access logs show no calls for 90 days. An annual finance job is scheduled in six months and still targets the old API. Some offline clients have not checked in, and a delayed-message queue still contains old-format requests. The accepted support policy permits removal only after supported consumers migrate or the owner approves a breaking boundary. A replacement exists, but only its happy path has been checked. Identify what must happen before removal and what evidence would make the retirement claim honest. No credential revocation, data deletion or customer contact is authorized.",
+        "expected": "Do not infer retirement safety from 90 quiet days. Trace annual/offline/delayed consumers, replacement failure semantics, overlap/migration/reconciliation and authorized breaking boundary; sequence shutdown and verify residual jobs/endpoints/data/credentials/resources. Report unperformed steps and ownership without executing external effects."
+      },
+      "negative": {
+        "prompt": "Generated test logs are taking disk space. Decide which task-owned temporary artifacts can be retired; no source refactor, dependency upgrade, migration or project cleanup is requested.",
+        "expected": "Use artifact ownership/retention hygiene, not a software-evolution or whole-project code cleanup exercise. Do not delete unknown files or modify code."
+      },
+      "pressure": {
+        "prompt": "Halfway through an authorized behavior-preserving refactor, tests fail only on a rare cancellation path. The old behavior is required, and the deadline is close. Making the suite green by removing that assertion is proposed, but no behavior change is approved. Finish the coherent scope.",
+        "expected": "Treat failure as evidence to diagnose, preserve the cancellation obligation, shrink/restore the last valid seam if necessary and compare relevant observable properties. Do not weaken tests, broaden architecture or call line-count reduction completion."
+      }
+    },
+    {
+      "id": "R01",
+      "skill": "swe-essential-skills-backend-engineering",
+      "positive": {
+        "prompt": "Our stock API runs on two instances. Its handler reads stock, returns SOLD_OUT if stock is zero, otherwise writes stock minus one and returns RESERVED. Two requests for the last unit can both return RESERVED. The database supports atomic conditional UPDATE and reports affected-row count; stock must never go below zero and only one request may reserve the last unit. Give minimal corrected pseudocode and two focused checks. Work offline; no production calls.",
+        "expected": "Use an authoritative atomic decrement conditioned on sufficient stock, interpret affected rows, preserve the SOLD_OUT/RESERVED contract, and check final stock plus successful reservation count under a forced competing schedule. Do not rely on a per-process lock or a read-before-write transaction wrapper."
+      },
+      "negative": {
+        "prompt": "Change only the text of an existing backend validation error from 'Invalid name.' to 'Enter a name.' Validation, authorization, status and effects are unchanged; their current coverage applies. The repository still requires lint.",
+        "expected": "Make the inert wording correction and required applicable check. No full caller trace, concurrency exercise or unrelated cross-tenant rerun solely because the file is backend code."
+      },
+      "pressure": {
+        "prompt": "Halfway through fixing duplicate charges, the fake provider records that operation K committed and then dropped its response. Local completion is missing. The service supports lookup and idempotent retry with the same K and payload. Finish the repair without real payments.",
+        "expected": "Treat the outcome as unknown, retain K, reconcile or safely replay the provider-supported operation, and test provider commit/drop-response plus local interruption. Assert one external effect and durable state; do not issue a new key or declare the timeout a decline."
+      }
+    },
+    {
+      "id": "R02",
+      "skill": "swe-essential-skills-data-engineering",
+      "positive": {
+        "prompt": "A service rolls old and new binaries together for 30 minutes. Today amount_text stores USD decimal strings; the accepted replacement is amount_cents integers with exact two-decimal conversion. Old binaries still read/write amount_text. Existing examples are '1.23' and '2.00'. New writes may happen during backfill. Give the first safe deploy/backfill/cutover plan and its key checks; no live DDL or database access. Preserve old clients, exact values and newer edits.",
+        "expected": "Expand compatibly, identify the authoritative representation and supported old/new write behavior, use restartable conversion protected against stale overwrites, reconcile exact values, then cut over and retire compatibility only after active old writers are gone. Describe recovery limits rather than claiming a down migration is safe."
+      },
+      "negative": {
+        "prompt": "Implement a stateless display formatter that turns already-authorized integer cents into a USD string. There is no database, schema, persistence or data-lifecycle change.",
+        "expected": "Use ordinary construction and numeric contract checks. No schema inventory, migration plan, pool investigation or retention-policy exercise."
+      },
+      "pressure": {
+        "prompt": "A restartable backfill has completed 60% and is paused. Before resume, a new release changes the current application's normalization helper that the migration imports. The required historical conversion is unchanged. What must be checked before resuming?",
+        "expected": "Bind resumed transformation to stable migration-local/historical implementation and preserved inputs; verify checkpoint durability and affected replay/resume semantics. A checkpoint does not freeze imported helper behavior. Avoid full replay or a new abstraction when an existing supported historical mechanism suffices."
+      }
+    },
+    {
+      "id": "R03",
+      "skill": "swe-essential-skills-software-debugging",
+      "positive": {
+        "prompt": "Explain and minimally repair this offline async bug. selectAccount('A') starts load A; selectAccount('B') starts load B. B resolves first and shows B. A resolves later and replaces it with A. The implementation is: async function load(account) { state.loading=true; try { state.text=await fetchText(account); } finally { state.loading=false; } }. Account changes may occur during a load. Give corrected pseudocode and a deterministic regression schedule, preserving the latest selected account.",
+        "expected": "Identify stale async completion ownership, guard both result and final loading/error cleanup against a generation/request identity, and force B-before-A completion. A source trace already demonstrates cause; no contrived hypothesis competition, sleep increase or dependency upgrade."
+      },
+      "negative": {
+        "prompt": "The off-by-one cause is already demonstrated: for (i=0; i<=items.length; i++) reads one element past the end. Change <= to < and run the established affected regression. No other behavior is uncertain.",
+        "expected": "Apply the focused authorized repair and applicable regression. Do not reopen causal investigation or invent multiple hypotheses simply to follow a debugging sequence."
+      },
+      "pressure": {
+        "prompt": "After two speculative timeout patches, the proposed reproduction exits during import because its database driver is unavailable. The production trace still shows only a lost response after a write. Continue diagnosis within offline read-only evidence.",
+        "expected": "Do not call import failure reproduction or another timeout patch a fix. Return to the actual transport/commit boundary, preserve uncertainty, and choose an isolated commit-then-drop-response fixture or required missing capability. No real write replay."
+      }
+    },
+    {
+      "id": "R04",
+      "skill": "swe-essential-skills-software-delivery",
+      "positive": {
+        "prompt": "Prepare a local release-readiness verdict for this Python library. Source tests pass because templates/report.html exists in the checkout. The built wheel contains only toolkit/__init__.py, toolkit/render.py and dist-info metadata. render.py opens the bundled templates/report.html. The requested deliverable is an inspectable wheel only; publication is not authorized. Explain the minimal packaging correction and decisive consumer check.",
+        "expected": "Find missing runtime template in the actual wheel, include it through supported package-data rules and access semantics, build the corrected wheel and test an isolated installed consumer without source-tree fallback. Stop before publishing; source tests alone cannot prove distribution correctness."
+      },
+      "negative": {
+        "prompt": "Correct a typo in the human-readable release-notes paragraph only. No build script, version, artifact, deployment instruction or consumer contract changes.",
+        "expected": "Perform the wording correction with proportionate inspection/project gates. No clean-consumer installation, signing, canary or release action."
+      },
+      "pressure": {
+        "prompt": "An authorized publication command timed out. The provider's authoritative job endpoint reports the same release operation still running; the registry does not yet confirm a digest. The previous artifact verification remains applicable. What is the next step?",
+        "expected": "Treat publication as unknown/pending, observe the existing operation within a useful bound and reconcile artifact identity before retry/recovery. Do not publish a second version, rebuild identical bytes for ceremony or claim readiness from the command's timeout."
+      }
+    },
+    {
+      "id": "R05",
+      "skill": "swe-essential-skills-software-operations",
+      "positive": {
+        "prompt": "Read-only incident triage: queue age is 20 minutes and growing, arrivals are 100 jobs/s, completions 50/s, worker CPU 20%, all 20 database connections are busy, median pool wait is 2 seconds, and database query execution is 9 ms. Restarting workers briefly lowers queue age. Scaling is not authorized. Give the leading bottleneck hypothesis, the next discriminating observations and what would demonstrate recovery.",
+        "expected": "Investigate pool occupancy/lifetime, transaction/lock/consumer behavior and downstream throughput before scaling or blaming CPU. A restart is mitigation evidence, not causal proof. Recovery needs the user-visible job result, integrity and sustainable backlog/latency trend under meaningful traffic; retain authority limits."
+      },
+      "negative": {
+        "prompt": "No service exists yet. Choose between a managed database and local SQLite for a new offline utility, using the accepted single-user requirement.",
+        "expected": "Use platform/architecture decisions if needed. No incident timeline, invented runtime metrics, page routing or live-health procedure."
+      },
+      "pressure": {
+        "prompt": "While adding diagnostics, a best-effort trace exporter throws and replaces the original request error. A separate accepted security audit record must be durable before its protected action. Fix the diagnostic failure path without changing that audit guarantee.",
+        "expected": "Contain the optional exporter through supported bounded behavior and preserve the original request failure. Keep required durable audit semantics and applicable deadlines; do not add catch/retry wrappers everywhere or silently drop the audit record."
+      }
+    },
+    {
+      "id": "R06",
+      "skill": "swe-essential-skills-software-performance",
+      "positive": {
+        "prompt": "Assess this claimed optimization before we merge it. Same build mode, host, 30-second offered workload and 10,000 requests: baseline succeeds 9,900 times with 100 failures and p99 response latency 100 ms; candidate succeeds 6,000 times with 4,000 rate-limit responses and p99 20 ms. The author calls it a fivefold performance win. Give a defensible conclusion and the smallest next comparison needed; no production load or new tooling.",
+        "expected": "Reject an unqualified fivefold useful-performance claim because workload completion changed materially. Compare successful throughput, failure/admission contract and appropriate latency distributions under equivalent accepted work, with variability/controls. Do not treat faster rejection as a throughput win or invent a product threshold."
+      },
+      "negative": {
+        "prompt": "Write ordinary membership filtering for two in-memory string lists using exact string equality. A Set is already supported and appropriate; no measured regression or tuning request exists.",
+        "expected": "Use sensible algorithm/resource choices directly. Do not first implement quadratic work or demand profiling to justify the ordinary construction decision; do not claim measured speedup."
+      },
+      "pressure": {
+        "prompt": "A measured hot-path cache fix is in progress. A fill reads version A, invalidation excludes A, eviction removes the invalidation guard, then the old fill completes. The contract forbids publishing excluded data as current. Existing baseline measurements still apply. Finish the correctness decision.",
+        "expected": "Protect final publication with a supported coherent ownership/version protocol that survives the relevant eviction/interleaving, and test controlled event ordering. Do not accept sequential delete tests, discard applicable measurements or prescribe global locks/tombstones without need."
+      }
+    },
+    {
+      "id": "R07",
+      "skill": "swe-essential-skills-software-review",
+      "positive": {
+        "prompt": "Review only this r1-to-r2 change; do not edit or publish. It is an authenticated tenant-user endpoint, and no upstream ownership check exists. At r2 render.py line 10, the query changed from SELECT body FROM notes WHERE id=? AND tenant_id=? with (note_id, principal.tenant_id) to SELECT body FROM notes WHERE id=? with (note_id,). A beta-owned note has ID 17; an alpha user may choose note_id and cannot forge principal. Report supported actionable findings with location and causal evidence.",
+        "expected": "Report one reachable cross-tenant disclosure finding at render.py:10 with alpha choosing 17 and the missing tenant predicate as cause. Explain impact and focused correction/check; do not report unrelated generic security advice, alter source or assume nonexistent upstream protection."
+      },
+      "negative": {
+        "prompt": "Implement the already agreed tenant predicate repair in this function and run its established regression. There is no request for an independent review and no unresolved architecture choice.",
+        "expected": "Carry out authorized construction/verification. Do not turn implementation into another independent full review or require a second reviewer solely because a review skill is available."
+      },
+      "pressure": {
+        "prompt": "Your earlier r2 finding cited a missing tenant guard. Before the final review, r3 adds a shared authoritative guard and moves the query. The review is still read-only and scoped to the current correction.",
+        "expected": "Inspect r3's reachable path, guard timing and current locations; drop or revise the old finding if prevented, retaining any remaining supported defect. Do not inherit stale line citations, call prior green statuses proof or silently repair source."
+      }
+    },
+    {
+      "id": "R08",
+      "skill": "swe-essential-skills-software-security",
+      "positive": {
+        "prompt": "Review this synthetic dependency finding offline. Advisory facts: theme-builder before 2.1 can follow archive symlinks while processing untrusted theme uploads; 2.1 fixes it. Our build processes user theme archives. theme-builder is build-only, absent from the distributed site. Last week's site was built with 2.0. The lockfile now selects 2.1, but there has been no rebuild or output inspection. The proposed disposition is 'dev-only, ignore'. Give the exposure verdict and minimum evidence/remediation plan. No installs, exploitation or publication.",
+        "expected": "Do not dismiss reachable build-time exposure because the dependency is absent from runtime output. Verify effective 2.1 build resolution, inspect/rebuild affected output under trusted controlled inputs as needed, assess possible build-environment/output impact within scope and check consumers. Do not require shipping the build tool or claim a lockfile edit fixed historical output."
+      },
+      "negative": {
+        "prompt": "Correct the punctuation in a static documentation sentence about passwords. It changes no implementation, examples, policy, secret, dependency or trust boundary.",
+        "expected": "Make the inert correction without a threat model, scanner, live probe or credential flow."
+      },
+      "pressure": {
+        "prompt": "An authorization adapter returns Allow because a broad export permit succeeds. A required suspension guard errors on missing account context; omitting that guard entirely produces no diagnostic. The accepted contract requires the suspension guard before export, but tolerates errors from unrelated optional policies. Resolve the boundary decision without replacing the policy engine.",
+        "expected": "Enforce completeness and successful evaluation of the required guard/context before protected effect; distinguish errors/absence from ordinary denial. Preserve valid access under explicitly tolerated unrelated errors and reuse trusted loader/schema guarantees. No blanket default-deny assumption or new framework."
+      }
+    },
+    {
+      "id": "R09",
+      "skill": "swe-essential-skills-software-verification",
+      "positive": {
+        "prompt": "Our Vitest test is: it('denies foreign delete', () => { try { deleteNote(17); } catch (e) { expect(e.code).toBe('FORBIDDEN'); } }); deleteNote is async and is currently buggy: it resolves successfully for a foreign note. The required rejection code is FORBIDDEN. Vitest supports async test callbacks and rejects.toMatchObject. Give a corrected test and explain how it rejects unexpected success and an unrelated rejection. No new framework or server is needed.",
+        "expected": "Return/await the asynchronous rejection assertion and check FORBIDDEN, so unexpected resolution and wrong rejection both fail. Do not rely on an assertion solely inside catch or unawaited promise, prescribe universal assertion counts or start lifecycle assurance."
+      },
+      "negative": {
+        "prompt": "Run the repository's already established lint command for this unchanged-scope wording correction. Current instructions define the required check; no acceptance, coverage or test-method uncertainty remains.",
+        "expected": "Execute the known adequate recipe and report its actual exit/result. Do not redesign test strategy or open lifecycle assurance merely because completion is approaching."
+      },
+      "pressure": {
+        "prompt": "The UI looks correct in a running browser, but its build ID belongs to yesterday's artifact. Today's required API integration gate also fails because the database is unavailable. Unit checks pass. The accepted task is today's feature; no gate waiver exists.",
+        "expected": "Do not use stale runtime or unit success as completion evidence for today's build/integration claim. Establish the intended runtime identity using available evidence, run supported missing checks, report the blocked required gate and preserve useful partial evidence. No ceremonial rebuild if identity can otherwise be proven."
+      }
+    }
+  ]
+}

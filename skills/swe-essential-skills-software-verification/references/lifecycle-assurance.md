@@ -1,10 +1,10 @@
 # Lifecycle assurance: from obligation to acceptance evidence
 
-Use this procedure when failures have material consequences, acceptance spans several engineering activities, or a contract, applicable rule or organizational policy requires assurance. Reuse the project's existing records; a focused change may need only a claim, a check and an explicit limitation. This is technical evidence management, not a replacement for product priorities, project coordination, legal interpretation or an authorized acceptance decision.
+Use this procedure when an assurance or acceptance-readiness question remains unresolved, or a contract, applicable rule or organizational policy requires it. Material consequences determine the needed depth for the affected claims; they do not alone require reopening settled assurance or reviewing the whole lifecycle. Reuse the project's existing records; a focused change may need only a claim, a check and an explicit limitation. This is technical evidence management, not a replacement for product priorities, project coordination, legal interpretation or an authorized acceptance decision.
 
 ## Establish the obligation before choosing the test
 
-Start with intended use, users, operating environment and reasonably foreseeable misuse or failure. Trace affected behavior and dependencies through implementation, integration, release, operation and eventual retirement. Identify material obligations: functional correctness and integrity; reliability, performance and recovery; physical safety; security and abuse resistance; privacy and data retention; accessibility and supported interaction modes. Do not assume all categories require a new program, or that an unmentioned category is irrelevant.
+Start with intended use, users, operating environment and reasonably foreseeable misuse or failure. Trace the affected claims through relevant implementation, integration, release, operation or retirement dependencies; cover the full lifecycle where the actual obligation requires it. Identify material obligations: functional correctness and integrity; reliability, performance and recovery; physical safety; security and abuse resistance; privacy and data retention; accessibility and supported interaction modes. Do not assume all categories require a new program, or that an unmentioned category is irrelevant.
 
 For each consequential claim, record enough to answer:
 

@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-client-engineering
-description: Implement web, native or desktop interactions, state, navigation, async behavior and accessibility. Use for working user journeys; visual art direction belongs to design workflows.
+description: "Use when building or fixing interactive web, native or desktop flows: state, navigation, stale async results, save/retry behavior or accessibility. Visual art direction has its own workflow."
 ---
 
 # SWE Essential Skills / Client Engineering

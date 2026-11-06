@@ -31,9 +31,17 @@ and license with it.
 ## Use them normally
 
 Ask for work as usual. Codex can automatically select relevant installed skills
-from their descriptions; automatic selection is enabled by default. You do not
+from their descriptions; all eighteen policies explicitly allow automatic selection. You do not
 need to name a skill on every request. Selection is conditional, not a request
 to load all 18 skills or execute every lifecycle phase.
+
+Reconsider the relevant specialist when a concrete condition appears during work:
+an unexplained failure, a data migration, a trust boundary or an uncertain test
+oracle. Construction supplies the conditional routes and preserves the current
+task context. Its generated-file lifecycle also applies as outputs are produced,
+so preventing nested backups and retiring task-owned scratch work do not depend
+on a separate cleanup request. Native discovery still decides whether to load a
+skill; an enabled policy is not an observed activation result.
 
 - Starting a project or resolving a plan: use existing decisions and clarify
   material gaps before dependent implementation.
@@ -131,3 +139,5 @@ Original project content is available under the [MIT License](LICENSE). Each ski
 folder includes its own copy so individually distributed skills retain the notice.
 Linked third-party projects retain their own licenses; this license does not
 relicense their content.
+
+See [contextual selection and bounded artifacts](docs/contextual-activation-and-hygiene.md) for the current source comparisons, changes and executed forward exercises.

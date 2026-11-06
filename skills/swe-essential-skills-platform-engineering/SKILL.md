@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-platform-engineering
-description: Choose or build hosting, compute, networking, identity and durable storage. Use for platform setup and first-deployment bootstrap; routine releases and incidents have separate workflows.
+description: "Use when choosing hosting or establishing compute, networking, identity and durable storage, including first-deployment startup/connectivity. Existing release execution belongs to delivery."
 ---
 
 # SWE Essential Skills / Platform Engineering
@@ -24,7 +24,7 @@ Explicit delegation within stated bounds permits the delegated choice without an
 
 Produce the smallest useful resource graph, configuration and verification procedure appropriate to the request. Name the account/project/environment, region, owner and lifecycle of each resource. Edges specify both connectivity and authority: who calls whom, over which endpoint/protocol, using which workload identity and permitted operation. Include DNS/TLS, runtime, configuration/secrets, persistence, dependency connections and the management path when applicable.
 
-Use existing provisioning tools and conventions. Before writing executable provider configuration or commands, consult current primary documentation for the actual provider, service tier, region and tool/provider versions; record consequential constraints near the implementation. Do not freeze a remembered service limit into a universal rule. Pin reproducible inputs where supported and keep secret values out of source, output and state artifacts shared with others.
+Use existing provisioning tools and conventions. Reuse verified project evidence while it is current enough for the claim and its provider, service tier, region and tool/provider versions remain applicable. Before executable configuration or commands depend on an uncertain or changed capability, consult current primary documentation for that exact target; record consequential constraints near the implementation. Do not treat remembered service limits as verified evidence or repeat unaffected documentation checks. Pin reproducible inputs where supported and keep secret values out of source, output and state artifacts shared with others.
 
 Build and validate in dependency order. Avoid circular bootstrap dependencies such as requiring a runtime secret store to provision its own access identity. Prefer a thin end-to-end slice over building unused platform abstractions. Distinguish configuration authored, statically checked, provisioned and behavior verified.
 

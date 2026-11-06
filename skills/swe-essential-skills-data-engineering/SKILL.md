@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-data-engineering
-description: Change schemas, queries, migrations, backfills or data pipelines. Use for stored-data invariants, pooled sessions, compatibility and recovery in the actual datastore.
+description: "Use when changing schemas, queries, migrations, backfills or pipelines, or investigating stored-data invariants, pooled sessions, mixed versions and recovery."
 ---
 
 # SWE Essential Skills / Data Engineering

@@ -1,59 +1,77 @@
 ---
 name: swe-essential-skills-product-definition
-description: Define software product direction, positioning, outcomes and prioritized scope. Use when deciding what to build and why; skip settled scope and routine implementation.
+description: "Use when audience, product value, positioning, first scope or outcome priorities need choosing. Reuse settled product direction during implementation."
 ---
 
 # SWE Essential Skills / Product Definition
 
-Help the user choose a coherent product direction and enough scope to enable useful engineering work. Consume discovery evidence, user instructions and existing plans; do not force a new strategy exercise when those already settle the choice. A compact issue can be adequate for a small change. A broader product may need a durable brief, but not a universal collection of strategy documents.
+Help the owner choose product direction and enough scope for useful engineering.
+Reuse discovery evidence, user decisions and the existing issue or plan. A compact
+accepted request can already settle the direction; leave it intact during routine
+implementation. Product value, audience, scope and outcome targets remain the
+user's or designated owner's choices, including explicitly delegated choices.
 
-Product direction, positioning, scope and outcome targets are the user's choices,
-or those of an explicitly designated owner. Explain options and recommend; do
-not convert your recommendation, a provisional default or silence into agreement.
-Reuse explicit decisions and continue authorized routine work within them. Keep
-answers direct and specific: the choice, its practical tradeoff and the needed
-answer, without filler or repeating the whole brief.
+## Locate the open choice
 
-## Establish the decision boundary
+Recover the problem, target actors/situation, current alternatives, constraints,
+evidence and settled commitments. Separate observed evidence, assumptions,
+proposals and decisions. Retrieve material discoverable facts through authorized
+sources; bring only unresolved owner choices or unavailable information to the
+user. A template's empty field does not reopen an agreement.
 
-Recover the chosen problem, target actors and context, current alternatives, known evidence, constraints and accepted decisions. Separate fixed commitments from open choices and assumptions. If a missing fact materially changes scope, retrieve it from available authorized sources. If the underlying opportunity remains uncertain, preserve that uncertainty and recommend targeted discovery rather than fabricating validation or blocking every implementation.
+If the opportunity itself is uncertain and discovery can resolve it, load installed
+`swe-essential-skills-product-discovery` through the host's supported mechanism.
+Without it, perform a proportionate evidence check and retain the uncertainty.
+An explicit decision to build can authorize progress despite unresolved demand.
 
-For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
+For currently answerable choices, present viable alternatives, tradeoffs and a
+recommendation. Use permitted selectable input for concrete options when available;
+accept clear written answers and bounded delegation. Hold dependent work on an
+unanswered consequential choice; continue independent authorized work. Silence,
+a proposed default and urgency do not choose an outcome.
 
-Bring only unresolved product choices to the user. Batch independent material questions with recommendations and explicit tradeoffs; wait on prerequisite choices before posing dependent ones. Ask the user for decisions they own or unavailable information, not facts you can establish safely. Do not reopen settled decisions merely because a template has an empty field. Continue reversible work on independent parts.
+## Choose value and a coherent increment
 
-## Help choose value and positioning
+Explain whose outcome improves, in which situation and relative to which actual
+alternative. Distinguish users, buyers, approvers and operators when incentives
+differ. Tie differentiated benefit to evidence or label it a hypothesis. For
+positioning, scope, prioritization, measurement or staged choices, read the
+applicable [scope and outcomes](references/scope-and-outcomes.md) section.
 
-Explain whose outcome improves, in which situation, and why this product or increment is preferable to the actual alternative. Distinguish users, purchasers, approvers and operators when their incentives differ. Positioning is a product choice about audience, problem, differentiated benefit and credible reason to believe it—not a tagline or a claim of market leadership. Where the category or comparison frame matters, recommend one that helps the intended audience understand the value without suggesting unsupported capabilities.
+Define the smallest complete journey that delivers the chosen outcome or resolves
+the most consequential uncertainty. Include relevant failure, recovery,
+accessibility and operational obligations. A releasable increment needs those
+supporting behaviors; a bounded learning prototype states its omissions and
+cannot establish production readiness.
 
-Help the user choose focus and explicit tradeoffs: which audience/use case comes first, which strengths matter, and what is intentionally not optimized. Tie proposed differentiators to evidence or label them hypotheses. Consider distribution/access, switching and ongoing support when they affect whether the value can be realized. For internal tools, value may be reduced risk or effort rather than revenue; for libraries, compatibility and integration costs may dominate acquisition. Do not impose SaaS funnels, subscriptions, monetization or market-size exercises on unrelated products.
+Retain only material actors/journeys, scope/non-goals, intended outcomes and
+regression guardrails, constraints/dependencies and open choices with owners.
+Non-goals cannot waive existing obligations. Propose missing targets visibly or
+leave them unresolved; do not invent thresholds, dates, acceptance owners,
+revenue or precise rankings from uncertain inputs.
 
-Where options differ materially, compare a small set of viable directions, including improving the existing alternative or doing nothing. Use actual constraints and uncertain ranges rather than invented revenue, precision scores or a preferred technology. Recommend a direction and identify the condition that would change it. Product direction does not select a technical architecture by default.
+Separate importance from implementation order. Compare expected contribution,
+confidence, delivery/operating cost, downside and genuine dependencies. Treat
+engineering feasibility and estimates as evidence to establish. If scope,
+resources, date and quality conflict, present credible sequencing/scope options
+for the owner; preserve mandatory obligations and label uncertainty.
 
-## Bound a useful increment
+## Leave one usable decision record
 
-Translate the direction into the smallest coherent scope that can deliver the chosen outcome or resolve the most consequential uncertainty. Smallest does not mean a disconnected collection of screens, a throwaway demo, or removing essential safety and recovery behavior.
+Keep the chosen problem/audience, value, scope, journeys, outcome intent,
+constraints, priority rationale and material unresolved choices together.
+Update the existing issue, brief or source plan when that write is within the
+requested authority; otherwise provide the decision-ready result directly and
+do not imply it was saved. Preserve sources and approved/proposed/assumed status.
+Avoid duplicate strategy documents and repeating the interview downstream.
 
-Describe only what is material:
+When behavior or acceptance needs clarification, load installed `swe-essential-skills-software-requirements`;
+when feasibility or system boundaries remain consequential, load `swe-essential-skills-software-architecture`.
+Use the host's supported mechanism and carry the accepted context. These are
+conditional methods, not mandatory phases or installation dependencies. Otherwise
+provide the implementation handoff directly.
 
-- **Actors and critical journeys:** trigger, user intent, major decisions and resulting value; include meaningful failure, recovery, accessibility or assisted use needs.
-- **In scope and non-goals:** product capabilities and boundaries, plus why tempting adjacent work is excluded. Non-goals cannot waive existing obligations.
-- **Outcomes and guardrails:** observable improvement, relevant population/context and unacceptable regression. Distinguish shipping an output from achieving an outcome.
-- **Constraints and dependencies:** actual timing, capacity, compatibility, integrations, data rights, support, organizational or regulatory obligations; label estimates and unverified applicability.
-- **Open choices:** owner, consequence and which work depends on the answer. A proposal is not an approved requirement.
-
-Read [scope and outcome decisions](references/scope-and-outcomes.md) when prioritization, measurement or staged rollout materially affects the plan. Do not invent success thresholds, dates or acceptance owners; propose missing values visibly or leave them unresolved with their consequence.
-
-## Prioritize and sequence without false commitments
-
-Separate value/importance from implementation order. Compare expected contribution, confidence, risk, cost and dependencies using the evidence available. Essential obligations and a coherent journey are constraints on prioritization, not just items that can lose a popularity score. Prefer a useful end-to-end slice or a targeted uncertainty-reducing check when it unblocks the rest.
-
-Treat effort and feasibility as engineering input, not product certainty. Surface conflicts between desired scope, resources, timing and quality with viable scope or sequencing alternatives. Do not promise a deadline, silently weaken requirements, or turn a suggested roadmap into a delivery commitment. A roadmap expresses a current sequence of bets; identify dependencies and evidence that may change it.
-
-## Hand off decisions, not guesses
-
-Reuse the existing issue, brief or source plan. Leave enough for implementation to proceed without re-interviewing the user: problem and audience, chosen value, scope/non-goals, critical journeys, outcome intent, constraints, priority rationale and material unresolved decisions. Preserve sources and whether each important item is approved, proposed or assumed. Keep discovery evidence distinct from a decision to proceed despite uncertainty.
-
-Engineering requirements refine behavior, invariants and acceptance; architecture assesses solution tradeoffs and feasibility; delivery planning turns agreed slices into executable work. Provide the handoff directly when those skills are unavailable. Do not require their installation or duplicate their artifacts. When engineering uncovers a constraint that changes product value or scope, return that specific tradeoff to its owner rather than silently redesigning the product.
-
-Conclude with the recommendation or agreed scope first, then what can proceed and what needs a decision. Writing a plan authorizes neither implementation nor outreach, spending, publishing or deployment beyond the user's existing scope. Do not demand a redundant approval for work already explicitly authorized; obtain the missing authorization before a consequential action that is not.
+Return an engineering constraint that changes product value or scope to its owner.
+Lead with agreed scope or recommendation and what can proceed. Finish within the
+requested authority: a plan does not grant outreach, spending, publication,
+deployment or implementation beyond already authorized work.

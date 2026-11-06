@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-software-delivery
-description: Build, package, release or deploy software; change CI/CD or infrastructure and resolve requested PR/CI repair loops. Use for artifact compatibility, rollout and recovery within existing authority.
+description: "Use when building, packaging, releasing or deploying; changing CI/CD or infrastructure; or resolving requested PR/CI feedback. Verify the actual artifact, consumer and current revision."
 ---
 
 # SWE Essential Skills / Software Delivery
