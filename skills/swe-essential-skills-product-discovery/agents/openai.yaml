@@ -1,6 +1,6 @@
 interface:
   display_name: "swe-essential-skills-product-discovery"
-  short_description: "Validate user problems and software opportunities"
+  short_description: "Discover problems in their real market and context"
 
 policy:
   allow_implicit_invocation: true
