@@ -19,15 +19,26 @@ Retrieve accessible facts without making the user do the investigation. Use
 permitted native selection for concrete alternatives, with practical consequences
 and a justified recommendation; use free text for open facts. Do not bias every
 question toward agreement or fabricate confidence percentages.
+Running, failed or inconclusive investigation leaves its dependent decisions
+unready. A delegated lookup needs usable evidence before its result can settle
+a contract; do not replace an unavailable fact with an assumed owner preference.
 
 Wait for actual answers before dependent design or edits. Recompute the useful
 questions after each reply, retaining settled choices and unresolved parts of
 partial answers. Explicit delegation authorizes choices within its bounds; it
 does not authorize unrelated scope, spending or deployment. Challenge an accepted
 choice only when requested or new evidence bears on it, explaining the consequence.
+Check each answer against the actual constraints and earlier answers. Use a
+concrete input/state/outcome example to resolve material contradictions or
+ambiguity; a bare “yes” cannot select among several alternatives. Do not repeat
+settled questions. Exercise delegated choices within their bounds and explain
+the result rather than treating the delegation itself as the decision.
 
-Close when material in-scope decisions are resolved, investigated, delegated or
-explicitly deferred until a safe point. Preserve consequential uncertainty if
+Close when material in-scope decisions have supported answers or explicit
+deferrals naming the reason, accountable owner and latest safe decision point.
+Walk the resulting behavior through a decisive normal and adverse scenario;
+answers that still conflict do not establish an implementable contract.
+Preserve consequential uncertainty if
 the user stops. Leave accepted behavior, acceptance examples, open dependencies
 and the next authorized action in the existing plan. Do not require an exhaustive
 tree, a formal specification, a mandatory agent panel or another approval after
