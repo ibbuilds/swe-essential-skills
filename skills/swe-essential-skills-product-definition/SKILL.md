@@ -1,6 +1,6 @@
 ---
 name: swe-essential-skills-product-definition
-description: "Use when audience, product value, positioning, first scope or outcome priorities need choosing. Reuse settled product direction during implementation."
+description: "Use when target audience/market, product value, positioning, first scope or outcome priorities need choosing. Turn available discovery into product decisions; reuse settled direction during implementation."
 ---
 
 # SWE Essential Skills / Product Definition
@@ -14,15 +14,29 @@ user's or designated owner's choices, including explicitly delegated choices.
 ## Locate the open choice
 
 Recover the problem, target actors/situation, current alternatives, constraints,
-evidence and settled commitments. Separate observed evidence, assumptions,
-proposals and decisions. Retrieve material discoverable facts through authorized
-sources; bring only unresolved owner choices or unavailable information to the
-user. A template's empty field does not reopen an agreement.
+evidence and settled commitments from the conversation and relevant repository
+files, briefs, attachments or linked documents through authorized access. Carry
+forward applicable discovery and upstream decisions; neither a missing phase
+receipt nor a template's empty field reopens an agreement. Separate observed
+evidence, assumptions, proposals and decisions. Retrieve only missing or affected
+material. State inaccessible sources and conflicting evidence, hold the dependent
+commitment and continue supported work; do not pretend a linked page was read.
+Bring only unresolved owner choices or unavailable information to the user.
+
+Establish the intended launch market and reachable audience from that context:
+local, state/regional, national, selected countries or worldwide as appropriate.
+Distinguish first-release coverage from later ambition. Developer location,
+language and online availability do not settle the target market. Read
+[market fit for definition](references/scope-and-outcomes.md#fit-value-to-the-operating-market)
+when location, audience reach or evidence transfer changes a product choice.
+For internal tools or libraries, use the actual organizational or ecosystem reach.
 
 If the opportunity itself is uncertain and discovery can resolve it, load installed
 `swe-essential-skills-product-discovery` through the host's supported mechanism.
 Without it, perform a proportionate evidence check and retain the uncertainty.
 An explicit decision to build can authorize progress despite unresolved demand.
+The suite composes relevant methods around the project; it does not require every
+earlier skill to run before definition or repeat already sufficient research.
 
 For currently answerable choices, present viable alternatives, tradeoffs and a
 recommendation. Use permitted selectable input for concrete options when available;
