@@ -39,6 +39,14 @@ No companion skill is a required installation dependency.
 
 ## Change the responsible owner
 
+Implement the user's explicit target and behavioral delta. Necessary internal
+mechanics stay within that scope; adjacent cleanup, inferred requirements and
+compensating changes need their own instruction. If target or intent is ambiguous,
+state the concrete interpretation and ask before dependent edits. A clear request
+or answer needs no ritual reconfirmation. A resulting incidental effect is not
+permission to change another feature. Report material effects; raise an actual
+conflict with agreed behavior rather than silently choosing a different outcome.
+
 Trace inputs, outputs, rejection, side effects and behavior to preserve. Change
 the narrowest coherent owner; share mechanics only when semantics/lifetimes match.
 Use types for valid internal states and runtime validation for untrusted inputs.
