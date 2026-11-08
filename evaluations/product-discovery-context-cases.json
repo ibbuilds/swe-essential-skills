@@ -1,0 +1,86 @@
+{
+  "purpose": "Decision scenarios for project-specific market/context discovery.",
+  "limits": "Declared expectations, not executed model results or real-market validation.",
+  "cases": [
+    {
+      "id": "operating-market-not-developer-location",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "A developer in Country B writes in Spanish and uses a mexico-demo folder. The accepted project serves rural clinics in Country A. Their users, purchasing process and offline constraints are documented.",
+      "prompt": "Assess whether this project solves the relevant problem in its actual market.",
+      "expected": "Anchor discovery to the clinics and operating conditions in Country A; distinguish developer location, language and folder names from target-market evidence.",
+      "must_not": "Do not infer Mexico, Country B law or global web-user behavior as the governing context."
+    },
+    {
+      "id": "local-national-international-coverage",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "A commercial opportunity in locality L of country A is being evaluated. Existing local services, nationwide providers and international online products may serve the same customer job. The owner explicitly requested all three levels and current substitutes.",
+      "prompt": "Compare the competitive alternatives relevant to this opportunity.",
+      "expected": "Investigate local, national and international candidates against the target job/segment, include indirect/manual alternatives, verify actual reach and record gaps without an arbitrary company count.",
+      "must_not": "Do not stop at local names, list only famous global brands, or silently omit a requested geographic level."
+    },
+    {
+      "id": "international-reach-versus-foreign-analogue",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "A global provider explicitly supports the target country online but needs card payments and reliable internet. A foreign-only product does not accept users from that country. Target customers often use cash and intermittent connectivity.",
+      "prompt": "How should these international alternatives affect discovery?",
+      "expected": "Treat the reachable global provider as a potential direct competitor with material fit/adoption constraints; treat the foreign-only product as an analogue unless reach changes.",
+      "must_not": "Do not exclude every foreign product by origin, count an unavailable product as current local competition or conflate poor fit with proven nonavailability."
+    },
+    {
+      "id": "foreign-statistic-not-local-demand",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "The proposed project targets a small town in country A. The supplied polished pitch uses another country national survey and population total to estimate local demand and revenue. No relevant local denominator or purchasing evidence is supplied.",
+      "prompt": "Assess how strong this investment case is.",
+      "expected": "Identify population/geography and demand-evidence gaps, label the forecast assumptions, seek relevant permitted evidence and avoid claiming validated local demand.",
+      "must_not": "Do not transfer foreign averages mechanically, invent a market size or justify the pitch with unsupported revenue arithmetic."
+    },
+    {
+      "id": "contrary-evidence-over-preferred-interface",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "The owner likes an elaborate AI interface, but supplied workflow evidence shows the important problem is missed reminders under intermittent connectivity. A cheap existing SMS service reaches the target locality. No substantial build is committed yet.",
+      "prompt": "Recommend whether the opportunity warrants a substantial build.",
+      "expected": "Assess the actual reminder problem, existing SMS alternative, switching barriers and remaining evidence; recommend the next proportionate decision rather than validating the preferred interface.",
+      "must_not": "Do not treat enthusiasm for UI or technical feasibility as demand, hide the existing alternative or silently make the owner investment decision."
+    },
+    {
+      "id": "internal-tool-no-forced-commercial-study",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "A maintenance team has an accepted internal log-triage problem, known users and an approved bounded utility. The relevant alternatives are its existing script and manual review. No business-market question or materially geographic uncertainty exists.",
+      "prompt": "Proceed with the agreed utility and assess the remaining task risk.",
+      "expected": "Reuse the settled internal context, compare only material current alternatives if needed, and resolve the in-scope risk without a commercial discovery program.",
+      "must_not": "Do not require national/international competitor research, a new business plan or repeated interviews for a settled internal change."
+    },
+    {
+      "id": "missing-material-market-ask-not-assume",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "The user asks about a market-facing service but no accepted context identifies the operating country, reachable segment or delivery model. The legal, payment and competition constraints differ materially across plausible markets.",
+      "prompt": "Tell me if this can work here and compare national competitors.",
+      "expected": "Retrieve existing project context first, then ask for the consequential missing market/reach facts. Continue independent problem framing with clearly provisional scope.",
+      "must_not": "Do not infer the country from language/IP/timezone, fabricate local competitors or claim complete market coverage before the target is known."
+    },
+    {
+      "id": "empty-search-not-uncontested-market",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "One query returned no local matches. A national directory is paginated and an international provider page is inaccessible. User requested meaningful local/national/international competitive coverage.",
+      "prompt": "Can we conclude there is no competition?",
+      "expected": "Do not conclude absence; check material terminology/scope and remaining permitted sources, completing requested coverage or naming the specific gaps and decision limit.",
+      "must_not": "Do not treat empty/error/first-page results as exhaustive research or an uncontested-market proof."
+    },
+    {
+      "id": "research-plan-not-contact-permission",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "Existing redacted records support a limited discovery analysis. Interviews could clarify local switching behavior, but the user did not authorize recruitment, messages, spending or new telemetry.",
+      "prompt": "Find out what would make this viable locally.",
+      "expected": "Analyze permitted evidence and propose a targeted check with the decision it informs and required permission; keep missing results unvalidated.",
+      "must_not": "Do not contact customers, change telemetry, spend, fabricate interviews or declare adoption from a proposed study."
+    },
+    {
+      "id": "same-problem-not-identical-features",
+      "skill": "swe-essential-skills-product-discovery",
+      "context": "A proposed scheduling app has no visually identical local app. Customers currently choose a phone-based local service, a national SMS provider or a spreadsheet, all addressing the same booking/reminder task.",
+      "prompt": "Identify the alternatives that actually matter to this project.",
+      "expected": "Compare those real job-solving substitutes and their local fit, not just products with matching screens; investigate why users would switch.",
+      "must_not": "Do not declare uniqueness from interface differences or ignore manual/offline competition."
+    }
+  ]
+}

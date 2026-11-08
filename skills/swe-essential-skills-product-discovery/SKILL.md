@@ -1,49 +1,55 @@
 ---
 name: swe-essential-skills-product-discovery
-description: "Use when deciding whether a software opportunity or reported user problem merits investment, researching real workflows and alternatives. An accepted build brief can already settle direction."
+description: "Use when deciding whether a software opportunity or user problem merits investment, examining real workflows, operating context and relevant market alternatives. An accepted build brief can already settle direction."
 ---
 
 # SWE Essential Skills / Product Discovery
 
-Resolve the uncertainty that could change whether a problem is worth solving, for whom, or under what conditions. A requested feature is a candidate response, not evidence of a problem; an explicit user decision to build is still a decision to respect, not an invitation to restart discovery. This applies to internal tools, libraries, native applications, embedded products and services as well as commercial web products.
+Resolve uncertainty that could change whether a problem is worth solving, for whom and under what conditions. Start from the requested project's intended outcome and real operating situation, not a preferred interface or a pitch to justify. Respect an explicit decision to build; investigate material risks within that direction rather than silently replacing the product. This applies to internal tools, libraries, native/embedded applications and services as well as commercial products.
 
-## Start from what is already known
+## Start from the decision and existing context
 
-Read the relevant brief, prior decisions, support or research records and accessible product evidence. Preserve their sources and scope. Reuse settled facts and accepted constraints unless new evidence materially conflicts with them. Do not demand interviews, competitive research or a discovery document before every change. For a well-specified request, identify any consequential gap and otherwise hand the existing context onward.
+Reuse the brief, accepted decisions, constraints and relevant support/research/product evidence with their sources and scope. Reopen settled facts only for a material gap or conflict. A clear implementation request needs no new interviews, competitor report or discovery document.
 
-Frame the actual question: choosing an audience, understanding an unmet need, comparing opportunities, checking adoption barriers, or deciding whether more evidence justifies investment. Establish the decision owner and the consequence of being wrong. Scale investigation to that decision, not to a universal discovery process.
+Frame the live decision: audience, unmet need, adoption barrier, opportunity comparison or justified investment. Establish who owns that decision and the consequence of being wrong; scale investigation accordingly.
 
-## Recover the situation, not just the feature request
+Identify the actual operating market and location where relevant: who will use, buy, approve, maintain or be affected, where they are and where the service can reach them. Developer location, language, timezone or folder names do not establish the target market or jurisdiction. Retrieve known project facts first; ask only for missing distinctions that materially change the analysis.
 
-Identify the relevant actors and distinguish users, buyers, approvers, maintainers and affected non-users where those differ. Describe a concrete situation: trigger, intended outcome, current sequence, obstacles, frequency and consequences. Separate inconvenience from severe cost or harm; do not infer frequency from a vivid anecdote.
+## Understand the problem and alternatives in that setting
 
-Inspect current alternatives, including manual work, spreadsheets, existing software, outsourcing and doing nothing. Ask what makes the current method tolerable and what would make switching difficult: habits, trust, migration, interoperability, training, procurement or constrained environments. For a developer tool, the alternative may be an existing dependency or a few lines of code rather than a competing company.
+Describe a concrete episode: trigger, intended outcome, current steps, obstacles, frequency and consequences. Distinguish users, buyers, approvers and affected non-users where incentives differ. A vivid anecdote does not establish prevalence.
+
+Examine current alternatives, including manual work, spreadsheets, existing software, outsourcing, an existing dependency and doing nothing. Check why the current approach remains tolerable and what impedes switching: trust, habits, migration, interoperability, training, procurement or constrained environments.
+
+For a market-facing opportunity, investigate relevant local, national and international competitors and substitutes against the same problem and target segment. Distinguish actual reachable competitors from foreign-market analogues; an international online provider may compete locally. Compare practical availability and fit, not just similar features or attractive interfaces. Read [market and operating context](references/market-and-operating-context.md) for this analysis, including requested geographic coverage. An internal utility need not inherit a commercial market study when its decision concerns an established internal workflow.
+
+## Separate evidence from interpretation
 
 Keep distinct:
 
-- **Observed evidence:** what actually occurred, for whom, when and in what context, with a retrievable source where permitted.
-- **Reported experience:** what someone says occurred or wants; useful but not automatically representative behavior or demand.
-- **Inference or assumption:** the interpretation and the evidence that could weaken it.
-- **Decision:** a chosen direction, its owner and authorization status; approval does not turn its assumptions into facts.
+- **Observed evidence:** what occurred, for whom, when and in which context, with a retrievable source where permitted.
+- **Reported experience:** what someone says occurred or wants; useful, but not automatically representative behavior or demand.
+- **Inference/assumption:** the interpretation and evidence that could weaken it.
+- **Decision:** the chosen direction, its owner and authorization; approval does not make assumptions true.
 
-Do not invent personas, quotes, market sizes, usage, willingness to pay or completed validation. A synthetic scenario can help inspect an idea, but cannot stand in for a real user observation. Avoid copying private user data into new research artifacts when a minimized summary suffices.
+Use applicable records, code, analytics and authoritative public sources; check population, location, freshness and scope. Prefer original evidence and relevant expertise. National averages, foreign demand or a competitor's marketing claim do not establish local need or advantage. Actively examine contrary evidence and alternatives that may already solve the problem.
+
+Do not invent personas, quotes, competitors, market size, usage, willingness to pay or completed validation. Label synthetic examples as such; they cannot replace real observations. Minimize private data copied into research artifacts.
 
 ## Investigate the uncertainty that matters next
 
-Identify the few assumptions whose failure would reverse the decision or substantially change the solution. Separate problem importance, reach, adoption/value, usability, technical feasibility and viability under business, operational or institutional constraints: evidence for one does not prove the others. If the user has fixed the direction, investigate risks within that direction rather than silently substituting a new product.
+Identify the few assumptions whose failure would reverse the decision or substantially change the solution. Separate problem importance, reach, adoption/value, usability, technical feasibility and viability under business, operational or institutional constraints. Evidence for one is not evidence for the others.
 
-For necessary decisions with concrete alternatives, use the host's permitted selectable-input tool when available, with concise options and a justified recommendation. Use free text for open-ended facts or when no suitable tool is available. Accept clear written answers; defaults and timeouts are not consent. Permission escalations use their dedicated mechanism.
+Retrieve discoverable facts before asking the user. Ask neutrally about experience; for owner choices offer concrete alternatives and a justified recommendation using permitted selectable input when useful. Accept clear written answers; defaults and timeouts are not consent. Ask currently answerable independent questions, hold dependent ones until prerequisites settle and continue useful independent work. Do not exhaust an interview tree or repeat settled questions. Permission escalations use their dedicated mechanism.
 
-Retrieve missing facts from authorized records, code, analytics or current authoritative public sources when useful; verify relevance, population and freshness. Ask the user only for material information unavailable through permitted investigation or choices they must own. Batch independent, currently answerable questions. Recommend an option for an owner choice when justified, explaining its consequence; ask neutrally for reported facts or experience rather than suggesting the desired answer. Hold dependent questions until their prerequisites are settled; continue unrelated useful work. Do not repeatedly ask settled questions or exhaust every possible branch of an idea.
+Choose the least costly credible evidence that can change the decision. Read [validation choices](references/validation-choices.md) when designing research or experiments. Existing evidence may suffice; an authorized reversible implementation may be cheaper than further research. Uninvestigated does not mean validated.
 
-For a material unknown, choose the least costly credible evidence that can change the decision. Read [validation choices](references/validation-choices.md) when designing research or an experiment. Existing evidence may already be sufficient; sometimes a reversible implementation is cheaper than further research. State what remains uncertain rather than treating “not worth investigating now” as “validated.”
+A proposal is not authorization for interviews, recruitment, contacting customers, telemetry changes, publication, spending or exposing data. Name material evidence/access gaps and required permission; finish independent analysis without simulating missing results.
 
-Research proposals are not authorization for interviews, recruitment, contacting customers, telemetry changes, publication, spending or exposing data. Separate proposed methods from actions permitted now. If access or authority is absent, name the missing evidence and the specific action requiring permission; complete independent analysis without simulating the missing result.
+## Leave a decision-ready result
 
-## Conclude with a decision-ready result
+Lead with pursue, narrow, change direction, defer, stop or proceed provisionally, with evidence-based rationale and uncertainty. Separate recommendation from the owner's decision. Explain what contrary evidence changes; do not declare market fit from isolated enthusiasm.
 
-Report the useful finding first: pursue, narrow, change direction, defer, stop, or proceed provisionally, with rationale and confidence appropriate to the evidence. Distinguish your recommendation from the owner's decision. Avoid declaring market fit or product success from isolated positive feedback.
+Carry forward only needed context in the existing brief: target actors/location and situation, intended outcome, alternatives and competitive fit, strongest supporting/contrary evidence, assumptions, constraints and unresolved choices. If another check is warranted, name the question, authority needs and result that would change the recommendation. Stop when evidence supports the next authorized decision at its risk level, or unavailable evidence/authority blocks it.
 
-Leave only the context needed next, in the existing brief or task convention: target actors and situation, desired outcome, current alternatives, strongest evidence and contrary evidence, material assumptions, constraints and unresolved decisions. If another check is warranted, identify the question it can resolve, its authority needs, and what result would change the recommendation. Stop investigation when the available evidence supports the next authorized decision at its risk level, or when progress requires unavailable evidence or authorization; do not drift into indefinite research.
-
-Product definition turns the chosen opportunity into positioning, scope and outcome choices. Engineering requirements turn that scope into behavioral contracts. Neither downstream step requires a separate installed skill or a duplicate document.
+Product definition chooses positioning and scope; project planning orders the commitment; requirements define behavior. Grilling can challenge assumptions but does not itself supply market evidence. No companion skill or duplicate document is required.
