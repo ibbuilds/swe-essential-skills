@@ -7,6 +7,13 @@ description: "Use when building or fixing interactive web, native or desktop flo
 
 Turn the agreed interface into reliable behavior in the existing client architecture. Preserve the accepted visual design, content, and platform conventions; raise an actual feasibility or accessibility conflict rather than silently redesigning it.
 
+Apply the requested UI delta to the specified target. Moving one element can
+naturally reflow another; do not restyle, move or otherwise compensate on adjacent
+elements merely to improve the result. Report a material effect. Ask before edits
+only when the target/meaning is ambiguous or an actual binding constraint conflicts;
+show the interpretation so the user can confirm or correct it. Preserve clear
+instructions without adding a redesign or redundant confirmation.
+
 ## Build the behavioral slice
 
 Reuse established entry-path, architecture, and runtime facts that still apply to the changed code. Before introducing another pattern, inspect the affected route/window/screen, nearby components, state owner, data client, error handling, and tests only where that context is missing or affected. Check manifests and lockfiles when versions are unknown, dependencies changed, or an API decision depends on them; an inert label correction does not require rediscovering the runtime. Use applicable known repository commands and consult official documentation for the installed versions when behavior or APIs are uncertain; do not substitute remembered commands from a different stack.
