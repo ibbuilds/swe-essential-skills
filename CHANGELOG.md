@@ -8,3 +8,4 @@
 - Added the `debug`, `tdd`, `spec`, `slices` and `verify-ui` skills, each with trigger and behavior eval cases and a measured gain over a no-skill baseline.
 - Dropped the planned `code-review` skill: Claude passed its behavior cases without one. The cases stay in `evals/` to re-check on model upgrades.
 - Added the `security-review`, `ship`, `decide` and `upgrade` skills, with the same eval coverage.
+- Dropped the planned `db-migration` skill: Claude passed its behavior cases without one (expand-contract rename and batched backfill, 6/6 runs). The cases stay in `evals/` to re-check on model upgrades.
