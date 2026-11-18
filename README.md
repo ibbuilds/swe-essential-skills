@@ -27,6 +27,7 @@ In Claude Code:
 | `ship` | You say "open a PR", "deploy", "release" or "CI is failing" | Checks run before the PR, a PR body that says what ran, CI fixed at the cause, a release checklist with rollback | Ready |
 | `decide` | You ask "X or Y?" about a database, framework, hosting or service boundary | Options compared against the repo's constraints, a recommendation and an ADR in `docs/adr/` | Ready |
 | `upgrade` | You say "upgrade", "bump", "migrate to vN" or see deprecation warnings | One major version per step, from the official migration guide, with checks between steps | Ready |
+| `incident` | You say "prod is down", "outage", "5xx since the deploy" or "write the postmortem" | Mitigation first with the repo's own rollback command; a blameless postmortem whose action items have owners and due dates | Ready |
 | `db-migration` | You ask for a schema change on a live database | Expand-contract phases and batched backfills | Dropped: Claude already does this without a skill |
 
 ## Development
