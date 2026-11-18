@@ -1,6 +1,6 @@
 ---
 name: tickets
-description: 'Tracer-bullet tickets from a spec or plan. Use when the user says "break this into tickets", "split into issues", "turn this into a backlog", "what are the pieces of work", "plan the work so we can start", or hands over a SPEC.md to plan, even when the work splits naturally by layer or by person (backend, frontend). For writing the spec itself use spec.'
+description: 'Tracer-bullet tickets from a spec or plan. Use when the user says "break this into tickets", "split into issues", "turn this into a backlog", "what are the pieces of work", or hands over a SPEC.md to plan, even when the work splits naturally by layer or by person (backend, frontend). For writing the spec itself use spec.'
 metadata:
   type: technique
 ---
