@@ -19,7 +19,7 @@ In Claude Code:
 | --- | --- | --- | --- |
 | `debug` | You say "debug this", or something is broken, failing or slow | A reproduction first, then ranked hypotheses, then a root-cause fix with a regression test | Ready |
 | `tdd` | You build a feature or fix a bug in a repo with tests | One failing test at a time, in vertical slices | Ready |
-| `code-review` | You ask for a review of a diff, branch or PR | Ranked findings with file:line, trigger scenario and fix | Planned |
+| `code-review` | You ask for a review of a diff, branch or PR | Ranked findings with file:line, trigger scenario and fix | Dropped: Claude already does this without a skill |
 | `verify-ui` | Claude changes UI | Evidence from the running build: console, network, screenshot | Planned |
 | `spec` | You run `/spec` or describe something to build | A `SPEC.md` written after an interview | Planned |
 | `slices` | You ask to break a spec into tasks or tickets | Tracer-bullet tickets with blocking edges and acceptance | Planned |
