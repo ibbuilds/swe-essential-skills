@@ -1,6 +1,6 @@
 # Upgrading a dependency
 
-Move one major version per step, read the official migration guide for that step, and get the project's checks green before the next step.
+Follow the official guide's supported path, one major version per step unless the guide supports a direct jump; read the migration guide for each step, and get the project's checks green before the next step.
 
 1. **Inventory.** Read the installed version from the lockfile, the target, and the packages that must move with it: peer dependencies (React for Next.js), type packages, plugins, the runtime version (Node, Python). Done when the path is written out, for example 12 → 13 → 14 → 15, with the companion bumps for each step.
 2. **Read the guide for each step.** Open the official upgrade guide and changelog for that version with a docs or web tool, and search the codebase for each breaking change. When no docs tool is available, say so and list the guide URLs. Done when every breaking change that touches this codebase is listed for that step.

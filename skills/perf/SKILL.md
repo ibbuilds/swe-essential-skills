@@ -1,6 +1,6 @@
 ---
 name: perf
-description: 'Performance work driven by measurement. Use when the user says "make it faster", "too slow", "optimize", "speed up", "takes N seconds", "high latency", "bundle too big", "memory keeps growing" or "performance", even when the bottleneck looks obvious from the code or swapping a heavy library is an easy win. For a slowdown that began with a specific release or change use diagnose.'
+description: 'Performance work driven by measurement. Use when the user says "make it faster", "too slow", "optimize", "speed up", "takes N seconds", "high latency", "bundle too big", "memory keeps growing" or "performance", even when the bottleneck looks obvious from the code or swapping a heavy library is an easy win. For a slowdown that began with a specific release or change use diagnose; for prompt quality use llm-feature.'
 metadata:
   type: technique
 ---

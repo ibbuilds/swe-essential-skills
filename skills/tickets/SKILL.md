@@ -14,7 +14,7 @@ metadata:
 3. **Widen.** One ticket per remaining story, edge case or acceptance item, each still crossing the layers it needs. When the user names people by role, assign whole tickets: a server-heavy slice still includes its small UI part. Done when every acceptance item in the source belongs to exactly one ticket.
 4. **Mark who can do it.** **AFK** when an agent can finish it from the ticket alone; **HITL** when it needs a human decision, credentials, design review or a manual step, and say which. Done when every ticket is marked.
 5. **Link.** "Blocked by" with ticket numbers or "none". Done when there are no cycles and, where the source allows it, two tickets can start in parallel after ticket 1.
-6. **Publish.** With a GitHub remote and `gh` available, create one issue per ticket in order and rewrite blockers as issue links. Otherwise write every ticket to `TICKETS.md`, or the file the user names. Done when every ticket exists and every blocker points at a real ticket.
+6. **Publish.** Write every ticket to `TICKETS.md`, or the file the user names. When the user asked for GitHub issues, or agrees after seeing the list, create one issue per ticket in order with `gh` and rewrite blockers as issue links. Done when every ticket exists and every blocker points at a real ticket.
 
 Write each ticket so it stays true while the code moves: describe behavior and acceptance, name modules rather than line numbers, and say what is out of scope.
 

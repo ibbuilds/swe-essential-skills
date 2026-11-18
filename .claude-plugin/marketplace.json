@@ -9,7 +9,7 @@
     {
       "name": "swe-essential-skills",
       "source": "./",
-      "description": "Software engineering skills for Claude Code: debug from a reproduction, build test-first, verify UI in the browser, write specs and tickets, review security, ship, decide, upgrade, respond to incidents, tune performance and refactor safely."
+      "description": "Software engineering skills for Claude Code: specs, tickets and decisions; test-first work, root-cause diagnosis, refactoring, performance and dependencies; evidence before done, shipping, review feedback, security and incidents; LLM features, handoffs, readable docs and turning repeated mistakes into checks."
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 name: refactor
-description: 'Behavior-preserving refactoring, and finding what is worth refactoring. Use when the user says "refactor", "clean up", "tidy", "split into smaller functions", "extract", "deduplicate", "this is a mess", "untangle", "what should we refactor", or "the codebase is getting hard to change", even when the code has no tests or the request also asks for a behavior change "while you are at it".'
+description: 'Behavior-preserving refactoring, and finding what is worth refactoring. Use when the user says "refactor", "clean up", "tidy", "split into smaller functions", "extract", "deduplicate", "this is a mess", "untangle", "what should we refactor", or "the codebase is getting hard to change", even when the code has no tests or the request also asks for a behavior change "while you are at it". For a quick cleanup pass over your own uncommitted changes use simplify.'
 metadata:
   type: technique
 ---

@@ -11,13 +11,13 @@ metadata:
 
 1. **Run the gates.** Call the Skill tool with `done` and use its gate results. Done when each gate passed, was fixed, or is listed as "not run" with its command.
 2. **Size the risk.** From the diff: what users or systems it touches (blast radius), and whether it is a two-way door (revert the commit and all is well) or a one-way door (migrations, data rewrites, public API or URL changes, sent emails, external webhooks). Done when the rollback is a concrete command or the one-way part is named.
-3. **Write the body** from `<pr-body>`, under 40 lines. Create the PR with `gh pr create` when it is available; otherwise write the body to the file the user names. Done when the PR or file exists and its Verification table matches what actually ran.
+3. **Write the body** from `<pr-body>`, under 40 lines. When the user asked to open the PR, push the branch and create it with `gh pr create`; otherwise show the body and ask. Done when the PR or the drafted body exists and its Verification table matches what actually ran.
 
 ## Fix failing CI
 
 1. **Read the failing job's log** (`gh run view <id> --log-failed`) and find the first real failure, not the cascade after it. Done when you can quote the failing assertion or error.
-2. **Fix the cause.** A regression gets a code fix. A wrong test gets a corrected test and a sentence on why. A flaky or infrastructure failure gets one rerun, then a report. When the user asks to skip, loosen or disable a check, show the real cause and its fix first: a one-line fix unblocks the merge as fast as a skip and ships no bug. Done when the fix is in and the failing check passes locally, or "not run" with the command.
-3. **Push and recheck.** Done when CI is green on the new commit. When the same failure comes back twice after a fix, stop and report what each round tried.
+2. **Fix the cause.** A regression gets a code fix. A wrong test gets a corrected test and a sentence on why. A flaky or infrastructure failure gets one rerun, then a report. When the user asks to skip, loosen or disable a check, show the real cause and its fix first, as `done` describes for a lowered bar. Done when the fix is in and the failing check passes locally, or "not run" with the command.
+3. **Push and recheck,** pushing only when the user asked to fix CI on the branch or to push. Done when CI is green on the new commit. When the same failure comes back twice after a fix, stop and report what each round tried.
 
 ## Release or deploy
 
@@ -44,5 +44,4 @@ Work through `<release-checklist>` in order and report each line.
 - [ ] Rollback command written down before deploying
 - [ ] Deployed: `<command>` at `<time>`
 - [ ] Verified after deploy: health check, one key user flow, error rate
-- [ ] Announced, with the rollback command
 </release-checklist>

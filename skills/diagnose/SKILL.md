@@ -1,6 +1,6 @@
 ---
 name: diagnose
-description: 'Root-cause diagnosis from a red reproduction. Use when the user says "debug this", "why is this failing", "what''s going on", "it broke", or reports something throwing, returning wrong values, flaky, hanging, or worse since a release or merge, and before you propose any fix for a bug, even when the cause looks obvious from the code or the user asks for the quickest fix.'
+description: 'Root-cause diagnosis from a red reproduction. Use when the user says "debug this", "why is this failing", "why does this return", "it broke", or reports something throwing, returning wrong values, flaky, hanging, or worse since a release or merge, and before you propose any fix for a bug, even when the cause looks obvious from the code or the user asks for the quickest fix. For a production outage use incident.'
 metadata:
   type: discipline
 ---
@@ -22,8 +22,10 @@ No source edit until a check reproduces the bug and you have seen it fail.
 
    Run it and confirm it fails *for the reported reason*, not a setup error. Done when the check is red and its failure line matches the report.
 2. **Rank hypotheses.** Two to four causes, most likely first, each with a prediction that would confirm it ("if the key is mixed case, `findDiscount('Spring25')` returns null"). Test them against code, data, logs, or temporary instrumentation tagged `[DEBUG-<id>]` so one grep removes it. Done when one is confirmed by evidence and the rest are ruled out.
-3. **Fix at the root.** Change the code where the wrong value is produced, not where it surfaces. Run the same unmodified check: green with the fix; when cheap, stash the fix and see it go red again. Done when the check is green, the full suite still passes, and no `[DEBUG-` line remains.
+3. **Fix at the root.** Change the code where the wrong value is produced, not where it surfaces: no `?? 0`, empty fallback, try/catch, sleep or retry around the symptom. Run the same unmodified check: green with the fix; when cheap, stash the fix and see it go red again. Done when the check is green, the full suite still passes, and no `[DEBUG-` line remains.
 4. **Report** with the template.
+
+When the user asks only why, stop after step 2: report the confirmed cause with its evidence and offer the fix.
 
 When you cannot run commands, still write the failing check first, give its exact command, and label every result "not run".
 
@@ -47,10 +49,3 @@ After three fixes that did not turn the check green, stop. Report what each atte
 | "I'll add the test after the fix." | A test written after the fix never failed, so it proves nothing about this bug. |
 | "It's flaky, a retry will do." | A retry hides a race. The loop's failure rate is the reproduction. |
 | "I can't run commands here." | Write the check anyway and hand over the command. |
-
-## Red flags
-
-- Editing source while no failing check exists.
-- Guarding the bad value where it shows up (`?? 0`, an empty fallback, a try/catch) instead of where it is produced.
-- Adding a sleep or a retry to make a flaky check pass.
-- "Should work now" with no run result or "not run" label.

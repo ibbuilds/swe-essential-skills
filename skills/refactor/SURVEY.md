@@ -17,4 +17,4 @@ Rank candidates by evidence, not taste. Propose; refactor only the one the user 
 Recommended first: <#> because <reason>.
 </refactor-candidates>
 
-Propose no new interfaces until the user picks a candidate. When the user rejects one for a lasting reason, offer to record that reason as an ADR so it is not proposed again.
+When the user rejects one for a lasting reason, offer to record that reason as an ADR so it is not proposed again.

@@ -215,7 +215,15 @@ def lint_repo(root: Path) -> tuple[list[str], int, int]:
             if path.is_dir() and path.name not in EVAL_SKIP_DIRS and not path.name.startswith(".")
         ]
     plugin_name = read_plugin_name(root)
-    for case_dir in case_dirs:
+    shell_dir = root / "evals-shell"
+    shell_cases = []
+    if shell_dir.is_dir():
+        shell_cases = [
+            path
+            for path in sorted(shell_dir.iterdir())
+            if path.is_dir() and path.name not in EVAL_SKIP_DIRS and not path.name.startswith(".")
+        ]
+    for case_dir in case_dirs + shell_cases:
         problems.extend(lint_eval_case(case_dir, plugin_name))
 
     skills_dir = root / "skills"
@@ -225,7 +233,7 @@ def lint_repo(root: Path) -> tuple[list[str], int, int]:
     case_names = {case.name for case in case_dirs}
     for skill_dir in skill_dirs:
         problems.extend(lint_skill(skill_dir, case_names, plugin_name))
-    return problems, len(skill_dirs), len(case_dirs)
+    return problems, len(skill_dirs), len(case_dirs) + len(shell_cases)
 
 
 def main(argv: list[str]) -> int:

@@ -25,7 +25,7 @@ When you cannot run commands, keep the rhythm (one test, then its code, then the
 - **Tautology:** the expected value is computed the same way the code computes it. Write the literal: `expect(total).toBe(3600)`, not `expect(total).toBe(price * qty * 0.9)`.
 - **Mocked subject:** mocking the module under test, or so much around it that the test checks the mocks. Mock only what crosses a process boundary: network, clock, randomness, paid APIs.
 - **Change detector:** asserting private calls or internal structure, so any refactor breaks it while bugs pass.
-- **Bundled behaviors:** five behaviors in one test, written after the code.
+- **Bundled behaviors:** five behaviors asserted in one test.
 
 ## Report
 

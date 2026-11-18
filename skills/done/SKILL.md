@@ -1,6 +1,6 @@
 ---
 name: done
-description: 'Evidence gate before any claim that work is complete. Use when you are about to say done, fixed, works, passing, ready or "should work now", before committing or opening a PR, after a subagent reports success, and when the user says "make sure it works", "check it in the browser" or "verify it", even when the change looks trivially correct or the checks were green earlier in the session.'
+description: 'Evidence gate before any claim that work is complete. Use when you are about to say done, fixed, works, passing or "should work now", before committing or opening a PR, after a subagent reports success, and when the user says "make sure it works", "check it in the browser" or "verify it", even when the change looks trivially correct or the checks were green earlier in the session.'
 metadata:
   type: discipline
 ---
@@ -17,7 +17,7 @@ No completion claim without a command run after the last edit, and its result li
 2. **Run them on the current code,** after the last edit. Read the output, not the exit code alone: count passed, failed and skipped. Done when each gate has a result line you can quote.
 3. **Check the claim's own evidence** from the table. A green suite proves the suite, not the feature.
 4. **Check the bar,** with `git diff` over everything this task changed. Done when none of the lowered-bar patterns below appears, or each one is reported to the user with its reason.
-5. **Report** with the template. Every line is evidence or "not verified: <why>", plus what the user should run or look at.
+5. **Report** with the template; with a single gate, one line is enough: `<command>`: <result line>. Every line is evidence or "not verified: <why>", plus what the user should run or look at. Done when every claim in your message has its evidence line.
 
 | Claim | Evidence it needs | Not enough |
 | --- | --- | --- |
@@ -26,7 +26,6 @@ No completion claim without a command run after the last edit, and its result li
 | UI works | Follow [UI.md](UI.md): the page in a running build, console and network | The component compiling |
 | Feature done | Each acceptance item checked one by one | The build succeeding |
 | Subagent finished | `git diff` and a gate run by you | The subagent's report |
-| Deployed | The live health check or a real request | The deploy command exiting 0 |
 
 ## Lowered bar
 

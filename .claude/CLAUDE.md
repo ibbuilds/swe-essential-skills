@@ -1,6 +1,6 @@
 # Maintaining this plugin
 
-This repository is a Claude Code plugin. Skills live in `skills/<name>/SKILL.md`. Eval cases for `claude plugin eval` live in `evals/<case>/`.
+This repository is a Claude Code plugin. Skills live in `skills/<name>/SKILL.md`. Eval cases for `claude plugin eval` live in `evals/<case>/`. Cases that need a shell live in `evals-shell/<case>/` and run with `scripts/shell_trial.py`, because the eval runner cannot sandbox a shell on Windows.
 
 ## Every skill
 
@@ -10,7 +10,9 @@ This repository is a Claude Code plugin. Skills live in `skills/<name>/SKILL.md`
 - Body: only what Claude would not do by default. Use positive instructions, steps that end in "Done when...", and output templates in XML-style tags. Prohibitions belong only in discipline skills, backed by excuses seen in baseline runs.
 - Budgets: 500 body words, or 1,500 for `metadata.type: discipline`; 20 KB per `SKILL.md`. Put content that must survive compaction first.
 - Branch-only material goes in sibling `UPPERCASE.md` files, linked from the step that needs it. No `@` links. To use another skill, write "Call the Skill tool with `<name>`".
-- Name eval cases `<skill>-trigger-<direct|reworded|near-miss|unrelated>-<n>` and `<skill>-behavior-<n>`.
+- Name eval cases `<skill>-trigger-<direct|reworded|near-miss|unrelated>-<n>` and `<skill>-behavior-<n>`. A near-miss is a neighbouring skill's request, not trivia. Reworded prompts avoid the description's keywords.
+- Skill graders match `swe-essential-skills:<skill>`; Claude Code ships built-in skills with overlapping names.
+- Before adding a skill, check that Claude Code has no built-in skill or command for the same job. If it does, the skill must beat a baseline that has it, or it is not built.
 
 ## Checks
 
@@ -18,7 +20,10 @@ This repository is a Claude Code plugin. Skills live in `skills/<name>/SKILL.md`
 python scripts/lint_skills.py
 python -m unittest discover -s tests
 claude plugin validate . --strict
-claude plugin eval . --case <case> --runs 1 --ablation none --no-publish --max-cost-usd 1
+claude plugin eval . --case <case> --runs 3 --scaffold --trust-plugin --no-publish --max-cost-usd 5
+python scripts/shell_trial.py <case-glob> --runs 3
 ```
+
+`claude plugin eval` runs a no-plugin baseline arm by default; pass `--ablation none` for trigger-only runs. Shell trials load your user `CLAUDE.md` in both arms.
 
 On Windows use `py -3` for `python`. Model-backed evals spend real usage: always pass `--max-cost-usd` and run only the cases you changed.

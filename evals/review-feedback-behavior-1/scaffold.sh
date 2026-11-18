@@ -2,7 +2,7 @@
 set -euo pipefail
 mkdir -p src test
 cat > package.json <<'EOF'
-{ "name": "billing", "private": true, "scripts": { "test": "node --test test/" } }
+{ "name": "billing", "private": true, "scripts": { "test": "node --test" } }
 EOF
 cat > src/invoices.js <<'EOF'
 const { loadInvoice } = require('./store');

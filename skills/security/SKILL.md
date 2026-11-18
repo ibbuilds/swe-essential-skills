@@ -1,6 +1,6 @@
 ---
 name: security
-description: 'Security review of a named surface that proves each finding with an attacker path. Use when the user asks "is this secure", "can someone access...", "could a user see another user''s...", "anything I should worry about", or before launch of code touching auth, sessions, permissions, secrets, payments or webhooks, uploads, user input reaching queries, or an LLM that reads untrusted text or calls tools, even when the change looks small or a fix seems to close the issue.'
+description: 'Security review of a named surface, each finding proven with an attacker path. Use when the user asks "is this secure", "can someone access...", "could a user see another user''s...", "anything to worry about security-wise", or before launching code that touches auth, permissions, secrets, payments, webhooks, uploads, or an LLM that reads untrusted text or calls tools, even when the change looks small or a fix seems to close the issue. For a review of the pending diff use security-review.'
 metadata:
   type: technique
 ---

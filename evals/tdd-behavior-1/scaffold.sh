@@ -5,7 +5,7 @@ cat > package.json <<'EOF'
 {
   "name": "timekit",
   "private": true,
-  "scripts": { "test": "node --test test/" }
+  "scripts": { "test": "node --test" }
 }
 EOF
 cat > src/clock.js <<'EOF'

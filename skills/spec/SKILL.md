@@ -1,6 +1,6 @@
 ---
 name: spec
-description: 'Feature spec through a design interview, written to SPEC.md. Use when the user says "spec", "PRD", "requirements", "I want to build", "grill me", "let''s pin down what we''re building", or describes a feature before code exists, even when the idea sounds clear enough to start coding or to write the whole spec in one pass. For splitting an existing spec into tickets use tickets.'
+description: 'Feature spec through a design interview, written to SPEC.md. Use when the user says "spec", "PRD", "requirements", "grill me", "let''s pin down what we''re building", "help me figure out what to build", or describes a feature with open product decisions before code exists, even when the idea sounds clear enough to start coding or to write the whole spec in one pass. For splitting an existing spec into tickets use tickets.'
 metadata:
   type: collaborative
 ---
@@ -9,7 +9,7 @@ metadata:
 
 ## Process
 
-1. **Read the code first.** Before asking anything, read what the feature touches: data model, routes, jobs, config and any similar feature. Use a subagent for wide searches. Done when no question to the user asks how the code works today.
+1. **Read the code first.** Before asking anything, read what the feature touches: data model, routes, jobs, config and any similar feature. Done when no question to the user asks how the code works today.
 2. **Interview in rounds.** Each round asks the open decisions that block the most others, at most four, and never a question whose answer depends on another in the same round. Use the AskUserQuestion tool when the session has it, with your recommended answer as the first option; otherwise use `<question-round>`. Facts come from the repo; only decisions go to the user. Done when every branch is decided or explicitly left open, or the user says to write it.
 3. **Pin the terms.** When the user and the code name the same thing differently ("workspace" vs `org`), settle one term and record it in the spec's Terms. Done when each domain noun in the spec has one meaning.
 4. **Write the spec** to `SPEC.md` (or the file or issue the user names) from the template. Stories and acceptance hold only what was decided or what the repo shows. Every undecided point goes under Open questions with your recommendation. Done when each acceptance item can be checked by a test or one manual step.

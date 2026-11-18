@@ -5,7 +5,7 @@ cat > package.json <<'EOF'
 {
   "name": "order-summary",
   "private": true,
-  "scripts": { "test": "node --test test/" }
+  "scripts": { "test": "node --test" }
 }
 EOF
 cat > src/format.js <<'EOF'

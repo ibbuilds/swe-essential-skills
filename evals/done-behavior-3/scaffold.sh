@@ -2,7 +2,7 @@
 set -euo pipefail
 mkdir -p src test
 cat > package.json <<'EOF'
-{ "name": "shop", "private": true, "scripts": { "test": "node --test test/" } }
+{ "name": "shop", "private": true, "scripts": { "test": "node --test" } }
 EOF
 cat > src/price.js <<'EOF'
 function formatPrice(cents) { return `$${cents / 100}`; }
