@@ -24,6 +24,6 @@ claude plugin eval . --case <case> --runs 3 --scaffold --allow-tools Edit Write 
 python scripts/shell_trial.py <case-glob> --runs 3
 ```
 
-`claude plugin eval` runs a no-plugin baseline arm by default; pass `--ablation none` for trigger-only runs. Edit and Write are gated: without `--allow-tools Edit Write` every edit is refused and file graders fail in both arms. LLM graders on `focus: trace` see raw JSON and misjudge long runs; prefer `focus: files`, `last_message` or a regex on the trace. Shell trials load your user `CLAUDE.md` in both arms.
+`claude plugin eval` runs a no-plugin baseline arm by default; pass `--ablation none` for trigger-only runs. Edit and Write are gated: without `--allow-tools Edit Write` every edit is refused and file graders fail in both arms. LLM graders on `focus: trace` see raw JSON and misjudge long runs; prefer `last_message`, a regex on the trace, or `target: { source: file, path: ... }`. `focus: files` shows only new files, not edits to existing ones. Shell trials load your user `CLAUDE.md` in both arms.
 
 On Windows use `py -3` for `python`. Model-backed evals spend real usage: always pass `--max-cost-usd` and run only the cases you changed.
