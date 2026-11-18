@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-software-evolution"
-  short_description: "Refactor, upgrade and retire software safely"
-
-policy:
-  allow_implicit_invocation: true

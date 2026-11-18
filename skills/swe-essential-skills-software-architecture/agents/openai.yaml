@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-software-architecture"
-  short_description: "Choose system boundaries and technical tradeoffs"
-
-policy:
-  allow_implicit_invocation: true

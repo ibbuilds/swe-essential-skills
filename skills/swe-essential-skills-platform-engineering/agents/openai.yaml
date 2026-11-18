@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-platform-engineering"
-  short_description: "Establish hosting, networking and runtime foundations"
-
-policy:
-  allow_implicit_invocation: true
