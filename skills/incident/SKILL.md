@@ -1,6 +1,6 @@
 ---
 name: incident
-description: 'Production incident response and postmortems. Use when the user says "prod is down", "outage", "on fire", "incident", "5xx since the deploy", "users can''t log in", "write the postmortem" or "what went wrong", even when the cause looks findable in the code or a generic rollback command seems enough. For a failing test or a local bug use debug.'
+description: 'Production incident response and postmortems. Use when the user says "prod is down", "outage", "on fire", "incident", "5xx since the deploy", "users can''t log in", "write the postmortem" or "what went wrong", even when the cause looks findable in the code or a generic rollback command seems enough. For a failing test or a local bug use diagnose.'
 metadata:
   type: technique
 ---
