@@ -1,6 +1,6 @@
 # SWE Essential Skills
 
-Software engineering skills for Claude Code. They don't teach Claude to code. They target the moments where coding agents reliably cut corners: fixing before reproducing, writing code before tests, declaring UI work done without opening it, building before the spec is settled, skipping a failing check to ship, and jumping several major versions at once.
+Software engineering skills for Claude Code. They don't teach Claude to code. They target the moments where coding agents reliably cut corners: fixing before reproducing, writing code before tests, declaring UI work done without opening it, building before the spec is settled, skipping a failing check to ship, jumping several major versions at once, debugging an outage before rolling back, optimizing without measuring, and slipping behavior changes into a refactor.
 
 > **Rebuild in progress.** The previous eighteen-skill suite is preserved at the [`legacy-v0`](https://github.com/ibbuilds/swe-essential-skills/tree/legacy-v0) tag. A skill is added here only after an eval shows Claude does worse without it.
 
