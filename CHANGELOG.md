@@ -11,3 +11,4 @@
 - Dropped the planned `db-migration` skill: Claude passed its behavior cases without one (expand-contract rename and batched backfill, 6/6 runs). The cases stay in `evals/` to re-check on model upgrades.
 - Added the `incident` skill: rollback with the repo's documented command before debugging, and postmortems with owned, dated action items.
 - Added the `perf` skill: no speed edits without a named target, and numbers or measurement steps before and after.
+- Added the `refactor` skill: characterization tests before restructuring, and behavior changes kept out of the refactor.

@@ -29,6 +29,7 @@ In Claude Code:
 | `upgrade` | You say "upgrade", "bump", "migrate to vN" or see deprecation warnings | One major version per step, from the official migration guide, with checks between steps | Ready |
 | `incident` | You say "prod is down", "outage", "5xx since the deploy" or "write the postmortem" | Mitigation first with the repo's own rollback command; a blameless postmortem whose action items have owners and due dates | Ready |
 | `perf` | You say "make it faster", "too slow", "optimize" or "bundle too big" | A named target and baseline, the measured bottleneck fixed, numbers before and after | Ready |
+| `refactor` | You say "refactor", "clean up", "split into smaller functions" or "this is a mess" | Behavior pinned by tests first, and any requested behavior change kept apart from the refactor | Ready |
 | `db-migration` | You ask for a schema change on a live database | Expand-contract phases and batched backfills | Dropped: Claude already does this without a skill |
 
 ## Development
