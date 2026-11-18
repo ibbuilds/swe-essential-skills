@@ -1,6 +1,6 @@
 ---
 name: ship
-description: 'Shipping work with evidence: pull requests, CI and releases. Use when the user says "open a PR", "ship it", "deploy", "release", "cut a version", "CI is failing", "get it green", "what''s left before we release", even when the checks look fine or the user asks to skip a failing test to unblock a merge. For a script or app that errors use diagnose; for review comments on a PR use review-feedback.'
+description: 'Shipping work with evidence: pull requests, CI and releases. Use when the user says "open a PR", "ship it", "deploy", "release", "cut a version", "CI is failing", "get it green", "what''s left before we release", even when the checks look fine or the user asks to skip a failing test to unblock a merge. For a script or app that errors use diagnose.'
 metadata:
   type: technique
 ---
