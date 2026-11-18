@@ -1,6 +1,6 @@
 ---
 name: llm-feature
-description: 'Building or changing a feature that calls an LLM. Use when the user wants to add AI, a chatbot, an agent, RAG, summarization, extraction, classification or generation with a model, change a prompt or the model, or says "the AI output is bad", "improve the prompt", "which model should we use for this", "add evals", even when the prompt looks like a one-line string or the model name seems well known.'
+description: 'Building or changing a feature that calls an LLM. Use when the user wants to add AI, a chatbot, an agent, RAG, summarization, extraction, classification or generation with a model, change a prompt or the model, or says "the AI output is bad", "improve the prompt", "which model should we use for this", "add evals", even when the prompt looks like a one-line string or the model name seems well known. Load it alongside claude-api, which covers only the SDK.'
 metadata:
   type: technique
 ---

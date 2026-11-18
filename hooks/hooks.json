@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"swe-essential-skills: before your final message on a task that changed code or config, call the Skill tool with swe-essential-skills:done. Before installing a package that is not in the manifest yet, call it with swe-essential-skills:deps.\""
+            "command": "echo \"swe-essential-skills: before writing implementation code in a repo that has tests, call the Skill tool with swe-essential-skills:tdd (or swe-essential-skills:diagnose for a bug). Before installing a package not in the manifest, call swe-essential-skills:deps. Before your final message on a task that changed code or config, call swe-essential-skills:done.\""
           }
         ]
       }
