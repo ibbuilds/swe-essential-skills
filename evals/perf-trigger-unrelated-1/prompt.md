@@ -1,6 +1,6 @@
 ---
 description: 'Complexity concept question.'
-tags: [trigger, perf, near-miss]
+tags: [trigger, perf, unrelated]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

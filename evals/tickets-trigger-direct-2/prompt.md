@@ -1,6 +1,6 @@
 ---
 description: Direct phrase "split into GitHub issues" with an inline spec.
-tags: [trigger, slices, direct]
+tags: [trigger, tickets, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

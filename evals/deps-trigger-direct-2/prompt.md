@@ -1,6 +1,6 @@
 ---
 description: 'Direct "bump" phrasing.'
-tags: [trigger, upgrade, direct]
+tags: [trigger, deps, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

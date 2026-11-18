@@ -1,6 +1,6 @@
 ---
 description: Asks for a backlog from a plan.
-tags: [trigger, slices, reworded]
+tags: [trigger, tickets, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

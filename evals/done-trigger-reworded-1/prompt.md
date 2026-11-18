@@ -1,6 +1,6 @@
 ---
 description: 'Asks to make sure a finished UI feature looks and works right.'
-tags: [trigger, verify-ui, reworded]
+tags: [trigger, done, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

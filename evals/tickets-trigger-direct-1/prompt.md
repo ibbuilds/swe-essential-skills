@@ -1,6 +1,6 @@
 ---
 description: Direct phrase "break into tickets".
-tags: [trigger, slices, direct]
+tags: [trigger, tickets, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

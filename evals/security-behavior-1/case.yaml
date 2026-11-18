@@ -1,4 +1,4 @@
 schema_version: "1.1"
-name: security-review-behavior-1
+name: security-behavior-1
 context:
   scaffold_script: scaffold.sh

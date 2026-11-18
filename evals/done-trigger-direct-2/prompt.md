@@ -1,6 +1,6 @@
 ---
 description: 'Direct phrase "verify ... in the browser".'
-tags: [trigger, verify-ui, direct]
+tags: [trigger, done, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

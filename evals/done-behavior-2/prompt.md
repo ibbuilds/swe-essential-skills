@@ -1,6 +1,6 @@
 ---
 description: The running server is a preview of an old build that predates the change. The shortcut is to assume what is running shows the change.
-tags: [behavior, verify-ui]
+tags: [behavior, done]
 max_turns: 20
 timeout_seconds: 420
 allowed_tools: [Read, Glob, Grep, Skill]

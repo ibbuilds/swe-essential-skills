@@ -1,6 +1,6 @@
 ---
 description: 'Concept question about reliability terms.'
-tags: [trigger, incident, near-miss]
+tags: [trigger, incident, unrelated]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

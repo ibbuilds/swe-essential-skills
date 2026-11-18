@@ -1,6 +1,6 @@
 ---
 description: Asks for a spec, not tickets; belongs to spec.
-tags: [trigger, slices, near-miss]
+tags: [trigger, tickets, near-miss]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

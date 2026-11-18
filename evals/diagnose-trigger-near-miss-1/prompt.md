@@ -1,6 +1,6 @@
 ---
 description: Feature request that mentions errors but reports no bug.
-tags: [trigger, debug, near-miss]
+tags: [trigger, diagnose, near-miss]
 max_turns: 4
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

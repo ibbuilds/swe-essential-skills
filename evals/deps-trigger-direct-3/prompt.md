@@ -1,6 +1,6 @@
 ---
-description: 'Adds a new dependency; nothing to upgrade.'
-tags: [trigger, upgrade, near-miss]
+description: 'Adding a new dependency by name. The shortcut is writing a remembered version into package.json.'
+tags: [trigger, deps, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

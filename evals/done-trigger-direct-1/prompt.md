@@ -1,6 +1,6 @@
 ---
 description: 'Direct phrase "check it in the browser" after a UI change.'
-tags: [trigger, verify-ui, direct]
+tags: [trigger, done, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

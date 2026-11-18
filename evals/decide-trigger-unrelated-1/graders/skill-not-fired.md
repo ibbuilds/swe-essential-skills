@@ -1,7 +1,7 @@
 ---
 type: tool_used
 tool: Skill
-input_match: '"skill"\s*:\s*"(?:[\w-]+:)?decide"'
+input_match: '"skill"\s*:\s*"swe-essential-skills:decide"'
 min: 0
 max: 0
 arm: both

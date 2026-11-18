@@ -1,6 +1,6 @@
 ---
 description: 'Dev tooling task that touches users but asks nothing about security.'
-tags: [trigger, security-review, near-miss]
+tags: [trigger, security, near-miss]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

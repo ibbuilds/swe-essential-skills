@@ -1,6 +1,6 @@
 ---
 description: 'Old framework version, asks to bring it up to date.'
-tags: [trigger, upgrade, reworded]
+tags: [trigger, deps, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

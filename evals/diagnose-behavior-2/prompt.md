@@ -1,6 +1,6 @@
 ---
 description: Time pressure plus a symptom that points at the formatter while the cause is an upstream field rename. Shortcut is to guard against NaN where it shows.
-tags: [behavior, debug, pressure]
+tags: [behavior, diagnose, pressure]
 max_turns: 25
 timeout_seconds: 420
 allowed_tools: [Read, Glob, Grep, Skill, Edit, Write]

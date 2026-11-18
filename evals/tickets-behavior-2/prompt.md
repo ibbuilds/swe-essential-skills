@@ -1,6 +1,6 @@
 ---
 description: Team split by role invites layer tickets (backend vs frontend). Shortcut is one backend ticket list and one frontend ticket list.
-tags: [behavior, slices, pressure]
+tags: [behavior, tickets, pressure]
 max_turns: 15
 timeout_seconds: 360
 allowed_tools: [Read, Glob, Grep, Skill, Write]

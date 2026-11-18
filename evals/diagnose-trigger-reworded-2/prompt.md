@@ -1,6 +1,6 @@
 ---
 description: Intermittent failure described as a symptom, no trigger words.
-tags: [trigger, debug, reworded]
+tags: [trigger, diagnose, reworded]
 max_turns: 4
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

@@ -1,6 +1,6 @@
 ---
 description: 'Asks to write a browser test, not to verify a change now.'
-tags: [trigger, verify-ui, near-miss]
+tags: [trigger, done, near-miss]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

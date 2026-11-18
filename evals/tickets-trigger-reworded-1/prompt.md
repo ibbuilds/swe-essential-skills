@@ -1,6 +1,6 @@
 ---
 description: Asks for chunks of work in order, no ticket words.
-tags: [trigger, slices, reworded]
+tags: [trigger, tickets, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

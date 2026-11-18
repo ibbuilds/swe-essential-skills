@@ -1,6 +1,6 @@
 ---
 description: 'Asks about cross-customer access without the word security.'
-tags: [trigger, security-review, reworded]
+tags: [trigger, security, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

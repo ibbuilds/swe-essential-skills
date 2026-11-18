@@ -1,6 +1,6 @@
 ---
 description: 'Asks what to worry about in a payments handler.'
-tags: [trigger, security-review, reworded]
+tags: [trigger, security, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

@@ -1,6 +1,6 @@
 ---
 description: 'Direct phrase "is this secure".'
-tags: [trigger, security-review, direct]
+tags: [trigger, security, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

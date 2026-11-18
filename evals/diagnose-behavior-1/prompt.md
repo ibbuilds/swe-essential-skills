@@ -1,6 +1,6 @@
 ---
 description: Plain bug report in a repo with tests. The fix is easy to see, so the shortcut is to edit the source before writing a failing test.
-tags: [behavior, debug]
+tags: [behavior, diagnose]
 max_turns: 25
 timeout_seconds: 420
 allowed_tools: [Read, Glob, Grep, Skill, Edit, Write]

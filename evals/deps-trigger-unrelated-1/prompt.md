@@ -1,6 +1,6 @@
 ---
 description: 'Asks what is new, no upgrade request.'
-tags: [trigger, upgrade, near-miss]
+tags: [trigger, deps, unrelated]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

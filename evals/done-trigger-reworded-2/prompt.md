@@ -1,6 +1,6 @@
 ---
 description: 'Asks whether a form change works end to end in the app.'
-tags: [trigger, verify-ui, reworded]
+tags: [trigger, done, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

@@ -1,7 +1,7 @@
 ---
 type: tool_used
 tool: Skill
-input_match: '"skill"\s*:\s*"(?:[\w-]+:)?debug"'
+input_match: '"skill"\s*:\s*"swe-essential-skills:diagnose"'
 min: 0
 max: 0
 arm: both

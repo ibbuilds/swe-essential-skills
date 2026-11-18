@@ -1,4 +1,4 @@
 schema_version: "1.1"
-name: verify-ui-behavior-1
+name: done-behavior-1
 context:
   scaffold_script: scaffold.sh

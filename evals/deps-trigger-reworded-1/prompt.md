@@ -1,6 +1,6 @@
 ---
 description: 'Deprecation warnings, no upgrade word.'
-tags: [trigger, upgrade, reworded]
+tags: [trigger, deps, reworded]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

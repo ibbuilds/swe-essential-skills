@@ -1,6 +1,6 @@
 ---
 description: Performance regression described without the word debug.
-tags: [trigger, debug, reworded]
+tags: [trigger, diagnose, reworded]
 max_turns: 4
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

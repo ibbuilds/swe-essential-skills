@@ -1,6 +1,6 @@
 ---
 description: Direct phrase "why is this failing" with a test error.
-tags: [trigger, debug, direct]
+tags: [trigger, diagnose, direct]
 max_turns: 4
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

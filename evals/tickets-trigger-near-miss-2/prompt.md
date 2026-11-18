@@ -1,6 +1,6 @@
 ---
 description: A single bug issue, nothing to break down.
-tags: [trigger, slices, near-miss]
+tags: [trigger, tickets, near-miss]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

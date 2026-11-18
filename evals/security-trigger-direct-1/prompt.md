@@ -1,6 +1,6 @@
 ---
 description: 'Direct phrase "security review" on pasted code.'
-tags: [trigger, security-review, direct]
+tags: [trigger, security, direct]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---

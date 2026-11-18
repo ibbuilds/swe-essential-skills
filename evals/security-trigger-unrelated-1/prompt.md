@@ -1,6 +1,6 @@
 ---
 description: 'Concept question about auth, no code to review.'
-tags: [trigger, security-review, near-miss]
+tags: [trigger, security, unrelated]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]
 ---
