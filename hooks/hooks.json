@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"swe-essential-skills: before your final message on a task that changed code or config, call the Skill tool with swe-essential-skills:done. Before installing a package that is not in the manifest yet, call it with swe-essential-skills:deps.\""
+          }
+        ]
+      }
+    ]
+  }
+}

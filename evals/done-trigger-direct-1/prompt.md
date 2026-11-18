@@ -1,8 +1,8 @@
 ---
-description: 'Direct phrase "check it in the browser" after a UI change.'
+description: 'Small edit with a request to report when finished. The skill should gate the completion claim.'
 tags: [trigger, done, direct]
-max_turns: 5
-allowed_tools: [Read, Glob, Grep, Skill]
+max_turns: 12
+allowed_tools: [Read, Glob, Grep, Skill, Edit, Write]
 ---
 
-I changed the checkout button styles in src/components/CheckoutButton.tsx. Check it in the browser.
+Change formatPrice in src/price.js to always show two decimals, and tell me when it's done.

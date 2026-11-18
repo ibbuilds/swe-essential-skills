@@ -1,6 +1,6 @@
 ---
 name: done
-description: 'Evidence gate before any claim that work is complete. Use when you are about to say done, fixed, works, passing or "should work now", before committing or opening a PR, after a subagent reports success, and when the user says "make sure it works", "check it in the browser" or "verify it", even when the change looks trivially correct or the checks were green earlier in the session.'
+description: 'Final check before reporting back on any task that changed code or config. Use when finishing every such task, before your last message says done, fixed, works, passing or "should work now", before committing or opening a PR, after a subagent reports success, and when the user says "make sure it works", "tell me when it''s done" or "verify it", even when the change is one line or the checks were green earlier in the session.'
 metadata:
   type: discipline
 ---
