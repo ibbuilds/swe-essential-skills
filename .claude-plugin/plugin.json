@@ -1,6 +1,6 @@
 {
   "name": "swe-essential-skills",
-  "version": "2.0.0",
+  "version": "0.9.0",
   "description": "Software engineering skills for Claude Code: specs, tickets and decisions; test-first work, root-cause diagnosis, refactoring, performance and dependencies; evidence before done, shipping, review feedback, security and incidents; LLM features, handoffs, readable docs and turning repeated mistakes into checks.",
   "author": {
     "name": "ibbuilds",

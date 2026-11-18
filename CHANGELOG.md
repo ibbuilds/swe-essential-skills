@@ -1,8 +1,10 @@
 # Changelog
 
-## 2.0.0 (unreleased)
+## Unreleased (0.9.0)
 
-Rebuilt the pack after an audit against Claude Code's built-in skills and five practitioner skill packs.
+No release has been cut yet. The first release will be 1.0.0, once the pack has been tested in real projects.
+
+Rebuilt the pack after an audit against Claude Code's built-in skills and seven practitioner skill packs.
 
 ### Changed
 - Renamed `debug` to `diagnose` (Claude Code ships `/debug`), `slices` to `tickets`, and `security-review` to `security` (Claude Code ships a model-visible `security-review`).
@@ -32,6 +34,6 @@ Rebuilt the pack after an audit against Claude Code's built-in skills and five p
 - Trigger graders match `swe-essential-skills:<skill>`. The old graders also matched built-in skills with the same name, so `security-review` trigger scores were not evidence.
 - Trivia near-misses relabeled `unrelated`; near-misses are now neighbouring skills' requests.
 
-## 1.0.0 (2026-11-18)
+## Earlier work
 
-- Rebuilt as a Claude Code plugin with a marketplace manifest, twelve skills, eval cases, a lint script and CI. The legacy suite remains in the history at commit `35cc01c`.
+- The first plugin version (twelve skills, eval cases, a lint script and CI) was tagged 1.0.0 before it was ready; that tag and release were withdrawn. The legacy suite before the plugin remains in the history at commit `35cc01c`.
