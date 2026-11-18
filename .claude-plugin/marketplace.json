@@ -1,0 +1,15 @@
+{
+  "name": "swe-essential-skills",
+  "description": "Software engineering skills for Claude Code by ibbuilds.",
+  "owner": {
+    "name": "ibbuilds",
+    "url": "https://github.com/ibbuilds"
+  },
+  "plugins": [
+    {
+      "name": "swe-essential-skills",
+      "source": "./",
+      "description": "Software engineering skills for Claude Code: debug from a reproduction, build test-first, verify UI in the browser, write specs and slice them into tickets."
+    }
+  ]
+}

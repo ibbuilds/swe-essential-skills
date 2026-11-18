@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-software-security"
-  short_description: "Assess trust boundaries and implement security controls"
-
-policy:
-  allow_implicit_invocation: true

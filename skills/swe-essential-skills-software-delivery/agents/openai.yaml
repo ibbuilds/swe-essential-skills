@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-software-delivery"
-  short_description: "Prepare compatible releases, rollouts and recovery"
-
-policy:
-  allow_implicit_invocation: true

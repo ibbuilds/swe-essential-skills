@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-project-planning"
-  short_description: "Reconcile plans and resolve consequential readiness gaps"
-
-policy:
-  allow_implicit_invocation: true

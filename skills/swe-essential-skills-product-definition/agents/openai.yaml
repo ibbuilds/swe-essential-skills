@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-product-definition"
-  short_description: "Define product outcomes, positioning and actionable scope"
-
-policy:
-  allow_implicit_invocation: true

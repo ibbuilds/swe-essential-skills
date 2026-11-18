@@ -1,143 +1,35 @@
 # SWE Essential Skills
 
-18 independent skills for software work in Codex and Claude Code, from product
-planning through development, security, delivery and maintenance. The goal is
-less avoidable work and user supervision without reducing engineering quality.
+Software engineering skills for Claude Code. They don't teach Claude to code. They target the moments where coding agents reliably cut corners: fixing before reproducing, writing code before tests, declaring UI work done without opening it, and building before the spec is settled.
 
-The [70-entry workflow map](docs/workflow-coverage.md) shows how Matt Pocock,
-Ras Mic and Addy Osmani mechanisms map to these skills and PM, with explicit
-adaptations, integration limits and exclusions. For "grill my software plan",
-Software Requirements now provides a focused design-interview route.
-See [coverage validation](docs/coverage-validation-2026-10-26.md) for the actual
-independent exercises and their limits.
+> **Rebuild in progress.** The previous eighteen-skill suite is preserved at the [`legacy-v0`](https://github.com/ibbuilds/swe-essential-skills/tree/legacy-v0) tag. A skill is added here only after an eval shows Claude does worse without it.
 
-The [broader workflow audit](docs/broad-workflow-coverage.md) adds official
-and specialist sources, exact adaptation decisions and explicit remaining limits.
+## Install
 
-## Install as normal skills
+In Claude Code:
 
-Use your usual skill manager with this repository. For example, with the Skills CLI:
-
-```sh
-npx skills add ibbuilds/swe-essential-skills
+```
+/plugin marketplace add ibbuilds/swe-essential-skills
+/plugin install swe-essential-skills@swe-essential-skills
 ```
 
-Or copy selected complete folders from `skills/` into your host's normal skills
-directory. See [installation](docs/installation.md) for paths and updates.
-No custom installer, Python setup, hooks, global instructions, API key, service
-or PM Essential Skills installation is required. Keep each skill's references
-and license with it.
+## Skills
 
-## Use them normally
+| Skill | How it starts | What you get | Status |
+| --- | --- | --- | --- |
+| `debug` | You say "debug this", or something is broken, failing or slow | A reproduction first, then ranked hypotheses, then a root-cause fix with a regression test | Ready |
+| `tdd` | You build a feature or fix a bug in a repo with tests | One failing test at a time, in vertical slices | Ready |
+| `code-review` | You ask for a review of a diff, branch or PR | Ranked findings with file:line, trigger scenario and fix | Dropped: Claude already does this without a skill |
+| `verify-ui` | Claude changes UI | Evidence from the running build: console, network, screenshot | Ready |
+| `spec` | You run `/spec` or describe something to build | A `SPEC.md` written after an interview | Ready |
+| `slices` | You ask to break a spec into tasks or tickets | Tracer-bullet tickets with blocking edges and acceptance | Ready |
 
-Ask for work as usual. Codex can automatically select relevant installed skills
-from their descriptions; all eighteen policies explicitly allow automatic selection. You do not
-need to name a skill on every request. Selection is conditional, not a request
-to load all 18 skills or execute every lifecycle phase.
+Security review, shipping, design decisions and dependency upgrades are next, once the skills above pass their evals.
 
-Reconsider the relevant specialist when a concrete condition appears during work:
-an unexplained failure, a data migration, a trust boundary or an uncertain test
-oracle. Construction supplies the conditional routes and preserves the current
-task context. Its generated-file lifecycle also applies as outputs are produced,
-so preventing nested backups and retiring task-owned scratch work do not depend
-on a separate cleanup request. Native discovery still decides whether to load a
-skill; an enabled policy is not an observed activation result.
+## Development
 
-- Starting a project or resolving a plan: use existing decisions and clarify
-  material gaps before dependent implementation.
-- Already building: continue the agreed work, including substantial features.
-  Installation does not restart discovery or require a new planning document.
-- A consequential change is unclear: explain its concrete effect and ask only
-  the unresolved choice. An accepted plan already supplies its decisions.
-- A suitable built-in feature or existing check does the job: reuse it rather
-  than creating another pass or tool.
-
-Explicit invocation is available when useful, not required setup: select a skill
-with Codex's `$` picker or Claude Code's `/skill-name` syntax. See the
-[native-first action guide](docs/reusable-actions.md) and
-[project walkthrough](docs/project-walkthrough.md) for examples.
-
-## Skill identity
-
-Every installable name uses `repo-name-skill-name`: for example,
-`swe-essential-skills-software-review`. Folder names, `name` frontmatter and
-optional Codex UI display names all use that exact identity. Hosts that ignore
-UI metadata still have the same canonical skill name.
-See [migration guidance](docs/installation.md#migrate-from-previous-names) for
-existing installations; old installed names do not rename themselves.
-
-## Skill catalogue
-
-Each folder works independently. PM Essential Skills is a complementary general
-workflow suite, not a dependency.
-
-| Skill | Engineering work it helps perform |
-| --- | --- |
-| [Project planning](skills/swe-essential-skills-project-planning/SKILL.md) | Import or create a usable plan, assess material gaps and guide readiness through the lifecycle |
-| [Product discovery](skills/swe-essential-skills-product-discovery/SKILL.md) | Understand users/problems, alternatives and evidence before committing to a solution |
-| [Product definition](skills/swe-essential-skills-product-definition/SKILL.md) | Establish strategy, positioning, scope, outcomes and an actionable product brief |
-| [Software requirements](skills/swe-essential-skills-software-requirements/SKILL.md) | Requirements discovery, validation, conflicts, baselines and change traceability |
-| [Software architecture](skills/swe-essential-skills-software-architecture/SKILL.md) | Technical requirements, quality attributes, boundaries, alternatives and failure models |
-| [Software construction](skills/swe-essential-skills-software-construction/SKILL.md) | Repository foundations, reproducible setup, coherent implementation and consumer contracts |
-| [Backend engineering](skills/swe-essential-skills-backend-engineering/SKILL.md) | APIs, service behavior, concurrency, transactions and side-effect semantics |
-| [Data engineering](skills/swe-essential-skills-data-engineering/SKILL.md) | Data integrity, schema/query work, migrations, backfills and recovery |
-| [Client engineering](skills/swe-essential-skills-client-engineering/SKILL.md) | Working interactions, state, async behavior, accessibility and client lifecycle |
-| [Software debugging](skills/swe-essential-skills-software-debugging/SKILL.md) | Reproduction, causal investigation, distinguishing experiments and verified fixes |
-| [Software verification](skills/swe-essential-skills-software-verification/SKILL.md) | Behavior/invariant-based checks, test strategy, regression evidence and limitations |
-| [Software review](skills/swe-essential-skills-software-review/SKILL.md) | Context-aware code/change review, validated findings and impact assessment |
-| [Software performance](skills/swe-essential-skills-software-performance/SKILL.md) | Representative measurements, profiling, bottlenecks and safe optimization |
-| [Software security](skills/swe-essential-skills-software-security/SKILL.md) | Trust boundaries, secure implementation, security review and vulnerability response |
-| [Platform engineering](skills/swe-essential-skills-platform-engineering/SKILL.md) | Hosting selection, environment establishment, network/DNS/TLS, identity and runtime foundations |
-| [Software delivery](skills/swe-essential-skills-software-delivery/SKILL.md) | Build/package/CI, infrastructure changes, compatible rollout and recovery |
-| [Software operations](skills/swe-essential-skills-software-operations/SKILL.md) | Runtime diagnosis, observability, incidents, capacity and restoration |
-| [Software evolution](skills/swe-essential-skills-software-evolution/SKILL.md) | Refactoring, upgrades, compatibility, deprecation and retirement |
-
-
-## Documentation
-
-- [Installation and automatic discovery](docs/installation.md)
-- [Activation audit and troubleshooting](docs/activation-audit-2026-10-25.md)
-- [Functional validation of all eighteen workflows](docs/functional-validation-2026-10-25.md)
-- [Coverage and composition](docs/coverage-and-composition.md)
-- [Lifecycle coverage](docs/lifecycle-coverage.md)
-- [Workflow value and limits](docs/workflow-value.md)
-- [First-version readiness and review scenarios](docs/v1-readiness.md)
-- [Expert comparisons and sources](docs/expert-comparison.md)
-- [Empirical evidence and its limits](docs/empirical-evidence.md)
-
-## Status and limits
-
-This is an independently installable workflow suite. The current
-[outcome contract](docs/v1-readiness.md) and
-[request routing guide](docs/project-walkthrough.md#route-to-the-smallest-useful-owner-and-finish-the-request)
-explain selective use, proportional verification and coherent authorized delivery.
-Evidence includes bounded local and cloud workflows. Tested tasks include planning from partial information
-and a SQLite change preserving existing data, tenant boundaries, transaction
-ownership and rollback/retry behavior. See
-[core workflow checks](docs/core-workflow-checks-2026-10-24.md) for exact scope
-and results, and [earlier observations](docs/empirical-evidence.md) for the
-preceding evidence and its limits.
-
-These observations do not certify every engineering domain, actual native-host
-selection or production readiness. Both conditions completed the matched tasks;
-no incremental quality or overall efficiency benefit was established. Skills do
-not bypass permissions or usage limits, require extra installation tooling or
-authorize deployment. Specialized systems can still require appropriate tools,
-current documentation and expert assurance.
-
-## For maintainers
-
-[AGENTS.md](AGENTS.md) describes maintaining this repository. Do not copy it into
-consumer projects. Development dependencies and validation commands are for
-maintainers, not normal skill installation. Follow its scoped checks when editing
-skills or helpers; [review scenarios](docs/review-scenarios.md) are specifications,
-not executed model benchmarks.
+See [.claude/CLAUDE.md](.claude/CLAUDE.md) for the skill standard and the checks to run.
 
 ## License
 
-Original project content is available under the [MIT License](LICENSE). Each skill
-folder includes its own copy so individually distributed skills retain the notice.
-Linked third-party projects retain their own licenses; this license does not
-relicense their content.
-
-See [contextual selection and bounded artifacts](docs/contextual-activation-and-hygiene.md) for the current source comparisons, changes and executed forward exercises.
+MIT. See [LICENSE](LICENSE).

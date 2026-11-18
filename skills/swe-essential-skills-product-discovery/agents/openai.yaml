@@ -1,6 +1,0 @@
-interface:
-  display_name: "swe-essential-skills-product-discovery"
-  short_description: "Discover problems in their real market and context"
-
-policy:
-  allow_implicit_invocation: true
