@@ -22,15 +22,17 @@ Rebuilt the pack after an audit against Claude Code's built-in skills and seven 
 
 ### Added
 - `done`: no completion claim without gates run after the last edit, evidence matched to the claim, and a check for lowered bars (skips, suppressions, loosened assertions, unrequested fallbacks).
-- `review-feedback`: verify each review comment against the code, then fix, push back with evidence, ask, or defer.
 - `llm-feature`: contract, eval set before the prompt, model IDs and prices from current docs, prompts in versioned files, structured validated output, per-call cost and latency logs. `EVALS.md` covers error analysis and judge validation.
-- `humanize`: prose without AI tells, with a facts-preserved check. Adapted from blader/humanizer (MIT).
-- `handoff`: resumable `HANDOFF.md` notes, verified against the repo on pickup.
-- `retro` (user-invoked): turn a repeated agent mistake into a check that provably fails on it.
+- A one-sentence SessionStart hook so `tdd`, `diagnose`, `deps` and `done` fire mid-task.
 - `scripts/shell_trial.py` and `evals-shell/`: with and without plugin trials that can run a shell, for Windows where the eval runner cannot.
 - Lint rule: Skill graders must match the plugin's namespaced skill name.
 
+### Removed
+- `review-feedback`, `retro` and `handoff`: built, then removed when Claude Opus 5.5 matched them without the plugin (review-feedback 1.00 vs 1.00 on two cases, retro 0.50 vs 0.50, handoff 1.00 vs 1.00).
+- `humanize`: removed because pm-essential-skills ships its own `humanize`; two installed packs with the same skill name collide.
+
 ### Evals
+- Fixed three grader problems that made earlier numbers unreliable: Edit and Write are gated in `claude plugin eval` and need `--allow-tools Edit Write`; LLM graders on `focus: trace` misjudged long raw traces; `focus: files` ignores edits to existing files.
 - Trigger graders match `swe-essential-skills:<skill>`. The old graders also matched built-in skills with the same name, so `security-review` trigger scores were not evidence.
 - Trivia near-misses relabeled `unrelated`; near-misses are now neighbouring skills' requests.
 
