@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added one `unrelated` trigger case per skill (12 cases): an ordinary request outside every skill, checking the skill stays quiet and Claude still answers.
+
 ## 1.0.0 (2026-11-18)
 
 - Rebuilt as a Claude Code plugin with a marketplace manifest.
