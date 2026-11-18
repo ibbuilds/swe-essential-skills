@@ -1,7 +1,7 @@
 ---
-type: llm
-focus: trace
+type: regex
+target: trace
+pattern: '"name":"(?:Write|Edit)","input":\{[^{}]*?"file_path":"[^"]*(?:evals?|cases|fixtures|\.test\.)[^"]*"'
 ---
 
-PASS if the run creates a set of example tickets with expected categories (a test file, fixture or eval file with several cases including at least one ambiguous or adversarial ticket) that can be run to score the classifier.
-FAIL if no such case set is created.
+A file of example tickets with expected categories (eval, cases, fixtures or test file) is written.

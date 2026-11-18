@@ -1,6 +1,6 @@
 ---
 type: llm
-focus: trace
+focus: files
 ---
 
 PASS if the run uses dayjs (already a dependency, with its relativeTime plugin) or Intl.RelativeTimeFormat, and the reply says why no new library was needed.
