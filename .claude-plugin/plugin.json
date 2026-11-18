@@ -1,7 +1,7 @@
 {
   "name": "swe-essential-skills",
   "version": "0.6.0",
-  "description": "Software engineering skills for Claude Code: debug from a reproduction, build test-first, verify UI in the browser, write specs and slice them into tickets.",
+  "description": "Software engineering skills for Claude Code: debug from a reproduction, build test-first, verify UI in the browser, write specs and tickets, review security, ship, decide and upgrade.",
   "author": {
     "name": "ibbuilds",
     "url": "https://github.com/ibbuilds"
@@ -9,5 +9,5 @@
   "homepage": "https://github.com/ibbuilds/swe-essential-skills",
   "repository": "https://github.com/ibbuilds/swe-essential-skills",
   "license": "MIT",
-  "keywords": ["skills", "debugging", "tdd", "specs", "tickets"]
+  "keywords": ["skills", "debugging", "tdd", "specs", "security", "upgrades"]
 }
