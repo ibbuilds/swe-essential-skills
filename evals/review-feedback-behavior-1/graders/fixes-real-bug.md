@@ -1,7 +1,7 @@
 ---
-type: llm
-focus: files
+type: regex
+target: { source: file, path: src/invoices.js }
+pattern: 'line\.net'
 ---
 
-PASS if invoiceTotal is changed so discounted lines are summed by their net amount (for example `line.net ?? line.amount`), or the reply shows that fix.
-FAIL if comment 1 is not fixed.
+invoiceTotal uses the net amount for discounted lines.
