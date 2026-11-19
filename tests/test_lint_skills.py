@@ -165,6 +165,14 @@ class EvalCaseTests(LintTestCase):
         self.write("evals-shell/debug-behavior-1/graders/check.md", grader)
         self.assertEqual(len(self.problems()), 1)
 
+    def test_readme_documents_every_skill(self):
+        self.skill("debug", f"name: debug\ndescription: {GOOD_DESCRIPTION!r}")
+        self.eval_case("debug-trigger-direct-1")
+        self.write("README.md", "# Pack\n\n**`tdd`** builds code.\n")
+        self.assertOneProblem("not documented")
+        self.write("README.md", "# Pack\n\n**`debug`** finds causes.\n\nRESULTS_PLACEHOLDER\n")
+        self.assertOneProblem("PLACEHOLDER")
+
     def test_case_needs_a_prompt(self):
         self.write("evals/empty-case/graders/criteria.md", "---\ntype: llm\n---\nPASS\n")
         self.assertOneProblem("prompt.md or case.yaml")

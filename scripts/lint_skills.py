@@ -205,6 +205,19 @@ def lint_eval_case(case_dir: Path, plugin_name: str | None = None) -> list[str]:
     return problems
 
 
+def lint_readme(root: Path, skill_names: list[str]) -> list[str]:
+    """The README documents every shipped skill and has no unfilled placeholders."""
+    readme = root / "README.md"
+    if not readme.is_file():
+        return []
+    text = read_text(readme)
+    problems = [f"README.md: skill `{name}` is not documented as **`{name}`**"
+                for name in skill_names if f"**`{name}`**" not in text]
+    if "PLACEHOLDER" in text:
+        problems.append("README.md: unfilled PLACEHOLDER")
+    return problems
+
+
 def lint_repo(root: Path) -> tuple[list[str], int, int]:
     """Return (problems, skill count, eval case count)."""
     problems: list[str] = []
@@ -235,6 +248,7 @@ def lint_repo(root: Path) -> tuple[list[str], int, int]:
     case_names = {case.name for case in case_dirs}
     for skill_dir in skill_dirs:
         problems.extend(lint_skill(skill_dir, case_names, plugin_name))
+    problems.extend(lint_readme(root, [path.name for path in skill_dirs]))
     return problems, len(skill_dirs), len(case_dirs) + len(shell_cases)
 
 
