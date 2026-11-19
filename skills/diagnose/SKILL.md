@@ -22,7 +22,7 @@ No source edit until a check reproduces the bug and you have seen it fail.
 
    Run it and confirm it fails *for the reported reason*, not a setup error. Done when the check is red and its failure line matches the report.
 2. **Rank hypotheses.** Two to four causes, most likely first, each with a prediction that would confirm it ("if the key is mixed case, `findDiscount('Spring25')` returns null"). Test them against code, data, logs, or temporary instrumentation tagged `[DEBUG-<id>]` so one grep removes it. Done when one is confirmed by evidence and the rest are ruled out.
-3. **Fix at the root.** Change the code where the wrong value is produced, not where it surfaces: no `?? 0`, empty fallback, try/catch, sleep or retry around the symptom. Run the same unmodified check: green with the fix; when cheap, stash the fix and see it go red again. Done when the check is green, the full suite still passes, and no `[DEBUG-` line remains.
+3. **Fix at the root.** Change the code where the wrong value is produced, not where it surfaces: no `?? 0`, empty fallback, try/catch, sleep or retry around the symptom. Run the same unmodified check: green with the fix; when cheap, stash the fix and see it go red again. Then search the repo for the same faulty pattern and fix or list each copy. Done when the check is green, the full suite still passes, every copy is fixed or listed, and no `[DEBUG-` line remains.
 4. **Report** with the template.
 
 When the user asks only why, stop after step 2: report the confirmed cause with its evidence and offer the fix.
@@ -38,6 +38,7 @@ After three fixes that did not turn the check green, stop. Report what each atte
 **Root cause:** `<file:line>`, and why it produces the symptom.
 **Fix:** what changed.
 **Regression test:** `<path>`, red before and green after (or "not run" with the command).
+**Copies:** <other places with the same faulty pattern: fixed, listed, or none found>
 </diagnosis>
 
 ## Excuses

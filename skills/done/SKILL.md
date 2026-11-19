@@ -25,6 +25,7 @@ No completion claim without a command run after the last edit, and its result li
 | Bug fixed | The reproduction red before and green after | The suite passing |
 | UI works | Follow [UI.md](UI.md): the page in a running build, console and network | The component compiling |
 | Feature done | Each acceptance item checked one by one | The build succeeding |
+| User-visible change | README, docs, help text and the changelog's Unreleased section (when the repo keeps one) describe the new behavior | The code and its tests alone |
 | Subagent finished | `git diff` and a gate run by you | The subagent's report |
 
 ## Lowered bar
