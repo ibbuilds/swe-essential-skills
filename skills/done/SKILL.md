@@ -1,6 +1,6 @@
 ---
 name: done
-description: 'Final check before reporting back on any task that changed code or config. Use when finishing every such task, before your last message says done, fixed, works, passing or "should work now", before committing or opening a PR, after a subagent reports success, and when the user says "make sure it works", "tell me when it''s done" or "verify it", even when the change is one line or the checks were green earlier in the session.'
+description: 'Final check before reporting back on any task that changed code or config. Use when finishing every such task, before your last message says done, fixed, works, passing or "should work now", before committing or opening a PR, after a subagent reports success, and when asked to check a change someone made ("make sure it works", "does it look right", "verify it"), or say "tell me when it''s done", even when the change is one line or the checks were green earlier in the session.'
 metadata:
   type: discipline
 ---
