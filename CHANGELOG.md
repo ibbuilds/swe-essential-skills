@@ -6,6 +6,15 @@ No release has been cut yet. The first release will be 1.0.0, once the pack has 
 
 Rebuilt the pack after an audit against Claude Code's built-in skills and seven practitioner skill packs, then audited the whole engineering lifecycle for gaps.
 
+### Phase 2B audit
+- Re-scored every skill from the recorded runs: all twelve beat the no-plugin baseline (with Claude Code's built-in skills available) on at least one behavior case and lose on none. The README now has the full table.
+- Found and fixed three eval defects that measured the sandbox, not the skill. The `tdd` trigger graders failed a correct one-test-at-a-time plan in a folder with no files or edit tools; they now accept a plan, and `max_turns` went from 4 to 6 (tdd 12 of 12 fired, test-first 9 of 12). The `done` near-miss asked Claude to write a Playwright test, which is a code change that `done` should verify; it now asks only for a list of cases (0 of 3 fired). `done-trigger-reworded-1` ran in an empty folder with nothing to verify; it now has a scaffold.
+- `done` description: covers requests to check a change someone else made ("does it look right"). That case went from 0 of 3 fired to 3 of 3, with no false positives on either near-miss.
+- Measured the five cases that had no recorded result: `llm-feature-behavior-2` (1.00 with, 0.33 without), code review (baseline 0.78 and 1.00) and database migrations (baseline 1.00 on both). The last two stay `baseline-only`.
+- Added [docs/RUNTIME.md](docs/RUNTIME.md): checks a hook or script should own (gates run after the last edit, lowered-bar diff scan, leftover debug tags, registry check before install, UI evidence), recorded as requirements for a later runtime layer and not built here.
+- Lint: the README must document every skill and contain no unfilled placeholder.
+- Known gap, not fixed: on a "check it in the browser" request the built-in `run` fires before `done`, and neither arm gives the user the exact URL, action and request to watch (`done-behavior-1`, 0.50 vs 0.50). A `UI.md` line for this was tried, did not change the score, and was reverted.
+
 ### Lifecycle audit
 - Probed six workflows the pack did not cover, each with a no-plugin baseline first: adding tests to existing code (graded by injected bugs), merge conflicts, scope discipline, reusing existing helpers, building a payment webhook safely, and copies of a bug elsewhere in the repo. Claude without a skill scored 1.00 on all of them, so no skill was built; the first five cases stay tagged `baseline-only`. With `diagnose` loaded, Claude found the copies in only 2 of 3 runs, so `diagnose` gained a step for it (3 of 3 after).
 - `spec` now has trigger cases for a plain feature request and for a one-sentence app idea in an empty folder. It fired 3 of 3 on both.

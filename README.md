@@ -79,7 +79,9 @@ Skills fire from their descriptions, so you don't have to remember names. Four n
 
 ## What it leaves to Claude Code
 
-Claude Code already ships `code-review`, `simplify`, `security-review`, `run`, `verify` and `init`, and this pack doesn't duplicate them. `done` uses `run` to check UI changes.
+Claude Code already ships `code-review`, `simplify`, `security-review`, `debug`, `verify`, `run` and `init`, and this pack doesn't duplicate them. `done` uses `run` to check UI changes. Every "without" number above was measured with these built-ins available.
+
+Some checks are better done by a hook or a script than by a skill: a skipped test in the diff, gates that haven't run since the last edit, a package name that doesn't exist on the registry. [docs/RUNTIME.md](docs/RUNTIME.md) lists them as requirements for a later runtime layer. Until that layer exists, the skills keep those instructions.
 
 We also tested common workflows where Claude Code alone already did the job well. No skill was built for these, and each test stays in the repo tagged `baseline-only` to re-check when models change:
 
@@ -91,13 +93,46 @@ We also tested common workflows where Claude Code alone already did the job well
 | Reusing an existing helper instead of writing a new one | 1.00 |
 | Finding copies of a bug elsewhere after fixing it | 1.00. `diagnose` alone narrowed to the reported file (2 of 3), so it now has a step for this |
 | Security review, and building a payment webhook safely | 0.89 on reviews, 1.00 on the webhook |
-| Code review, review feedback, database migrations | the same score as with a skill |
+| Code review (two seeded-bug diffs) | 0.78 and 1.00; with the plugin loaded, 1.00 and 0.83 |
+| Database migrations (expand/contract, batched backfill) | 1.00 on both |
+| Review feedback, handoff | 1.00, the same as the removed skills scored |
 
 If you also use [pm-essential-skills](https://github.com/ibbuilds/pm-essential-skills), it owns `handoff`, `humanize`, `grill-me`, `breakdown`, `retro` and `write-skill`. No skill here does the same job.
 
 ## Results
 
-RESULTS_PLACEHOLDER
+Measured with Claude Opus 5.5 (`claude-opus-5-5`) on Claude Code 2.1.325 and 2.1.328, 3 runs per case and arm, using the latest run of each case. "Without" is Claude Code with its built-in skills and no plugin.
+
+**Behavior: the same task with and without the plugin**
+
+| Skill | Cases | With | Without | Wins / ties / losses |
+| --- | --- | --- | --- | --- |
+| `decide` | 3 | 0.83 | 0.50 | 1 / 2 / 0 |
+| `deps` | 3 | 1.00 | 0.67 | 1 / 2 / 0 |
+| `diagnose` | 4 | 0.92 | 0.67 | 3 / 1 / 0 |
+| `done` | 5 | 0.90 | 0.59 | 3 / 2 / 0 |
+| `incident` | 2 | 1.00 | 0.58 | 2 / 0 / 0 |
+| `llm-feature` | 2 | 0.92 | 0.29 | 2 / 0 / 0 |
+| `perf` | 3 | 1.00 | 0.15 | 3 / 0 / 0 |
+| `refactor` | 2 | 1.00 | 0.34 | 2 / 0 / 0 |
+| `ship` | 2 | 1.00 | 0.00 | 2 / 0 / 0 |
+| `spec` | 2 | 0.92 | 0.50 | 2 / 0 / 0 |
+| `tdd` | 3 | 0.94 | 0.28 | 3 / 0 / 0 |
+| `tickets` | 2 | 0.92 | 0.50 | 2 / 0 / 0 |
+
+Every skill beats the baseline on at least one case and loses on none. Ties are kept on purpose: they show where Claude is already good (for example `deps` on a well-known upgrade, `decide` when the repo makes the answer obvious).
+
+**Activation: does the right skill fire**
+
+Across the trigger cases, the skill fired in 139 of 139 runs where it should (direct and reworded requests) and in 0 of 69 runs where it should not (a neighbouring skill's request, or an unrelated one). The trigger cases also grade the reply, and those graders passed in 182 of 193 runs. The misses were in `ship` (5 runs across four cases), `incident` (2), `spec` (1) and `tdd-trigger-direct-2` (3 of 3). The `ship` and `incident` misses are one or two runs per case. A rerun of `incident-trigger-direct-2`, which had missed 2 of 3, scored 3 of 3 with one split judge vote, so some of these misses are LLM-judge noise. The `ship` misses were not rerun. The `tdd` miss is consistent. In a sandbox with no edit tools, Claude plans the cycles one at a time but then pastes the whole test file. With edit tools (`tdd-behavior-*` and the shell trial) it writes one test at a time.
+
+**What these numbers do and do not show**
+
+- Behavior and trigger cases test **Claude's behavior**: did it reproduce before fixing, run the gates after the last edit, refuse to lower the bar. Most are graded by regexes on the trace or by an LLM judge on the final message.
+- Shell trials in `evals-shell/` also check **the software Claude produced**: hidden tests and injected bugs (mutants) run against the result. That covers `diagnose`, `done`, `perf`, `tdd` and the four baseline-only workflows. Other skills' code output is not independently tested.
+- Three runs per arm is a small sample. A 0.17 difference is one grader in one run.
+- Trigger cases run in an empty folder, and most have no edit tools, so they measure firing, not the quality of finished work.
+- Browser verification (`done` with `UI.md`) has been tested only in runs without a browser. No eval drives a real browser yet. In those runs Claude never claimed an unchecked UI worked, with or without the plugin. But on a "check it in the browser" request, Claude Code's built-in `run` fires first and `done` fires late or not at all (2 of 4 traced runs), and neither arm hands over the exact URL, action and request to watch (`done-behavior-1` ties at 0.50). A one-line `UI.md` fix for this did not move the score, so it was reverted. Requirement 6 in [docs/RUNTIME.md](docs/RUNTIME.md) is the deterministic fix.
 
 ## How skills are tested
 

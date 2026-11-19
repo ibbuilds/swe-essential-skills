@@ -13,6 +13,8 @@ This repository is a Claude Code plugin. Skills live in `skills/<name>/SKILL.md`
 - Name eval cases `<skill>-trigger-<direct|reworded|near-miss|unrelated>-<n>` and `<skill>-behavior-<n>`. A near-miss is a neighbouring skill's request, not trivia. Reworded prompts avoid the description's keywords.
 - Skill graders match `swe-essential-skills:<skill>`; Claude Code ships built-in skills with overlapping names.
 - Before adding a skill, check that Claude Code has no built-in skill or command for the same job. If it does, the skill must beat a baseline that has it, or it is not built.
+- A check a script or hook can do every time (a diff pattern, a command run since the last edit, a registry lookup) belongs in [docs/RUNTIME.md](../docs/RUNTIME.md) as a runtime requirement, not as new skill text. Skills keep such lines only until that mechanism ships.
+- The README documents every skill as **`<name>`**; the lint fails otherwise.
 
 ## Checks
 
@@ -24,6 +26,6 @@ claude plugin eval . --case <case> --runs 3 --scaffold --allow-tools Edit Write 
 python scripts/shell_trial.py <case-glob> --runs 3
 ```
 
-`claude plugin eval` runs a no-plugin baseline arm by default; pass `--ablation none` for trigger-only runs. Edit and Write are gated: without `--allow-tools Edit Write` every edit is refused and file graders fail in both arms. LLM graders on `focus: trace` see raw JSON and misjudge long runs; prefer `last_message`, a regex on the trace, or `target: { source: file, path: ... }`. `focus: files` shows only new files, not edits to existing ones; LLM graders reject `target`, so check edited files with a regex grader. Shell trials load your user `CLAUDE.md` in both arms and also accept `type: command` graders (a script run in the workdir, `CASE_DIR` set to the case folder), which is how hidden tests and mutants check outcomes. Cases where Claude already passes without a skill stay tagged `baseline-only`, as the evidence for not building that skill.
+`claude plugin eval` runs a no-plugin baseline arm by default; pass `--ablation none` for trigger-only runs. Edit and Write are gated: without `--allow-tools Edit Write` every edit is refused and file graders fail in both arms. LLM graders on `focus: trace` see raw JSON and misjudge long runs; prefer `last_message`, a regex on the trace, or `target: { source: file, path: ... }`. `focus: files` shows only new files, not edits to existing ones; LLM graders reject `target`, so check edited files with a regex grader. Shell trials load your user `CLAUDE.md` in both arms and also accept `type: command` graders (a script run in the workdir, `CASE_DIR` set to the case folder), which is how hidden tests and mutants check outcomes. Cases where Claude already passes without a skill stay tagged `baseline-only`, as the evidence for not building that skill. Trigger cases run in an empty folder without edit tools: their quality graders must accept a plan, or they measure the sandbox instead of the skill.
 
 On Windows use `py -3` for `python`. Model-backed evals spend real usage: always pass `--max-cost-usd` and run only the cases you changed.
