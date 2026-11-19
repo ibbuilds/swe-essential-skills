@@ -1,8 +1,8 @@
 # SWE Essential Skills
 
-Thirteen skills for Claude Code that target the moments where coding agents cut corners: fixing a bug they never reproduced, writing code before its test, saying "done" without running anything, turning CI green by skipping the failing test, upgrading three major versions in one jump, optimizing without measuring, and shipping an LLM feature with an inline prompt and no eval set.
+Twelve skills for Claude Code. Each one changes what Claude does at a moment where it tends to cut corners: fixing a bug it never reproduced, writing code before its test, saying "done" without running anything, optimizing without measuring, guessing package versions, or building a feature on guessed requirements.
 
-They don't teach Claude to code. Each one changes what Claude does at one specific moment. A skill stays only if it beats Claude without the plugin on the same task, with Claude Code's own built-in skills available in both runs.
+They don't teach Claude to code. A skill is in this pack only if it beat Claude without the plugin on the same task, with Claude Code's own built-in skills available in both runs. Skills we built that didn't beat that baseline were removed.
 
 Status: **unreleased (0.9.0)**. The first release will be 1.0.0, after use in real projects.
 
@@ -15,117 +15,108 @@ In Claude Code:
 /plugin install swe-essential-skills@swe-essential-skills
 ```
 
-Skills start on their own when your request matches. You can also call one directly, for example `/swe-essential-skills:diagnose`. To update later, run `/plugin marketplace update swe-essential-skills`.
+You don't call the skills yourself. Each one starts when your request or Claude's next step matches it. You can still call one by name, for example `/swe-essential-skills:diagnose`. To update, run `/plugin marketplace update swe-essential-skills`.
 
 ## Skills
 
 ### Plan
 
-| Skill | Starts when | What changes |
-| --- | --- | --- |
-| `spec` | You describe a feature that still has open decisions, or ask for a spec, PRD or requirements | Claude reads the code first, then asks only the decisions, in rounds of up to four with a recommended answer you can accept with "yes". A fresh subagent then reads the spec as an implementer who can't ask questions. Output: `SPEC.md`. |
-| `tickets` | You ask to break a spec into tickets, issues or a backlog | Tracer-bullet tickets that each cross every layer, with blocking edges, AFK/HITL marking and acceptance criteria. Written to `TICKETS.md`, or created as GitHub issues when you ask. |
-| `decide` | You ask "X or Y?" about a database, framework, hosting, library or service boundary | A comparison against your repo's real constraints and a recommendation. An ADR only when the choice is hard to reverse. |
+**`spec`** turns a feature idea into decisions before code.
+- **Starts when:** you describe something to build that still has open product decisions ("add team workspaces so people can invite coworkers", "I want a web app for my climbing gym"), or ask for a spec, PRD or requirements.
+- **Result:** Claude reads the code first, then asks only the decisions, up to four at a time, each with a recommended answer you can accept with "yes". A fresh subagent then reads the spec as an implementer who can't ask questions, to catch gaps. You get `SPEC.md`.
+
+**`tickets`** splits a spec or plan into work that ships.
+- **Starts when:** you ask to break a spec or plan into tickets, issues or a backlog.
+- **Result:** tracer-bullet tickets: the first one works end to end, and each one crosses every layer it needs. Each ticket lists what blocks it, whether an agent can finish it alone or needs a person, and its acceptance criteria. Written to `TICKETS.md`, or created as GitHub issues if you ask.
+
+**`decide`** answers "X or Y?" for your project, not in general.
+- **Starts when:** you're choosing a database, framework, queue, auth provider, hosting, library or service boundary.
+- **Result:** the options compared against constraints read from your repo (hosting, existing services, scale), with versions and limits checked in current docs, and one recommendation that names the deciding constraint. An ADR only when the choice is hard to reverse.
 
 ### Build
 
-| Skill | Starts when | What changes |
-| --- | --- | --- |
-| `tdd` | You ask for a new function, endpoint or option in a repo with tests | One test that fails for the right reason, the least code to pass it, then the next. Tautological and mock-only tests are named and avoided. |
-| `diagnose` | Something is broken, failing, flaky, or worse since a release | No fix before a red reproduction. Regressions are bisected. The fix goes where the wrong value is produced, and the reproduction stays as a test. |
-| `refactor` | You ask to refactor or clean up a named piece of code, or ask what is worth refactoring | Behavior is pinned by tests first, small steps stay green, and requested behavior changes are kept separate. A survey ranks candidates by churn and design evidence. |
-| `perf` | Something is too slow or too big | A baseline with its noise range, a profile, one change at a time, and keep or revert based on the numbers. |
-| `deps` | You add, install, upgrade or bump a dependency | Names, versions and install scripts are checked on the registry, not from memory. Existing dependencies and the standard library come first. Upgrades go one major version at a time. |
-| `llm-feature` | You add or change a feature that calls a model | The eval set comes before the prompt, and prompts live in versioned files. Output is structured and validated. Model IDs come from current docs, and every call logs its cost and latency. |
+**`tdd`** builds new code one tested behavior at a time.
+- **Starts when:** you ask for a new function, endpoint or option in a repo that has tests, or ask for TDD.
+- **Result:** one test that fails for the right reason, the least code to pass it, then the next. Tests that prove nothing (tautologies, mocked subjects, change detectors) are avoided.
+
+**`diagnose`** finds the cause before changing code.
+- **Starts when:** something is broken, failing, flaky, hanging or worse since a release.
+- **Result:** a check that reproduces the bug, a confirmed cause, and a fix where the wrong value is produced, not where it shows up. Regressions are found with `git bisect`. Copies of the same faulty pattern elsewhere are fixed or listed. The reproduction stays as a regression test.
+
+**`refactor`** changes structure without changing behavior.
+- **Starts when:** you ask to refactor or clean up code, or ask what is worth refactoring.
+- **Result:** behavior pinned by tests first, small steps kept green, and any requested behavior change done separately. "What should we refactor" gets a ranked list based on churn and design evidence.
+
+**`perf`** makes things faster with numbers, not guesses.
+- **Starts when:** something is slow, too big or uses too much memory.
+- **Result:** a baseline with its noise range, a profile that finds the real cost, one change at a time, and each change kept or reverted based on before and after numbers.
+
+**`deps`** checks packages against the registry, not memory.
+- **Starts when:** you add, install, upgrade or bump a dependency, or Claude is about to install one.
+- **Result:** name, version, repository and install scripts checked on the registry; the standard library and existing dependencies tried first; upgrades one major version at a time, following the official migration guides.
+
+**`llm-feature`** treats prompts like code.
+- **Starts when:** you add or change a feature that calls a model, change a prompt or model, or say the AI output is bad.
+- **Result:** an eval set before the prompt, prompts in versioned files, structured and validated output, a model chosen from current docs and prices, and a log line per call with cost and latency.
 
 ### Finish and ship
 
-| Skill | Starts when | What changes |
-| --- | --- | --- |
-| `done` | Claude is about to report a code change as done, fixed or passing | Gates run after the last edit, and their output is quoted. The evidence must fit the claim. Skips, suppressions and loosened assertions are flagged. |
-| `ship` | You ask to open a PR, fix CI, release or deploy | A PR body that says what actually ran, the blast radius and the way back. CI is fixed at the cause. Releases follow a checklist that includes the rollback. |
-| `security` | You ask whether a route or feature is secure, or launch code that touches auth, payments, uploads, secrets or an LLM with tools | Every path to the asset is mapped. A finding is reported only with an attacker, their preconditions and an exploit. Prompt injection into tools with side effects is covered. |
-| `incident` | Production is down, or you need a postmortem | Mitigation comes first, using the repo's own rollback command, and recovery is confirmed. The postmortem is blameless, and every action item has an owner and a date. |
+**`done`** makes "done" mean verified.
+- **Starts when:** Claude is about to report a code change as done, fixed or working.
+- **Result:** tests, typecheck, lint and build run after the last edit, with their output quoted. The evidence has to fit the claim (a fixed bug needs its reproduction, a UI change needs the running page). Skipped tests, suppressions and loosened assertions are flagged. User-visible changes update the README, docs and changelog.
 
-## The one hook
+**`ship`** moves changes forward on evidence.
+- **Starts when:** you ask to open a PR, fix CI, release or deploy.
+- **Result:** a PR body that says what actually ran, who is affected if it's wrong and how to undo it. CI is fixed at the cause, never by skipping the check. Releases follow a checklist that writes down the rollback before deploying.
 
-Claude rarely stops to look for a skill just before its final message. On their own, `done`, `tdd` and `deps` would almost never fire mid-task: in trigger evals, `done` fired 0 times in 3 runs.
+**`incident`** stops the damage first.
+- **Starts when:** production is down or broken, or you need a postmortem.
+- **Result:** mitigation first, using your repo's own rollback or flag command, then recovery confirmed with the same signal that showed the problem. The postmortem is blameless and every action item has an owner and a date.
 
-The plugin adds one SessionStart hook. Once per session it prints a single sentence, about 70 tokens, reminding Claude to:
-- call `tdd` or `diagnose` before writing code
-- call `deps` before installing a package
-- call `done` before reporting back
+## Activation
 
-With the hook, `tdd` went from firing in 1 of 3 runs to 3 of 3.
+Skills fire from their descriptions, so you don't have to remember names. Four needed help: Claude rarely looks for a skill in the middle of a task, so `tdd`, `diagnose`, `deps` and `done` seldom fired on their own (`done` 0 of 3 runs, `tdd` 1 of 3). The plugin adds one SessionStart hook: a single sentence, about 70 tokens, once per session, reminding Claude to call `tdd` or `diagnose` before writing code, `deps` before installing a package, and `done` before reporting back. With it, `tdd` fired 3 of 3 and `done` fired in every shell trial.
 
 ## What it leaves to Claude Code
 
-Claude Code ships its own `code-review`, `simplify`, `security-review` (for the pending diff) and `run` (launch and drive the app) skills, and this pack doesn't duplicate them. `done` calls `run` for UI checks when it is available. `security` covers a named surface, while `security-review` covers your diff.
+Claude Code already ships `code-review`, `simplify`, `security-review`, `run`, `verify` and `init`, and this pack doesn't duplicate them. `done` uses `run` to check UI changes.
 
-If you also use [pm-essential-skills](https://github.com/ibbuilds/pm-essential-skills), it owns `handoff`, `humanize`, `grill-me`, `breakdown`, `retro` and `write-skill`. This pack has no skill with the same job.
+We also tested common workflows where Claude Code alone already did the job well. No skill was built for these, and each test stays in the repo tagged `baseline-only` to re-check when models change:
+
+| Workflow | Claude without a skill |
+| --- | --- |
+| Adding tests to existing code | 1.00: tests killed all 7 injected bugs and flagged a code-vs-comment mismatch |
+| Resolving a merge conflict | 1.00: kept both sides' intent, ran the tests |
+| Fixing a bug without touching unrelated code | 1.00 |
+| Reusing an existing helper instead of writing a new one | 1.00 |
+| Finding copies of a bug elsewhere after fixing it | 1.00. `diagnose` alone narrowed to the reported file (2 of 3), so it now has a step for this |
+| Security review, and building a payment webhook safely | 0.89 on reviews, 1.00 on the webhook |
+| Code review, review feedback, database migrations | the same score as with a skill |
+
+If you also use [pm-essential-skills](https://github.com/ibbuilds/pm-essential-skills), it owns `handoff`, `humanize`, `grill-me`, `breakdown`, `retro` and `write-skill`. No skill here does the same job.
 
 ## Results
 
-Measured with Claude Opus 5.5 on 2026-11-18, 3 runs per arm. "Without" is Claude Code with no plugin, with every built-in skill available. Scores are the share of graders passed.
+RESULTS_PLACEHOLDER
 
-**Behavior** (`claude plugin eval`, mean over each skill's cases):
-
-| Skill | Cases | With | Without |
-| --- | --- | --- | --- |
-| `perf` | 2 | 1.00 | 0.00 |
-| `ship` | 2 | 1.00 | 0.00 |
-| `tdd` | 2 | 0.92 | 0.25 |
-| `refactor` | 2 | 1.00 | 0.33 |
-| `llm-feature` | 2 | 0.92 | 0.40 |
-| `incident` | 2 | 1.00 | 0.58 |
-| `spec` | 2 | 0.92 | 0.50 |
-| `tickets` | 2 | 0.92 | 0.50 |
-| `diagnose` | 2 | 0.83 | 0.50 |
-| `done` | 3 | 0.83 | 0.50 |
-| `decide` | 3 | 1.00 | 0.67 |
-| `deps` | 3 | 1.00 | 0.67 |
-| `security` | 3 | 1.00 | 0.89 |
-
-**Shell trials** (`scripts/shell_trial.py`, real shell, the author's own environment and global `CLAUDE.md` in both arms):
-
-| Case | With | Without |
-| --- | --- | --- |
-| `diagnose`: regression hidden in git history | 1.00 | 0.67. It edited code before reproducing, 3 of 3 runs. |
-| `done`: a one-line change breaks a test in another folder | 1.00 | 0.67 |
-| `tdd`: new function in a tested repo | 1.00 | 0.33. It never saw a test fail first. |
-| `perf`: slow report with a decoy bottleneck | 1.00 | 0.67. It found the real cost but timed only once before editing, 3 of 3 runs. |
-
-**Triggers:** 219 runs across 73 cases, each checking that the skill fires or stays quiet when it should; 215 are correct. The misses:
-- `deps` on "add date-fns": 2 of 3.
-- `done` on "change this and tell me when it's done": 0 of 3 under `claude plugin eval`. In the shell trials, which run a normal headless session with the hook, `done` fired in all 9 runs.
-
-**Limits:**
-- Each skill has only one to three behavior cases.
-- The `security` gain comes from one case (stating the attacker's preconditions). On the other two cases, Claude without the plugin already found the vulnerability.
-
-## How skills earn their place
+## How skills are tested
 
 Every skill has eval cases in [`evals/`](evals/), run with `claude plugin eval`:
 
-- **Trigger cases** check that the skill fires on a direct request and on a reworded one. They also check that it stays quiet on a neighbouring skill's request and on an unrelated one. Graders match `swe-essential-skills:<skill>`, so a built-in skill with a similar name can't pass for ours.
-- **Behavior cases** run with and without the plugin, and grade the outcome: the bug fixed at its cause, the bar not lowered, no invented package version.
-- **Shell trials** in [`evals-shell/`](evals-shell/) cover the skills whose value is running things. They use `scripts/shell_trial.py`, because the eval runner can't sandbox a shell on Windows.
-
-A skill that doesn't beat its baseline is removed:
-- `code-review`, `db-migration`, `review-feedback`, `retro` and `handoff` were dropped because Claude scored the same without them. Their behavior cases (except `retro`'s) stay in `evals/`, tagged `baseline-only`, to re-check when the model changes.
-- `humanize` was dropped because pm-essential-skills already covers it.
+- **Trigger cases** check that the skill fires on a direct request and on a reworded one, and stays quiet on a neighbouring skill's request and on an unrelated one.
+- **Behavior cases** run the same task with and without the plugin and grade the outcome: the bug fixed at its cause, the bar not lowered, no invented package version.
+- **Shell trials** in [`evals-shell/`](evals-shell/) cover the skills whose value is running things, with hidden tests and injected bugs as graders. They use `scripts/shell_trial.py`, because the eval runner can't sandbox a shell on Windows.
 
 ## Credits
 
-These skills adapt ideas from packs whose authors have spent a long time testing what makes agents behave. Nothing is copied wholesale. Each idea was cut down to what Claude doesn't already do and checked against a baseline.
+These skills adapt ideas from other packs. Nothing is copied wholesale: each idea was cut down to what Claude doesn't already do and checked against a baseline.
 
-- [obra/superpowers](https://github.com/obra/superpowers): evidence before completion claims, excuse tables built from observed failures, and the session-start reminder (here cut from about 500 words to one sentence).
-- [mattpocock/skills](https://github.com/mattpocock/skills): grilling interviews with a recommended answer, tracer-bullet tickets, deep modules and the deletion test, and the ADR bar.
-- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills): guarding the bar against skipped tests and suppressions, keep-or-revert performance work, and trigger evals with paired near-misses.
+- [obra/superpowers](https://github.com/obra/superpowers): evidence before completion claims, excuse tables built from observed failures, and the session-start reminder (cut here from about 500 words to one sentence).
+- [mattpocock/skills](https://github.com/mattpocock/skills): design interviews with a recommended answer, tracer-bullet tickets, deep modules and the ADR bar.
+- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills): guarding against skipped tests and suppressions, keep-or-revert performance work, and trigger evals with paired near-misses.
 - [cursor/plugins pstack](https://github.com/cursor/plugins/tree/main/pstack): reply contracts, the cheapest-first performance order, and proving a check can fail.
-- [trailofbits/skills](https://github.com/trailofbits/skills): "unknown is not clean" for dependency checks, and the revert arm for proving a fix.
-- [hamelsmu/evals-skills](https://github.com/hamelsmu/evals-skills) and [getsentry/skills](https://github.com/getsentry/skills): error analysis before writing evals, binary judges validated against labels, and comparing prompt candidates on held-out cases.
-- [blader/humanizer](https://github.com/blader/humanizer) was studied for this pack's writing skill, which now lives in pm-essential-skills.
+- [trailofbits/skills](https://github.com/trailofbits/skills): "unknown is not clean" for dependency checks, the revert arm for proving a fix, and checking for copies of a bug after fixing it.
+- [hamelsmu/evals-skills](https://github.com/hamelsmu/evals-skills) and [getsentry/skills](https://github.com/getsentry/skills): error analysis before writing evals, binary judges checked against labels, and comparing prompts on held-out cases.
 
 ## Development
 
