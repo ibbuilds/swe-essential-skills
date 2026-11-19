@@ -159,7 +159,7 @@ def lint_skill(skill_dir: Path, eval_case_names: set[str], plugin_name: str | No
     return problems
 
 
-def lint_eval_case(case_dir: Path) -> list[str]:
+def lint_eval_case(case_dir: Path, plugin_name: str | None = None) -> list[str]:
     problems: list[str] = []
 
     def report(message: str) -> None:
@@ -190,6 +190,16 @@ def lint_eval_case(case_dir: Path) -> list[str]:
         grader_type = fields.get("type")
         if grader_type not in GRADER_TYPES:
             report(f"graders/{grader.name}: type must be one of: {', '.join(sorted(GRADER_TYPES))}")
+        if (
+            plugin_name
+            and grader_type == "tool_used"
+            and fields.get("tool") == "Skill"
+            and f"{plugin_name}:" not in str(fields.get("input_match", ""))
+        ):
+            report(
+                f"graders/{grader.name}: Skill grader must match '{plugin_name}:<skill>' "
+                "so a built-in skill with the same name cannot pass it"
+            )
     return problems
 
 
@@ -204,18 +214,26 @@ def lint_repo(root: Path) -> tuple[list[str], int, int]:
             for path in sorted(evals_dir.iterdir())
             if path.is_dir() and path.name not in EVAL_SKIP_DIRS and not path.name.startswith(".")
         ]
-    for case_dir in case_dirs:
-        problems.extend(lint_eval_case(case_dir))
+    plugin_name = read_plugin_name(root)
+    shell_dir = root / "evals-shell"
+    shell_cases = []
+    if shell_dir.is_dir():
+        shell_cases = [
+            path
+            for path in sorted(shell_dir.iterdir())
+            if path.is_dir() and path.name not in EVAL_SKIP_DIRS and not path.name.startswith(".")
+        ]
+    for case_dir in case_dirs + shell_cases:
+        problems.extend(lint_eval_case(case_dir, plugin_name))
 
     skills_dir = root / "skills"
     skill_dirs = []
     if skills_dir.is_dir():
         skill_dirs = [path for path in sorted(skills_dir.iterdir()) if path.is_dir()]
     case_names = {case.name for case in case_dirs}
-    plugin_name = read_plugin_name(root)
     for skill_dir in skill_dirs:
         problems.extend(lint_skill(skill_dir, case_names, plugin_name))
-    return problems, len(skill_dirs), len(case_dirs)
+    return problems, len(skill_dirs), len(case_dirs) + len(shell_cases)
 
 
 def main(argv: list[str]) -> int:

@@ -161,6 +161,18 @@ class EvalCaseTests(LintTestCase):
         self.write("evals/empty-case/graders/criteria.md", "---\ntype: llm\n---\nPASS\n")
         self.assertOneProblem("prompt.md or case.yaml")
 
+    def test_skill_grader_must_be_namespaced(self):
+        self.write(".claude-plugin/plugin.json", '{"name": "demo-pack"}')
+        bare = "---\ntype: tool_used\ntool: Skill\ninput_match: '\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?debug\"'\n---\n"
+        self.eval_case("debug-trigger-direct-1", grader=bare)
+        self.assertOneProblem("demo-pack:<skill>")
+
+    def test_namespaced_skill_grader_passes(self):
+        self.write(".claude-plugin/plugin.json", '{"name": "demo-pack"}')
+        named = "---\ntype: tool_used\ntool: Skill\ninput_match: '\"skill\"\\s*:\\s*\"demo-pack:debug\"'\n---\n"
+        self.eval_case("debug-trigger-direct-1", grader=named)
+        self.assertEqual(self.problems(), [])
+
     def test_results_folder_is_ignored(self):
         self.write("evals/results/2026/report.html", "<html></html>")
         self.assertEqual(self.problems(), [])
