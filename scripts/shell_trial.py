@@ -11,7 +11,8 @@ Usage: python scripts/shell_trial.py <case-glob> [--runs N] [--arms with,without
 Differences from `claude plugin eval`, so read results with care:
 - Your user CLAUDE.md loads in both arms (your real environment); plugins and MCP servers
   from your settings do not.
-- Graders supported: regex, tool_used, file_exists, llm. LLM graders get one judge vote.
+- Graders supported: regex, tool_used, file_exists, llm, command. LLM graders get one judge vote.
+  `command` runs `run:` with bash in the workdir (CASE_DIR = the case folder); exit 0 passes.
 - `focus: trace` gives the judge a condensed transcript: each tool call, and the first
   lines of each result, in order.
 """
@@ -42,14 +43,18 @@ def frontmatter(path: Path) -> tuple[dict, str]:
     return yaml.safe_load(raw) or {}, body.strip()
 
 
+def find_bash() -> str:
+    bash = os.environ.get("SHELL_TRIAL_BASH") or shutil.which("bash")
+    if not bash or "system32" in bash.lower():
+        sys.exit("Git Bash not found; set SHELL_TRIAL_BASH to its bash.exe")
+    return bash
+
+
 def run_scaffold(case: Path, workdir: Path) -> None:
     script = case / "scaffold.sh"
     if not script.is_file():
         return
-    bash = os.environ.get("SHELL_TRIAL_BASH") or shutil.which("bash")
-    if not bash:
-        sys.exit("bash not found; set SHELL_TRIAL_BASH to Git Bash")
-    subprocess.run([bash, str(script)], cwd=workdir, check=True, capture_output=True)
+    subprocess.run([find_bash(), str(script)], cwd=workdir, check=True, capture_output=True)
 
 
 def run_claude(prompt: str, meta: dict, workdir: Path, arm: str, args) -> list[dict]:
@@ -160,6 +165,14 @@ def grade(grader: Path, events: list[dict], workdir: Path, judge_model: str) -> 
         focus = fields.get("focus", "last_message")
         evidence = condensed(events) if focus == "trace" else target_text(focus, events, workdir)
         return judge(body, evidence, judge_model)
+    if kind == "command":
+        env = {**os.environ, "CASE_DIR": grader.parent.parent.as_posix()}
+        try:
+            proc = subprocess.run([find_bash(), "-c", fields["run"]], cwd=workdir, env=env,
+                                  capture_output=True, text=True, encoding="utf-8", timeout=300)
+        except subprocess.TimeoutExpired:
+            return False
+        return proc.returncode == 0
     raise ValueError(f"{grader}: unsupported grader type {kind}")
 
 

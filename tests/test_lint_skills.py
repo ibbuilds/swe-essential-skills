@@ -157,6 +157,14 @@ class EvalCaseTests(LintTestCase):
         self.eval_case("debug-trigger-direct-1", grader="---\ntype: judge\n---\n")
         self.assertOneProblem("type must be one of")
 
+    def test_command_grader_only_in_shell_cases(self):
+        grader = "---\ntype: command\nrun: bash check.sh\n---\n"
+        self.eval_case("debug-trigger-direct-1", grader=grader)
+        self.assertOneProblem("type must be one of")
+        self.write("evals-shell/debug-behavior-1/prompt.md", "---\nmax_turns: 4\n---\n\nDebug this.\n")
+        self.write("evals-shell/debug-behavior-1/graders/check.md", grader)
+        self.assertEqual(len(self.problems()), 1)
+
     def test_case_needs_a_prompt(self):
         self.write("evals/empty-case/graders/criteria.md", "---\ntype: llm\n---\nPASS\n")
         self.assertOneProblem("prompt.md or case.yaml")

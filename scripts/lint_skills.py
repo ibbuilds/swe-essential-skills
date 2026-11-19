@@ -21,6 +21,7 @@ DEFAULT_WORD_BUDGET = 500
 WORD_BUDGETS = {"discipline": 1500}
 SKILL_TYPES = {"technique", "discipline", "collaborative", "reference"}
 GRADER_TYPES = {"regex", "tool_used", "tool_order", "file_exists", "llm", "baseline"}
+SHELL_GRADER_TYPES = GRADER_TYPES | {"command"}  # scripts/shell_trial.py only
 NESTED_MARKDOWN_DIRS = {"assets"}
 EVAL_SKIP_DIRS = {"results", "mocks"}
 
@@ -188,8 +189,9 @@ def lint_eval_case(case_dir: Path, plugin_name: str | None = None) -> list[str]:
             report(f"graders/{grader.name}: {error}")
             continue
         grader_type = fields.get("type")
-        if grader_type not in GRADER_TYPES:
-            report(f"graders/{grader.name}: type must be one of: {', '.join(sorted(GRADER_TYPES))}")
+        allowed = SHELL_GRADER_TYPES if case_dir.parent.name == "evals-shell" else GRADER_TYPES
+        if grader_type not in allowed:
+            report(f"graders/{grader.name}: type must be one of: {', '.join(sorted(allowed))}")
         if (
             plugin_name
             and grader_type == "tool_used"
