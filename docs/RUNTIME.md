@@ -10,11 +10,13 @@ Until that layer exists, the skills keep their instructions for these checks. On
 | 2 | Flag lowered-bar patterns added in the diff | Script over `git diff`: `.skip`, `.only`, `xit`, `@pytest.mark.skip`, `@ts-ignore`, `@ts-expect-error`, `# type: ignore`, `eslint-disable`, `noqa`, empty `catch`, `--no-verify`, lowered thresholds | `Stop`, and `PreToolUse` on `Bash(git commit*)` | `done` "Lowered bar" |
 | 3 | Leftover debug instrumentation | Grep the diff for `[DEBUG-` | `Stop` | `diagnose` step 3 |
 | 4 | Verify a package before it is installed | Hook that reads the package name from the install command, queries the registry (exists, latest version, repository, last release, install scripts) and checks edit distance to popular names | `PreToolUse` with `if: Bash(npm install*)`, `pnpm add`, `yarn add`, `bun add`, `pip install`, `uv add`, `poetry add`, `cargo add`, `go get` | `deps` step 2 |
-| 5 | Fire `tdd`, `diagnose`, `deps` and `done` in the middle of a task | Today: one sentence at `SessionStart` (shipped in `hooks/hooks.json`). Later: inject the reminder at the first source edit in a repo with tests, and before the final message | `PreToolUse` (first Edit or Write of a source file), `Stop` | Activation of the four mid-task skills |
+| 5 | Fire `tdd`, `diagnose`, `deps` and `done` in the middle of a task | Today: one sentence at `SessionStart` on `startup`, `clear` and `compact` (shipped in `hooks/hooks.json`; skipped on `resume`, where the transcript already holds it). Later: inject the reminder at the first source edit in a repo with tests, and before the final message | `PreToolUse` (first Edit or Write of a source file), `Stop` | Activation of the four mid-task skills |
 | 6 | Evidence for UI claims | Hook that notices edits to UI files and requires a screenshot, console read or network read after the last such edit | `PostToolUse` + `Stop` | `done` UI row, `UI.md` |
 | 7 | Secrets in a commit | Pre-commit scanner (for example gitleaks) and CI | git pre-commit hook, CI | none: left to Claude Code's `security-review` and the repo's CI |
 | 8 | Gates on every PR | The repo's own CI workflow | CI | `ship` reads CI results; it does not replace them |
 | 9 | Per-feature LLM cost and latency | Logging middleware in the app, not a skill | app code | `llm-feature` step 5 asks Claude to add it |
+
+These requirements are merged, with PM Essential Skills' list and the author's global setup, into one Phase 3 runtime specification kept outside both plugins. This file stays the record of what this plugin needs from a runtime.
 
 ## Why these are not in the plugin today
 
