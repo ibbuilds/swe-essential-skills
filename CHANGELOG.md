@@ -35,6 +35,7 @@ Rebuilt the pack after an audit against Claude Code's built-in skills and seven 
 - Fixed three grader problems that made earlier numbers unreliable: Edit and Write are gated in `claude plugin eval` and need `--allow-tools Edit Write`; LLM graders on `focus: trace` misjudged long raw traces; `focus: files` ignores edits to existing files.
 - Trigger graders match `swe-essential-skills:<skill>`. The old graders also matched built-in skills with the same name, so `security-review` trigger scores were not evidence.
 - Trivia near-misses relabeled `unrelated`; near-misses are now neighbouring skills' requests.
+- Added `llm-feature-behavior-2` (fixing a bad inline prompt) and a `perf` shell trial with a decoy bottleneck.
 
 ## Earlier work
 

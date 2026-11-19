@@ -76,7 +76,7 @@ Measured with Claude Opus 5.5 on 2026-11-18, 3 runs per arm. "Without" is Claude
 | `ship` | 2 | 1.00 | 0.00 |
 | `tdd` | 2 | 0.92 | 0.25 |
 | `refactor` | 2 | 1.00 | 0.33 |
-| `llm-feature` | 1 | 0.83 | 0.25 |
+| `llm-feature` | 2 | 0.92 | 0.40 |
 | `incident` | 2 | 1.00 | 0.58 |
 | `spec` | 2 | 0.92 | 0.50 |
 | `tickets` | 2 | 0.92 | 0.50 |
@@ -93,6 +93,7 @@ Measured with Claude Opus 5.5 on 2026-11-18, 3 runs per arm. "Without" is Claude
 | `diagnose`: regression hidden in git history | 1.00 | 0.67. It edited code before reproducing, 3 of 3 runs. |
 | `done`: a one-line change breaks a test in another folder | 1.00 | 0.67 |
 | `tdd`: new function in a tested repo | 1.00 | 0.33. It never saw a test fail first. |
+| `perf`: slow report with a decoy bottleneck | 1.00 | 0.67. It found the real cost but timed only once before editing, 3 of 3 runs. |
 
 **Triggers:** 219 runs across 73 cases, each checking that the skill fires or stays quiet when it should; 215 are correct. The misses:
 - `deps` on "add date-fns": 2 of 3.
