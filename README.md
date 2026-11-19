@@ -75,7 +75,7 @@ You don't call the skills yourself. Each one starts when your request or Claude'
 
 ## Activation
 
-Skills fire from their descriptions, so you don't have to remember names. Four needed help: Claude rarely looks for a skill in the middle of a task, so `tdd`, `diagnose`, `deps` and `done` seldom fired on their own (`done` 0 of 3 runs, `tdd` 1 of 3). The plugin adds one SessionStart hook: a single sentence, about 70 tokens, once per session, reminding Claude to call `tdd` or `diagnose` before writing code, `deps` before installing a package, and `done` before reporting back. With it, `tdd` fired 3 of 3 and `done` fired in every shell trial.
+Skills fire from their descriptions, so you don't have to remember names. Four needed help: Claude rarely looks for a skill in the middle of a task, so `tdd`, `diagnose`, `deps` and `done` seldom fired on their own (`done` 0 of 3 runs, `tdd` 1 of 3). The plugin adds one SessionStart hook: a single sentence, about 70 tokens, at startup and again after `/clear` or compaction, reminding Claude to call `tdd` or `diagnose` before writing code, `deps` before installing a package, and `done` before reporting back. With it, `tdd` fired 3 of 3 and `done` fired in every shell trial.
 
 ## What it leaves to Claude Code
 
@@ -97,7 +97,7 @@ We also tested common workflows where Claude Code alone already did the job well
 | Database migrations (expand/contract, batched backfill) | 1.00 on both |
 | Review feedback, handoff | 1.00, the same as the removed skills scored |
 
-If you also use [pm-essential-skills](https://github.com/ibbuilds/pm-essential-skills), it owns `handoff`, `humanize`, `grill-me`, `breakdown`, `retro` and `write-skill`. No skill here does the same job.
+If you also use [pm-essential-skills](https://github.com/ibbuilds/pm-essential-skills), it owns planning and stress-testing plans (`plan-first`), handoffs (`pause`), parked side requests (`side-task`), getting unstuck after repeated failed fixes (`unstuck`), making corrections stick (`never-again`) and human-sounding writing (`humanize`). No skill here does the same job. Where the two meet, the code-specific skill wins: `plan-first` hands software specs to `spec` and spec splitting to `tickets`, and `unstuck` uses `diagnose` to reproduce a code bug. Each pack works on its own.
 
 ## Results
 

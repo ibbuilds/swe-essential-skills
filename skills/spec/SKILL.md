@@ -1,6 +1,6 @@
 ---
 name: spec
-description: 'Feature spec through a design interview, written to SPEC.md. Use when the user says "spec", "PRD", "requirements", "let''s pin down what we''re building", "help me figure out what to build", or describes a feature with open product decisions before code exists, even when the idea sounds clear enough to start coding or to write the whole spec in one pass. For splitting an existing spec into tickets use tickets; to stress-test an existing plan use grill-me if installed.'
+description: 'Feature spec through a design interview, written to SPEC.md. Use when the user says "spec", "PRD", "requirements", "let''s pin down what we''re building", "help me figure out what to build", or describes a feature with open product decisions before code exists, even when the idea sounds clear enough to start coding or to write the whole spec in one pass. For splitting an existing spec into tickets use tickets; to stress-test an existing plan use pm-essential-skills:plan-first if installed.'
 metadata:
   type: collaborative
 ---

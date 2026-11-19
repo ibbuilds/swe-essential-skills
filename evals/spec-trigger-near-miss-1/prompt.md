@@ -1,5 +1,5 @@
 ---
-description: Splitting an existing spec into tickets; belongs to slices.
+description: Splitting an existing spec into tickets; belongs to tickets.
 tags: [trigger, spec, near-miss]
 max_turns: 4
 allowed_tools: [Read, Glob, Grep, Skill]
