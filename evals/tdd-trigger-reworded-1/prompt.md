@@ -1,7 +1,7 @@
 ---
 description: Feature in a repo with tests, asking for it to be built test by test without naming TDD.
 tags: [trigger, tdd, reworded]
-max_turns: 4
+max_turns: 6
 allowed_tools: [Read, Glob, Grep, Skill]
 ---
 

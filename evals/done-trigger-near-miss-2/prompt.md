@@ -1,5 +1,5 @@
 ---
-description: 'A UI bug report with an error; belongs to debug.'
+description: 'A UI bug report with an error; belongs to diagnose.'
 tags: [trigger, done, near-miss]
 max_turns: 5
 allowed_tools: [Read, Glob, Grep, Skill]

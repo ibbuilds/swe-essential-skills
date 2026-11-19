@@ -1,7 +1,7 @@
 ---
 description: Feature request that asks to start from a failing test.
 tags: [trigger, tdd, reworded]
-max_turns: 4
+max_turns: 6
 allowed_tools: [Read, Glob, Grep, Skill]
 ---
 
