@@ -1,7 +1,7 @@
 ---
 description: Direct phrase "red-green-refactor".
 tags: [trigger, tdd, direct]
-max_turns: 4
+max_turns: 6
 allowed_tools: [Read, Glob, Grep, Skill]
 ---
 

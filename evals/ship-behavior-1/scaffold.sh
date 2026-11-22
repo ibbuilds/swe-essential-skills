@@ -2,7 +2,7 @@
 set -euo pipefail
 mkdir -p "$(dirname 'package.json')"
 cat > 'package.json' <<'EOF1'
-{ "name": "ledger", "private": true, "scripts": { "test": "node --test test/" } }
+{ "name": "ledger", "private": true, "scripts": { "test": "node --test" } }
 EOF1
 mkdir -p "$(dirname 'src/currency.js')"
 cat > 'src/currency.js' <<'EOF2'

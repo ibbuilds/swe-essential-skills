@@ -157,9 +157,37 @@ class EvalCaseTests(LintTestCase):
         self.eval_case("debug-trigger-direct-1", grader="---\ntype: judge\n---\n")
         self.assertOneProblem("type must be one of")
 
+    def test_command_grader_only_in_shell_cases(self):
+        grader = "---\ntype: command\nrun: bash check.sh\n---\n"
+        self.eval_case("debug-trigger-direct-1", grader=grader)
+        self.assertOneProblem("type must be one of")
+        self.write("evals-shell/debug-behavior-1/prompt.md", "---\nmax_turns: 4\n---\n\nDebug this.\n")
+        self.write("evals-shell/debug-behavior-1/graders/check.md", grader)
+        self.assertEqual(len(self.problems()), 1)
+
+    def test_readme_documents_every_skill(self):
+        self.skill("debug", f"name: debug\ndescription: {GOOD_DESCRIPTION!r}")
+        self.eval_case("debug-trigger-direct-1")
+        self.write("README.md", "# Pack\n\n**`tdd`** builds code.\n")
+        self.assertOneProblem("not documented")
+        self.write("README.md", "# Pack\n\n**`debug`** finds causes.\n\nRESULTS_PLACEHOLDER\n")
+        self.assertOneProblem("PLACEHOLDER")
+
     def test_case_needs_a_prompt(self):
         self.write("evals/empty-case/graders/criteria.md", "---\ntype: llm\n---\nPASS\n")
         self.assertOneProblem("prompt.md or case.yaml")
+
+    def test_skill_grader_must_be_namespaced(self):
+        self.write(".claude-plugin/plugin.json", '{"name": "demo-pack"}')
+        bare = "---\ntype: tool_used\ntool: Skill\ninput_match: '\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?debug\"'\n---\n"
+        self.eval_case("debug-trigger-direct-1", grader=bare)
+        self.assertOneProblem("demo-pack:<skill>")
+
+    def test_namespaced_skill_grader_passes(self):
+        self.write(".claude-plugin/plugin.json", '{"name": "demo-pack"}')
+        named = "---\ntype: tool_used\ntool: Skill\ninput_match: '\"skill\"\\s*:\\s*\"demo-pack:debug\"'\n---\n"
+        self.eval_case("debug-trigger-direct-1", grader=named)
+        self.assertEqual(self.problems(), [])
 
     def test_results_folder_is_ignored(self):
         self.write("evals/results/2026/report.html", "<html></html>")
