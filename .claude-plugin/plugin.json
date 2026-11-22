@@ -1,5 +1,6 @@
 {
   "name": "swe-essential-skills",
+  "displayName": "swe-essential-skills",
   "version": "1.0.0",
   "description": "Software engineering skills for Claude Code: debug from a reproduction, build test-first, verify UI in the browser, write specs and tickets, review security, ship, decide, upgrade, respond to incidents, tune performance and refactor safely.",
   "author": {
